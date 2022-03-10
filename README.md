@@ -1,4 +1,4 @@
-# Đề tài PBL3: Phần mềm Quản lý Cafe
+# Đề tài PBL3: Xây dựng phần mềm quản lý quán cafe
 
 Lớp học phần PBL3: 20Nh13A.
 Đại học Bách Khoa - Đại học Đà Nẵng.
