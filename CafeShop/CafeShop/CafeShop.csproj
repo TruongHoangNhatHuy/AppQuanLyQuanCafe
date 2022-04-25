@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B2C6B40-A65A-420E-89F1-5C34EAFEE087}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CafeShop</RootNamespace>
+    <AssemblyName>CafeShop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdForm\EmpDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdForm\EmpDetailForm.Designer.cs">
+      <DependentUpon>EmpDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdForm\EmpInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdForm\EmpInfoForm.Designer.cs">
+      <DependentUpon>EmpInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdForm\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdForm\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdForm\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdForm\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\JButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\JDatetimepicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\JNewTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\JNewTextbox.Designer.cs">
+      <DependentUpon>JNewTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\JTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\JTextbox.Designer.cs">
+      <DependentUpon>JTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpForm\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpForm\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpForm\TablesButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpForm\TablesButton.Designer.cs">
+      <DependentUpon>TablesButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdForm\EmpDetailForm.resx">
+      <DependentUpon>EmpDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdForm\EmpInfoForm.resx">
+      <DependentUpon>EmpInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdForm\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdForm\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\JNewTextbox.resx">
+      <DependentUpon>JNewTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\JTextbox.resx">
+      <DependentUpon>JTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpForm\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpForm\TablesButton.resx">
+      <DependentUpon>TablesButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\big-round-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\EmployeeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\food-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\home-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\round-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\table-chair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\book-multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\calendar-blank-multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\receipt-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\card-account-details-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\hammer-sickle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\hammer-wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cash-multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\coffee-cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mediumTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\order.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
