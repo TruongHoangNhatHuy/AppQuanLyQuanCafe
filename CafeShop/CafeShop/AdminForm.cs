@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CafeShop
@@ -29,26 +23,26 @@ namespace CafeShop
         }
         private void hideSubMenu()
         {
-            if(subFacilityPanel.Visible == true)
-                subFacilityPanel.Visible=false;
-            if(subStatisticsPanel.Visible == true)
-                subStatisticsPanel.Visible=false;
-            if(subPersonPanel.Visible == true)
-                subPersonPanel.Visible=false;
+            if (subFacilityPanel.Visible == true)
+                subFacilityPanel.Visible = false;
+            if (subStatisticsPanel.Visible == true)
+                subStatisticsPanel.Visible = false;
+            if (subPersonPanel.Visible == true)
+                subPersonPanel.Visible = false;
 
             this.childFormPanel.Controls.Clear();
             //
         }
-        
+
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
                 hideSubMenu();
-                subMenu.Visible=true;
+                subMenu.Visible = true;
             }
             else
-                subMenu.Visible=false;
+                subMenu.Visible = false;
         }
         #endregion
 
@@ -66,10 +60,10 @@ namespace CafeShop
         }
         private void DisableButton()
         {
-            if(currentButton != null)
+            if (currentButton != null)
             {
                 currentButton.BackColor = sideMenuPanel.BackColor;
-            }    
+            }
         }
 
         #endregion
@@ -164,7 +158,7 @@ namespace CafeShop
             this.label1.Text = "Sổ Thu Chi";
         }
         #endregion
-        
+
 
         private void homeButton_Click(object sender, EventArgs e)
         {
@@ -195,7 +189,36 @@ namespace CafeShop
 
         public void Reload()
         {
-            homeButton_Click(homeButton,null);
+            homeButton_Click(homeButton, null);
         }
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #region ControlBar
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void zoomButton_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+        private void button_MouseEnter(object sender, EventArgs e)
+        {
+            CustomControl.JButton button = sender as CustomControl.JButton;
+            button.BorderSize = 2;
+        }
+        private void button_MouseLeave(object sender, EventArgs e)
+        {
+            CustomControl.JButton button = sender as CustomControl.JButton;
+            button.BorderSize = 0;
+        }
+        #endregion
     }
 }

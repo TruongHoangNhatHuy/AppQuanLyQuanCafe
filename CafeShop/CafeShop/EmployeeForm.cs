@@ -68,5 +68,35 @@ namespace CafeShop
             this.label1.Text = "Đặt món";
             openChildForm(new EmpForm.OrderForm());
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #region ControlBar
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void zoomButton_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+        private void button_MouseEnter(object sender, EventArgs e)
+        {
+            CustomControl.JButton button = sender as CustomControl.JButton;
+            button.BorderSize = 2;
+        }
+        private void button_MouseLeave(object sender, EventArgs e)
+        {
+            CustomControl.JButton button = sender as CustomControl.JButton;
+            button.BorderSize = 0;
+        }
+        #endregion
     }
 }

@@ -65,7 +65,7 @@ namespace CafeShop.CustomControl
         public bool PasswordChar
         {
             get { return isPasswordChar; }
-            set { textBox1.UseSystemPasswordChar = value; }
+            set { textBox1.UseSystemPasswordChar = value; isPasswordChar = value; }
         }
         [Category("Textbox Properties")]
         public bool Multiline
@@ -170,22 +170,24 @@ namespace CafeShop.CustomControl
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text) && placeholderText != "")
             {
+                if (isPasswordChar)
+                    textBox1.UseSystemPasswordChar = false;
                 isPlaceholder = true;
                 textBox1.Text = placeholderText;
                 textBox1.ForeColor = placeholderColor;
-                if (isPasswordChar)
-                    textBox1.UseSystemPasswordChar = false;
+                
             }
         }
         private void RemovePlaceholder()
         {
             if (isPlaceholder && placeholderText != "")
             {
+                if (isPasswordChar)
+                    textBox1.UseSystemPasswordChar = true;
                 isPlaceholder = false;
                 textBox1.Text = "";
                 textBox1.ForeColor = this.ForeColor;
-                if (isPasswordChar)
-                    textBox1.UseSystemPasswordChar = true;
+                
             }
         }
         private GraphicsPath GetFigurePath(Rectangle rect, int radius)

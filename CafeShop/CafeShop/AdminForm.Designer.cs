@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             this.sideMenuPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.subStatisticsPanel = new System.Windows.Forms.Panel();
+            this.subFacilityPanel = new System.Windows.Forms.Panel();
+            this.subPersonPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.titleBarPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.childFormPanel = new System.Windows.Forms.Panel();
+            this.zoomButton = new CafeShop.CustomControl.JButton();
+            this.minimizeButton = new CafeShop.CustomControl.JButton();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.changeButton = new System.Windows.Forms.Button();
             this.revenueButton = new System.Windows.Forms.Button();
             this.invoiceButton = new System.Windows.Forms.Button();
             this.statisticsButton = new System.Windows.Forms.Button();
             this.scheduleButton = new System.Windows.Forms.Button();
-            this.subFacilityPanel = new System.Windows.Forms.Panel();
             this.warehouseButton = new System.Windows.Forms.Button();
             this.tableButton = new System.Windows.Forms.Button();
             this.facilityButton = new System.Windows.Forms.Button();
             this.menuButton = new System.Windows.Forms.Button();
-            this.subPersonPanel = new System.Windows.Forms.Panel();
             this.cusButton = new System.Windows.Forms.Button();
             this.empButton = new System.Windows.Forms.Button();
             this.personalButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.titleBarPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.childFormPanel = new System.Windows.Forms.Panel();
             this.sideMenuPanel.SuspendLayout();
             this.subStatisticsPanel.SuspendLayout();
             this.subFacilityPanel.SuspendLayout();
@@ -61,7 +63,7 @@
             // 
             this.sideMenuPanel.AutoScroll = true;
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
-            this.sideMenuPanel.Controls.Add(this.button1);
+            this.sideMenuPanel.Controls.Add(this.logoutButton);
             this.sideMenuPanel.Controls.Add(this.subStatisticsPanel);
             this.sideMenuPanel.Controls.Add(this.statisticsButton);
             this.sideMenuPanel.Controls.Add(this.scheduleButton);
@@ -75,22 +77,8 @@
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.sideMenuPanel.Name = "sideMenuPanel";
-            this.sideMenuPanel.Size = new System.Drawing.Size(210, 691);
+            this.sideMenuPanel.Size = new System.Drawing.Size(190, 691);
             this.sideMenuPanel.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::CafeShop.Properties.Resources.log_out;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 716);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 50);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // subStatisticsPanel
             // 
@@ -98,10 +86,133 @@
             this.subStatisticsPanel.Controls.Add(this.revenueButton);
             this.subStatisticsPanel.Controls.Add(this.invoiceButton);
             this.subStatisticsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subStatisticsPanel.Location = new System.Drawing.Point(0, 583);
+            this.subStatisticsPanel.Location = new System.Drawing.Point(0, 568);
             this.subStatisticsPanel.Name = "subStatisticsPanel";
-            this.subStatisticsPanel.Size = new System.Drawing.Size(193, 133);
+            this.subStatisticsPanel.Size = new System.Drawing.Size(173, 133);
             this.subStatisticsPanel.TabIndex = 8;
+            // 
+            // subFacilityPanel
+            // 
+            this.subFacilityPanel.Controls.Add(this.warehouseButton);
+            this.subFacilityPanel.Controls.Add(this.tableButton);
+            this.subFacilityPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subFacilityPanel.Location = new System.Drawing.Point(0, 374);
+            this.subFacilityPanel.Name = "subFacilityPanel";
+            this.subFacilityPanel.Size = new System.Drawing.Size(173, 94);
+            this.subFacilityPanel.TabIndex = 5;
+            // 
+            // subPersonPanel
+            // 
+            this.subPersonPanel.Controls.Add(this.cusButton);
+            this.subPersonPanel.Controls.Add(this.empButton);
+            this.subPersonPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subPersonPanel.Location = new System.Drawing.Point(0, 180);
+            this.subPersonPanel.Name = "subPersonPanel";
+            this.subPersonPanel.Size = new System.Drawing.Size(173, 94);
+            this.subPersonPanel.TabIndex = 2;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(173, 80);
+            this.mainPanel.TabIndex = 0;
+            // 
+            // titleBarPanel
+            // 
+            this.titleBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
+            this.titleBarPanel.Controls.Add(this.zoomButton);
+            this.titleBarPanel.Controls.Add(this.minimizeButton);
+            this.titleBarPanel.Controls.Add(this.label1);
+            this.titleBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titleBarPanel.Location = new System.Drawing.Point(190, 0);
+            this.titleBarPanel.Name = "titleBarPanel";
+            this.titleBarPanel.Size = new System.Drawing.Size(1154, 80);
+            this.titleBarPanel.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 47);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Trang Chủ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // childFormPanel
+            // 
+            this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childFormPanel.Location = new System.Drawing.Point(190, 80);
+            this.childFormPanel.Name = "childFormPanel";
+            this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.childFormPanel.Size = new System.Drawing.Size(1154, 611);
+            this.childFormPanel.TabIndex = 2;
+            // 
+            // zoomButton
+            // 
+            this.zoomButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.zoomButton.BackColor = System.Drawing.Color.Transparent;
+            this.zoomButton.BackgroundColor = System.Drawing.Color.Transparent;
+            this.zoomButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.zoomButton.BorderRadius = 0;
+            this.zoomButton.BorderSize = 0;
+            this.zoomButton.FlatAppearance.BorderSize = 0;
+            this.zoomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.zoomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoomButton.ForeColor = System.Drawing.Color.Black;
+            this.zoomButton.Image = global::CafeShop.Properties.Resources.full_screen;
+            this.zoomButton.Location = new System.Drawing.Point(1107, 3);
+            this.zoomButton.Name = "zoomButton";
+            this.zoomButton.Size = new System.Drawing.Size(44, 29);
+            this.zoomButton.TabIndex = 2;
+            this.zoomButton.TextColor = System.Drawing.Color.Black;
+            this.zoomButton.UseVisualStyleBackColor = false;
+            this.zoomButton.Click += new System.EventHandler(this.zoomButton_Click);
+            this.zoomButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+            this.zoomButton.MouseHover += new System.EventHandler(this.button_MouseEnter);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.BackgroundColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.minimizeButton.BorderRadius = 0;
+            this.minimizeButton.BorderSize = 0;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeButton.ForeColor = System.Drawing.Color.Black;
+            this.minimizeButton.Image = global::CafeShop.Properties.Resources.minimize_sign;
+            this.minimizeButton.Location = new System.Drawing.Point(1057, 3);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(44, 29);
+            this.minimizeButton.TabIndex = 1;
+            this.minimizeButton.TextColor = System.Drawing.Color.Black;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            this.minimizeButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+            this.minimizeButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.Image = global::CafeShop.Properties.Resources.log_out;
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.Location = new System.Drawing.Point(0, 701);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(173, 50);
+            this.logoutButton.TabIndex = 9;
+            this.logoutButton.Text = "Thoát";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // changeButton
             // 
@@ -114,7 +225,7 @@
             this.changeButton.Location = new System.Drawing.Point(0, 90);
             this.changeButton.Name = "changeButton";
             this.changeButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.changeButton.Size = new System.Drawing.Size(193, 45);
+            this.changeButton.Size = new System.Drawing.Size(173, 45);
             this.changeButton.TabIndex = 2;
             this.changeButton.Text = "Sổ thu chi";
             this.changeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,7 +243,7 @@
             this.revenueButton.Location = new System.Drawing.Point(0, 45);
             this.revenueButton.Name = "revenueButton";
             this.revenueButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.revenueButton.Size = new System.Drawing.Size(193, 45);
+            this.revenueButton.Size = new System.Drawing.Size(173, 45);
             this.revenueButton.TabIndex = 1;
             this.revenueButton.Text = "Doanh thu";
             this.revenueButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,7 +261,7 @@
             this.invoiceButton.Location = new System.Drawing.Point(0, 0);
             this.invoiceButton.Name = "invoiceButton";
             this.invoiceButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.invoiceButton.Size = new System.Drawing.Size(193, 45);
+            this.invoiceButton.Size = new System.Drawing.Size(173, 45);
             this.invoiceButton.TabIndex = 0;
             this.invoiceButton.Text = "Hoá đơn";
             this.invoiceButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,9 +276,9 @@
             this.statisticsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statisticsButton.Image = global::CafeShop.Properties.Resources.statistics;
             this.statisticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.statisticsButton.Location = new System.Drawing.Point(0, 533);
+            this.statisticsButton.Location = new System.Drawing.Point(0, 518);
             this.statisticsButton.Name = "statisticsButton";
-            this.statisticsButton.Size = new System.Drawing.Size(193, 50);
+            this.statisticsButton.Size = new System.Drawing.Size(173, 50);
             this.statisticsButton.TabIndex = 7;
             this.statisticsButton.Text = "Thống kê";
             this.statisticsButton.UseVisualStyleBackColor = true;
@@ -181,23 +292,13 @@
             this.scheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scheduleButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
             this.scheduleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scheduleButton.Location = new System.Drawing.Point(0, 483);
+            this.scheduleButton.Location = new System.Drawing.Point(0, 468);
             this.scheduleButton.Name = "scheduleButton";
-            this.scheduleButton.Size = new System.Drawing.Size(193, 50);
+            this.scheduleButton.Size = new System.Drawing.Size(173, 50);
             this.scheduleButton.TabIndex = 6;
             this.scheduleButton.Text = "Lịch làm việc";
             this.scheduleButton.UseVisualStyleBackColor = true;
             this.scheduleButton.Click += new System.EventHandler(this.scheduleButton_Click);
-            // 
-            // subFacilityPanel
-            // 
-            this.subFacilityPanel.Controls.Add(this.warehouseButton);
-            this.subFacilityPanel.Controls.Add(this.tableButton);
-            this.subFacilityPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subFacilityPanel.Location = new System.Drawing.Point(0, 389);
-            this.subFacilityPanel.Name = "subFacilityPanel";
-            this.subFacilityPanel.Size = new System.Drawing.Size(193, 94);
-            this.subFacilityPanel.TabIndex = 5;
             // 
             // warehouseButton
             // 
@@ -210,7 +311,7 @@
             this.warehouseButton.Location = new System.Drawing.Point(0, 45);
             this.warehouseButton.Name = "warehouseButton";
             this.warehouseButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.warehouseButton.Size = new System.Drawing.Size(193, 45);
+            this.warehouseButton.Size = new System.Drawing.Size(173, 45);
             this.warehouseButton.TabIndex = 1;
             this.warehouseButton.Text = "Kho hàng";
             this.warehouseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,7 +329,7 @@
             this.tableButton.Location = new System.Drawing.Point(0, 0);
             this.tableButton.Name = "tableButton";
             this.tableButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.tableButton.Size = new System.Drawing.Size(193, 45);
+            this.tableButton.Size = new System.Drawing.Size(173, 45);
             this.tableButton.TabIndex = 0;
             this.tableButton.Text = "Bàn";
             this.tableButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,9 +344,9 @@
             this.facilityButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.facilityButton.Image = global::CafeShop.Properties.Resources.hammer_wrench;
             this.facilityButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.facilityButton.Location = new System.Drawing.Point(0, 339);
+            this.facilityButton.Location = new System.Drawing.Point(0, 324);
             this.facilityButton.Name = "facilityButton";
-            this.facilityButton.Size = new System.Drawing.Size(193, 50);
+            this.facilityButton.Size = new System.Drawing.Size(173, 50);
             this.facilityButton.TabIndex = 4;
             this.facilityButton.Text = "Cơ sở vật chất";
             this.facilityButton.UseVisualStyleBackColor = true;
@@ -259,23 +360,13 @@
             this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuButton.Image = global::CafeShop.Properties.Resources.food_outline;
             this.menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuButton.Location = new System.Drawing.Point(0, 289);
+            this.menuButton.Location = new System.Drawing.Point(0, 274);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(193, 50);
+            this.menuButton.Size = new System.Drawing.Size(173, 50);
             this.menuButton.TabIndex = 3;
             this.menuButton.Text = "Thực đơn";
             this.menuButton.UseVisualStyleBackColor = true;
             this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
-            // 
-            // subPersonPanel
-            // 
-            this.subPersonPanel.Controls.Add(this.cusButton);
-            this.subPersonPanel.Controls.Add(this.empButton);
-            this.subPersonPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subPersonPanel.Location = new System.Drawing.Point(0, 195);
-            this.subPersonPanel.Name = "subPersonPanel";
-            this.subPersonPanel.Size = new System.Drawing.Size(193, 94);
-            this.subPersonPanel.TabIndex = 2;
             // 
             // cusButton
             // 
@@ -288,7 +379,7 @@
             this.cusButton.Location = new System.Drawing.Point(0, 45);
             this.cusButton.Name = "cusButton";
             this.cusButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.cusButton.Size = new System.Drawing.Size(193, 45);
+            this.cusButton.Size = new System.Drawing.Size(173, 45);
             this.cusButton.TabIndex = 1;
             this.cusButton.Text = "Khách hàng";
             this.cusButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,7 +397,7 @@
             this.empButton.Location = new System.Drawing.Point(0, 0);
             this.empButton.Name = "empButton";
             this.empButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.empButton.Size = new System.Drawing.Size(193, 45);
+            this.empButton.Size = new System.Drawing.Size(173, 45);
             this.empButton.TabIndex = 0;
             this.empButton.Text = "Nhân viên";
             this.empButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,9 +412,9 @@
             this.personalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.personalButton.Image = global::CafeShop.Properties.Resources.card_account_details_outline;
             this.personalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.personalButton.Location = new System.Drawing.Point(0, 145);
+            this.personalButton.Location = new System.Drawing.Point(0, 130);
             this.personalButton.Name = "personalButton";
-            this.personalButton.Size = new System.Drawing.Size(193, 50);
+            this.personalButton.Size = new System.Drawing.Size(173, 50);
             this.personalButton.TabIndex = 1;
             this.personalButton.Text = "Nhân sự";
             this.personalButton.UseVisualStyleBackColor = true;
@@ -337,53 +428,13 @@
             this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeButton.Image = global::CafeShop.Properties.Resources.home;
             this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeButton.Location = new System.Drawing.Point(0, 95);
+            this.homeButton.Location = new System.Drawing.Point(0, 80);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(193, 50);
+            this.homeButton.Size = new System.Drawing.Size(173, 50);
             this.homeButton.TabIndex = 0;
             this.homeButton.Text = "Trang chủ";
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(193, 95);
-            this.mainPanel.TabIndex = 0;
-            // 
-            // titleBarPanel
-            // 
-            this.titleBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
-            this.titleBarPanel.Controls.Add(this.label1);
-            this.titleBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titleBarPanel.Location = new System.Drawing.Point(210, 0);
-            this.titleBarPanel.Name = "titleBarPanel";
-            this.titleBarPanel.Size = new System.Drawing.Size(1134, 95);
-            this.titleBarPanel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Trang Chủ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // childFormPanel
-            // 
-            this.childFormPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.childFormPanel.Location = new System.Drawing.Point(210, 95);
-            this.childFormPanel.Name = "childFormPanel";
-            this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.childFormPanel.Size = new System.Drawing.Size(1134, 596);
-            this.childFormPanel.TabIndex = 2;
             // 
             // AdminForm
             // 
@@ -391,6 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1344, 691);
+            this.ControlBox = false;
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.titleBarPanel);
             this.Controls.Add(this.sideMenuPanel);
@@ -427,9 +479,11 @@
         private System.Windows.Forms.Button revenueButton;
         private System.Windows.Forms.Button invoiceButton;
         private System.Windows.Forms.Panel titleBarPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel childFormPanel;
+        private CustomControl.JButton zoomButton;
+        private CustomControl.JButton minimizeButton;
     }
 }
 

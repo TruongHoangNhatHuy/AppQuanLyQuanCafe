@@ -112,6 +112,12 @@
     <Compile Include="EmpForm\TablesButton.Designer.cs">
       <DependentUpon>TablesButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdForm\EmpDetailForm.resx">
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmpForm\TablesButton.resx">
       <DependentUpon>TablesButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -256,6 +265,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logoshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\newlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cafe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\minimize-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\closelogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\full-screen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

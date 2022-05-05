@@ -68,9 +68,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(98, 203);
+            this.dataGridView1.Location = new System.Drawing.Point(111, 216);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(851, 342);
+            this.dataGridView1.Size = new System.Drawing.Size(911, 372);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -100,7 +100,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 100);
+            this.panel1.Size = new System.Drawing.Size(1154, 100);
             this.panel1.TabIndex = 6;
             // 
             // flowLayoutPanel1
@@ -109,7 +109,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(108, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1010, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1046, 100);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -356,7 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1118, 557);
+            this.ClientSize = new System.Drawing.Size(1154, 611);
             this.Controls.Add(this.jButton2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.jNewTextbox1);
@@ -365,6 +365,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InvoiceForm";
             this.Text = "InvoiceForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
