@@ -70,6 +70,12 @@
     <Compile Include="AdForm\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdForm\TableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdForm\TableForm.Designer.cs">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdForm\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdForm\TableForm.resx">
+      <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>

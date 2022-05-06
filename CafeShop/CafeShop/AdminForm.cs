@@ -120,6 +120,9 @@ namespace CafeShop
         {
             ActivateButton(sender);
             this.label1.Text = "Bàn";
+            AdForm.TableForm form = new AdForm.TableForm();
+            form.reload = Reload;
+            openChildForm(form);
         }
 
         private void warehouseButton_Click(object sender, EventArgs e)

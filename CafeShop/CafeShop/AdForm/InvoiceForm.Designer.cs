@@ -67,6 +67,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(111, 216);
             this.dataGridView1.Name = "dataGridView1";
@@ -290,12 +291,13 @@
             // 
             // jNewTextbox1
             // 
+            this.jNewTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.jNewTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.jNewTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
             this.jNewTextbox1.BorderRadius = 10;
             this.jNewTextbox1.BorderSize = 2;
             this.jNewTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox1.Location = new System.Drawing.Point(571, 162);
+            this.jNewTextbox1.Location = new System.Drawing.Point(637, 162);
             this.jNewTextbox1.Multiline = false;
             this.jNewTextbox1.Name = "jNewTextbox1";
             this.jNewTextbox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -335,6 +337,7 @@
             // 
             // jButton2
             // 
+            this.jButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.jButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.jButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -344,7 +347,7 @@
             this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jButton2.ForeColor = System.Drawing.Color.White;
             this.jButton2.Image = global::CafeShop.Properties.Resources.magnifying_glass;
-            this.jButton2.Location = new System.Drawing.Point(878, 157);
+            this.jButton2.Location = new System.Drawing.Point(951, 157);
             this.jButton2.Name = "jButton2";
             this.jButton2.Size = new System.Drawing.Size(71, 40);
             this.jButton2.TabIndex = 7;

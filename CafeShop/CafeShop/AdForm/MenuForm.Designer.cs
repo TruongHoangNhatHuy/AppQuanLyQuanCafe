@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
             this.label1 = new System.Windows.Forms.Label();
             this.categoryFoodPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.detailFoodLabel = new System.Windows.Forms.Label();
@@ -55,10 +55,12 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(34, 59);
+            this.label1.Location = new System.Drawing.Point(34, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 16);
             this.label1.TabIndex = 0;
@@ -66,9 +68,7 @@
             // 
             // categoryFoodPanel
             // 
-            this.categoryFoodPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoryFoodPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.categoryFoodPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.categoryFoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.categoryFoodPanel.Location = new System.Drawing.Point(37, 85);
@@ -78,10 +78,12 @@
             // 
             // detailFoodLabel
             // 
+            this.detailFoodLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.detailFoodLabel.AutoSize = true;
             this.detailFoodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailFoodLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.detailFoodLabel.Location = new System.Drawing.Point(34, 226);
+            this.detailFoodLabel.Location = new System.Drawing.Point(34, 240);
+            this.detailFoodLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.detailFoodLabel.Name = "detailFoodLabel";
             this.detailFoodLabel.Size = new System.Drawing.Size(93, 16);
             this.detailFoodLabel.TabIndex = 2;
@@ -89,9 +91,7 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listView1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.header1,
@@ -101,7 +101,7 @@
             this.header5});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem3});
             this.listView1.Location = new System.Drawing.Point(37, 265);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(873, 290);
@@ -130,9 +130,9 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(37, 561);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(37, 555);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 23);
             this.button1.TabIndex = 12;
@@ -141,9 +141,9 @@
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(170, 561);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Location = new System.Drawing.Point(170, 555);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 23);
             this.button2.TabIndex = 13;
@@ -152,9 +152,9 @@
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(305, 561);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.Location = new System.Drawing.Point(305, 555);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(138, 23);
             this.button3.TabIndex = 14;
@@ -163,9 +163,9 @@
             // 
             // button4
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(440, 561);
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.Location = new System.Drawing.Point(440, 555);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(138, 23);
             this.button4.TabIndex = 15;
@@ -302,7 +302,7 @@
             this.jButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jButton3.ForeColor = System.Drawing.Color.Black;
-            this.jButton3.Location = new System.Drawing.Point(988, 187);
+            this.jButton3.Location = new System.Drawing.Point(988, 167);
             this.jButton3.Name = "jButton3";
             this.jButton3.Size = new System.Drawing.Size(94, 29);
             this.jButton3.TabIndex = 6;
@@ -322,7 +322,7 @@
             this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jButton2.ForeColor = System.Drawing.Color.Black;
-            this.jButton2.Location = new System.Drawing.Point(988, 151);
+            this.jButton2.Location = new System.Drawing.Point(988, 131);
             this.jButton2.Name = "jButton2";
             this.jButton2.Size = new System.Drawing.Size(94, 29);
             this.jButton2.TabIndex = 5;
@@ -342,7 +342,7 @@
             this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jButton1.ForeColor = System.Drawing.Color.Black;
-            this.jButton1.Location = new System.Drawing.Point(988, 116);
+            this.jButton1.Location = new System.Drawing.Point(988, 96);
             this.jButton1.Name = "jButton1";
             this.jButton1.Size = new System.Drawing.Size(94, 29);
             this.jButton1.TabIndex = 4;
