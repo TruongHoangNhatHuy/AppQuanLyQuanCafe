@@ -33,10 +33,6 @@
             this.quantityTextbox = new CafeShop.CustomControl.JNewTextbox();
             this.descriptionTextbox = new CafeShop.CustomControl.JNewTextbox();
             this.totalTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.surchargeTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.discountTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.surchargeLabel = new System.Windows.Forms.Label();
-            this.discountLabel = new System.Windows.Forms.Label();
             this.cancelButton = new CafeShop.CustomControl.JButton();
             this.acceptButton = new CafeShop.CustomControl.JButton();
             this.descriptionLabel = new System.Windows.Forms.Label();
@@ -90,14 +86,14 @@
             this.descriptionTextbox.BorderRadius = 5;
             this.descriptionTextbox.BorderSize = 2;
             this.descriptionTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionTextbox.Location = new System.Drawing.Point(128, 144);
+            this.descriptionTextbox.Location = new System.Drawing.Point(128, 194);
             this.descriptionTextbox.Multiline = true;
             this.descriptionTextbox.Name = "descriptionTextbox";
             this.descriptionTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.descriptionTextbox.PasswordChar = false;
             this.descriptionTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.descriptionTextbox.PlaceholderText = "";
-            this.descriptionTextbox.Size = new System.Drawing.Size(196, 32);
+            this.descriptionTextbox.Size = new System.Drawing.Size(196, 78);
             this.descriptionTextbox.TabIndex = 2;
             this.descriptionTextbox.Texts = "";
             this.descriptionTextbox.UnderlinedStyle = false;
@@ -110,7 +106,7 @@
             this.totalTextbox.BorderSize = 2;
             this.totalTextbox.Enabled = false;
             this.totalTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextbox.Location = new System.Drawing.Point(128, 214);
+            this.totalTextbox.Location = new System.Drawing.Point(128, 132);
             this.totalTextbox.Multiline = false;
             this.totalTextbox.Name = "totalTextbox";
             this.totalTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -121,64 +117,6 @@
             this.totalTextbox.TabIndex = 3;
             this.totalTextbox.Texts = "";
             this.totalTextbox.UnderlinedStyle = false;
-            // 
-            // surchargeTextbox
-            // 
-            this.surchargeTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.surchargeTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.surchargeTextbox.BorderRadius = 5;
-            this.surchargeTextbox.BorderSize = 2;
-            this.surchargeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.surchargeTextbox.Location = new System.Drawing.Point(52, 278);
-            this.surchargeTextbox.Multiline = false;
-            this.surchargeTextbox.Name = "surchargeTextbox";
-            this.surchargeTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.surchargeTextbox.PasswordChar = false;
-            this.surchargeTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.surchargeTextbox.PlaceholderText = "";
-            this.surchargeTextbox.Size = new System.Drawing.Size(89, 32);
-            this.surchargeTextbox.TabIndex = 4;
-            this.surchargeTextbox.Texts = "";
-            this.surchargeTextbox.UnderlinedStyle = false;
-            // 
-            // discountTextbox
-            // 
-            this.discountTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.discountTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.discountTextbox.BorderRadius = 5;
-            this.discountTextbox.BorderSize = 2;
-            this.discountTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountTextbox.Location = new System.Drawing.Point(218, 278);
-            this.discountTextbox.Multiline = false;
-            this.discountTextbox.Name = "discountTextbox";
-            this.discountTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.discountTextbox.PasswordChar = false;
-            this.discountTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.discountTextbox.PlaceholderText = "";
-            this.discountTextbox.Size = new System.Drawing.Size(89, 32);
-            this.discountTextbox.TabIndex = 5;
-            this.discountTextbox.Texts = "";
-            this.discountTextbox.UnderlinedStyle = false;
-            // 
-            // surchargeLabel
-            // 
-            this.surchargeLabel.AutoSize = true;
-            this.surchargeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.surchargeLabel.Location = new System.Drawing.Point(64, 259);
-            this.surchargeLabel.Name = "surchargeLabel";
-            this.surchargeLabel.Size = new System.Drawing.Size(73, 16);
-            this.surchargeLabel.TabIndex = 6;
-            this.surchargeLabel.Text = "Phụ thu (%)";
-            // 
-            // discountLabel
-            // 
-            this.discountLabel.AutoSize = true;
-            this.discountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountLabel.Location = new System.Drawing.Point(219, 258);
-            this.discountLabel.Name = "discountLabel";
-            this.discountLabel.Size = new System.Drawing.Size(84, 16);
-            this.discountLabel.TabIndex = 7;
-            this.discountLabel.Text = "Giảm giá (%)";
             // 
             // cancelButton
             // 
@@ -191,7 +129,7 @@
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelButton.Location = new System.Drawing.Point(28, 356);
+            this.cancelButton.Location = new System.Drawing.Point(37, 296);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(116, 40);
             this.cancelButton.TabIndex = 8;
@@ -210,7 +148,7 @@
             this.acceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.acceptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.acceptButton.ForeColor = System.Drawing.Color.Black;
-            this.acceptButton.Location = new System.Drawing.Point(191, 356);
+            this.acceptButton.Location = new System.Drawing.Point(200, 296);
             this.acceptButton.Name = "acceptButton";
             this.acceptButton.Size = new System.Drawing.Size(116, 40);
             this.acceptButton.TabIndex = 9;
@@ -222,7 +160,7 @@
             // 
             this.descriptionLabel.AutoSize = true;
             this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionLabel.Location = new System.Drawing.Point(25, 153);
+            this.descriptionLabel.Location = new System.Drawing.Point(25, 203);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(71, 20);
             this.descriptionLabel.TabIndex = 10;
@@ -232,7 +170,7 @@
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.Location = new System.Drawing.Point(24, 226);
+            this.totalLabel.Location = new System.Drawing.Point(21, 144);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(72, 20);
             this.totalLabel.TabIndex = 11;
@@ -242,15 +180,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 418);
+            this.ClientSize = new System.Drawing.Size(352, 357);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.acceptButton);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.discountLabel);
-            this.Controls.Add(this.surchargeLabel);
-            this.Controls.Add(this.discountTextbox);
-            this.Controls.Add(this.surchargeTextbox);
             this.Controls.Add(this.totalTextbox);
             this.Controls.Add(this.descriptionTextbox);
             this.Controls.Add(this.quantityTextbox);
@@ -271,10 +205,6 @@
         private CustomControl.JNewTextbox quantityTextbox;
         private CustomControl.JNewTextbox descriptionTextbox;
         private CustomControl.JNewTextbox totalTextbox;
-        private CustomControl.JNewTextbox surchargeTextbox;
-        private CustomControl.JNewTextbox discountTextbox;
-        private System.Windows.Forms.Label surchargeLabel;
-        private System.Windows.Forms.Label discountLabel;
         private CustomControl.JButton cancelButton;
         private CustomControl.JButton acceptButton;
         private System.Windows.Forms.Label descriptionLabel;

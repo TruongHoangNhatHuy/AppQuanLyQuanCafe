@@ -32,15 +32,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.jButton1 = new CafeShop.CustomControl.JButton();
-            this.jNewTextbox1 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox2 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox3 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox4 = new CafeShop.CustomControl.JNewTextbox();
-            this.jButton2 = new CafeShop.CustomControl.JButton();
-            this.jButton3 = new CafeShop.CustomControl.JButton();
-            this.jNewTextbox5 = new CafeShop.CustomControl.JNewTextbox();
             this.label2 = new System.Windows.Forms.Label();
+            this.discountLabel = new System.Windows.Forms.Label();
+            this.surchargeLabel = new System.Windows.Forms.Label();
+            this.discountTextbox = new CafeShop.CustomControl.JNewTextbox();
+            this.surchargeTextbox = new CafeShop.CustomControl.JNewTextbox();
+            this.jNewTextbox5 = new CafeShop.CustomControl.JNewTextbox();
+            this.jButton3 = new CafeShop.CustomControl.JButton();
+            this.jButton2 = new CafeShop.CustomControl.JButton();
+            this.jNewTextbox4 = new CafeShop.CustomControl.JNewTextbox();
+            this.jNewTextbox3 = new CafeShop.CustomControl.JNewTextbox();
+            this.jNewTextbox2 = new CafeShop.CustomControl.JNewTextbox();
+            this.jNewTextbox1 = new CafeShop.CustomControl.JNewTextbox();
+            this.jButton1 = new CafeShop.CustomControl.JButton();
             this.SuspendLayout();
             // 
             // label1
@@ -87,138 +91,74 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "SĐT khách hàng";
             // 
-            // jButton1
+            // label2
             // 
-            this.jButton1.BackColor = System.Drawing.Color.LightGreen;
-            this.jButton1.BackgroundColor = System.Drawing.Color.LightGreen;
-            this.jButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton1.BorderRadius = 27;
-            this.jButton1.BorderSize = 0;
-            this.jButton1.FlatAppearance.BorderSize = 0;
-            this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton1.ForeColor = System.Drawing.Color.Black;
-            this.jButton1.Location = new System.Drawing.Point(40, 296);
-            this.jButton1.Name = "jButton1";
-            this.jButton1.Size = new System.Drawing.Size(108, 38);
-            this.jButton1.TabIndex = 5;
-            this.jButton1.Text = "Kiểm tra";
-            this.jButton1.TextColor = System.Drawing.Color.Black;
-            this.jButton1.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label2.Location = new System.Drawing.Point(132, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 47);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Thanh toán";
             // 
-            // jNewTextbox1
+            // discountLabel
             // 
-            this.jNewTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox1.BorderRadius = 5;
-            this.jNewTextbox1.BorderSize = 2;
-            this.jNewTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox1.Location = new System.Drawing.Point(190, 241);
-            this.jNewTextbox1.Multiline = false;
-            this.jNewTextbox1.Name = "jNewTextbox1";
-            this.jNewTextbox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.jNewTextbox1.PasswordChar = false;
-            this.jNewTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox1.PlaceholderText = "";
-            this.jNewTextbox1.Size = new System.Drawing.Size(181, 32);
-            this.jNewTextbox1.TabIndex = 6;
-            this.jNewTextbox1.Texts = "";
-            this.jNewTextbox1.UnderlinedStyle = false;
+            this.discountLabel.AutoSize = true;
+            this.discountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountLabel.Location = new System.Drawing.Point(249, 359);
+            this.discountLabel.Name = "discountLabel";
+            this.discountLabel.Size = new System.Drawing.Size(84, 16);
+            this.discountLabel.TabIndex = 17;
+            this.discountLabel.Text = "Giảm giá (%)";
             // 
-            // jNewTextbox2
+            // surchargeLabel
             // 
-            this.jNewTextbox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox2.BorderRadius = 5;
-            this.jNewTextbox2.BorderSize = 2;
-            this.jNewTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox2.Location = new System.Drawing.Point(190, 185);
-            this.jNewTextbox2.Multiline = false;
-            this.jNewTextbox2.Name = "jNewTextbox2";
-            this.jNewTextbox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.jNewTextbox2.PasswordChar = false;
-            this.jNewTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox2.PlaceholderText = "";
-            this.jNewTextbox2.Size = new System.Drawing.Size(181, 32);
-            this.jNewTextbox2.TabIndex = 7;
-            this.jNewTextbox2.Texts = "";
-            this.jNewTextbox2.UnderlinedStyle = false;
+            this.surchargeLabel.AutoSize = true;
+            this.surchargeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surchargeLabel.Location = new System.Drawing.Point(94, 360);
+            this.surchargeLabel.Name = "surchargeLabel";
+            this.surchargeLabel.Size = new System.Drawing.Size(73, 16);
+            this.surchargeLabel.TabIndex = 16;
+            this.surchargeLabel.Text = "Phụ thu (%)";
             // 
-            // jNewTextbox3
+            // discountTextbox
             // 
-            this.jNewTextbox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox3.BorderRadius = 5;
-            this.jNewTextbox3.BorderSize = 2;
-            this.jNewTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox3.Location = new System.Drawing.Point(190, 126);
-            this.jNewTextbox3.Multiline = false;
-            this.jNewTextbox3.Name = "jNewTextbox3";
-            this.jNewTextbox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.jNewTextbox3.PasswordChar = false;
-            this.jNewTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox3.PlaceholderText = "";
-            this.jNewTextbox3.Size = new System.Drawing.Size(181, 32);
-            this.jNewTextbox3.TabIndex = 8;
-            this.jNewTextbox3.Texts = "";
-            this.jNewTextbox3.UnderlinedStyle = false;
+            this.discountTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.discountTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.discountTextbox.BorderRadius = 5;
+            this.discountTextbox.BorderSize = 2;
+            this.discountTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountTextbox.Location = new System.Drawing.Point(248, 379);
+            this.discountTextbox.Multiline = false;
+            this.discountTextbox.Name = "discountTextbox";
+            this.discountTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.discountTextbox.PasswordChar = false;
+            this.discountTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.discountTextbox.PlaceholderText = "";
+            this.discountTextbox.Size = new System.Drawing.Size(89, 32);
+            this.discountTextbox.TabIndex = 15;
+            this.discountTextbox.Texts = "";
+            this.discountTextbox.UnderlinedStyle = false;
             // 
-            // jNewTextbox4
+            // surchargeTextbox
             // 
-            this.jNewTextbox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox4.BorderRadius = 5;
-            this.jNewTextbox4.BorderSize = 2;
-            this.jNewTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox4.Location = new System.Drawing.Point(190, 71);
-            this.jNewTextbox4.Multiline = false;
-            this.jNewTextbox4.Name = "jNewTextbox4";
-            this.jNewTextbox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.jNewTextbox4.PasswordChar = false;
-            this.jNewTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox4.PlaceholderText = "";
-            this.jNewTextbox4.Size = new System.Drawing.Size(181, 32);
-            this.jNewTextbox4.TabIndex = 9;
-            this.jNewTextbox4.Texts = "";
-            this.jNewTextbox4.UnderlinedStyle = false;
-            // 
-            // jButton2
-            // 
-            this.jButton2.BackColor = System.Drawing.Color.Crimson;
-            this.jButton2.BackgroundColor = System.Drawing.Color.Crimson;
-            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton2.BorderRadius = 27;
-            this.jButton2.BorderSize = 0;
-            this.jButton2.FlatAppearance.BorderSize = 0;
-            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton2.ForeColor = System.Drawing.Color.Black;
-            this.jButton2.Location = new System.Drawing.Point(50, 370);
-            this.jButton2.Name = "jButton2";
-            this.jButton2.Size = new System.Drawing.Size(133, 38);
-            this.jButton2.TabIndex = 10;
-            this.jButton2.Text = "Huỷ";
-            this.jButton2.TextColor = System.Drawing.Color.Black;
-            this.jButton2.UseVisualStyleBackColor = false;
-            // 
-            // jButton3
-            // 
-            this.jButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton3.BorderRadius = 27;
-            this.jButton3.BorderSize = 0;
-            this.jButton3.FlatAppearance.BorderSize = 0;
-            this.jButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton3.ForeColor = System.Drawing.Color.Black;
-            this.jButton3.Location = new System.Drawing.Point(238, 370);
-            this.jButton3.Name = "jButton3";
-            this.jButton3.Size = new System.Drawing.Size(133, 38);
-            this.jButton3.TabIndex = 11;
-            this.jButton3.Text = "Kiểm tra";
-            this.jButton3.TextColor = System.Drawing.Color.Black;
-            this.jButton3.UseVisualStyleBackColor = false;
+            this.surchargeTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.surchargeTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.surchargeTextbox.BorderRadius = 5;
+            this.surchargeTextbox.BorderSize = 2;
+            this.surchargeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surchargeTextbox.Location = new System.Drawing.Point(82, 379);
+            this.surchargeTextbox.Multiline = false;
+            this.surchargeTextbox.Name = "surchargeTextbox";
+            this.surchargeTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.surchargeTextbox.PasswordChar = false;
+            this.surchargeTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.surchargeTextbox.PlaceholderText = "";
+            this.surchargeTextbox.Size = new System.Drawing.Size(89, 32);
+            this.surchargeTextbox.TabIndex = 14;
+            this.surchargeTextbox.Texts = "";
+            this.surchargeTextbox.UnderlinedStyle = false;
             // 
             // jNewTextbox5
             // 
@@ -239,23 +179,149 @@
             this.jNewTextbox5.Texts = "";
             this.jNewTextbox5.UnderlinedStyle = false;
             // 
-            // label2
+            // jButton3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(132, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 47);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Thanh toán";
+            this.jButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton3.BorderRadius = 27;
+            this.jButton3.BorderSize = 0;
+            this.jButton3.FlatAppearance.BorderSize = 0;
+            this.jButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton3.ForeColor = System.Drawing.Color.Black;
+            this.jButton3.Location = new System.Drawing.Point(248, 438);
+            this.jButton3.Name = "jButton3";
+            this.jButton3.Size = new System.Drawing.Size(133, 38);
+            this.jButton3.TabIndex = 11;
+            this.jButton3.Text = "Xác nhận";
+            this.jButton3.TextColor = System.Drawing.Color.Black;
+            this.jButton3.UseVisualStyleBackColor = false;
+            // 
+            // jButton2
+            // 
+            this.jButton2.BackColor = System.Drawing.Color.Crimson;
+            this.jButton2.BackgroundColor = System.Drawing.Color.Crimson;
+            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton2.BorderRadius = 27;
+            this.jButton2.BorderSize = 0;
+            this.jButton2.FlatAppearance.BorderSize = 0;
+            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton2.ForeColor = System.Drawing.Color.Black;
+            this.jButton2.Location = new System.Drawing.Point(40, 438);
+            this.jButton2.Name = "jButton2";
+            this.jButton2.Size = new System.Drawing.Size(133, 38);
+            this.jButton2.TabIndex = 10;
+            this.jButton2.Text = "Huỷ";
+            this.jButton2.TextColor = System.Drawing.Color.Black;
+            this.jButton2.UseVisualStyleBackColor = false;
+            // 
+            // jNewTextbox4
+            // 
+            this.jNewTextbox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.jNewTextbox4.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.jNewTextbox4.BorderRadius = 5;
+            this.jNewTextbox4.BorderSize = 2;
+            this.jNewTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jNewTextbox4.Location = new System.Drawing.Point(190, 71);
+            this.jNewTextbox4.Multiline = false;
+            this.jNewTextbox4.Name = "jNewTextbox4";
+            this.jNewTextbox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.jNewTextbox4.PasswordChar = false;
+            this.jNewTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.jNewTextbox4.PlaceholderText = "";
+            this.jNewTextbox4.Size = new System.Drawing.Size(181, 32);
+            this.jNewTextbox4.TabIndex = 9;
+            this.jNewTextbox4.Texts = "";
+            this.jNewTextbox4.UnderlinedStyle = false;
+            // 
+            // jNewTextbox3
+            // 
+            this.jNewTextbox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.jNewTextbox3.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.jNewTextbox3.BorderRadius = 5;
+            this.jNewTextbox3.BorderSize = 2;
+            this.jNewTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jNewTextbox3.Location = new System.Drawing.Point(190, 126);
+            this.jNewTextbox3.Multiline = false;
+            this.jNewTextbox3.Name = "jNewTextbox3";
+            this.jNewTextbox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.jNewTextbox3.PasswordChar = false;
+            this.jNewTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.jNewTextbox3.PlaceholderText = "";
+            this.jNewTextbox3.Size = new System.Drawing.Size(181, 32);
+            this.jNewTextbox3.TabIndex = 8;
+            this.jNewTextbox3.Texts = "";
+            this.jNewTextbox3.UnderlinedStyle = false;
+            // 
+            // jNewTextbox2
+            // 
+            this.jNewTextbox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.jNewTextbox2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.jNewTextbox2.BorderRadius = 5;
+            this.jNewTextbox2.BorderSize = 2;
+            this.jNewTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jNewTextbox2.Location = new System.Drawing.Point(190, 185);
+            this.jNewTextbox2.Multiline = false;
+            this.jNewTextbox2.Name = "jNewTextbox2";
+            this.jNewTextbox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.jNewTextbox2.PasswordChar = false;
+            this.jNewTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.jNewTextbox2.PlaceholderText = "";
+            this.jNewTextbox2.Size = new System.Drawing.Size(181, 32);
+            this.jNewTextbox2.TabIndex = 7;
+            this.jNewTextbox2.Texts = "";
+            this.jNewTextbox2.UnderlinedStyle = false;
+            // 
+            // jNewTextbox1
+            // 
+            this.jNewTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.jNewTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.jNewTextbox1.BorderRadius = 5;
+            this.jNewTextbox1.BorderSize = 2;
+            this.jNewTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jNewTextbox1.Location = new System.Drawing.Point(190, 241);
+            this.jNewTextbox1.Multiline = false;
+            this.jNewTextbox1.Name = "jNewTextbox1";
+            this.jNewTextbox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.jNewTextbox1.PasswordChar = false;
+            this.jNewTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.jNewTextbox1.PlaceholderText = "";
+            this.jNewTextbox1.Size = new System.Drawing.Size(181, 32);
+            this.jNewTextbox1.TabIndex = 6;
+            this.jNewTextbox1.Texts = "";
+            this.jNewTextbox1.UnderlinedStyle = false;
+            // 
+            // jButton1
+            // 
+            this.jButton1.BackColor = System.Drawing.Color.LightGreen;
+            this.jButton1.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.jButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton1.BorderRadius = 27;
+            this.jButton1.BorderSize = 0;
+            this.jButton1.FlatAppearance.BorderSize = 0;
+            this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton1.ForeColor = System.Drawing.Color.Black;
+            this.jButton1.Location = new System.Drawing.Point(40, 296);
+            this.jButton1.Name = "jButton1";
+            this.jButton1.Size = new System.Drawing.Size(108, 38);
+            this.jButton1.TabIndex = 5;
+            this.jButton1.Text = "Kiểm tra";
+            this.jButton1.TextColor = System.Drawing.Color.Black;
+            this.jButton1.UseVisualStyleBackColor = false;
             // 
             // BillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 450);
+            this.ClientSize = new System.Drawing.Size(448, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.discountLabel);
+            this.Controls.Add(this.surchargeLabel);
+            this.Controls.Add(this.discountTextbox);
+            this.Controls.Add(this.surchargeTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.jNewTextbox5);
             this.Controls.Add(this.jButton3);
@@ -291,5 +357,9 @@
         private CustomControl.JButton jButton3;
         private CustomControl.JNewTextbox jNewTextbox5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label discountLabel;
+        private System.Windows.Forms.Label surchargeLabel;
+        private CustomControl.JNewTextbox discountTextbox;
+        private CustomControl.JNewTextbox surchargeTextbox;
     }
 }
