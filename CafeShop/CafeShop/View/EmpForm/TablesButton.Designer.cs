@@ -1,4 +1,4 @@
-﻿namespace CafeShop.EmpForm
+﻿namespace CafeShop.View.EmpForm
 {
     partial class TablesButton
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TableButton = new CafeShop.CustomControl.JButton();
+            this.TableButton = new CafeShop.View.CustomControl.JButton();
             this.SuspendLayout();
             // 
             // TableButton

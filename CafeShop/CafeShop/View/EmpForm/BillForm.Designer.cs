@@ -1,4 +1,4 @@
-﻿namespace CafeShop.EmpForm
+﻿namespace CafeShop.View.EmpForm
 {
     partial class BillForm
     {
@@ -37,16 +37,16 @@
             this.surchargeLabel = new System.Windows.Forms.Label();
             this.surchargePercent = new System.Windows.Forms.CheckBox();
             this.discountPercent = new System.Windows.Forms.CheckBox();
-            this.discountTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.surchargeTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox5 = new CafeShop.CustomControl.JNewTextbox();
-            this.jButton3 = new CafeShop.CustomControl.JButton();
-            this.jButton2 = new CafeShop.CustomControl.JButton();
-            this.jNewTextbox4 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox3 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox2 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox1 = new CafeShop.CustomControl.JNewTextbox();
-            this.jButton1 = new CafeShop.CustomControl.JButton();
+            this.discountTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.surchargeTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jNewTextbox5 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jButton3 = new CafeShop.View.CustomControl.JButton();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.jNewTextbox4 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jNewTextbox3 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jNewTextbox2 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jNewTextbox1 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jButton1 = new CafeShop.View.CustomControl.JButton();
             this.SuspendLayout();
             // 
             // label1

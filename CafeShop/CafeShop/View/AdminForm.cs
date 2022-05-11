@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace CafeShop
+namespace CafeShop.View
 {
     public partial class AdminForm : Form
     {

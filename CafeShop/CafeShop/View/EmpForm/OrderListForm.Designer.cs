@@ -1,4 +1,4 @@
-﻿namespace CafeShop.EmpForm
+﻿namespace CafeShop.View.EmpForm
 {
     partial class OrderListForm
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CafeShop
+namespace CafeShop.View
 {
     public partial class EmployeeForm : Form
     {

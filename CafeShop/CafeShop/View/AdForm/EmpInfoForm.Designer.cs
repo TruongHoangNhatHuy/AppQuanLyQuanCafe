@@ -1,4 +1,4 @@
-﻿namespace CafeShop.AdForm
+﻿namespace CafeShop.View.AdForm
 {
     partial class EmpInfoForm
     {
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.searchButton = new CafeShop.CustomControl.JButton();
-            this.searchTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.addButton = new CafeShop.CustomControl.JButton();
-            this.updateButton = new CafeShop.CustomControl.JButton();
-            this.deleteButton = new CafeShop.CustomControl.JButton();
+            this.searchButton = new CafeShop.View.CustomControl.JButton();
+            this.searchTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.addButton = new CafeShop.View.CustomControl.JButton();
+            this.updateButton = new CafeShop.View.CustomControl.JButton();
+            this.deleteButton = new CafeShop.View.CustomControl.JButton();
             this.sortComboBox = new System.Windows.Forms.ComboBox();
-            this.sortButton = new CafeShop.CustomControl.JButton();
-            this.exitButton = new CafeShop.CustomControl.JButton();
-            this.resetPasswordButton = new CafeShop.CustomControl.JButton();
+            this.sortButton = new CafeShop.View.CustomControl.JButton();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.resetPasswordButton = new CafeShop.View.CustomControl.JButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 

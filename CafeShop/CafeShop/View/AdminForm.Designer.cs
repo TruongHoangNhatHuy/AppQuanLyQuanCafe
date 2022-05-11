@@ -1,4 +1,4 @@
-﻿namespace CafeShop
+﻿namespace CafeShop.View
 {
     partial class AdminForm
     {
@@ -36,8 +36,8 @@
             this.titleBarPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.childFormPanel = new System.Windows.Forms.Panel();
-            this.zoomButton = new CafeShop.CustomControl.JButton();
-            this.minimizeButton = new CafeShop.CustomControl.JButton();
+            this.zoomButton = new CafeShop.View.CustomControl.JButton();
+            this.minimizeButton = new CafeShop.View.CustomControl.JButton();
             this.logoutButton = new System.Windows.Forms.Button();
             this.changeButton = new System.Windows.Forms.Button();
             this.revenueButton = new System.Windows.Forms.Button();

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CafeShop.CustomControl
+namespace CafeShop.View.CustomControl
 {
     public partial class JNewTextbox : UserControl
     {

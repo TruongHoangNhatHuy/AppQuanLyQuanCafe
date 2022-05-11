@@ -1,4 +1,4 @@
-﻿namespace CafeShop.AdForm
+﻿namespace CafeShop.View.AdForm
 {
     partial class TableForm
     {
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.exitButton = new CafeShop.CustomControl.JButton();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.dataPanel = new System.Windows.Forms.Panel();
             this.detailPanel = new System.Windows.Forms.Panel();
             this.controlPanel = new System.Windows.Forms.Panel();
             this.areaLabel = new System.Windows.Forms.Label();
             this.areaCombobox = new System.Windows.Forms.ComboBox();
-            this.searchTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.searchButton = new CafeShop.CustomControl.JButton();
+            this.searchTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.searchButton = new CafeShop.View.CustomControl.JButton();
             this.borderPanel = new System.Windows.Forms.Panel();
             this.buttonPagePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,16 +46,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.infoLabel = new System.Windows.Forms.Label();
             this.detailGroupbox = new System.Windows.Forms.GroupBox();
-            this.areaNameTextbox = new CafeShop.CustomControl.JNewTextbox();
+            this.areaNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.tableIDLabel = new System.Windows.Forms.Label();
             this.areaIDLabel = new System.Windows.Forms.Label();
             this.areaNameLabel = new System.Windows.Forms.Label();
-            this.tableIDTextbox = new CafeShop.CustomControl.JNewTextbox();
+            this.tableIDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.areaIDCombobox = new System.Windows.Forms.ComboBox();
-            this.jButton1 = new CafeShop.CustomControl.JButton();
-            this.jButton2 = new CafeShop.CustomControl.JButton();
-            this.jButton3 = new CafeShop.CustomControl.JButton();
-            this.jButton4 = new CafeShop.CustomControl.JButton();
+            this.jButton1 = new CafeShop.View.CustomControl.JButton();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.jButton3 = new CafeShop.View.CustomControl.JButton();
+            this.jButton4 = new CafeShop.View.CustomControl.JButton();
             this.TopPanel.SuspendLayout();
             this.dataPanel.SuspendLayout();
             this.detailPanel.SuspendLayout();

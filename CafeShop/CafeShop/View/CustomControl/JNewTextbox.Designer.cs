@@ -1,4 +1,4 @@
-﻿namespace CafeShop.CustomControl
+﻿namespace CafeShop.View.CustomControl
 {
     partial class JNewTextbox
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace CafeShop
+namespace CafeShop.View
 {
     partial class LoginForm
     {
@@ -31,13 +31,13 @@ namespace CafeShop
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.warningLabel = new System.Windows.Forms.Label();
-            this.minimizeButton = new CafeShop.CustomControl.JButton();
-            this.closeButton = new CafeShop.CustomControl.JButton();
-            this.loginButton = new CafeShop.CustomControl.JButton();
-            this.passwordButton = new CafeShop.CustomControl.JButton();
-            this.passwordTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.userButton = new CafeShop.CustomControl.JButton();
-            this.userTextbox = new CafeShop.CustomControl.JNewTextbox();
+            this.minimizeButton = new CafeShop.View.CustomControl.JButton();
+            this.closeButton = new CafeShop.View.CustomControl.JButton();
+            this.loginButton = new CafeShop.View.CustomControl.JButton();
+            this.passwordButton = new CafeShop.View.CustomControl.JButton();
+            this.passwordTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.userButton = new CafeShop.View.CustomControl.JButton();
+            this.userTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 

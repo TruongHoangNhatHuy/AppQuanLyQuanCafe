@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CafeShop.AdForm
+namespace CafeShop.View.AdForm
 {
     public partial class MenuForm : Form
     {

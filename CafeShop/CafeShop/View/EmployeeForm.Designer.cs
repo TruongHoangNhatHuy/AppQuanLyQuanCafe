@@ -1,4 +1,4 @@
-﻿namespace CafeShop
+﻿namespace CafeShop.View
 {
     partial class EmployeeForm
     {
@@ -37,8 +37,8 @@
             this.logoutButton = new System.Windows.Forms.Button();
             this.orderListButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
-            this.minimizeButton = new CafeShop.CustomControl.JButton();
-            this.zoomButton = new CafeShop.CustomControl.JButton();
+            this.minimizeButton = new CafeShop.View.CustomControl.JButton();
+            this.zoomButton = new CafeShop.View.CustomControl.JButton();
             this.sideMenuPanel.SuspendLayout();
             this.titleBarPanel.SuspendLayout();
             this.SuspendLayout();

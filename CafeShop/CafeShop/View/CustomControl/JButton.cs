@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
-namespace CafeShop.CustomControl
+namespace CafeShop.View.CustomControl
 {
     public class JButton : Button
     {

@@ -1,4 +1,4 @@
-﻿namespace CafeShop.AdForm
+﻿namespace CafeShop.View.AdForm
 {
     partial class InvoiceForm
     {
@@ -47,11 +47,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.exitButton = new CafeShop.CustomControl.JButton();
-            this.jNewTextbox1 = new CafeShop.CustomControl.JNewTextbox();
-            this.jDatetimepicker2 = new CafeShop.CustomControl.JDatetimepicker();
-            this.jDatetimepicker1 = new CafeShop.CustomControl.JDatetimepicker();
-            this.jButton2 = new CafeShop.CustomControl.JButton();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.jNewTextbox1 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jDatetimepicker2 = new CafeShop.View.CustomControl.JDatetimepicker();
+            this.jDatetimepicker1 = new CafeShop.View.CustomControl.JDatetimepicker();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();

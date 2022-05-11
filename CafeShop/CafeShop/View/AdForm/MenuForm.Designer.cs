@@ -1,4 +1,4 @@
-﻿namespace CafeShop.AdForm
+﻿namespace CafeShop.View.AdForm
 {
     partial class MenuForm
     {
@@ -42,15 +42,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.exitButton = new CafeShop.CustomControl.JButton();
-            this.jButton7 = new CafeShop.CustomControl.JButton();
-            this.jNewTextbox1 = new CafeShop.CustomControl.JNewTextbox();
-            this.jButton4 = new CafeShop.CustomControl.JButton();
-            this.jButton5 = new CafeShop.CustomControl.JButton();
-            this.jButton6 = new CafeShop.CustomControl.JButton();
-            this.jButton3 = new CafeShop.CustomControl.JButton();
-            this.jButton2 = new CafeShop.CustomControl.JButton();
-            this.jButton1 = new CafeShop.CustomControl.JButton();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.jButton7 = new CafeShop.View.CustomControl.JButton();
+            this.jNewTextbox1 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jButton4 = new CafeShop.View.CustomControl.JButton();
+            this.jButton5 = new CafeShop.View.CustomControl.JButton();
+            this.jButton6 = new CafeShop.View.CustomControl.JButton();
+            this.jButton3 = new CafeShop.View.CustomControl.JButton();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.jButton1 = new CafeShop.View.CustomControl.JButton();
             this.SuspendLayout();
             // 
             // label1

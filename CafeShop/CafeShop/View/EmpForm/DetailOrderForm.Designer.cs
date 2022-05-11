@@ -1,4 +1,4 @@
-﻿namespace CafeShop.EmpForm
+﻿namespace CafeShop.View.EmpForm
 {
     partial class DetailOrderForm
     {
@@ -30,11 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.quantityLabel = new System.Windows.Forms.Label();
-            this.quantityTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.descriptionTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.totalTextbox = new CafeShop.CustomControl.JNewTextbox();
-            this.cancelButton = new CafeShop.CustomControl.JButton();
-            this.acceptButton = new CafeShop.CustomControl.JButton();
+            this.quantityTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.descriptionTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.totalTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.cancelButton = new CafeShop.View.CustomControl.JButton();
+            this.acceptButton = new CafeShop.View.CustomControl.JButton();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();

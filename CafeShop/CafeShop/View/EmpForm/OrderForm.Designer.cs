@@ -1,4 +1,4 @@
-﻿namespace CafeShop.EmpForm
+﻿namespace CafeShop.View.EmpForm
 {
     partial class OrderForm
     {
@@ -35,13 +35,13 @@
             this.areaLabel = new System.Windows.Forms.Label();
             this.detailPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.jButton4 = new CafeShop.CustomControl.JButton();
-            this.jButton3 = new CafeShop.CustomControl.JButton();
-            this.jButton2 = new CafeShop.CustomControl.JButton();
-            this.jButton1 = new CafeShop.CustomControl.JButton();
+            this.jButton4 = new CafeShop.View.CustomControl.JButton();
+            this.jButton3 = new CafeShop.View.CustomControl.JButton();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.jButton1 = new CafeShop.View.CustomControl.JButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.openButton = new CafeShop.CustomControl.JButton();
-            this.orderButton = new CafeShop.CustomControl.JButton();
+            this.openButton = new CafeShop.View.CustomControl.JButton();
+            this.orderButton = new CafeShop.View.CustomControl.JButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();

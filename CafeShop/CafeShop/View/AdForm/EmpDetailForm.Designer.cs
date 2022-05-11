@@ -1,4 +1,4 @@
-﻿namespace CafeShop.AdForm
+﻿namespace CafeShop.View.AdForm
 {
     partial class EmpDetailForm
     {
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.jNewTextbox4 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox3 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox2 = new CafeShop.CustomControl.JNewTextbox();
-            this.jNewTextbox1 = new CafeShop.CustomControl.JNewTextbox();
+            this.jNewTextbox4 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jNewTextbox3 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jNewTextbox2 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.jNewTextbox1 = new CafeShop.View.CustomControl.JNewTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.jNewTextbox5 = new CafeShop.CustomControl.JNewTextbox();
-            this.cancelButton = new CafeShop.CustomControl.JButton();
-            this.jButton2 = new CafeShop.CustomControl.JButton();
+            this.jNewTextbox5 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.cancelButton = new CafeShop.View.CustomControl.JButton();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
             this.SuspendLayout();
             // 
             // jNewTextbox4
