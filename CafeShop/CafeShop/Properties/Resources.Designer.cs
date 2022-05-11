@@ -65,7 +65,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap big_round_table {
             get {
-                object obj = ResourceManager.GetObject("big-round-table", resourceCulture);
+                object obj = ResourceManager.GetObject("big_round_table", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap book_multiple {
             get {
-                object obj = ResourceManager.GetObject("book-multiple", resourceCulture);
+                object obj = ResourceManager.GetObject("book_multiple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap calendar_blank_multiple {
             get {
-                object obj = ResourceManager.GetObject("calendar-blank-multiple", resourceCulture);
+                object obj = ResourceManager.GetObject("calendar_blank_multiple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -125,7 +125,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap card_account_details_outline {
             get {
-                object obj = ResourceManager.GetObject("card-account-details-outline", resourceCulture);
+                object obj = ResourceManager.GetObject("card_account_details_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -135,7 +135,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap cash_multiple {
             get {
-                object obj = ResourceManager.GetObject("cash-multiple", resourceCulture);
+                object obj = ResourceManager.GetObject("cash_multiple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -175,7 +175,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap coffee_cup {
             get {
-                object obj = ResourceManager.GetObject("coffee-cup", resourceCulture);
+                object obj = ResourceManager.GetObject("coffee_cup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -225,7 +225,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap food_outline {
             get {
-                object obj = ResourceManager.GetObject("food-outline", resourceCulture);
+                object obj = ResourceManager.GetObject("food_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -235,7 +235,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap full_screen {
             get {
-                object obj = ResourceManager.GetObject("full-screen", resourceCulture);
+                object obj = ResourceManager.GetObject("full_screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -245,7 +245,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap hammer_sickle {
             get {
-                object obj = ResourceManager.GetObject("hammer-sickle", resourceCulture);
+                object obj = ResourceManager.GetObject("hammer_sickle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -255,7 +255,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap hammer_wrench {
             get {
-                object obj = ResourceManager.GetObject("hammer-wrench", resourceCulture);
+                object obj = ResourceManager.GetObject("hammer_wrench", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -275,7 +275,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap home_outline {
             get {
-                object obj = ResourceManager.GetObject("home-outline", resourceCulture);
+                object obj = ResourceManager.GetObject("home_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -285,7 +285,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap log_out {
             get {
-                object obj = ResourceManager.GetObject("log-out", resourceCulture);
+                object obj = ResourceManager.GetObject("log_out", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -305,7 +305,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap magnifying_glass {
             get {
-                object obj = ResourceManager.GetObject("magnifying-glass", resourceCulture);
+                object obj = ResourceManager.GetObject("magnifying_glass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -335,7 +335,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap minimize_sign {
             get {
-                object obj = ResourceManager.GetObject("minimize-sign", resourceCulture);
+                object obj = ResourceManager.GetObject("minimize_sign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -385,7 +385,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap receipt_outline {
             get {
-                object obj = ResourceManager.GetObject("receipt-outline", resourceCulture);
+                object obj = ResourceManager.GetObject("receipt_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -395,7 +395,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap round_table {
             get {
-                object obj = ResourceManager.GetObject("round-table", resourceCulture);
+                object obj = ResourceManager.GetObject("round_table", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -415,7 +415,7 @@ namespace CafeShop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap table_chair {
             get {
-                object obj = ResourceManager.GetObject("table-chair", resourceCulture);
+                object obj = ResourceManager.GetObject("table_chair", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

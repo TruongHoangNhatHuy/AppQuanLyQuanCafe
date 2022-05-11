@@ -150,7 +150,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(231, 28);
             this.label7.TabIndex = 2;
-            this.label7.Text = "69";
+            this.label7.Text = "20";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox3
@@ -194,7 +194,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(231, 28);
             this.label5.TabIndex = 2;
-            this.label5.Text = "69";
+            this.label5.Text = "50";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox2
@@ -238,7 +238,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(231, 28);
             this.label4.TabIndex = 2;
-            this.label4.Text = "69";
+            this.label4.Text = "100";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1

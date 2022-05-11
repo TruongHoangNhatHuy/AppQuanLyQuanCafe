@@ -33,12 +33,12 @@
             this.titleBarPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.childFormPanel = new System.Windows.Forms.Panel();
+            this.sheduleButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
-            this.scheduleButton = new System.Windows.Forms.Button();
+            this.orderListButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
-            this.homeButton = new System.Windows.Forms.Button();
-            this.zoomButton = new CafeShop.CustomControl.JButton();
             this.minimizeButton = new CafeShop.CustomControl.JButton();
+            this.zoomButton = new CafeShop.CustomControl.JButton();
             this.sideMenuPanel.SuspendLayout();
             this.titleBarPanel.SuspendLayout();
             this.SuspendLayout();
@@ -46,10 +46,10 @@
             // sideMenuPanel
             // 
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
+            this.sideMenuPanel.Controls.Add(this.sheduleButton);
             this.sideMenuPanel.Controls.Add(this.logoutButton);
-            this.sideMenuPanel.Controls.Add(this.scheduleButton);
+            this.sideMenuPanel.Controls.Add(this.orderListButton);
             this.sideMenuPanel.Controls.Add(this.orderButton);
-            this.sideMenuPanel.Controls.Add(this.homeButton);
             this.sideMenuPanel.Controls.Add(this.mainPanel);
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 0);
@@ -99,6 +99,21 @@
             this.childFormPanel.Size = new System.Drawing.Size(1154, 611);
             this.childFormPanel.TabIndex = 3;
             // 
+            // sheduleButton
+            // 
+            this.sheduleButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sheduleButton.FlatAppearance.BorderSize = 0;
+            this.sheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sheduleButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
+            this.sheduleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sheduleButton.Location = new System.Drawing.Point(0, 180);
+            this.sheduleButton.Name = "sheduleButton";
+            this.sheduleButton.Size = new System.Drawing.Size(190, 50);
+            this.sheduleButton.TabIndex = 11;
+            this.sheduleButton.Text = "Lịch làm việc";
+            this.sheduleButton.UseVisualStyleBackColor = true;
+            // 
             // logoutButton
             // 
             this.logoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -114,20 +129,21 @@
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // scheduleButton
+            // orderListButton
             // 
-            this.scheduleButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scheduleButton.FlatAppearance.BorderSize = 0;
-            this.scheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scheduleButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
-            this.scheduleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scheduleButton.Location = new System.Drawing.Point(0, 180);
-            this.scheduleButton.Name = "scheduleButton";
-            this.scheduleButton.Size = new System.Drawing.Size(190, 50);
-            this.scheduleButton.TabIndex = 7;
-            this.scheduleButton.Text = "Lịch làm việc";
-            this.scheduleButton.UseVisualStyleBackColor = true;
+            this.orderListButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.orderListButton.FlatAppearance.BorderSize = 0;
+            this.orderListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderListButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
+            this.orderListButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderListButton.Location = new System.Drawing.Point(0, 130);
+            this.orderListButton.Name = "orderListButton";
+            this.orderListButton.Size = new System.Drawing.Size(190, 50);
+            this.orderListButton.TabIndex = 7;
+            this.orderListButton.Text = "Đơn gọi món";
+            this.orderListButton.UseVisualStyleBackColor = true;
+            this.orderListButton.Click += new System.EventHandler(this.orderListButton_Click);
             // 
             // orderButton
             // 
@@ -137,52 +153,13 @@
             this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderButton.Image = global::CafeShop.Properties.Resources.order;
             this.orderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderButton.Location = new System.Drawing.Point(0, 130);
+            this.orderButton.Location = new System.Drawing.Point(0, 80);
             this.orderButton.Name = "orderButton";
             this.orderButton.Size = new System.Drawing.Size(190, 50);
             this.orderButton.TabIndex = 3;
             this.orderButton.Text = "Đặt món";
             this.orderButton.UseVisualStyleBackColor = true;
             this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
-            // 
-            // homeButton
-            // 
-            this.homeButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homeButton.FlatAppearance.BorderSize = 0;
-            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeButton.Image = global::CafeShop.Properties.Resources.home;
-            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeButton.Location = new System.Drawing.Point(0, 80);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(190, 50);
-            this.homeButton.TabIndex = 2;
-            this.homeButton.Text = "Trang chủ";
-            this.homeButton.UseVisualStyleBackColor = true;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
-            // 
-            // zoomButton
-            // 
-            this.zoomButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.zoomButton.BackColor = System.Drawing.Color.Transparent;
-            this.zoomButton.BackgroundColor = System.Drawing.Color.Transparent;
-            this.zoomButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.zoomButton.BorderRadius = 0;
-            this.zoomButton.BorderSize = 0;
-            this.zoomButton.FlatAppearance.BorderSize = 0;
-            this.zoomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.zoomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zoomButton.ForeColor = System.Drawing.Color.Black;
-            this.zoomButton.Image = global::CafeShop.Properties.Resources.full_screen;
-            this.zoomButton.Location = new System.Drawing.Point(1098, 3);
-            this.zoomButton.Name = "zoomButton";
-            this.zoomButton.Size = new System.Drawing.Size(44, 29);
-            this.zoomButton.TabIndex = 3;
-            this.zoomButton.TextColor = System.Drawing.Color.Black;
-            this.zoomButton.UseVisualStyleBackColor = false;
-            this.zoomButton.Click += new System.EventHandler(this.zoomButton_Click);
-            this.zoomButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-            this.zoomButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
             // minimizeButton
             // 
@@ -207,6 +184,29 @@
             this.minimizeButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
             this.minimizeButton.MouseLeave += new System.EventHandler(this.button_MouseEnter);
             // 
+            // zoomButton
+            // 
+            this.zoomButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.zoomButton.BackColor = System.Drawing.Color.Transparent;
+            this.zoomButton.BackgroundColor = System.Drawing.Color.Transparent;
+            this.zoomButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.zoomButton.BorderRadius = 0;
+            this.zoomButton.BorderSize = 0;
+            this.zoomButton.FlatAppearance.BorderSize = 0;
+            this.zoomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.zoomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoomButton.ForeColor = System.Drawing.Color.Black;
+            this.zoomButton.Image = global::CafeShop.Properties.Resources.full_screen;
+            this.zoomButton.Location = new System.Drawing.Point(1098, 3);
+            this.zoomButton.Name = "zoomButton";
+            this.zoomButton.Size = new System.Drawing.Size(44, 29);
+            this.zoomButton.TabIndex = 3;
+            this.zoomButton.TextColor = System.Drawing.Color.Black;
+            this.zoomButton.UseVisualStyleBackColor = false;
+            this.zoomButton.Click += new System.EventHandler(this.zoomButton_Click);
+            this.zoomButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
+            this.zoomButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,14 +229,14 @@
 
         private System.Windows.Forms.Panel sideMenuPanel;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button orderButton;
         private System.Windows.Forms.Panel titleBarPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel childFormPanel;
-        private System.Windows.Forms.Button scheduleButton;
+        private System.Windows.Forms.Button orderListButton;
         private System.Windows.Forms.Button logoutButton;
         private CustomControl.JButton zoomButton;
         private CustomControl.JButton minimizeButton;
+        private System.Windows.Forms.Button sheduleButton;
     }
 }

@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,132 +61,159 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdForm\EmpDetailForm.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdForm\EmpDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdForm\EmpDetailForm.Designer.cs">
+    <Compile Include="View\AdForm\EmpDetailForm.Designer.cs">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdForm\EmpInfoForm.cs">
+    <Compile Include="View\AdForm\EmpInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdForm\EmpInfoForm.Designer.cs">
+    <Compile Include="View\AdForm\EmpInfoForm.Designer.cs">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdForm\InvoiceForm.cs">
+    <Compile Include="View\AdForm\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdForm\InvoiceForm.Designer.cs">
+    <Compile Include="View\AdForm\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdForm\MenuForm.cs">
+    <Compile Include="View\AdForm\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdForm\MenuForm.Designer.cs">
+    <Compile Include="View\AdForm\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdForm\TableForm.cs">
+    <Compile Include="View\AdForm\TableForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdForm\TableForm.Designer.cs">
+    <Compile Include="View\AdForm\TableForm.Designer.cs">
       <DependentUpon>TableForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
+    <Compile Include="View\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\JButton.cs">
+    <Compile Include="View\CustomControl\JButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomControl\JDatetimepicker.cs">
+    <Compile Include="View\CustomControl\JDatetimepicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomControl\JNewTextbox.cs">
+    <Compile Include="View\CustomControl\JNewTextbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl\JNewTextbox.Designer.cs">
+    <Compile Include="View\CustomControl\JNewTextbox.Designer.cs">
       <DependentUpon>JNewTextbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\JTextbox.cs">
+    <Compile Include="View\CustomControl\JTextbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl\JTextbox.Designer.cs">
+    <Compile Include="View\CustomControl\JTextbox.Designer.cs">
       <DependentUpon>JTextbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeForm.cs">
+    <Compile Include="View\EmpForm\BillForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeForm.Designer.cs">
+    <Compile Include="View\EmpForm\BillForm.Designer.cs">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmpForm\DetailOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmpForm\DetailOrderForm.Designer.cs">
+      <DependentUpon>DetailOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmpForm\OrderListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmpForm\OrderListForm.Designer.cs">
+      <DependentUpon>OrderListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpForm\OrderForm.cs">
+    <Compile Include="View\EmpForm\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpForm\OrderForm.Designer.cs">
+    <Compile Include="View\EmpForm\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpForm\TablesButton.cs">
+    <Compile Include="View\EmpForm\TablesButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmpForm\TablesButton.Designer.cs">
+    <Compile Include="View\EmpForm\TablesButton.Designer.cs">
       <DependentUpon>TablesButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="View\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdForm\EmpDetailForm.resx">
+    <EmbeddedResource Include="View\AdForm\EmpDetailForm.resx">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdForm\EmpInfoForm.resx">
+    <EmbeddedResource Include="View\AdForm\EmpInfoForm.resx">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdForm\InvoiceForm.resx">
+    <EmbeddedResource Include="View\AdForm\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdForm\MenuForm.resx">
+    <EmbeddedResource Include="View\AdForm\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdForm\TableForm.resx">
+    <EmbeddedResource Include="View\AdForm\TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm.resx">
+    <EmbeddedResource Include="View\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControl\JNewTextbox.resx">
+    <EmbeddedResource Include="View\CustomControl\JNewTextbox.resx">
       <DependentUpon>JNewTextbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControl\JTextbox.resx">
+    <EmbeddedResource Include="View\CustomControl\JTextbox.resx">
       <DependentUpon>JTextbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeForm.resx">
+    <EmbeddedResource Include="View\EmpForm\BillForm.resx">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmpForm\DetailOrderForm.resx">
+      <DependentUpon>DetailOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmpForm\OrderListForm.resx">
+      <DependentUpon>OrderListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpForm\OrderForm.resx">
+    <EmbeddedResource Include="View\EmpForm\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpForm\TablesButton.resx">
+    <EmbeddedResource Include="View\EmpForm\TablesButton.resx">
       <DependentUpon>TablesButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,115 +228,127 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\big-round-table.png" />
+    <None Include="View\Images\big-round-table.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\close.png" />
+    <None Include="View\Images\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\customer.png" />
+    <None Include="View\Images\customer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\edit.png" />
+    <None Include="View\Images\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\EmployeeIcon.png" />
+    <None Include="View\Images\EmployeeIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\food-outline.png" />
+    <None Include="View\Images\food-outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\home-outline.png" />
+    <None Include="View\Images\home-outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\log-out.png" />
+    <None Include="View\Images\log-out.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\magnifying-glass.png" />
+    <None Include="View\Images\magnifying-glass.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\menu.png" />
+    <None Include="View\Images\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\more.png" />
+    <None Include="View\Images\more.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\round-table.png" />
+    <None Include="View\Images\round-table.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\statistics.png" />
+    <None Include="View\Images\statistics.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\table-chair.png" />
+    <None Include="View\Images\table-chair.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\warehouse.png" />
+    <None Include="View\Images\warehouse.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\home.png" />
+    <None Include="View\Images\home.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\book-multiple.png" />
+    <None Include="View\Images\book-multiple.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\calendar-blank-multiple.png" />
+    <None Include="View\Images\calendar-blank-multiple.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\receipt-outline.png" />
+    <None Include="View\Images\receipt-outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\card-account-details-outline.png" />
+    <None Include="View\Images\card-account-details-outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\hammer-sickle.png" />
+    <None Include="View\Images\hammer-sickle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\hammer-wrench.png" />
+    <None Include="View\Images\hammer-wrench.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\cash-multiple.png" />
+    <None Include="View\Images\cash-multiple.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\exit.png" />
+    <None Include="View\Images\exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\calendarDark.png" />
+    <None Include="View\Images\calendarDark.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\calendarWhite.png" />
+    <None Include="View\Images\calendarWhite.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\coffee-cup.png" />
+    <None Include="View\Images\coffee-cup.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\mediumTable.png" />
+    <None Include="View\Images\mediumTable.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\checkout.png" />
+    <None Include="View\Images\checkout.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\order.png" />
+    <None Include="View\Images\order.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\logoshop.png" />
+    <None Include="View\Images\logoshop.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\newlogo.png" />
+    <None Include="View\Images\newlogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\cafe.png" />
+    <None Include="View\Images\cafe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\padlock.png" />
+    <None Include="View\Images\padlock.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\minimize-sign.png" />
+    <None Include="View\Images\minimize-sign.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\closelogin.png" />
+    <None Include="View\Images\closelogin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\full-screen.png" />
+    <None Include="View\Images\full-screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

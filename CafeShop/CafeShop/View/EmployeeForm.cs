@@ -98,5 +98,12 @@ namespace CafeShop
             button.BorderSize = 0;
         }
         #endregion
+
+        private void orderListButton_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            this.label1.Text = "Đơn gọi món";
+            openChildForm(new EmpForm.OrderListForm());
+        }
     }
 }

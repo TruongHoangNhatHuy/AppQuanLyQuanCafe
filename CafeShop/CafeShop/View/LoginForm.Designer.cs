@@ -1,4 +1,5 @@
-﻿namespace CafeShop
+﻿
+namespace CafeShop
 {
     partial class LoginForm
     {

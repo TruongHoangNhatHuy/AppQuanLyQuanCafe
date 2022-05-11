@@ -40,3 +40,6 @@ C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.pd
 C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.LoginForm.resources
 C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.AssemblyReference.cache
 C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.AdForm.TableForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.EmpForm.BillForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.EmpForm.DetailOrderForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.EmpForm.OrderListForm.resources
