@@ -11,10 +11,6 @@ namespace CafeShop.DTO
     [Table("Ban")]
     public class Ban
     {
-        public Ban()
-        {
-            this.Bans = new HashSet<Ban>();
-        }
         [Key]
         [StringLength(10)]
         public string MaBan { get; set; }
@@ -25,6 +21,5 @@ namespace CafeShop.DTO
         public string MaKhuVuc { get; set; }
         [ForeignKey("MaKhuVuc")]
         public virtual KhuVuc KhuVuc { get; set; }
-        public virtual ICollection<Ban> Bans { get; set; }
     }
 }

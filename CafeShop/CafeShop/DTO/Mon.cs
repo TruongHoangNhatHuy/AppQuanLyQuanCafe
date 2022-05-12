@@ -23,6 +23,8 @@ namespace CafeShop.DTO
         public string TenMon { get; set; }
         public int DonGia { get; set; }
         [StringLength(10)]
+        public string DonVi { get; set; }
+        [StringLength(10)]
         public string MaDanhMuc { get; set; }
         [ForeignKey("MaDanhMuc")]
         public virtual DanhMucThucDon DanhMucThucDon { get; set; }

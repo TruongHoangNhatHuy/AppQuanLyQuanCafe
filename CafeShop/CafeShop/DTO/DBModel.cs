@@ -7,7 +7,7 @@ namespace CafeShop.DTO
     public class DBModel : DbContext
     {
         public DBModel()
-                    : base("name=DAL")
+                    : base("name=DBModel")
         {
             Database.SetInitializer<DBModel>(new CreateDB());
         }

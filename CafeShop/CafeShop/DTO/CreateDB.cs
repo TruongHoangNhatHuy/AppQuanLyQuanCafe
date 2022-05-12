@@ -48,12 +48,12 @@ namespace CafeShop.DTO
             });
             context.Mons.AddRange(new Mon[]
             {
-                new Mon { MaMon = "M00000001", TenMon = "Cà phê đen", DonGia = 10000, MaDanhMuc = "DM00000001"},
-                new Mon { MaMon = "M00000002", TenMon = "Cà phê sữa", DonGia = 12000, MaDanhMuc = "DM00000001"},
-                new Mon { MaMon = "M00000003", TenMon = "Trà gừng", DonGia = 20000, MaDanhMuc = "DM00000002"},
-                new Mon { MaMon = "M00000004", TenMon = "Trà chanh", DonGia = 10000, MaDanhMuc = "DM00000002"},
-                new Mon { MaMon = "M00000005", TenMon = "Cola chai", DonGia = 12000, MaDanhMuc = "DM00000003"},
-                new Mon { MaMon = "M00000006", TenMon = "Sting chai", DonGia = 12000, MaDanhMuc = "DM00000003"}
+                new Mon { MaMon = "M00000001", TenMon = "Cà phê đen", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
+                new Mon { MaMon = "M00000002", TenMon = "Cà phê sữa", DonGia = 12000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
+                new Mon { MaMon = "M00000003", TenMon = "Trà gừng", DonGia = 20000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
+                new Mon { MaMon = "M00000004", TenMon = "Trà chanh", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
+                new Mon { MaMon = "M00000005", TenMon = "Cola chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"},
+                new Mon { MaMon = "M00000006", TenMon = "Sting chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"}
             });
             context.NguyenLieux.AddRange(new NguyenLieu[]
             {
