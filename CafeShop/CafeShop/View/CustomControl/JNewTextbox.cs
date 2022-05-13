@@ -23,7 +23,7 @@ namespace CafeShop.View.CustomControl
         private string placeholderText = "";
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
-
+        
         public event EventHandler _TextChanged;
 
         public JNewTextbox()

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CafeShop.DTO;
 namespace CafeShop.View
 {
     public partial class LoginForm : Form
@@ -15,6 +15,9 @@ namespace CafeShop.View
         public LoginForm()
         {
             InitializeComponent();
+            DBModel db = new DBModel();
+            DataGridView dataGridView = new DataGridView();
+            dataGridView.DataSource = db.KhuVucs.ToList();
         }
         #region EventHandler
         private void button_MouseEnter(object sender, EventArgs e)

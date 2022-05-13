@@ -50,6 +50,7 @@
             this.TableButton.Text = "1";
             this.TableButton.TextColor = System.Drawing.Color.White;
             this.TableButton.UseVisualStyleBackColor = false;
+            this.TableButton.Click += new System.EventHandler(this.ButtonClick);
             // 
             // TablesButton
             // 

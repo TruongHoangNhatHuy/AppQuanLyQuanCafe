@@ -43,15 +43,16 @@
             this.openButton = new CafeShop.View.CustomControl.JButton();
             this.orderButton = new CafeShop.View.CustomControl.JButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.timeOutLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableNameLabel = new System.Windows.Forms.Label();
             this.statusTableLabel = new System.Windows.Forms.Label();
-            this.areaTableLabel = new System.Windows.Forms.Label();
-            this.IDTableLabel = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.timeArriveLabel = new System.Windows.Forms.Label();
             this.itemPanel = new System.Windows.Forms.Panel();
             this.categoryFoodPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.foodPanel = new System.Windows.Forms.Panel();
+            this.foodPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.statusTable = new System.Windows.Forms.Label();
             this.areaPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.detailPanel.SuspendLayout();
@@ -76,6 +77,7 @@
             // 
             this.areaFlowPanel.BackColor = System.Drawing.Color.Wheat;
             this.areaFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.areaFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.areaFlowPanel.Location = new System.Drawing.Point(0, 62);
             this.areaFlowPanel.Name = "areaFlowPanel";
             this.areaFlowPanel.Size = new System.Drawing.Size(327, 547);
@@ -95,17 +97,19 @@
             // areaComboBox
             // 
             this.areaComboBox.FormattingEnabled = true;
-            this.areaComboBox.Location = new System.Drawing.Point(127, 38);
+            this.areaComboBox.Location = new System.Drawing.Point(127, 32);
             this.areaComboBox.Name = "areaComboBox";
             this.areaComboBox.Size = new System.Drawing.Size(121, 21);
             this.areaComboBox.TabIndex = 1;
+            this.areaComboBox.SelectedIndexChanged += new System.EventHandler(this.areaComboBox_SelectedIndexChanged);
             // 
             // areaLabel
             // 
             this.areaLabel.AutoSize = true;
-            this.areaLabel.Location = new System.Drawing.Point(12, 38);
+            this.areaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.areaLabel.Location = new System.Drawing.Point(12, 31);
             this.areaLabel.Name = "areaLabel";
-            this.areaLabel.Size = new System.Drawing.Size(47, 13);
+            this.areaLabel.Size = new System.Drawing.Size(72, 20);
             this.areaLabel.TabIndex = 0;
             this.areaLabel.Text = "Khu vực";
             // 
@@ -280,49 +284,50 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.statusTable);
+            this.panel1.Controls.Add(this.timeOutLabel);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tableNameLabel);
             this.panel1.Controls.Add(this.statusTableLabel);
-            this.panel1.Controls.Add(this.areaTableLabel);
-            this.panel1.Controls.Add(this.IDTableLabel);
+            this.panel1.Controls.Add(this.statusLabel);
+            this.panel1.Controls.Add(this.timeArriveLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 242);
             this.panel1.TabIndex = 0;
             // 
-            // label3
+            // timeOutLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(76, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "25/04/2022 07:34 PM";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(77, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Thời điểm phục vụ gần nhất";
+            this.timeOutLabel.AutoSize = true;
+            this.timeOutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeOutLabel.ForeColor = System.Drawing.Color.OrangeRed;
+            this.timeOutLabel.Location = new System.Drawing.Point(66, 202);
+            this.timeOutLabel.Name = "timeOutLabel";
+            this.timeOutLabel.Size = new System.Drawing.Size(179, 20);
+            this.timeOutLabel.TabIndex = 5;
+            this.timeOutLabel.Text = "25/04/2022 07:34 PM";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(76, 17);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(77, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Bàn số 1 - Tầng 1";
+            this.label1.Size = new System.Drawing.Size(158, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Thời điểm phục vụ gần nhất";
+            // 
+            // tableNameLabel
+            // 
+            this.tableNameLabel.AutoSize = true;
+            this.tableNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.tableNameLabel.Location = new System.Drawing.Point(76, 17);
+            this.tableNameLabel.Name = "tableNameLabel";
+            this.tableNameLabel.Size = new System.Drawing.Size(151, 20);
+            this.tableNameLabel.TabIndex = 3;
+            this.tableNameLabel.Text = "Bàn số 1 - Tầng 1";
             // 
             // statusTableLabel
             // 
@@ -334,25 +339,25 @@
             this.statusTableLabel.TabIndex = 2;
             this.statusTableLabel.Text = "Khách: ";
             // 
-            // areaTableLabel
+            // statusLabel
             // 
-            this.areaTableLabel.AutoSize = true;
-            this.areaTableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaTableLabel.Location = new System.Drawing.Point(20, 96);
-            this.areaTableLabel.Name = "areaTableLabel";
-            this.areaTableLabel.Size = new System.Drawing.Size(81, 18);
-            this.areaTableLabel.TabIndex = 1;
-            this.areaTableLabel.Text = "Tình trạng: ";
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.Location = new System.Drawing.Point(19, 96);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(81, 18);
+            this.statusLabel.TabIndex = 1;
+            this.statusLabel.Text = "Tình trạng: ";
             // 
-            // IDTableLabel
+            // timeArriveLabel
             // 
-            this.IDTableLabel.AutoSize = true;
-            this.IDTableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDTableLabel.Location = new System.Drawing.Point(19, 62);
-            this.IDTableLabel.Name = "IDTableLabel";
-            this.IDTableLabel.Size = new System.Drawing.Size(68, 18);
-            this.IDTableLabel.TabIndex = 0;
-            this.IDTableLabel.Text = "Giờ đến: ";
+            this.timeArriveLabel.AutoSize = true;
+            this.timeArriveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeArriveLabel.Location = new System.Drawing.Point(19, 62);
+            this.timeArriveLabel.Name = "timeArriveLabel";
+            this.timeArriveLabel.Size = new System.Drawing.Size(68, 18);
+            this.timeArriveLabel.TabIndex = 0;
+            this.timeArriveLabel.Text = "Giờ đến: ";
             // 
             // itemPanel
             // 
@@ -377,10 +382,22 @@
             // 
             this.foodPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.foodPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.foodPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.foodPanel.Location = new System.Drawing.Point(760, 0);
             this.foodPanel.Name = "foodPanel";
             this.foodPanel.Size = new System.Drawing.Size(394, 611);
             this.foodPanel.TabIndex = 3;
+            // 
+            // statusTable
+            // 
+            this.statusTable.AutoSize = true;
+            this.statusTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTable.ForeColor = System.Drawing.Color.Crimson;
+            this.statusTable.Location = new System.Drawing.Point(146, 96);
+            this.statusTable.Name = "statusTable";
+            this.statusTable.Size = new System.Drawing.Size(93, 18);
+            this.statusTable.TabIndex = 6;
+            this.statusTable.Text = "Tình trạng: ";
             // 
             // OrderForm
             // 
@@ -417,7 +434,6 @@
         private System.Windows.Forms.Label areaLabel;
         private System.Windows.Forms.Panel detailPanel;
         private System.Windows.Forms.Panel itemPanel;
-        private System.Windows.Forms.Panel foodPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private CustomControl.JButton jButton4;
         private CustomControl.JButton jButton3;
@@ -427,12 +443,14 @@
         private CustomControl.JButton openButton;
         private CustomControl.JButton orderButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label timeOutLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tableNameLabel;
         private System.Windows.Forms.Label statusTableLabel;
-        private System.Windows.Forms.Label areaTableLabel;
-        private System.Windows.Forms.Label IDTableLabel;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label timeArriveLabel;
         private System.Windows.Forms.FlowLayoutPanel categoryFoodPanel;
+        private System.Windows.Forms.FlowLayoutPanel foodPanel;
+        private System.Windows.Forms.Label statusTable;
     }
 }
