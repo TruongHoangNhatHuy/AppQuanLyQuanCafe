@@ -37,20 +37,21 @@ namespace CafeShop.BLL
         {
             return mon.DonGia * SoLuong;
         }
-        public DonGoiMon ConfirmDetailOrder(int SoLuong, string GhiChu)
+        public void ConfirmDetailOrder(int SoLuong, string GhiChu)
         {
-            // Lưu dữ liệu vào tầng trung gian
-            return new DonGoiMon 
-                { 
-                    MaDonGoiMon = "",
-                    MaHoaDon = "",
-                    MaMon = mon.MaMon,
-                    SoLuong = SoLuong,
-                    GhiChu = GhiChu,
-                    GiaTien = CalculatePrice(SoLuong),
-                    ThoiGianGoiMon = DateTime.Now,
-                    TinhTrang = "Đang chờ"
-                };
+            DonGoiMon result = new DonGoiMon
+            {
+                MaDonGoiMon = "2002051318036283",
+                MaHoaDon = "2022051119401331",
+                MaMon = mon.MaMon,
+                SoLuong = SoLuong,
+                GhiChu = GhiChu,
+                GiaTien = CalculatePrice(SoLuong),
+                ThoiGianGoiMon = DateTime.Now,
+                TinhTrang = "Đang chờ"
+            };
+            db.DonGoiMons.Add(result);
+            //db.SaveChanges();
         }
     }
 }
