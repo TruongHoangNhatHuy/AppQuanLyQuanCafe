@@ -20,34 +20,33 @@ namespace CafeShop.BLL
             private set { }
         }
         private BLLTable() { }
-        private DBModel db = new DBModel();
         public List<KhuvucCBItem> GetKhuvucCBItem()
         {
             List<KhuvucCBItem> data = new List<KhuvucCBItem>();
-            foreach (KhuVuc khuvuc in db.KhuVucs)
+            foreach (KhuVuc khuvuc in DBModel.Instance.KhuVucs)
             {
                 data.Add(new KhuvucCBItem { ID = khuvuc.MaKhuVuc, Name = khuvuc.TenKhuVuc });
             }
             return data;
         }
-        public List<Ban> GetAllBan() => db.Bans.ToList();
-        public List<KhuVuc> GetAllKhuvuc() => db.KhuVucs.ToList();
-        public Ban GetBanByMaBan(string MaBan) => db.Bans.Find(MaBan);
+        public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList();
+        public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList();
+        public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
 
         public List<Ban> GetBanByMaKhuvuc(string MaKhuVuc)
         {
             if (MaKhuVuc.Equals("0"))
                 return GetAllBan();
             else
-                return db.Bans.Where(p => p.MaKhuVuc.Equals(MaKhuVuc)).ToList();
+                return DBModel.Instance.Bans.Where(p => p.MaKhuVuc.Equals(MaKhuVuc)).ToList();
         }
         public List<Ban> SearchTable(string MaKhuVuc, string searchText)
             => GetBanByMaKhuvuc(MaKhuVuc).Where(p => p.TenBan.ToLower().Contains(searchText)).ToList();
         public void DeleteTable(List<string> delList)
         {
             foreach (string MaBan in delList)
-                db.Bans.Remove(GetBanByMaBan(MaBan));
-            db.SaveChanges();
+                DBModel.Instance.Bans.Remove(GetBanByMaBan(MaBan));
+            DBModel.Instance.SaveChanges();
         }
     }
 }

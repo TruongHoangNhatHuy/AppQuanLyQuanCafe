@@ -22,7 +22,6 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        private DBModel db = new DBModel();
         private Mon mon = null;
 
         public void SetDish(string MaMon)
