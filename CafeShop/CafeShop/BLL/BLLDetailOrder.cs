@@ -9,19 +9,20 @@ namespace CafeShop.BLL
 {
     public class BLLDetailOrder
     {
-        private static BLLDetailOrder _instance;
+        private static BLLDetailOrder _Instance;
         public static BLLDetailOrder Instance
         {
             get
             {
-                if (_instance == null)
+                if (_Instance == null)
                 {
-                    _instance = new BLLDetailOrder();
+                    _Instance = new BLLDetailOrder();
                 }
-                return _instance;
+                return _Instance;
             }
             private set { }
         }
+        private DBModel db = new DBModel();
         private Mon mon = null;
 
         public void SetDish(string MaMon)

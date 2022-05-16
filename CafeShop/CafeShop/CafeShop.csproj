@@ -73,6 +73,7 @@
     <Compile Include="BLL\BLLDetailOrder.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
     <Compile Include="BLL\BLLOrderList.cs" />
+    <Compile Include="BLL\BLLTable.cs" />
     <Compile Include="DTO\Ban.cs" />
     <Compile Include="DTO\CongThuc.cs" />
     <Compile Include="DTO\CreateDB.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\KhuVuc.cs" />
+    <Compile Include="DTO\KhuvucCBItem.cs" />
     <Compile Include="DTO\LoHang.cs" />
     <Compile Include="DTO\Mon.cs" />
     <Compile Include="DTO\NguyenLieu.cs" />

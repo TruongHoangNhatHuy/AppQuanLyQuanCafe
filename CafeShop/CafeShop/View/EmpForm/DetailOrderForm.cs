@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CafeShop.BLL;
+using System;
 using System.Windows.Forms;
 using CafeShop.BLL;
 
@@ -18,24 +12,45 @@ namespace CafeShop.View.EmpForm
         {
             InitializeComponent();
             BLLDetailOrder.Instance.SetDish(MaMon);
-            label1.Text = BLLDetailOrder.Instance.ShowDetail();
+            foodLabel.Text = BLLDetailOrder.Instance.ShowDetail();
             quantityTextbox.Texts = "0";
             totalTextbox.Texts = "0";
         }
 
         private void quantityTextbox__TextChanged(object sender, EventArgs e)
         {
-            int SoLuong = Convert.ToInt32(quantityTextbox.Texts);
-            if (SoLuong >= 0)
-                totalTextbox.Texts = BLLDetailOrder.Instance.CalculatePrice(SoLuong).ToString();
-            else
-                totalTextbox.Texts = "Số lượng phải lớn hơn 0";
+            int SoLuong = 0;
+            try
+            {
+                SoLuong = Convert.ToInt32(quantityTextbox.Texts);
+                if (SoLuong >= 0)
+                    totalTextbox.Texts = BLLDetailOrder.Instance.CalculatePrice(SoLuong).ToString();
+                else
+                    totalTextbox.Texts = "Số lượng phải lớn hơn 0";
+            }
+            catch (Exception ex) { }
+            
         }
         private void acceptButton_Click(object sender, EventArgs e)
         {
-            int SoLuong = Convert.ToInt32(quantityTextbox.Texts);
+            int SoLuong = 0;
+            try
+            {
+                SoLuong = Convert.ToInt32(quantityTextbox.Texts);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chưa nhập đúng định dạng số", "Cảnh Báo");
+                return;
+            }
+            
             string GhiChu = descriptionTextbox.Texts;
-            BLLDetailOrder.Instance.ConfirmDetailOrder(SoLuong,GhiChu);
+            BLLDetailOrder.Instance.ConfirmDetailOrder(SoLuong, GhiChu);
+            this.Close();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

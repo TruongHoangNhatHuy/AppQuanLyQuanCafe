@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CafeShop.View;
 namespace CafeShop
 {
     internal static class Program
@@ -16,15 +16,10 @@ namespace CafeShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
             //Application.Run(new View.LoginForm());
             Application.Run(new View.EmpForm.DetailOrderForm());
             //Application.Run(new View.EmpForm.BillForm());
-=======
-            Application.Run(new View.EmployeeForm());
-            //Application.Run(new View.LoginForm());
-            //Application.Run(new View.EmpForm.OrderForm());
->>>>>>> Stashed changes
+
         }
     }
 }
