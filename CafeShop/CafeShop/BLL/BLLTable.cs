@@ -33,6 +33,7 @@ namespace CafeShop.BLL
         public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList();
         public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
 
+        public KhuVuc GetKhuVucByMaKhuVuc(string MaKhuVuc) => DBModel.Instance.KhuVucs.Find(MaKhuVuc);
         public List<Ban> GetBanByMaKhuvuc(string MaKhuVuc)
         {
             if (MaKhuVuc.Equals("0"))
@@ -48,5 +49,34 @@ namespace CafeShop.BLL
                 DBModel.Instance.Bans.Remove(GetBanByMaBan(MaBan));
             DBModel.Instance.SaveChanges();
         }
+        public bool Check(string MaBan)
+        {
+            foreach(var ban in DBModel.Instance.Bans)
+                if (ban.MaBan.Equals(MaBan))
+                    return true;
+            return false;
+        }
+        public void Execute(Ban ban)
+        {
+            if(Check(ban.MaBan))
+            {
+                Ban newBan = DBModel.Instance.Bans.Find(ban.MaBan);
+                if(newBan != null)
+                {
+                    newBan.TenBan = ban.TenBan;
+                    newBan.MaKhuVuc = ban.MaKhuVuc;
+                    newBan.KhuVuc = GetKhuVucByMaKhuVuc(newBan.MaKhuVuc);
+                }    
+            }
+            else
+                DBModel.Instance.Bans.Add(ban);
+            DBModel.Instance.SaveChanges();
+        }
+        public void AddArea(KhuVuc khuvuc)
+        {
+            DBModel.Instance.KhuVucs.Add(khuvuc);
+            DBModel.Instance.SaveChanges();
+        }
     }
+
 }

@@ -35,7 +35,13 @@
             this.areaLabel = new System.Windows.Forms.Label();
             this.detailPanel = new System.Windows.Forms.Panel();
             this.buttonPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.jButton4 = new CafeShop.View.CustomControl.JButton();
+            this.jButton3 = new CafeShop.View.CustomControl.JButton();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.jButton1 = new CafeShop.View.CustomControl.JButton();
             this.buttonPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.openButton = new CafeShop.View.CustomControl.JButton();
+            this.orderButton = new CafeShop.View.CustomControl.JButton();
             this.tableInfoTable = new System.Windows.Forms.Panel();
             this.statusTable = new System.Windows.Forms.Label();
             this.timeOutLabel = new System.Windows.Forms.Label();
@@ -47,12 +53,6 @@
             this.itemPanel = new System.Windows.Forms.Panel();
             this.categoryFoodPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.foodPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.jButton4 = new CafeShop.View.CustomControl.JButton();
-            this.jButton3 = new CafeShop.View.CustomControl.JButton();
-            this.jButton2 = new CafeShop.View.CustomControl.JButton();
-            this.jButton1 = new CafeShop.View.CustomControl.JButton();
-            this.openButton = new CafeShop.View.CustomControl.JButton();
-            this.orderButton = new CafeShop.View.CustomControl.JButton();
             this.areaPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.detailPanel.SuspendLayout();
@@ -145,6 +145,86 @@
             this.buttonPanel2.Size = new System.Drawing.Size(311, 47);
             this.buttonPanel2.TabIndex = 2;
             // 
+            // jButton4
+            // 
+            this.jButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton4.BorderRadius = 30;
+            this.jButton4.BorderSize = 0;
+            this.jButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.jButton4.FlatAppearance.BorderSize = 0;
+            this.jButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton4.ForeColor = System.Drawing.Color.White;
+            this.jButton4.Location = new System.Drawing.Point(234, 3);
+            this.jButton4.Name = "jButton4";
+            this.jButton4.Size = new System.Drawing.Size(74, 41);
+            this.jButton4.TabIndex = 3;
+            this.jButton4.Text = "Thanh toán";
+            this.jButton4.TextColor = System.Drawing.Color.White;
+            this.jButton4.UseVisualStyleBackColor = false;
+            // 
+            // jButton3
+            // 
+            this.jButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton3.BorderRadius = 30;
+            this.jButton3.BorderSize = 0;
+            this.jButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.jButton3.FlatAppearance.BorderSize = 0;
+            this.jButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton3.ForeColor = System.Drawing.Color.White;
+            this.jButton3.Location = new System.Drawing.Point(157, 3);
+            this.jButton3.Name = "jButton3";
+            this.jButton3.Size = new System.Drawing.Size(71, 41);
+            this.jButton3.TabIndex = 2;
+            this.jButton3.Text = "Ghép bàn";
+            this.jButton3.TextColor = System.Drawing.Color.White;
+            this.jButton3.UseVisualStyleBackColor = false;
+            // 
+            // jButton2
+            // 
+            this.jButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton2.BorderRadius = 30;
+            this.jButton2.BorderSize = 0;
+            this.jButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.jButton2.FlatAppearance.BorderSize = 0;
+            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton2.ForeColor = System.Drawing.Color.White;
+            this.jButton2.Location = new System.Drawing.Point(80, 3);
+            this.jButton2.Name = "jButton2";
+            this.jButton2.Size = new System.Drawing.Size(71, 41);
+            this.jButton2.TabIndex = 1;
+            this.jButton2.Text = "Chuyển bàn";
+            this.jButton2.TextColor = System.Drawing.Color.White;
+            this.jButton2.UseVisualStyleBackColor = false;
+            // 
+            // jButton1
+            // 
+            this.jButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton1.BorderRadius = 30;
+            this.jButton1.BorderSize = 0;
+            this.jButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.jButton1.FlatAppearance.BorderSize = 0;
+            this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton1.ForeColor = System.Drawing.Color.White;
+            this.jButton1.Location = new System.Drawing.Point(3, 3);
+            this.jButton1.Name = "jButton1";
+            this.jButton1.Size = new System.Drawing.Size(71, 41);
+            this.jButton1.TabIndex = 0;
+            this.jButton1.Text = "Đặt chỗ";
+            this.jButton1.TextColor = System.Drawing.Color.White;
+            this.jButton1.UseVisualStyleBackColor = false;
+            // 
             // buttonPanel1
             // 
             this.buttonPanel1.ColumnCount = 5;
@@ -163,6 +243,48 @@
             this.buttonPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.buttonPanel1.Size = new System.Drawing.Size(311, 50);
             this.buttonPanel1.TabIndex = 1;
+            // 
+            // openButton
+            // 
+            this.openButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.openButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.openButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.openButton.BorderRadius = 30;
+            this.openButton.BorderSize = 0;
+            this.openButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.openButton.FlatAppearance.BorderSize = 0;
+            this.openButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openButton.ForeColor = System.Drawing.Color.White;
+            this.openButton.Location = new System.Drawing.Point(23, 3);
+            this.openButton.Name = "openButton";
+            this.openButton.Size = new System.Drawing.Size(124, 44);
+            this.openButton.TabIndex = 0;
+            this.openButton.Text = "Mở bàn";
+            this.openButton.TextColor = System.Drawing.Color.White;
+            this.openButton.UseVisualStyleBackColor = false;
+            this.openButton.Click += new System.EventHandler(this.openButton_Click);
+            // 
+            // orderButton
+            // 
+            this.orderButton.BackColor = System.Drawing.Color.Crimson;
+            this.orderButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.orderButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.orderButton.BorderRadius = 30;
+            this.orderButton.BorderSize = 0;
+            this.orderButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderButton.FlatAppearance.BorderSize = 0;
+            this.orderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderButton.ForeColor = System.Drawing.Color.White;
+            this.orderButton.Location = new System.Drawing.Point(163, 3);
+            this.orderButton.Name = "orderButton";
+            this.orderButton.Size = new System.Drawing.Size(124, 44);
+            this.orderButton.TabIndex = 1;
+            this.orderButton.Text = "Gọi Món";
+            this.orderButton.TextColor = System.Drawing.Color.White;
+            this.orderButton.UseVisualStyleBackColor = false;
+            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
             // tableInfoTable
             // 
@@ -285,128 +407,6 @@
             this.foodPanel.TabIndex = 3;
             this.foodPanel.Visible = false;
             // 
-            // jButton4
-            // 
-            this.jButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton4.BorderRadius = 30;
-            this.jButton4.BorderSize = 0;
-            this.jButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton4.FlatAppearance.BorderSize = 0;
-            this.jButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton4.ForeColor = System.Drawing.Color.White;
-            this.jButton4.Location = new System.Drawing.Point(234, 3);
-            this.jButton4.Name = "jButton4";
-            this.jButton4.Size = new System.Drawing.Size(74, 41);
-            this.jButton4.TabIndex = 3;
-            this.jButton4.Text = "Thanh toán";
-            this.jButton4.TextColor = System.Drawing.Color.White;
-            this.jButton4.UseVisualStyleBackColor = false;
-            // 
-            // jButton3
-            // 
-            this.jButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton3.BorderRadius = 30;
-            this.jButton3.BorderSize = 0;
-            this.jButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton3.FlatAppearance.BorderSize = 0;
-            this.jButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton3.ForeColor = System.Drawing.Color.White;
-            this.jButton3.Location = new System.Drawing.Point(157, 3);
-            this.jButton3.Name = "jButton3";
-            this.jButton3.Size = new System.Drawing.Size(71, 41);
-            this.jButton3.TabIndex = 2;
-            this.jButton3.Text = "Ghép bàn";
-            this.jButton3.TextColor = System.Drawing.Color.White;
-            this.jButton3.UseVisualStyleBackColor = false;
-            // 
-            // jButton2
-            // 
-            this.jButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton2.BorderRadius = 30;
-            this.jButton2.BorderSize = 0;
-            this.jButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton2.FlatAppearance.BorderSize = 0;
-            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton2.ForeColor = System.Drawing.Color.White;
-            this.jButton2.Location = new System.Drawing.Point(80, 3);
-            this.jButton2.Name = "jButton2";
-            this.jButton2.Size = new System.Drawing.Size(71, 41);
-            this.jButton2.TabIndex = 1;
-            this.jButton2.Text = "Chuyển bàn";
-            this.jButton2.TextColor = System.Drawing.Color.White;
-            this.jButton2.UseVisualStyleBackColor = false;
-            // 
-            // jButton1
-            // 
-            this.jButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton1.BorderRadius = 30;
-            this.jButton1.BorderSize = 0;
-            this.jButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton1.FlatAppearance.BorderSize = 0;
-            this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton1.ForeColor = System.Drawing.Color.White;
-            this.jButton1.Location = new System.Drawing.Point(3, 3);
-            this.jButton1.Name = "jButton1";
-            this.jButton1.Size = new System.Drawing.Size(71, 41);
-            this.jButton1.TabIndex = 0;
-            this.jButton1.Text = "Đặt chỗ";
-            this.jButton1.TextColor = System.Drawing.Color.White;
-            this.jButton1.UseVisualStyleBackColor = false;
-            // 
-            // openButton
-            // 
-            this.openButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.openButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.openButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.openButton.BorderRadius = 30;
-            this.openButton.BorderSize = 0;
-            this.openButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.openButton.FlatAppearance.BorderSize = 0;
-            this.openButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openButton.ForeColor = System.Drawing.Color.White;
-            this.openButton.Location = new System.Drawing.Point(23, 3);
-            this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(124, 44);
-            this.openButton.TabIndex = 0;
-            this.openButton.Text = "Mở bàn";
-            this.openButton.TextColor = System.Drawing.Color.White;
-            this.openButton.UseVisualStyleBackColor = false;
-            this.openButton.Click += new System.EventHandler(this.openButton_Click);
-            // 
-            // orderButton
-            // 
-            this.orderButton.BackColor = System.Drawing.Color.Crimson;
-            this.orderButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.orderButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.orderButton.BorderRadius = 30;
-            this.orderButton.BorderSize = 0;
-            this.orderButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderButton.FlatAppearance.BorderSize = 0;
-            this.orderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderButton.ForeColor = System.Drawing.Color.White;
-            this.orderButton.Location = new System.Drawing.Point(163, 3);
-            this.orderButton.Name = "orderButton";
-            this.orderButton.Size = new System.Drawing.Size(124, 44);
-            this.orderButton.TabIndex = 1;
-            this.orderButton.Text = "Gọi Món";
-            this.orderButton.TextColor = System.Drawing.Color.White;
-            this.orderButton.UseVisualStyleBackColor = false;
-            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
-            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +420,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OrderForm";
             this.Text = "OrderForm";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.areaPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

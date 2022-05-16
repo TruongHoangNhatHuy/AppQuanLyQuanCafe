@@ -9,18 +9,23 @@ namespace CafeShop.View.EmpForm
     public partial class OrderForm : Form
     {
         private List<FlowLayoutPanel> panelList = new List<FlowLayoutPanel>();
-        private TablesButton currentTableButton = null;
+        private TablesButton currentTableButton;
         private Ban currentTable;
 
         public OrderForm()
         {
             InitializeComponent();
+            
+        }
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
             areaComboBox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
             areaComboBox.Items.AddRange(BLLOrder.Instance.GetKhuvucCBItem().ToArray());
             LoadTableFromDB();
             LoadCategoryFood();
             HidePanel();
         }
+        #region Interface for components
         private void LoadCategoryFood()
         {
             foreach (var danhmuc in BLLOrder.Instance.GetDanhMucThucDon())
@@ -79,11 +84,6 @@ namespace CafeShop.View.EmpForm
                 foodPanel.Controls.Add(foodDetailPanel);
             }
         }
-        private void openDetailOrderForm(object sender, EventArgs e)
-        {
-            DetailOrderForm form = new DetailOrderForm();
-            form.ShowDialog();
-        }
         public void LoadTableFromDB()
         {
             foreach (KhuVuc khuvuc in BLLOrder.Instance.GetAllKhuvuc())
@@ -99,12 +99,12 @@ namespace CafeShop.View.EmpForm
                 tablePanel.FlowDirection = FlowDirection.LeftToRight;
                 tablePanel.BackColor = SystemColors.ActiveBorder;
                 tablePanel.AutoSize = true;
-                foreach(var ban in khuvuc.Bans)
+                foreach (var ban in khuvuc.Bans)
                 {
                     TablesButton table = new TablesButton(ban.MaBan, ban.TinhTrang);
                     table._Click += new EventHandler(ShowInfoTable);
                     tablePanel.Controls.Add(table);
-                }    
+                }
 
                 mainPanel.Name = khuvuc.MaKhuVuc;
                 mainPanel.FlowDirection = FlowDirection.TopDown;
@@ -115,6 +115,24 @@ namespace CafeShop.View.EmpForm
                 areaFlowPanel.Controls.Add(mainPanel);
                 panelList.Add(mainPanel);
             }
+        }
+        #endregion
+
+        #region EventHandler
+        private void openDetailOrderForm(object sender, EventArgs e)
+        {
+            DetailOrderForm form = new DetailOrderForm();
+            form.ShowDialog();
+        }
+
+        private void HidePanel()
+        {
+            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible =
+            foodPanel.Visible = categoryFoodPanel.Visible = false;
+        }
+        private void ShowPanel()
+        {
+            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible = true;
         }
         private void ShowInfoTable(object sender, EventArgs e)
         {
@@ -133,6 +151,7 @@ namespace CafeShop.View.EmpForm
             tableNameLabel.Text = this.currentTable.TenBan;
             statusTable.Text = this.currentTable.TinhTrang ? "Còn trống" : "Bận";
         }
+
         public void LoadTableByLocation(string MaKhuVuc)
         {
             if (MaKhuVuc.Equals("0"))
@@ -141,23 +160,20 @@ namespace CafeShop.View.EmpForm
                 panelList.ForEach(panel => panel.Visible = panel.Name.Equals(MaKhuVuc));
 
         }
-
         private void areaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string MaKhuVuc = (areaComboBox.SelectedItem as KhuvucCBItem).ID;
             LoadTableByLocation(MaKhuVuc);
         }
 
-        private void HidePanel()
+        private void ChangeStateTable()
         {
-            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible =
-            foodPanel.Visible = categoryFoodPanel.Visible = false;
+            if (currentTableButton.Status.Equals("Còn trống"))
+                currentTableButton.Status = "Bận";
+            else
+                currentTableButton.Status = "Còn trống";
+            currentTableButton.GUI();
         }
-        private void ShowPanel()
-        {
-            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible = true;
-        }
-
         private void orderButton_Click(object sender, EventArgs e)
         {
             categoryFoodPanel.Visible = true;
@@ -171,15 +187,10 @@ namespace CafeShop.View.EmpForm
                 ChangeStateTable();
                 SetInfoTable();
             }
-                
+
         }
-        private void ChangeStateTable()
-        {
-            if (currentTableButton.Status.Equals("Còn trống"))
-                currentTableButton.Status = "Bận";
-            else
-                currentTableButton.Status = "Còn trống";
-            currentTableButton.GUI();
-        }
+        #endregion
+
+        
     }
 }

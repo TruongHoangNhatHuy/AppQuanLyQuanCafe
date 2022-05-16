@@ -1,7 +1,6 @@
 ﻿using CafeShop.BLL;
 using System;
 using System.Windows.Forms;
-using CafeShop.BLL;
 
 namespace CafeShop.View.EmpForm
 {

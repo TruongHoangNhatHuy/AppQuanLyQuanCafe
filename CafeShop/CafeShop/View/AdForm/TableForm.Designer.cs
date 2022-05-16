@@ -42,22 +42,23 @@
             this.areaLabel = new System.Windows.Forms.Label();
             this.detailPanel = new System.Windows.Forms.Panel();
             this.detailGroupbox = new System.Windows.Forms.GroupBox();
+            this.tableNameLabel = new System.Windows.Forms.Label();
             this.infoLabel = new System.Windows.Forms.Label();
-            this.areaIDCombobox = new System.Windows.Forms.ComboBox();
+            this.areaNameCombobox = new System.Windows.Forms.ComboBox();
             this.areaNameLabel = new System.Windows.Forms.Label();
             this.areaIDLabel = new System.Windows.Forms.Label();
             this.tableIDLabel = new System.Windows.Forms.Label();
+            this.notifycationLabel = new System.Windows.Forms.Label();
+            this.tableNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.addAreaButton = new CafeShop.View.CustomControl.JButton();
             this.confirmButton = new CafeShop.View.CustomControl.JButton();
-            this.addButton = new CafeShop.View.CustomControl.JButton();
+            this.addTableButton = new CafeShop.View.CustomControl.JButton();
             this.deleteButton = new CafeShop.View.CustomControl.JButton();
             this.tableIDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.areaNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.areaIDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.searchButton = new CafeShop.View.CustomControl.JButton();
             this.searchTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.exitButton = new CafeShop.View.CustomControl.JButton();
-            this.tableNameLabel = new System.Windows.Forms.Label();
-            this.tableNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.TopPanel.SuspendLayout();
             this.dataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -94,8 +95,11 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(44, 73);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(709, 426);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // buttonPagePanel
             // 
@@ -210,19 +214,29 @@
             this.detailGroupbox.Controls.Add(this.addAreaButton);
             this.detailGroupbox.Controls.Add(this.infoLabel);
             this.detailGroupbox.Controls.Add(this.confirmButton);
-            this.detailGroupbox.Controls.Add(this.addButton);
+            this.detailGroupbox.Controls.Add(this.addTableButton);
             this.detailGroupbox.Controls.Add(this.deleteButton);
-            this.detailGroupbox.Controls.Add(this.areaIDCombobox);
+            this.detailGroupbox.Controls.Add(this.areaNameCombobox);
             this.detailGroupbox.Controls.Add(this.tableIDTextbox);
             this.detailGroupbox.Controls.Add(this.areaNameLabel);
             this.detailGroupbox.Controls.Add(this.areaIDLabel);
             this.detailGroupbox.Controls.Add(this.tableIDLabel);
-            this.detailGroupbox.Controls.Add(this.areaNameTextbox);
+            this.detailGroupbox.Controls.Add(this.areaIDTextbox);
             this.detailGroupbox.Location = new System.Drawing.Point(53, 73);
             this.detailGroupbox.Name = "detailGroupbox";
             this.detailGroupbox.Size = new System.Drawing.Size(300, 426);
             this.detailGroupbox.TabIndex = 1;
             this.detailGroupbox.TabStop = false;
+            // 
+            // tableNameLabel
+            // 
+            this.tableNameLabel.AutoSize = true;
+            this.tableNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableNameLabel.Location = new System.Drawing.Point(11, 236);
+            this.tableNameLabel.Name = "tableNameLabel";
+            this.tableNameLabel.Size = new System.Drawing.Size(57, 16);
+            this.tableNameLabel.TabIndex = 10;
+            this.tableNameLabel.Text = "Tên bàn";
             // 
             // infoLabel
             // 
@@ -235,33 +249,34 @@
             this.infoLabel.TabIndex = 0;
             this.infoLabel.Text = "Thông tin chi tiết";
             // 
-            // areaIDCombobox
+            // areaNameCombobox
             // 
-            this.areaIDCombobox.FormattingEnabled = true;
-            this.areaIDCombobox.Location = new System.Drawing.Point(100, 81);
-            this.areaIDCombobox.Name = "areaIDCombobox";
-            this.areaIDCombobox.Size = new System.Drawing.Size(182, 21);
-            this.areaIDCombobox.TabIndex = 5;
+            this.areaNameCombobox.FormattingEnabled = true;
+            this.areaNameCombobox.Location = new System.Drawing.Point(100, 81);
+            this.areaNameCombobox.Name = "areaNameCombobox";
+            this.areaNameCombobox.Size = new System.Drawing.Size(182, 21);
+            this.areaNameCombobox.TabIndex = 5;
+            this.areaNameCombobox.SelectedIndexChanged += new System.EventHandler(this.areaNameCombobox_SelectedIndexChanged);
             // 
             // areaNameLabel
             // 
             this.areaNameLabel.AutoSize = true;
             this.areaNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaNameLabel.Location = new System.Drawing.Point(6, 134);
+            this.areaNameLabel.Location = new System.Drawing.Point(8, 83);
             this.areaNameLabel.Name = "areaNameLabel";
-            this.areaNameLabel.Size = new System.Drawing.Size(79, 16);
+            this.areaNameLabel.Size = new System.Drawing.Size(53, 16);
             this.areaNameLabel.TabIndex = 3;
-            this.areaNameLabel.Text = "Tên khu vực";
+            this.areaNameLabel.Text = "Khu vực";
             // 
             // areaIDLabel
             // 
             this.areaIDLabel.AutoSize = true;
             this.areaIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaIDLabel.Location = new System.Drawing.Point(10, 86);
+            this.areaIDLabel.Location = new System.Drawing.Point(6, 134);
             this.areaIDLabel.Name = "areaIDLabel";
-            this.areaIDLabel.Size = new System.Drawing.Size(74, 16);
+            this.areaIDLabel.Size = new System.Drawing.Size(79, 16);
             this.areaIDLabel.TabIndex = 2;
-            this.areaIDLabel.Text = "Mã khu vực";
+            this.areaIDLabel.Text = "Tên khu vực";
             // 
             // tableIDLabel
             // 
@@ -272,6 +287,37 @@
             this.tableIDLabel.Size = new System.Drawing.Size(52, 16);
             this.tableIDLabel.TabIndex = 1;
             this.tableIDLabel.Text = "Mã bàn";
+            // 
+            // notifycationLabel
+            // 
+            this.notifycationLabel.AutoSize = true;
+            this.notifycationLabel.BackColor = System.Drawing.Color.Silver;
+            this.notifycationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notifycationLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.notifycationLabel.Location = new System.Drawing.Point(837, 413);
+            this.notifycationLabel.Name = "notifycationLabel";
+            this.notifycationLabel.Size = new System.Drawing.Size(50, 16);
+            this.notifycationLabel.TabIndex = 12;
+            this.notifycationLabel.Text = "label1";
+            // 
+            // tableNameTextbox
+            // 
+            this.tableNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tableNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tableNameTextbox.BorderRadius = 5;
+            this.tableNameTextbox.BorderSize = 2;
+            this.tableNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableNameTextbox.Location = new System.Drawing.Point(98, 228);
+            this.tableNameTextbox.Multiline = false;
+            this.tableNameTextbox.Name = "tableNameTextbox";
+            this.tableNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tableNameTextbox.PasswordChar = false;
+            this.tableNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tableNameTextbox.PlaceholderText = "";
+            this.tableNameTextbox.Size = new System.Drawing.Size(183, 32);
+            this.tableNameTextbox.TabIndex = 11;
+            this.tableNameTextbox.Texts = "";
+            this.tableNameTextbox.UnderlinedStyle = false;
             // 
             // addAreaButton
             // 
@@ -291,6 +337,7 @@
             this.addAreaButton.Text = "Thêm khu vực";
             this.addAreaButton.TextColor = System.Drawing.Color.Black;
             this.addAreaButton.UseVisualStyleBackColor = false;
+            this.addAreaButton.Click += new System.EventHandler(this.addAreaButton_Click);
             // 
             // confirmButton
             // 
@@ -310,25 +357,27 @@
             this.confirmButton.Text = "Xác nhận";
             this.confirmButton.TextColor = System.Drawing.Color.Black;
             this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // addButton
+            // addTableButton
             // 
-            this.addButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.addButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.addButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.addButton.BorderRadius = 30;
-            this.addButton.BorderSize = 0;
-            this.addButton.FlatAppearance.BorderSize = 0;
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(109, 306);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(72, 40);
-            this.addButton.TabIndex = 7;
-            this.addButton.Text = "Thêm";
-            this.addButton.TextColor = System.Drawing.Color.Black;
-            this.addButton.UseVisualStyleBackColor = false;
+            this.addTableButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.addTableButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.addTableButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.addTableButton.BorderRadius = 30;
+            this.addTableButton.BorderSize = 0;
+            this.addTableButton.FlatAppearance.BorderSize = 0;
+            this.addTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addTableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addTableButton.ForeColor = System.Drawing.Color.Black;
+            this.addTableButton.Location = new System.Drawing.Point(109, 306);
+            this.addTableButton.Name = "addTableButton";
+            this.addTableButton.Size = new System.Drawing.Size(72, 40);
+            this.addTableButton.TabIndex = 7;
+            this.addTableButton.Text = "Thêm";
+            this.addTableButton.TextColor = System.Drawing.Color.Black;
+            this.addTableButton.UseVisualStyleBackColor = false;
+            this.addTableButton.Click += new System.EventHandler(this.addTableButton_Click);
             // 
             // deleteButton
             // 
@@ -356,6 +405,7 @@
             this.tableIDTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tableIDTextbox.BorderRadius = 5;
             this.tableIDTextbox.BorderSize = 2;
+            this.tableIDTextbox.Enabled = false;
             this.tableIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableIDTextbox.Location = new System.Drawing.Point(98, 178);
             this.tableIDTextbox.Multiline = false;
@@ -369,24 +419,24 @@
             this.tableIDTextbox.Texts = "";
             this.tableIDTextbox.UnderlinedStyle = false;
             // 
-            // areaNameTextbox
+            // areaIDTextbox
             // 
-            this.areaNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.areaNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.areaNameTextbox.BorderRadius = 5;
-            this.areaNameTextbox.BorderSize = 2;
-            this.areaNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaNameTextbox.Location = new System.Drawing.Point(100, 127);
-            this.areaNameTextbox.Multiline = false;
-            this.areaNameTextbox.Name = "areaNameTextbox";
-            this.areaNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.areaNameTextbox.PasswordChar = false;
-            this.areaNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.areaNameTextbox.PlaceholderText = "";
-            this.areaNameTextbox.Size = new System.Drawing.Size(183, 32);
-            this.areaNameTextbox.TabIndex = 0;
-            this.areaNameTextbox.Texts = "";
-            this.areaNameTextbox.UnderlinedStyle = false;
+            this.areaIDTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.areaIDTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.areaIDTextbox.BorderRadius = 5;
+            this.areaIDTextbox.BorderSize = 2;
+            this.areaIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.areaIDTextbox.Location = new System.Drawing.Point(100, 127);
+            this.areaIDTextbox.Multiline = false;
+            this.areaIDTextbox.Name = "areaIDTextbox";
+            this.areaIDTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.areaIDTextbox.PasswordChar = false;
+            this.areaIDTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.areaIDTextbox.PlaceholderText = "";
+            this.areaIDTextbox.Size = new System.Drawing.Size(183, 32);
+            this.areaIDTextbox.TabIndex = 0;
+            this.areaIDTextbox.Texts = "";
+            this.areaIDTextbox.UnderlinedStyle = false;
             // 
             // searchButton
             // 
@@ -445,35 +495,6 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // tableNameLabel
-            // 
-            this.tableNameLabel.AutoSize = true;
-            this.tableNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableNameLabel.Location = new System.Drawing.Point(11, 236);
-            this.tableNameLabel.Name = "tableNameLabel";
-            this.tableNameLabel.Size = new System.Drawing.Size(57, 16);
-            this.tableNameLabel.TabIndex = 10;
-            this.tableNameLabel.Text = "Tên bàn";
-            // 
-            // tableNameTextbox
-            // 
-            this.tableNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.tableNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tableNameTextbox.BorderRadius = 5;
-            this.tableNameTextbox.BorderSize = 2;
-            this.tableNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableNameTextbox.Location = new System.Drawing.Point(98, 228);
-            this.tableNameTextbox.Multiline = false;
-            this.tableNameTextbox.Name = "tableNameTextbox";
-            this.tableNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tableNameTextbox.PasswordChar = false;
-            this.tableNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tableNameTextbox.PlaceholderText = "";
-            this.tableNameTextbox.Size = new System.Drawing.Size(183, 32);
-            this.tableNameTextbox.TabIndex = 11;
-            this.tableNameTextbox.Texts = "";
-            this.tableNameTextbox.UnderlinedStyle = false;
-            // 
             // TableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,10 +502,12 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1138, 595);
             this.ControlBox = false;
+            this.Controls.Add(this.notifycationLabel);
             this.Controls.Add(this.detailPanel);
             this.Controls.Add(this.dataPanel);
             this.Controls.Add(this.TopPanel);
             this.Name = "TableForm";
+            this.Load += new System.EventHandler(this.TableForm_Load);
             this.TopPanel.ResumeLayout(false);
             this.dataPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -495,6 +518,7 @@
             this.detailGroupbox.ResumeLayout(false);
             this.detailGroupbox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -517,18 +541,19 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox detailGroupbox;
-        private System.Windows.Forms.ComboBox areaIDCombobox;
+        private System.Windows.Forms.ComboBox areaNameCombobox;
         private CustomControl.JNewTextbox tableIDTextbox;
         private System.Windows.Forms.Label areaNameLabel;
         private System.Windows.Forms.Label areaIDLabel;
         private System.Windows.Forms.Label tableIDLabel;
-        private CustomControl.JNewTextbox areaNameTextbox;
+        private CustomControl.JNewTextbox areaIDTextbox;
         private System.Windows.Forms.Label infoLabel;
         private CustomControl.JButton addAreaButton;
         private CustomControl.JButton confirmButton;
-        private CustomControl.JButton addButton;
+        private CustomControl.JButton addTableButton;
         private CustomControl.JButton deleteButton;
         private CustomControl.JNewTextbox tableNameTextbox;
         private System.Windows.Forms.Label tableNameLabel;
+        private System.Windows.Forms.Label notifycationLabel;
     }
 }

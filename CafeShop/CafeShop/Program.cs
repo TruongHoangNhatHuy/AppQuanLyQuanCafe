@@ -16,8 +16,8 @@ namespace CafeShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new View.LoginForm());
-            Application.Run(new View.EmpForm.DetailOrderForm());
+            Application.Run(new View.LoginForm());
+            //Application.Run(new View.EmpForm.DetailOrderForm());
             //Application.Run(new View.EmpForm.BillForm());
 
         }
