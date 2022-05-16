@@ -8,16 +8,15 @@ namespace CafeShop.View.EmpForm
 {
     public partial class OrderForm : Form
     {
-        private static DBModel db = new DBModel();
         private List<FlowLayoutPanel> panelList = new List<FlowLayoutPanel>();
         public OrderForm()
         {
             InitializeComponent();
-            //LoadTables();
             areaComboBox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
             areaComboBox.Items.AddRange(BLLOrder.Instance.GetKhuvucCBItem().ToArray());
             LoadTableFromDB();
             LoadCategoryFood();
+            HidePanel();
         }
         private void LoadCategoryFood()
         {
@@ -31,7 +30,6 @@ namespace CafeShop.View.EmpForm
                     ForeColor = Color.Black,
                     Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)))
                 };
-                //add event for button click
                 button.Click += new EventHandler(ShowDetailFood);
                 categoryFoodPanel.Controls.Add(button);
             }
@@ -39,6 +37,7 @@ namespace CafeShop.View.EmpForm
         public void ShowDetailFood(object sender, EventArgs e)
         {
             foodPanel.Controls.Clear();
+            foodPanel.Visible = true;
             CustomControl.JButton button = sender as CustomControl.JButton;
             string MaDanhMuc = button.Name;
             foreach (var mon in BLLOrder.Instance.GetMonByMaDanhMuc(MaDanhMuc))
@@ -53,7 +52,6 @@ namespace CafeShop.View.EmpForm
                 foodNameLabel.ForeColor = Color.Crimson;
                 foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 foodNameLabel.Dock = DockStyle.Left;
-                //foodNameLabel.Height = 30;
                 //
                 //fooodPriceLabel
                 //
@@ -61,7 +59,6 @@ namespace CafeShop.View.EmpForm
                 foodPriceLabel.ForeColor = Color.Black;
                 foodPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 foodPriceLabel.Dock = DockStyle.Right;
-                //foodPriceLabel.Height = 30;
                 //
                 //foodPanel
                 //
@@ -99,12 +96,9 @@ namespace CafeShop.View.EmpForm
                 tablePanel.FlowDirection = FlowDirection.LeftToRight;
                 tablePanel.BackColor = SystemColors.ActiveBorder;
                 tablePanel.AutoSize = true;
-                //foreach (var ban in khuvuc.Bans)
-                //    tablePanel.Controls.Add(new TablesButton(Convert.ToInt32(ban.MaBan.Substring(1)).ToString(), ban.TinhTrang.ToString()));
                 foreach(var ban in khuvuc.Bans)
                 {
                     TablesButton table = new TablesButton(ban.MaBan, ban.TinhTrang.ToString());
-                    ///table.Click += new EventHandler(ShowInfoTable);
                     table._Click += new EventHandler(ShowInfoTable);
                     tablePanel.Controls.Add(table);
                 }    
@@ -121,11 +115,14 @@ namespace CafeShop.View.EmpForm
         }
         private void ShowInfoTable(object sender, EventArgs e)
         {
+            HidePanel();
             CustomControl.JButton button = sender as CustomControl.JButton;
             TablesButton tablesButton = button.Parent as TablesButton;
             Ban ban = BLLOrder.Instance.GetBanByMaBan(tablesButton.MaBan);
+            orderButton.Enabled = !tablesButton.Status.Equals("True");
             tableNameLabel.Text = ban.TenBan;
             statusTable.Text = ban.TinhTrang ? "Còn trống" : "Bận";
+            ShowPanel();
 
         }
         public void LoadTableByLocation(string MaKhuVuc)
@@ -141,6 +138,27 @@ namespace CafeShop.View.EmpForm
         {
             string MaKhuVuc = (areaComboBox.SelectedItem as KhuvucCBItem).ID;
             LoadTableByLocation(MaKhuVuc);
+        }
+
+        private void HidePanel()
+        {
+            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible =
+            foodPanel.Visible = categoryFoodPanel.Visible = false;
+        }
+        private void ShowPanel()
+        {
+            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible = true;
+        }
+
+        private void orderButton_Click(object sender, EventArgs e)
+        {
+            categoryFoodPanel.Visible = true;
+        }
+
+        private void openButton_Click(object sender, EventArgs e)
+        {
+            
+            orderButton.Enabled = true;
         }
     }
 }
