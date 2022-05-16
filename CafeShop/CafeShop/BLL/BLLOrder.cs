@@ -41,5 +41,6 @@ namespace CafeShop.BLL
         public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc) => db.Mons.Where(p => p.MaDanhMuc == MaDanhMuc).ToList();
 
         public Ban GetBanByMaBan(string MaBan) => db.Bans.Find(MaBan);
+
     }
 }

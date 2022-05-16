@@ -72,18 +72,13 @@
   <ItemGroup>
     <Compile Include="BLL\BLLDetailOrder.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
+    <Compile Include="BLL\BLLTable.cs" />
     <Compile Include="DTO\Ban.cs" />
     <Compile Include="DTO\CongThuc.cs" />
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DanhMucThucDon.cs" />
     <Compile Include="DTO\DBModel.cs" />
     <Compile Include="DTO\DonGoiMon.cs" />
-    <Compile Include="DTO\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DTO\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\KhuVuc.cs" />
@@ -196,9 +191,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DTO\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\EmpDetailForm.resx">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
     </EmbeddedResource>

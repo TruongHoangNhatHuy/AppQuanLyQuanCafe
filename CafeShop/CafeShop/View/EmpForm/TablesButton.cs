@@ -21,46 +21,25 @@ namespace CafeShop.View.EmpForm
         {
             InitializeComponent();
         }
-        public TablesButton(string MaBan, string Status)
+        public TablesButton(string MaBan, bool Status)
         {
             InitializeComponent();
             this.MaBan = MaBan;
             this.ID = Convert.ToInt32(MaBan.Substring(1)).ToString();
-            this.Status = Status;     
+            this.Status = Status ? "Còn trống" : "Bận";     
             GUI();
         }
-        private void GUI()
+        public void GUI()
         {
             TableButton.Text = ID;
-            //if(Status.Equals("Trống"))
-            //{
-            //    TableButton.ForeColor = Color.Black;
-            //    TableButton.BorderSize = 2;
-            //    TableButton.BorderColor = Color.Black;
-            //    TableButton.BackColor = Color.White;
-            //}
-            if (Status.Equals("False"))
+            if (Status.Equals("Bận"))
             {
                 TableButton.ForeColor = Color.Black;
                 TableButton.BorderSize = 2;
                 TableButton.BorderColor = Color.Black;
-                TableButton.BackColor = Color.White;
+                TableButton.BackColor = Color.Crimson;
             }
-            else if(Status.Equals("Đang phục vụ"))
-            {
-                TableButton.ForeColor = Color.Black;
-                TableButton.BorderSize = 2;
-                TableButton.BorderColor = Color.Red;
-                TableButton.BackColor = Color.PaleVioletRed;
-            }
-            //else if (Status.Equals("Đã phục vụ"))
-            //{
-            //    TableButton.ForeColor = Color.Black;
-            //    TableButton.BorderSize = 2;
-            //    TableButton.BorderColor = Color.Green;
-            //    TableButton.BackColor = Color.LightGreen;
-            //}
-            else if (Status.Equals("True"))
+            else if (Status.Equals("Còn trống"))
             {
                 TableButton.ForeColor = Color.Black;
                 TableButton.BorderSize = 2;

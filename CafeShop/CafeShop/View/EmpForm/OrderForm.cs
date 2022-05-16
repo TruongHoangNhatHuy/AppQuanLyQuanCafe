@@ -9,6 +9,8 @@ namespace CafeShop.View.EmpForm
     public partial class OrderForm : Form
     {
         private List<FlowLayoutPanel> panelList = new List<FlowLayoutPanel>();
+        private TablesButton currentTableButton = null;
+        private Ban currentTable;
         public OrderForm()
         {
             InitializeComponent();
@@ -98,7 +100,7 @@ namespace CafeShop.View.EmpForm
                 tablePanel.AutoSize = true;
                 foreach(var ban in khuvuc.Bans)
                 {
-                    TablesButton table = new TablesButton(ban.MaBan, ban.TinhTrang.ToString());
+                    TablesButton table = new TablesButton(ban.MaBan, ban.TinhTrang);
                     table._Click += new EventHandler(ShowInfoTable);
                     tablePanel.Controls.Add(table);
                 }    
@@ -118,12 +120,17 @@ namespace CafeShop.View.EmpForm
             HidePanel();
             CustomControl.JButton button = sender as CustomControl.JButton;
             TablesButton tablesButton = button.Parent as TablesButton;
-            Ban ban = BLLOrder.Instance.GetBanByMaBan(tablesButton.MaBan);
-            orderButton.Enabled = !tablesButton.Status.Equals("True");
-            tableNameLabel.Text = ban.TenBan;
-            statusTable.Text = ban.TinhTrang ? "Còn trống" : "Bận";
+            this.currentTableButton = tablesButton;
+            this.currentTable = BLLOrder.Instance.GetBanByMaBan(tablesButton.MaBan);
+            SetInfoTable();
             ShowPanel();
 
+        }
+        public void SetInfoTable()
+        {
+            orderButton.Enabled = currentTableButton.Status.Equals("Bận");
+            tableNameLabel.Text = this.currentTable.TenBan;
+            statusTable.Text = this.currentTable.TinhTrang ? "Còn trống" : "Bận";
         }
         public void LoadTableByLocation(string MaKhuVuc)
         {
@@ -157,8 +164,21 @@ namespace CafeShop.View.EmpForm
 
         private void openButton_Click(object sender, EventArgs e)
         {
-            
-            orderButton.Enabled = true;
+            if (currentTableButton.Status.Equals("Còn trống"))
+            {
+                orderButton.Enabled = true;
+                ChangeStateTable();
+                SetInfoTable();
+            }
+                
+        }
+        private void ChangeStateTable()
+        {
+            if (currentTableButton.Status.Equals("Còn trống"))
+                currentTableButton.Status = "Bận";
+            else
+                currentTableButton.Status = "Còn trống";
+            currentTableButton.GUI();
         }
     }
 }

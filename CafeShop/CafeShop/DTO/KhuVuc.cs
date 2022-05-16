@@ -22,5 +22,9 @@ namespace CafeShop.DTO
         public string TenKhuVuc { get; set; }
         public int SoLuongBan { get; set; }
         public virtual ICollection<Ban> Bans { get; set; }
+        public override string ToString()
+        {
+            return TenKhuVuc;
+        }
     }
 }
