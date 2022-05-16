@@ -63,6 +63,7 @@ namespace CafeShop.View.AdForm
             tableNameTextbox.Texts = "";
             areaNameCombobox.Enabled = areaIDTextbox.Enabled = tableNameTextbox.Enabled = false;
             notifycationLabel.Text = "";
+            state = ExecuteState.None;
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -149,6 +150,7 @@ namespace CafeShop.View.AdForm
     }
     enum ExecuteState
     {
+        None,
         AddTable,
         Update,
         AddArea
