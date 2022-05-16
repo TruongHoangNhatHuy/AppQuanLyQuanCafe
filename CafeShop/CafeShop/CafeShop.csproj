@@ -71,21 +71,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLLDetailOrder.cs" />
-<<<<<<< Updated upstream
-=======
     <Compile Include="BLL\BLLOrder.cs" />
     <Compile Include="BLL\BLLOrderList.cs" />
->>>>>>> Stashed changes
     <Compile Include="DTO\Ban.cs" />
     <Compile Include="DTO\CongThuc.cs" />
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DanhMucThucDon.cs" />
     <Compile Include="DTO\DBModel.cs" />
     <Compile Include="DTO\DonGoiMon.cs" />
-<<<<<<< Updated upstream
-=======
     <Compile Include="DTO\DonGoiMonView.cs" />
->>>>>>> Stashed changes
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\KhuVuc.cs" />
