@@ -71,18 +71,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLLDetailOrder.cs" />
+<<<<<<< Updated upstream
+=======
+    <Compile Include="BLL\BLLOrder.cs" />
+    <Compile Include="BLL\BLLOrderList.cs" />
+>>>>>>> Stashed changes
     <Compile Include="DTO\Ban.cs" />
     <Compile Include="DTO\CongThuc.cs" />
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DanhMucThucDon.cs" />
     <Compile Include="DTO\DBModel.cs" />
     <Compile Include="DTO\DonGoiMon.cs" />
+<<<<<<< Updated upstream
+=======
+    <Compile Include="DTO\DonGoiMonView.cs" />
+>>>>>>> Stashed changes
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\KhuVuc.cs" />
     <Compile Include="DTO\LoHang.cs" />
     <Compile Include="DTO\Mon.cs" />
     <Compile Include="DTO\NguyenLieu.cs" />
+    <Compile Include="BLL\PrimaryKeyGenerator.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\VaiTro.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -239,6 +249,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMon.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMonView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

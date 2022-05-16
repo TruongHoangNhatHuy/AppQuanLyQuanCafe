@@ -6,7 +6,20 @@ namespace CafeShop.DTO
 {
     public class DBModel : DbContext
     {
-        public DBModel()
+        private static DBModel _Instance;
+        public static DBModel Instance
+        {
+            get
+            {
+                if (_Instance == null)
+                {
+                    _Instance = new DBModel();
+                }
+                return _Instance;
+            }
+            private set { }
+        }
+        private DBModel()
                     : base("name=DBModel")
         {
             Database.SetInitializer<DBModel>(new CreateDB());

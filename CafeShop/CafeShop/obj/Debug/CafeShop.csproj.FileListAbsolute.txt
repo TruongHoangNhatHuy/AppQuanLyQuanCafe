@@ -53,6 +53,34 @@ C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeS
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CoreCompileInputs.cache
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.exe
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.pdb
+<<<<<<< Updated upstream
+=======
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpDetailForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpInfoForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.InvoiceForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.MenuForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.TableForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdminForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JNewTextbox.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JTextbox.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.BillForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.DetailOrderForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderListForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmployeeForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.TablesButton.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.LoginForm.resources
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CopyComplete
+C:\Users\Admin\Desktop\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.DTO.Form1.resources
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.dll
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.xml
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.xml
+>>>>>>> Stashed changes
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpDetailForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpInfoForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.InvoiceForm.resources

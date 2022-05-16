@@ -15,6 +15,11 @@ namespace CafeShop.View
         public LoginForm()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
+=======
+            DataGridView dataGridView = new DataGridView();
+            dataGridView.DataSource = DBModel.Instance.KhuVucs.ToList();
+>>>>>>> Stashed changes
         }
         #region EventHandler
         private void button_MouseEnter(object sender, EventArgs e)

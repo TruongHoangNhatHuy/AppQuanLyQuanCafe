@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeShop.BLL;
 
 namespace CafeShop.View.EmpForm
 {
@@ -15,6 +16,17 @@ namespace CafeShop.View.EmpForm
         public OrderListForm()
         {
             InitializeComponent();
+            dataGridView1.DataSource = BLLOrderList.Instance.GetOrderListSortByTime();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                string MaDonGoiMon = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                BLLOrderList.Instance.StateChange(MaDonGoiMon);
+                dataGridView1.DataSource = BLLOrderList.Instance.GetOrderListSortByTime();
+            }
         }
     }
 }

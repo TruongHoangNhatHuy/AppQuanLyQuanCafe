@@ -12,6 +12,10 @@ namespace CafeShop.View.EmpForm
 {
     public partial class OrderForm : Form
     {
+<<<<<<< Updated upstream
+=======
+        private List<FlowLayoutPanel> panelList = new List<FlowLayoutPanel>();
+>>>>>>> Stashed changes
         public OrderForm()
         {
             InitializeComponent();

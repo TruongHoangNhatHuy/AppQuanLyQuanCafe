@@ -24,7 +24,7 @@ namespace CafeShop.DTO
         public int GiaTien { get; set; }
         public DateTime ThoiGianGoiMon { get; set; }
         [StringLength(20)]
-        public string TinhTrang { get; set; }
+        public string TinhTrang { get; set; }   // "Đang chờ"/"Đang thực hiện"/"Hoàn thành"
         [ForeignKey("MaHoaDon")]
         public virtual HoaDon HoaDon { get; set; }
         [ForeignKey("MaMon")]
