@@ -36,22 +36,6 @@ namespace CafeShop.BLL
         {
             return mon.DonGia * SoLuong;
         }
-<<<<<<< Updated upstream
-        public DonGoiMon ConfirmDetailOrder(int SoLuong, string GhiChu)
-        {
-            // Lưu dữ liệu vào tầng trung gian
-            return new DonGoiMon 
-                { 
-                    MaDonGoiMon = "",
-                    MaHoaDon = "",
-                    MaMon = mon.MaMon,
-                    SoLuong = SoLuong,
-                    GhiChu = GhiChu,
-                    GiaTien = CalculatePrice(SoLuong),
-                    ThoiGianGoiMon = DateTime.Now,
-                    TinhTrang = "Đang chờ"
-                };
-=======
         // phương thức kiểm tra kho còn đủ nguyên liệu không
         public void CheckGoods() { }
         public void ConfirmDetailOrder(int SoLuong, string GhiChu)
@@ -69,7 +53,6 @@ namespace CafeShop.BLL
             };
             DBModel.Instance.DonGoiMons.Add(result);
             //db.SaveChanges();
->>>>>>> Stashed changes
         }
     }
 }
