@@ -103,7 +103,8 @@ namespace CafeShop.View
         {
             ActivateButton(sender);
             this.label1.Text = "Quản Lý Khách Hàng";
-            AdForm.EmpInfoForm form = new AdForm.EmpInfoForm();
+            //AdForm.EmpInfoForm form = new AdForm.EmpInfoForm();
+            AdForm.CustomerInfoForm form = new AdForm.CustomerInfoForm();
             form.reload = Reload;
             openChildForm(form);
         }

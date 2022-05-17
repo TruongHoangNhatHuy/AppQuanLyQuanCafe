@@ -1,6 +1,6 @@
 ﻿namespace CafeShop.View.AdForm
 {
-    partial class EmpInfoForm
+    partial class CustomerInfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,6 @@
             this.sortComboBox = new System.Windows.Forms.ComboBox();
             this.sortButton = new CafeShop.View.CustomControl.JButton();
             this.exitButton = new CafeShop.View.CustomControl.JButton();
-            this.resetPasswordButton = new CafeShop.View.CustomControl.JButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +112,7 @@
             this.addButton.Text = "Thêm";
             this.addButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.addButton.UseVisualStyleBackColor = false;
-            this.addButton.Click += new System.EventHandler(this.adButton_Click);
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // updateButton
             // 
@@ -127,7 +126,7 @@
             this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.updateButton.Location = new System.Drawing.Point(565, 543);
+            this.updateButton.Location = new System.Drawing.Point(478, 543);
             this.updateButton.Name = "updateButton";
             this.updateButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.updateButton.Size = new System.Drawing.Size(154, 40);
@@ -205,33 +204,12 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // resetPasswordButton
-            // 
-            this.resetPasswordButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.resetPasswordButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.resetPasswordButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.resetPasswordButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.resetPasswordButton.BorderRadius = 30;
-            this.resetPasswordButton.BorderSize = 0;
-            this.resetPasswordButton.FlatAppearance.BorderSize = 0;
-            this.resetPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetPasswordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetPasswordButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.resetPasswordButton.Location = new System.Drawing.Point(373, 543);
-            this.resetPasswordButton.Name = "resetPasswordButton";
-            this.resetPasswordButton.Size = new System.Drawing.Size(154, 40);
-            this.resetPasswordButton.TabIndex = 9;
-            this.resetPasswordButton.Text = "Reset mật khẩu";
-            this.resetPasswordButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.resetPasswordButton.UseVisualStyleBackColor = false;
-            // 
-            // EmpInfoForm
+            // CustomerInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1154, 611);
-            this.Controls.Add(this.resetPasswordButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.sortButton);
             this.Controls.Add(this.sortComboBox);
@@ -242,7 +220,7 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EmpInfoForm";
+            this.Name = "CustomerInfoForm";
             this.Text = "EmployeeForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -260,6 +238,5 @@
         private System.Windows.Forms.ComboBox sortComboBox;
         private CustomControl.JButton sortButton;
         private CustomControl.JButton exitButton;
-        private CustomControl.JButton resetPasswordButton;
     }
 }

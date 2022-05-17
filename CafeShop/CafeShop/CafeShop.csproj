@@ -96,11 +96,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\AdForm\CustomerDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\CustomerDetailForm.Designer.cs">
+      <DependentUpon>CustomerDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AdForm\EmpDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\AdForm\EmpDetailForm.Designer.cs">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdForm\CustumerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\CustumerInfoForm.Designer.cs">
+      <DependentUpon>CustumerInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AdForm\EmpInfoForm.cs">
       <SubType>Form</SubType>
@@ -194,8 +206,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\AdForm\CustomerDetailForm.resx">
+      <DependentUpon>CustomerDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\EmpDetailForm.resx">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\CustumerInfoForm.resx">
+      <DependentUpon>CustumerInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\EmpInfoForm.resx">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>

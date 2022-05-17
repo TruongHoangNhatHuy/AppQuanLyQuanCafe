@@ -10,19 +10,13 @@ using System.Windows.Forms;
 
 namespace CafeShop.View.AdForm
 {
-    public partial class EmpInfoForm : Form
+    public partial class CustomerInfoForm : Form
     {
         public delegate void Reload();
         public Reload reload;
-        public EmpInfoForm()
+        public CustomerInfoForm()
         {
             InitializeComponent();
-        }
-
-        private void adButton_Click(object sender, EventArgs e)
-        {
-            AdForm.EmpDetailForm form = new EmpDetailForm();
-            form.ShowDialog();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -30,6 +24,13 @@ namespace CafeShop.View.AdForm
 
             this.Close();
             reload?.Invoke();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            //AdForm.EmpDetailForm form = new EmpDetailForm();
+            AdForm.CustomerDetailForm form = new CustomerDetailForm();
+            form.ShowDialog();
         }
     }
 }
