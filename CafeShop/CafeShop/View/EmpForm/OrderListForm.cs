@@ -19,7 +19,7 @@ namespace CafeShop.View.EmpForm
             dataGridView1.DataSource = BLLOrderList.Instance.GetOrderListSortByTime();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void performButton_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
             {

@@ -25,7 +25,7 @@ namespace CafeShop.View.EmpForm
             LoadCategoryFood();
             HidePanel();
         }
-        #region Interface for components
+        #region Create dynamic Components
         private void LoadCategoryFood()
         {
             foreach (var danhmuc in BLLOrder.Instance.GetDanhMucThucDon())
@@ -60,6 +60,7 @@ namespace CafeShop.View.EmpForm
                 foodNameLabel.ForeColor = Color.Crimson;
                 foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 foodNameLabel.Dock = DockStyle.Left;
+                foodNameLabel.Click += new EventHandler(openDetailOrderForm);
                 //
                 //fooodPriceLabel
                 //

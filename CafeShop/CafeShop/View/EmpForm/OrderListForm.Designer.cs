@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.maDonGoiMonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenMonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +38,11 @@
             this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGoiMonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.donGoiMonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.searchTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.searchButton = new CafeShop.View.CustomControl.JButton();
+            this.performButton = new CafeShop.View.CustomControl.JButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGoiMonViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGoiMonBindingSource)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -61,46 +65,14 @@
             this.thoiGianTuKhiGoiDataGridViewTextBoxColumn,
             this.tinhTrangDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.donGoiMonViewBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 95);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(46, 125);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1262, 402);
+            this.dataGridView1.Size = new System.Drawing.Size(841, 426);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(122, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 35);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Theo thời gian";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(414, 37);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Theo bàn";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1339, 95);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 87);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Thực hiện";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // maDonGoiMonDataGridViewTextBoxColumn
             // 
@@ -165,18 +137,110 @@
             // 
             this.donGoiMonBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMon);
             // 
+            // jButton2
+            // 
+            this.jButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton2.BorderRadius = 15;
+            this.jButton2.BorderSize = 0;
+            this.jButton2.FlatAppearance.BorderSize = 0;
+            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton2.ForeColor = System.Drawing.Color.Black;
+            this.jButton2.Location = new System.Drawing.Point(46, 69);
+            this.jButton2.Name = "jButton2";
+            this.jButton2.Size = new System.Drawing.Size(95, 32);
+            this.jButton2.TabIndex = 10;
+            this.jButton2.Text = "Sắp xếp";
+            this.jButton2.TextColor = System.Drawing.Color.Black;
+            this.jButton2.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(167, 76);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(146, 21);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // searchTextbox
+            // 
+            this.searchTextbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchTextbox.BackColor = System.Drawing.Color.AliceBlue;
+            this.searchTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.searchTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.searchTextbox.BorderRadius = 10;
+            this.searchTextbox.BorderSize = 2;
+            this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextbox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.searchTextbox.Location = new System.Drawing.Point(402, 69);
+            this.searchTextbox.Multiline = false;
+            this.searchTextbox.Name = "searchTextbox";
+            this.searchTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.searchTextbox.PasswordChar = false;
+            this.searchTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.searchTextbox.PlaceholderText = "         Tìm kiếm.......";
+            this.searchTextbox.Size = new System.Drawing.Size(386, 32);
+            this.searchTextbox.TabIndex = 12;
+            this.searchTextbox.Texts = "";
+            this.searchTextbox.UnderlinedStyle = false;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.searchButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.searchButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.searchButton.BorderRadius = 15;
+            this.searchButton.BorderSize = 0;
+            this.searchButton.FlatAppearance.BorderSize = 0;
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.Color.Black;
+            this.searchButton.Image = global::CafeShop.Properties.Resources.magnifying_glass;
+            this.searchButton.Location = new System.Drawing.Point(803, 69);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(84, 32);
+            this.searchButton.TabIndex = 13;
+            this.searchButton.TextColor = System.Drawing.Color.Black;
+            this.searchButton.UseVisualStyleBackColor = false;
+            // 
+            // performButton
+            // 
+            this.performButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.performButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.performButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.performButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.performButton.BorderRadius = 20;
+            this.performButton.BorderSize = 0;
+            this.performButton.FlatAppearance.BorderSize = 0;
+            this.performButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.performButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.performButton.ForeColor = System.Drawing.Color.Black;
+            this.performButton.Location = new System.Drawing.Point(925, 125);
+            this.performButton.Name = "performButton";
+            this.performButton.Size = new System.Drawing.Size(101, 51);
+            this.performButton.TabIndex = 14;
+            this.performButton.Text = "Thực hiện";
+            this.performButton.TextColor = System.Drawing.Color.Black;
+            this.performButton.UseVisualStyleBackColor = false;
+            this.performButton.Click += new System.EventHandler(this.performButton_Click);
+            // 
             // OrderListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1557, 553);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1138, 595);
+            this.ControlBox = false;
+            this.Controls.Add(this.performButton);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.searchTextbox);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.jButton2);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "OrderListForm";
-            this.Text = "OrderListForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGoiMonViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGoiMonBindingSource)).EndInit();
@@ -185,9 +249,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource donGoiMonBindingSource;
         private System.Windows.Forms.BindingSource donGoiMonViewBindingSource;
@@ -197,5 +258,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thoiGianTuKhiGoiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tinhTrangDataGridViewTextBoxColumn;
+        private CustomControl.JButton jButton2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private CustomControl.JNewTextbox searchTextbox;
+        private CustomControl.JButton searchButton;
+        private CustomControl.JButton performButton;
     }
 }
