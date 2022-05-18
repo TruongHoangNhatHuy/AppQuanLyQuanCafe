@@ -193,7 +193,6 @@ namespace CafeShop.View.EmpForm
                 ChangeStateTable();
                 SetInfoTable();
             }
-
         }
         #endregion
 
