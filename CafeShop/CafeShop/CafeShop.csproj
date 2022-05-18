@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLBill.cs" />
     <Compile Include="BLL\BLLDetailOrder.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
     <Compile Include="BLL\BLLOrderList.cs" />

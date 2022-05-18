@@ -37,15 +37,17 @@
             this.surchargeLabel = new System.Windows.Forms.Label();
             this.surchargePercent = new System.Windows.Forms.CheckBox();
             this.discountPercent = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ThanhTienTextBox = new CafeShop.View.CustomControl.JNewTextbox();
             this.discountTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.surchargeTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.jNewTextbox5 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.tenKHTextBox = new CafeShop.View.CustomControl.JNewTextbox();
             this.jButton3 = new CafeShop.View.CustomControl.JButton();
             this.jButton2 = new CafeShop.View.CustomControl.JButton();
-            this.jNewTextbox4 = new CafeShop.View.CustomControl.JNewTextbox();
-            this.jNewTextbox3 = new CafeShop.View.CustomControl.JNewTextbox();
-            this.jNewTextbox2 = new CafeShop.View.CustomControl.JNewTextbox();
-            this.jNewTextbox1 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.TongTienTextBox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.soTienKhachDuaTextBox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.tienThuaTextBox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.SDTKhachHangTextBox = new CafeShop.View.CustomControl.JNewTextbox();
             this.jButton1 = new CafeShop.View.CustomControl.JButton();
             this.SuspendLayout();
             // 
@@ -57,16 +59,16 @@
             this.label1.Location = new System.Drawing.Point(56, 125);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 25);
+            this.label1.Size = new System.Drawing.Size(267, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Số tiền cần trả";
+            this.label1.Text = "Tổng tiền các đơn gọi món";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Crimson;
-            this.label3.Location = new System.Drawing.Point(56, 299);
+            this.label3.Location = new System.Drawing.Point(56, 363);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(186, 25);
@@ -78,7 +80,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Crimson;
-            this.label4.Location = new System.Drawing.Point(56, 384);
+            this.label4.Location = new System.Drawing.Point(56, 449);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 25);
@@ -90,7 +92,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Crimson;
-            this.label5.Location = new System.Drawing.Point(56, 475);
+            this.label5.Location = new System.Drawing.Point(56, 540);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 25);
@@ -113,7 +115,7 @@
             // 
             this.discountLabel.AutoSize = true;
             this.discountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountLabel.Location = new System.Drawing.Point(343, 173);
+            this.discountLabel.Location = new System.Drawing.Point(406, 172);
             this.discountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.discountLabel.Name = "discountLabel";
             this.discountLabel.Size = new System.Drawing.Size(89, 25);
@@ -134,22 +136,57 @@
             // surchargePercent
             // 
             this.surchargePercent.AutoSize = true;
-            this.surchargePercent.Location = new System.Drawing.Point(211, 216);
+            this.surchargePercent.Location = new System.Drawing.Point(212, 215);
             this.surchargePercent.Name = "surchargePercent";
             this.surchargePercent.Size = new System.Drawing.Size(49, 24);
             this.surchargePercent.TabIndex = 18;
             this.surchargePercent.Text = "%";
             this.surchargePercent.UseVisualStyleBackColor = true;
+            this.surchargePercent.CheckedChanged += new System.EventHandler(this.CalculateCharge);
             // 
             // discountPercent
             // 
             this.discountPercent.AutoSize = true;
-            this.discountPercent.Location = new System.Drawing.Point(482, 216);
+            this.discountPercent.Location = new System.Drawing.Point(544, 215);
             this.discountPercent.Name = "discountPercent";
             this.discountPercent.Size = new System.Drawing.Size(49, 24);
             this.discountPercent.TabIndex = 18;
             this.discountPercent.Text = "%";
             this.discountPercent.UseVisualStyleBackColor = true;
+            this.discountPercent.CheckedChanged += new System.EventHandler(this.CalculateCharge);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Crimson;
+            this.label6.Location = new System.Drawing.Point(56, 292);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 25);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Thành tiền";
+            // 
+            // ThanhTienTextBox
+            // 
+            this.ThanhTienTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.ThanhTienTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.ThanhTienTextBox.BorderRadius = 5;
+            this.ThanhTienTextBox.BorderSize = 2;
+            this.ThanhTienTextBox.Enabled = false;
+            this.ThanhTienTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThanhTienTextBox.Location = new System.Drawing.Point(347, 274);
+            this.ThanhTienTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ThanhTienTextBox.Multiline = false;
+            this.ThanhTienTextBox.Name = "ThanhTienTextBox";
+            this.ThanhTienTextBox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.ThanhTienTextBox.PasswordChar = false;
+            this.ThanhTienTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ThanhTienTextBox.PlaceholderText = "";
+            this.ThanhTienTextBox.Size = new System.Drawing.Size(272, 48);
+            this.ThanhTienTextBox.TabIndex = 20;
+            this.ThanhTienTextBox.Texts = "";
+            this.ThanhTienTextBox.UnderlinedStyle = false;
             // 
             // discountTextbox
             // 
@@ -158,7 +195,7 @@
             this.discountTextbox.BorderRadius = 5;
             this.discountTextbox.BorderSize = 2;
             this.discountTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountTextbox.Location = new System.Drawing.Point(341, 204);
+            this.discountTextbox.Location = new System.Drawing.Point(402, 205);
             this.discountTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.discountTextbox.Multiline = false;
             this.discountTextbox.Name = "discountTextbox";
@@ -170,6 +207,7 @@
             this.discountTextbox.TabIndex = 15;
             this.discountTextbox.Texts = "0";
             this.discountTextbox.UnderlinedStyle = false;
+            this.discountTextbox._TextChanged += new System.EventHandler(this.CalculateCharge);
             // 
             // surchargeTextbox
             // 
@@ -178,7 +216,7 @@
             this.surchargeTextbox.BorderRadius = 5;
             this.surchargeTextbox.BorderSize = 2;
             this.surchargeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.surchargeTextbox.Location = new System.Drawing.Point(69, 204);
+            this.surchargeTextbox.Location = new System.Drawing.Point(69, 205);
             this.surchargeTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.surchargeTextbox.Multiline = false;
             this.surchargeTextbox.Name = "surchargeTextbox";
@@ -190,27 +228,28 @@
             this.surchargeTextbox.TabIndex = 14;
             this.surchargeTextbox.Texts = "0";
             this.surchargeTextbox.UnderlinedStyle = false;
+            this.surchargeTextbox._TextChanged += new System.EventHandler(this.CalculateCharge);
             // 
-            // jNewTextbox5
+            // tenKHTextBox
             // 
-            this.jNewTextbox5.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox5.BorderRadius = 5;
-            this.jNewTextbox5.BorderSize = 2;
-            this.jNewTextbox5.Enabled = false;
-            this.jNewTextbox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox5.Location = new System.Drawing.Point(285, 533);
-            this.jNewTextbox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jNewTextbox5.Multiline = false;
-            this.jNewTextbox5.Name = "jNewTextbox5";
-            this.jNewTextbox5.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
-            this.jNewTextbox5.PasswordChar = false;
-            this.jNewTextbox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox5.PlaceholderText = "";
-            this.jNewTextbox5.Size = new System.Drawing.Size(272, 48);
-            this.jNewTextbox5.TabIndex = 12;
-            this.jNewTextbox5.Texts = "";
-            this.jNewTextbox5.UnderlinedStyle = false;
+            this.tenKHTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tenKHTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tenKHTextBox.BorderRadius = 5;
+            this.tenKHTextBox.BorderSize = 2;
+            this.tenKHTextBox.Enabled = false;
+            this.tenKHTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenKHTextBox.Location = new System.Drawing.Point(347, 597);
+            this.tenKHTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tenKHTextBox.Multiline = false;
+            this.tenKHTextBox.Name = "tenKHTextBox";
+            this.tenKHTextBox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.tenKHTextBox.PasswordChar = false;
+            this.tenKHTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tenKHTextBox.PlaceholderText = "";
+            this.tenKHTextBox.Size = new System.Drawing.Size(272, 48);
+            this.tenKHTextBox.TabIndex = 12;
+            this.tenKHTextBox.Texts = "";
+            this.tenKHTextBox.UnderlinedStyle = false;
             // 
             // jButton3
             // 
@@ -231,6 +270,7 @@
             this.jButton3.Text = "Xác nhận";
             this.jButton3.TextColor = System.Drawing.Color.Black;
             this.jButton3.UseVisualStyleBackColor = false;
+            this.jButton3.Click += new System.EventHandler(this.jButton3_Click);
             // 
             // jButton2
             // 
@@ -251,88 +291,90 @@
             this.jButton2.Text = "Huỷ";
             this.jButton2.TextColor = System.Drawing.Color.Black;
             this.jButton2.UseVisualStyleBackColor = false;
+            this.jButton2.Click += new System.EventHandler(this.jButton2_Click);
             // 
-            // jNewTextbox4
+            // TongTienTextBox
             // 
-            this.jNewTextbox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox4.BorderRadius = 5;
-            this.jNewTextbox4.BorderSize = 2;
-            this.jNewTextbox4.Enabled = false;
-            this.jNewTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox4.Location = new System.Drawing.Point(285, 109);
-            this.jNewTextbox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jNewTextbox4.Multiline = false;
-            this.jNewTextbox4.Name = "jNewTextbox4";
-            this.jNewTextbox4.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
-            this.jNewTextbox4.PasswordChar = false;
-            this.jNewTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox4.PlaceholderText = "";
-            this.jNewTextbox4.Size = new System.Drawing.Size(272, 48);
-            this.jNewTextbox4.TabIndex = 9;
-            this.jNewTextbox4.Texts = "";
-            this.jNewTextbox4.UnderlinedStyle = false;
+            this.TongTienTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.TongTienTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.TongTienTextBox.BorderRadius = 5;
+            this.TongTienTextBox.BorderSize = 2;
+            this.TongTienTextBox.Enabled = false;
+            this.TongTienTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TongTienTextBox.Location = new System.Drawing.Point(347, 109);
+            this.TongTienTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TongTienTextBox.Multiline = false;
+            this.TongTienTextBox.Name = "TongTienTextBox";
+            this.TongTienTextBox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.TongTienTextBox.PasswordChar = false;
+            this.TongTienTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TongTienTextBox.PlaceholderText = "";
+            this.TongTienTextBox.Size = new System.Drawing.Size(272, 48);
+            this.TongTienTextBox.TabIndex = 9;
+            this.TongTienTextBox.Texts = "";
+            this.TongTienTextBox.UnderlinedStyle = false;
             // 
-            // jNewTextbox3
+            // soTienKhachDuaTextBox
             // 
-            this.jNewTextbox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox3.BorderRadius = 5;
-            this.jNewTextbox3.BorderSize = 2;
-            this.jNewTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox3.Location = new System.Drawing.Point(285, 284);
-            this.jNewTextbox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jNewTextbox3.Multiline = false;
-            this.jNewTextbox3.Name = "jNewTextbox3";
-            this.jNewTextbox3.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
-            this.jNewTextbox3.PasswordChar = false;
-            this.jNewTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox3.PlaceholderText = "";
-            this.jNewTextbox3.Size = new System.Drawing.Size(272, 48);
-            this.jNewTextbox3.TabIndex = 8;
-            this.jNewTextbox3.Texts = "";
-            this.jNewTextbox3.UnderlinedStyle = false;
+            this.soTienKhachDuaTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.soTienKhachDuaTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.soTienKhachDuaTextBox.BorderRadius = 5;
+            this.soTienKhachDuaTextBox.BorderSize = 2;
+            this.soTienKhachDuaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soTienKhachDuaTextBox.Location = new System.Drawing.Point(347, 351);
+            this.soTienKhachDuaTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.soTienKhachDuaTextBox.Multiline = false;
+            this.soTienKhachDuaTextBox.Name = "soTienKhachDuaTextBox";
+            this.soTienKhachDuaTextBox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.soTienKhachDuaTextBox.PasswordChar = false;
+            this.soTienKhachDuaTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.soTienKhachDuaTextBox.PlaceholderText = "";
+            this.soTienKhachDuaTextBox.Size = new System.Drawing.Size(272, 48);
+            this.soTienKhachDuaTextBox.TabIndex = 8;
+            this.soTienKhachDuaTextBox.Texts = "";
+            this.soTienKhachDuaTextBox.UnderlinedStyle = false;
+            this.soTienKhachDuaTextBox._TextChanged += new System.EventHandler(this.CalculateCharge);
             // 
-            // jNewTextbox2
+            // tienThuaTextBox
             // 
-            this.jNewTextbox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox2.BorderRadius = 5;
-            this.jNewTextbox2.BorderSize = 2;
-            this.jNewTextbox2.Enabled = false;
-            this.jNewTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox2.Location = new System.Drawing.Point(285, 375);
-            this.jNewTextbox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jNewTextbox2.Multiline = false;
-            this.jNewTextbox2.Name = "jNewTextbox2";
-            this.jNewTextbox2.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
-            this.jNewTextbox2.PasswordChar = false;
-            this.jNewTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox2.PlaceholderText = "";
-            this.jNewTextbox2.Size = new System.Drawing.Size(272, 48);
-            this.jNewTextbox2.TabIndex = 7;
-            this.jNewTextbox2.Texts = "";
-            this.jNewTextbox2.UnderlinedStyle = false;
+            this.tienThuaTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tienThuaTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tienThuaTextBox.BorderRadius = 5;
+            this.tienThuaTextBox.BorderSize = 2;
+            this.tienThuaTextBox.Enabled = false;
+            this.tienThuaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tienThuaTextBox.Location = new System.Drawing.Point(347, 440);
+            this.tienThuaTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tienThuaTextBox.Multiline = false;
+            this.tienThuaTextBox.Name = "tienThuaTextBox";
+            this.tienThuaTextBox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.tienThuaTextBox.PasswordChar = false;
+            this.tienThuaTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tienThuaTextBox.PlaceholderText = "";
+            this.tienThuaTextBox.Size = new System.Drawing.Size(272, 48);
+            this.tienThuaTextBox.TabIndex = 7;
+            this.tienThuaTextBox.Texts = "";
+            this.tienThuaTextBox.UnderlinedStyle = false;
             // 
-            // jNewTextbox1
+            // SDTKhachHangTextBox
             // 
-            this.jNewTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox1.BorderRadius = 5;
-            this.jNewTextbox1.BorderSize = 2;
-            this.jNewTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox1.Location = new System.Drawing.Point(285, 461);
-            this.jNewTextbox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jNewTextbox1.Multiline = false;
-            this.jNewTextbox1.Name = "jNewTextbox1";
-            this.jNewTextbox1.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
-            this.jNewTextbox1.PasswordChar = false;
-            this.jNewTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.jNewTextbox1.PlaceholderText = "";
-            this.jNewTextbox1.Size = new System.Drawing.Size(272, 48);
-            this.jNewTextbox1.TabIndex = 6;
-            this.jNewTextbox1.Texts = "";
-            this.jNewTextbox1.UnderlinedStyle = false;
+            this.SDTKhachHangTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.SDTKhachHangTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.SDTKhachHangTextBox.BorderRadius = 5;
+            this.SDTKhachHangTextBox.BorderSize = 2;
+            this.SDTKhachHangTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SDTKhachHangTextBox.Location = new System.Drawing.Point(347, 526);
+            this.SDTKhachHangTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SDTKhachHangTextBox.Multiline = false;
+            this.SDTKhachHangTextBox.Name = "SDTKhachHangTextBox";
+            this.SDTKhachHangTextBox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.SDTKhachHangTextBox.PasswordChar = false;
+            this.SDTKhachHangTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.SDTKhachHangTextBox.PlaceholderText = "";
+            this.SDTKhachHangTextBox.Size = new System.Drawing.Size(272, 48);
+            this.SDTKhachHangTextBox.TabIndex = 6;
+            this.SDTKhachHangTextBox.Texts = "";
+            this.SDTKhachHangTextBox.UnderlinedStyle = false;
             // 
             // jButton1
             // 
@@ -345,7 +387,7 @@
             this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jButton1.ForeColor = System.Drawing.Color.Black;
-            this.jButton1.Location = new System.Drawing.Point(60, 523);
+            this.jButton1.Location = new System.Drawing.Point(60, 588);
             this.jButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.jButton1.Name = "jButton1";
             this.jButton1.Size = new System.Drawing.Size(162, 58);
@@ -353,13 +395,16 @@
             this.jButton1.Text = "Kiểm tra";
             this.jButton1.TextColor = System.Drawing.Color.Black;
             this.jButton1.UseVisualStyleBackColor = false;
+            this.jButton1.Click += new System.EventHandler(this.jButton1_Click);
             // 
             // BillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 785);
+            this.ClientSize = new System.Drawing.Size(672, 772);
             this.ControlBox = false;
+            this.Controls.Add(this.ThanhTienTextBox);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.discountPercent);
             this.Controls.Add(this.surchargePercent);
             this.Controls.Add(this.discountLabel);
@@ -367,13 +412,13 @@
             this.Controls.Add(this.discountTextbox);
             this.Controls.Add(this.surchargeTextbox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.jNewTextbox5);
+            this.Controls.Add(this.tenKHTextBox);
             this.Controls.Add(this.jButton3);
             this.Controls.Add(this.jButton2);
-            this.Controls.Add(this.jNewTextbox4);
-            this.Controls.Add(this.jNewTextbox3);
-            this.Controls.Add(this.jNewTextbox2);
-            this.Controls.Add(this.jNewTextbox1);
+            this.Controls.Add(this.TongTienTextBox);
+            this.Controls.Add(this.soTienKhachDuaTextBox);
+            this.Controls.Add(this.tienThuaTextBox);
+            this.Controls.Add(this.SDTKhachHangTextBox);
             this.Controls.Add(this.jButton1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -394,13 +439,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private CustomControl.JButton jButton1;
-        private CustomControl.JNewTextbox jNewTextbox1;
-        private CustomControl.JNewTextbox jNewTextbox2;
-        private CustomControl.JNewTextbox jNewTextbox3;
-        private CustomControl.JNewTextbox jNewTextbox4;
+        private CustomControl.JNewTextbox SDTKhachHangTextBox;
+        private CustomControl.JNewTextbox tienThuaTextBox;
+        private CustomControl.JNewTextbox soTienKhachDuaTextBox;
+        private CustomControl.JNewTextbox TongTienTextBox;
         private CustomControl.JButton jButton2;
         private CustomControl.JButton jButton3;
-        private CustomControl.JNewTextbox jNewTextbox5;
+        private CustomControl.JNewTextbox tenKHTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label discountLabel;
         private System.Windows.Forms.Label surchargeLabel;
@@ -408,5 +453,7 @@
         private CustomControl.JNewTextbox surchargeTextbox;
         private System.Windows.Forms.CheckBox surchargePercent;
         private System.Windows.Forms.CheckBox discountPercent;
+        private CustomControl.JNewTextbox ThanhTienTextBox;
+        private System.Windows.Forms.Label label6;
     }
 }

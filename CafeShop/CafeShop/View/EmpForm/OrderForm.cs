@@ -160,6 +160,8 @@ namespace CafeShop.View.EmpForm
             statusTable.Text = this.currentTable.TinhTrang ? "Còn trống" : "Bận";
             if (statusTable.Text == "Bận")
                 timeInfoLabel.Text = BLLOrder.Instance.GetHoaDonByMaBan(MaBan).ThoiGianThanhToan.ToString();
+            else
+                timeInfoLabel.Text = "";
         }
 
         public void LoadTableByLocation(string MaKhuVuc)
@@ -205,6 +207,10 @@ namespace CafeShop.View.EmpForm
 
         private void chargeButton_Click(object sender, EventArgs e)
         {
+            BillForm form = new BillForm(currentTable.MaBan);
+            form.ReloadTable += new BillForm.ReloadTableDelegate(ChangeStateTable);
+            form.ReloadInfo += new BillForm.ReloadTableInfoDelegate(SetInfoTable);
+            form.ShowDialog();
 
         }
     }
