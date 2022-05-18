@@ -19,7 +19,7 @@ namespace CafeShop.BLL
                 return _Instance;
             }
         }
-        private List<HoaDon> currentBill = new List<HoaDon>();
+        private List<HoaDon> currentBill = DBModel.Instance.HoaDons.Where(p => p.MaBan != "B000000000").ToList();
         private BLLOrder() 
         { }
         public List<KhuvucCBItem> GetKhuvucCBItem()

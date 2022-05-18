@@ -34,11 +34,13 @@ namespace CafeShop.DTO
             });
             context.KhuVucs.AddRange(new KhuVuc[]
             {
+                new KhuVuc { MaKhuVuc = "KV00000000", TenKhuVuc = "Khu vực ảo", SoLuongBan = 0},
                 new KhuVuc { MaKhuVuc = "KV00000001", TenKhuVuc = "Trong nhà", SoLuongBan = 0},
                 new KhuVuc { MaKhuVuc = "KV00000002", TenKhuVuc = "Ngoài trời", SoLuongBan = 0}
             });
             context.Bans.AddRange(new Ban[]
             {
+                new Ban { MaBan = "B000000000", TenBan = "Bàn ảo", TinhTrang = true, MaKhuVuc = "KV00000000"},
                 new Ban { MaBan = "B000000001", TenBan = "Bàn 1 trong nhà", TinhTrang = true, MaKhuVuc = "KV00000001"},
                 new Ban { MaBan = "B000000002", TenBan = "Bàn 1 ngoài trời", TinhTrang = true, MaKhuVuc = "KV00000002"},
                 new Ban { MaBan = "B000000003", TenBan = "Bàn 2 trong nhà", TinhTrang = true, MaKhuVuc = "KV00000001"},
