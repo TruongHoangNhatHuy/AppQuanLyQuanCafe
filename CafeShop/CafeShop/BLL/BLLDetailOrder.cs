@@ -53,6 +53,7 @@ namespace CafeShop.BLL
             };
             DBModel.Instance.DonGoiMons.Add(result);
             //db.SaveChanges();
+            DBModel.Instance.SaveChanges();
         }
     }
 }

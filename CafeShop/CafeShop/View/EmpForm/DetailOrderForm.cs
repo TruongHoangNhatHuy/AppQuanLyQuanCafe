@@ -6,8 +6,8 @@ namespace CafeShop.View.EmpForm
 {
     public partial class DetailOrderForm : Form
     {
-        string MaMon = "M00000001";
-        public DetailOrderForm()
+        //string MaMon = "M00000001";
+        public DetailOrderForm(string MaMon = "M00000001")
         {
             InitializeComponent();
             BLLDetailOrder.Instance.SetDish(MaMon);
@@ -15,7 +15,6 @@ namespace CafeShop.View.EmpForm
             quantityTextbox.Texts = "0";
             totalTextbox.Texts = "0";
         }
-
         private void quantityTextbox__TextChanged(object sender, EventArgs e)
         {
             int SoLuong = 0;

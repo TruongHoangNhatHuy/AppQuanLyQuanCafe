@@ -57,6 +57,7 @@ namespace CafeShop.View.EmpForm
                 //foodNameLabel
                 //
                 foodNameLabel.Text = mon.TenMon;
+                foodNameLabel.Name = mon.MaMon;
                 foodNameLabel.ForeColor = Color.Crimson;
                 foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 foodNameLabel.Dock = DockStyle.Left;
@@ -122,7 +123,11 @@ namespace CafeShop.View.EmpForm
         #region EventHandler
         private void openDetailOrderForm(object sender, EventArgs e)
         {
-            DetailOrderForm form = new DetailOrderForm();
+            string MaMon = "";
+            if (sender is Label)
+                sender = (sender as Label).Parent;
+            MaMon = (sender as Panel).Name;
+            DetailOrderForm form = new DetailOrderForm(MaMon);
             form.ShowDialog();
         }
 
