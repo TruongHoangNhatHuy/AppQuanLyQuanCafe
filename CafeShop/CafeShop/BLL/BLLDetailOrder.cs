@@ -23,7 +23,11 @@ namespace CafeShop.BLL
             private set { }
         }
         private Mon mon = null;
-
+        private string MaHoaDon;
+        public void SetMaHoaDon(string MaHoaDon)
+        {
+            this.MaHoaDon = MaHoaDon;
+        }
         public void SetDish(string MaMon)
         {
             mon = DBModel.Instance.Mons.Find(MaMon);
@@ -43,7 +47,7 @@ namespace CafeShop.BLL
             DonGoiMon result = new DonGoiMon
             {
                 MaDonGoiMon = PrimaryKeyGenerator.OrderBillPrimaryKey(),
-                MaHoaDon = "2022051119401331",
+                MaHoaDon = this.MaHoaDon,
                 MaMon = mon.MaMon,
                 SoLuong = SoLuong,
                 GhiChu = GhiChu,
@@ -52,7 +56,6 @@ namespace CafeShop.BLL
                 TinhTrang = "Đang chờ"
             };
             DBModel.Instance.DonGoiMons.Add(result);
-            //db.SaveChanges();
             DBModel.Instance.SaveChanges();
         }
     }

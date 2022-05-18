@@ -40,6 +40,7 @@ namespace CafeShop.BLL
             else if (state == "Đang thực hiện")
                 state = "Hoàn thành";
             dgm.TinhTrang = state;
+            DBModel.Instance.SaveChanges();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace CafeShop.DTO
         public string MaBan { get; set; }
         [StringLength(20)]
         public string TenBan { get; set; }
-        public bool TinhTrang { get; set; }
+        public bool TinhTrang { get; set; } // true:trống, false:bận
         [StringLength(10)]
         public string MaKhuVuc { get; set; }
         [ForeignKey("MaKhuVuc")]

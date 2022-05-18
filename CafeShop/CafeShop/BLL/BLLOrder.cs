@@ -19,6 +19,7 @@ namespace CafeShop.BLL
                 return _Instance;
             }
         }
+        private List<HoaDon> currentBill = new List<HoaDon>();
         private BLLOrder() 
         { }
         public List<KhuvucCBItem> GetKhuvucCBItem()
@@ -39,5 +40,37 @@ namespace CafeShop.BLL
         public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc) => DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc).ToList();
 
         public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
+        //public string GetMaHoaDonByMaBan(string MaBan)
+        //{
+        //    foreach(HoaDon hoadon in DBModel.Instance.HoaDons)
+        //    {
+        //        if(hoadon.MaBan.Equals(MaBan))
+        //            return hoadon.MaHoaDon;
+        //    }
+        //    return null;
+        //}
+        public HoaDon CreateNewBill(string MaBan)
+        {
+            HoaDon bill = new HoaDon()
+            {
+                MaHoaDon = PrimaryKeyGenerator.OrderBillPrimaryKey(),
+                IDKhachHang = "KH00000000",
+                IDNhanVien = "TK00000000",
+                MaBan = MaBan,
+                Ban = GetBanByMaBan(MaBan),
+                ThoiGianThanhToan = DateTime.Now
+            };
+            DBModel.Instance.HoaDons.Add(bill);
+            DBModel.Instance.SaveChanges();
+            currentBill.Add(bill);
+            return bill;
+        }
+        public void SaveTableState(string MaBan)
+        {
+            Ban ban = GetBanByMaBan(MaBan);
+            ban.TinhTrang = !ban.TinhTrang;
+            DBModel.Instance.SaveChanges();
+        }
+        public HoaDon GetHoaDonByMaBan(string MaBan) => currentBill.Where(p => p.MaBan == MaBan).FirstOrDefault();
     }
 }

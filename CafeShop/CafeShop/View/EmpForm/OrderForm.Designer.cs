@@ -35,7 +35,7 @@
             this.areaLabel = new System.Windows.Forms.Label();
             this.detailPanel = new System.Windows.Forms.Panel();
             this.buttonPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.jButton4 = new CafeShop.View.CustomControl.JButton();
+            this.chargeButton = new CafeShop.View.CustomControl.JButton();
             this.jButton3 = new CafeShop.View.CustomControl.JButton();
             this.jButton2 = new CafeShop.View.CustomControl.JButton();
             this.jButton1 = new CafeShop.View.CustomControl.JButton();
@@ -43,6 +43,7 @@
             this.openButton = new CafeShop.View.CustomControl.JButton();
             this.orderButton = new CafeShop.View.CustomControl.JButton();
             this.tableInfoTable = new System.Windows.Forms.Panel();
+            this.timeInfoLabel = new System.Windows.Forms.Label();
             this.statusTable = new System.Windows.Forms.Label();
             this.timeOutLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -132,7 +133,7 @@
             this.buttonPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.buttonPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.buttonPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.buttonPanel2.Controls.Add(this.jButton4, 3, 0);
+            this.buttonPanel2.Controls.Add(this.chargeButton, 3, 0);
             this.buttonPanel2.Controls.Add(this.jButton3, 2, 0);
             this.buttonPanel2.Controls.Add(this.jButton2, 1, 0);
             this.buttonPanel2.Controls.Add(this.jButton1, 0, 0);
@@ -145,25 +146,26 @@
             this.buttonPanel2.Size = new System.Drawing.Size(311, 47);
             this.buttonPanel2.TabIndex = 2;
             // 
-            // jButton4
+            // chargeButton
             // 
-            this.jButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton4.BorderRadius = 30;
-            this.jButton4.BorderSize = 0;
-            this.jButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton4.FlatAppearance.BorderSize = 0;
-            this.jButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton4.ForeColor = System.Drawing.Color.White;
-            this.jButton4.Location = new System.Drawing.Point(234, 3);
-            this.jButton4.Name = "jButton4";
-            this.jButton4.Size = new System.Drawing.Size(74, 41);
-            this.jButton4.TabIndex = 3;
-            this.jButton4.Text = "Thanh toán";
-            this.jButton4.TextColor = System.Drawing.Color.White;
-            this.jButton4.UseVisualStyleBackColor = false;
+            this.chargeButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.chargeButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.chargeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.chargeButton.BorderRadius = 30;
+            this.chargeButton.BorderSize = 0;
+            this.chargeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chargeButton.FlatAppearance.BorderSize = 0;
+            this.chargeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chargeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chargeButton.ForeColor = System.Drawing.Color.White;
+            this.chargeButton.Location = new System.Drawing.Point(234, 3);
+            this.chargeButton.Name = "chargeButton";
+            this.chargeButton.Size = new System.Drawing.Size(74, 41);
+            this.chargeButton.TabIndex = 3;
+            this.chargeButton.Text = "Thanh toán";
+            this.chargeButton.TextColor = System.Drawing.Color.White;
+            this.chargeButton.UseVisualStyleBackColor = false;
+            this.chargeButton.Click += new System.EventHandler(this.chargeButton_Click);
             // 
             // jButton3
             // 
@@ -290,6 +292,7 @@
             // 
             this.tableInfoTable.BackColor = System.Drawing.Color.PapayaWhip;
             this.tableInfoTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableInfoTable.Controls.Add(this.timeInfoLabel);
             this.tableInfoTable.Controls.Add(this.statusTable);
             this.tableInfoTable.Controls.Add(this.timeOutLabel);
             this.tableInfoTable.Controls.Add(this.label1);
@@ -302,6 +305,17 @@
             this.tableInfoTable.Name = "tableInfoTable";
             this.tableInfoTable.Size = new System.Drawing.Size(311, 242);
             this.tableInfoTable.TabIndex = 0;
+            // 
+            // timeInfoLabel
+            // 
+            this.timeInfoLabel.AutoSize = true;
+            this.timeInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeInfoLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.timeInfoLabel.Location = new System.Drawing.Point(110, 61);
+            this.timeInfoLabel.Name = "timeInfoLabel";
+            this.timeInfoLabel.Size = new System.Drawing.Size(40, 18);
+            this.timeInfoLabel.TabIndex = 7;
+            this.timeInfoLabel.Text = "time";
             // 
             // statusTable
             // 
@@ -444,7 +458,7 @@
         private System.Windows.Forms.Panel detailPanel;
         private System.Windows.Forms.Panel itemPanel;
         private System.Windows.Forms.TableLayoutPanel buttonPanel2;
-        private CustomControl.JButton jButton4;
+        private CustomControl.JButton chargeButton;
         private CustomControl.JButton jButton3;
         private CustomControl.JButton jButton2;
         private CustomControl.JButton jButton1;
@@ -455,11 +469,12 @@
         private System.Windows.Forms.Label timeOutLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label tableNameLabel;
-        private System.Windows.Forms.Label statusTableLabel;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label timeArriveLabel;
         private System.Windows.Forms.FlowLayoutPanel categoryFoodPanel;
         private System.Windows.Forms.FlowLayoutPanel foodPanel;
         private System.Windows.Forms.Label statusTable;
+        private System.Windows.Forms.Label timeInfoLabel;
+        private System.Windows.Forms.Label statusTableLabel;
     }
 }

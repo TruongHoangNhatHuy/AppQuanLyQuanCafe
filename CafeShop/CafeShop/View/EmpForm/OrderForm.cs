@@ -8,7 +8,7 @@ namespace CafeShop.View.EmpForm
 {
     public partial class OrderForm : Form
     {
-        private List<FlowLayoutPanel> panelList = new List<FlowLayoutPanel>();
+        private static List<FlowLayoutPanel> panelList = new List<FlowLayoutPanel>();
         private TablesButton currentTableButton;
         private Ban currentTable;
 
@@ -127,7 +127,9 @@ namespace CafeShop.View.EmpForm
             if (sender is Label)
                 sender = (sender as Label).Parent;
             MaMon = (sender as Panel).Name;
-            DetailOrderForm form = new DetailOrderForm(MaMon);
+            //string MaHoaDon = BLLOrder.Instance.CreateNewBill(currentTable.MaBan).MaHoaDon;
+            string MaHoaDon = BLLOrder.Instance.GetHoaDonByMaBan(currentTable.MaBan).MaHoaDon;
+            DetailOrderForm form = new DetailOrderForm(MaMon, MaHoaDon);
             form.ShowDialog();
         }
 
@@ -147,15 +149,17 @@ namespace CafeShop.View.EmpForm
             TablesButton tablesButton = button.Parent as TablesButton;
             this.currentTableButton = tablesButton;
             this.currentTable = BLLOrder.Instance.GetBanByMaBan(tablesButton.MaBan);
-            SetInfoTable();
+            SetInfoTable(tablesButton.MaBan);
             ShowPanel();
 
         }
-        public void SetInfoTable()
+        public void SetInfoTable(string MaBan)
         {
             orderButton.Enabled = currentTableButton.Status.Equals("Bận");
             tableNameLabel.Text = this.currentTable.TenBan;
             statusTable.Text = this.currentTable.TinhTrang ? "Còn trống" : "Bận";
+            if (statusTable.Text == "Bận")
+                timeInfoLabel.Text = BLLOrder.Instance.GetHoaDonByMaBan(MaBan).ThoiGianThanhToan.ToString();
         }
 
         public void LoadTableByLocation(string MaKhuVuc)
@@ -178,6 +182,7 @@ namespace CafeShop.View.EmpForm
                 currentTableButton.Status = "Bận";
             else
                 currentTableButton.Status = "Còn trống";
+            BLLOrder.Instance.SaveTableState(currentTable.MaBan);
             currentTableButton.GUI();
         }
         private void orderButton_Click(object sender, EventArgs e)
@@ -191,11 +196,16 @@ namespace CafeShop.View.EmpForm
             {
                 orderButton.Enabled = true;
                 ChangeStateTable();
-                SetInfoTable();
+                BLLOrder.Instance.CreateNewBill(currentTable.MaBan);
+                SetInfoTable(currentTable.MaBan);
             }
         }
+
         #endregion
 
-        
+        private void chargeButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
