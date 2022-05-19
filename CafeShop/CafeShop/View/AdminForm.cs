@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using CafeShop.BLL;
 
 namespace CafeShop.View
 {
@@ -11,6 +12,7 @@ namespace CafeShop.View
             InitializeComponent();
             customizeDesigning();
             homeButton_Click(null, null);
+            AdNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
         }
 
         #region SubMenu
@@ -197,6 +199,7 @@ namespace CafeShop.View
         }
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            BLLLogin.Instance.ResetCurrentID();
             this.Close();
         }
 

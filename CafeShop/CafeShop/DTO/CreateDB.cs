@@ -24,7 +24,8 @@ namespace CafeShop.DTO
             {
                 new TaiKhoan { ID = "TK00000000", TenTaiKhoan = "empty", MatKhau = "empty", HoTen = "", GioiTinh = true, NgaySinh = DateTime.MinValue, NgayBatDauLamViec = DateTime.MinValue, MaVaiTro = "VT00000000"},
                 new TaiKhoan { ID = "TK00000001", TenTaiKhoan = "admin", MatKhau = "admin", HoTen = "Trương Hoàng Nhật Huy", GioiTinh = true, NgaySinh = DateTime.MinValue, NgayBatDauLamViec = DateTime.MinValue, MaVaiTro = "VT00000001"},
-                new TaiKhoan { ID = "TK00000002", TenTaiKhoan = "user", MatKhau = "user", HoTen = "Nguyễn Ngọc Hải", GioiTinh = true, NgaySinh = DateTime.MinValue, NgayBatDauLamViec = DateTime.MinValue, MaVaiTro = "VT00000002"}
+                new TaiKhoan { ID = "TK00000002", TenTaiKhoan = "user", MatKhau = "user", HoTen = "Nguyễn Ngọc Hải", GioiTinh = true, NgaySinh = DateTime.MinValue, NgayBatDauLamViec = DateTime.MinValue, MaVaiTro = "VT00000002"},
+                new TaiKhoan { ID = "TK00000003", TenTaiKhoan = "user2", MatKhau = "user2", HoTen = "Trương Thị Thanh Kiều", GioiTinh = false, NgaySinh = DateTime.MinValue, NgayBatDauLamViec = DateTime.MinValue, MaVaiTro = "VT00000002"}
             });
             context.KhachHangs.AddRange(new KhachHang[]
             {

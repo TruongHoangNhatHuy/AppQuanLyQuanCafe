@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CafeShop.DTO;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CafeShop.DTO;
 
 namespace CafeShop.BLL
 {
@@ -43,9 +40,13 @@ namespace CafeShop.BLL
                 throw new Exception("Tài khoản không tồn tại");
             return isEmployee;
         }
-        public string GetIDName()
+        public string GetCurrentIDName()
         {
             return DBModel.Instance.TaiKhoans.Where(p => p.ID == BLLLogin.Instance.currentID).FirstOrDefault().HoTen;
+        }
+        public void ResetCurrentID()
+        {
+            currentID = "";
         }
     }
 }

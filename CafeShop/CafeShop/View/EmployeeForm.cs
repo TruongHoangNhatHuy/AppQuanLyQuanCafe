@@ -16,7 +16,7 @@ namespace CafeShop.View
         public EmployeeForm()
         {
             InitializeComponent();
-            EmpNameLabel.Text = BLLLogin.Instance.GetIDName();
+            EmpNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
         }
 
         #region ChangColorButton
@@ -73,6 +73,7 @@ namespace CafeShop.View
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            BLLLogin.Instance.ResetCurrentID();
             this.Close();
         }
 
