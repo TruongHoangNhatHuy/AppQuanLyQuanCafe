@@ -51,5 +51,26 @@ namespace CafeShop.BLL
                 p.MaHoaDon.Contains(MaHoaDon)
                 ).ToList();
         }
+        public List<HoaDonView> Sort(List<HoaDon> list, string orderBy, bool SortDirection)
+        {
+            switch (orderBy)
+            {
+                case "Theo mã hoá đơn":
+                    list.Sort((p1, p2) => p1.MaHoaDon.CompareTo(p2.MaHoaDon));
+                    break;
+                case "Theo thời gian":
+                    list.Sort((p1, p2) => p1.ThoiGianThanhToan.CompareTo(p2.ThoiGianThanhToan));
+                    break;
+                case "Theo giá trị":
+                    list.Sort((p1, p2) => p1.ThanhTien.CompareTo(p2.ThanhTien));
+                    break;
+            }
+            if (SortDirection)
+                list.Reverse();
+            return ChangeView(list);
+        }
+        public string GetBillCount(List<HoaDon> list) => list.Count.ToString();
+        public string GetCustomerCount(List<HoaDon> list) => list.Select(p => new { p.KhachHang }).Distinct().Count().ToString();
+        public string GetRevenue(List<HoaDon> list) => list.Sum(p => p.ThanhTien).ToString();
     }
 }

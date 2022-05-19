@@ -33,15 +33,15 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.revenueLabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.customerCountLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.billCountLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,13 +60,6 @@
             this.searchButton = new CafeShop.View.CustomControl.JButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.firstPageButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.hoaDonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNhanVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +67,13 @@
             this.phuThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giamGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoaDonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.firstPageButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,8 +88,8 @@
             this.leftPanel.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,7 +130,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.revenueLabel);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -139,17 +139,17 @@
             this.panel5.Size = new System.Drawing.Size(300, 88);
             this.panel5.TabIndex = 2;
             // 
-            // label7
+            // revenueLabel
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(66, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(231, 28);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "20";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.revenueLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.revenueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revenueLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.revenueLabel.Location = new System.Drawing.Point(66, 24);
+            this.revenueLabel.Name = "revenueLabel";
+            this.revenueLabel.Size = new System.Drawing.Size(231, 28);
+            this.revenueLabel.TabIndex = 2;
+            this.revenueLabel.Text = "20";
+            this.revenueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox3
             // 
@@ -174,7 +174,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.HotPink;
-            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.customerCountLabel);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -183,17 +183,17 @@
             this.panel4.Size = new System.Drawing.Size(298, 88);
             this.panel4.TabIndex = 1;
             // 
-            // label5
+            // customerCountLabel
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(64, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(231, 28);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "50";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.customerCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.customerCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerCountLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.customerCountLabel.Location = new System.Drawing.Point(64, 24);
+            this.customerCountLabel.Name = "customerCountLabel";
+            this.customerCountLabel.Size = new System.Drawing.Size(231, 28);
+            this.customerCountLabel.TabIndex = 2;
+            this.customerCountLabel.Text = "50";
+            this.customerCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox2
             // 
@@ -218,7 +218,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.billCountLabel);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -227,17 +227,17 @@
             this.panel3.Size = new System.Drawing.Size(298, 88);
             this.panel3.TabIndex = 0;
             // 
-            // label4
+            // billCountLabel
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(64, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(231, 28);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "100";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.billCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.billCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billCountLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.billCountLabel.Location = new System.Drawing.Point(64, 24);
+            this.billCountLabel.Name = "billCountLabel";
+            this.billCountLabel.Size = new System.Drawing.Size(231, 28);
+            this.billCountLabel.TabIndex = 2;
+            this.billCountLabel.Text = "100";
+            this.billCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1
             // 
@@ -329,6 +329,7 @@
             this.sortButton.Text = "Sắp xếp";
             this.sortButton.TextColor = System.Drawing.Color.White;
             this.sortButton.UseVisualStyleBackColor = false;
+            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
             // 
             // toPicker
             // 
@@ -502,6 +503,64 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(887, 405);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
+            // 
+            // maHoaDonDataGridViewTextBoxColumn
+            // 
+            this.maHoaDonDataGridViewTextBoxColumn.DataPropertyName = "MaHoaDon";
+            this.maHoaDonDataGridViewTextBoxColumn.Frozen = true;
+            this.maHoaDonDataGridViewTextBoxColumn.HeaderText = "Mã Hoá Đơn";
+            this.maHoaDonDataGridViewTextBoxColumn.Name = "maHoaDonDataGridViewTextBoxColumn";
+            this.maHoaDonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenNhanVienDataGridViewTextBoxColumn
+            // 
+            this.tenNhanVienDataGridViewTextBoxColumn.DataPropertyName = "TenNhanVien";
+            this.tenNhanVienDataGridViewTextBoxColumn.HeaderText = "Tên Nhân Viên";
+            this.tenNhanVienDataGridViewTextBoxColumn.Name = "tenNhanVienDataGridViewTextBoxColumn";
+            this.tenNhanVienDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenNhanVienDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // tenKhachHangDataGridViewTextBoxColumn
+            // 
+            this.tenKhachHangDataGridViewTextBoxColumn.DataPropertyName = "TenKhachHang";
+            this.tenKhachHangDataGridViewTextBoxColumn.HeaderText = "Tên Khách Hàng";
+            this.tenKhachHangDataGridViewTextBoxColumn.Name = "tenKhachHangDataGridViewTextBoxColumn";
+            this.tenKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenKhachHangDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // thoiGianThanhToanDataGridViewTextBoxColumn
+            // 
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianThanhToan";
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.HeaderText = "Thời gian thanh toán";
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.Name = "thoiGianThanhToanDataGridViewTextBoxColumn";
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.ReadOnly = true;
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // phuThuDataGridViewTextBoxColumn
+            // 
+            this.phuThuDataGridViewTextBoxColumn.DataPropertyName = "PhuThu";
+            this.phuThuDataGridViewTextBoxColumn.HeaderText = "Phụ thu";
+            this.phuThuDataGridViewTextBoxColumn.Name = "phuThuDataGridViewTextBoxColumn";
+            this.phuThuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // giamGiaDataGridViewTextBoxColumn
+            // 
+            this.giamGiaDataGridViewTextBoxColumn.DataPropertyName = "GiamGia";
+            this.giamGiaDataGridViewTextBoxColumn.HeaderText = "Giảm giá";
+            this.giamGiaDataGridViewTextBoxColumn.Name = "giamGiaDataGridViewTextBoxColumn";
+            this.giamGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // thanhTienDataGridViewTextBoxColumn
+            // 
+            this.thanhTienDataGridViewTextBoxColumn.DataPropertyName = "ThanhTien";
+            this.thanhTienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
+            this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
+            this.thanhTienDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoaDonViewBindingSource
+            // 
+            this.hoaDonViewBindingSource.DataSource = typeof(CafeShop.DTO.HoaDonView);
             // 
             // panel6
             // 
@@ -564,63 +623,6 @@
             this.button3.Text = "Trang cuối>>";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // hoaDonViewBindingSource
-            // 
-            this.hoaDonViewBindingSource.DataSource = typeof(CafeShop.DTO.HoaDonView);
-            // 
-            // maHoaDonDataGridViewTextBoxColumn
-            // 
-            this.maHoaDonDataGridViewTextBoxColumn.DataPropertyName = "MaHoaDon";
-            this.maHoaDonDataGridViewTextBoxColumn.Frozen = true;
-            this.maHoaDonDataGridViewTextBoxColumn.HeaderText = "Mã Hoá Đơn";
-            this.maHoaDonDataGridViewTextBoxColumn.Name = "maHoaDonDataGridViewTextBoxColumn";
-            this.maHoaDonDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenNhanVienDataGridViewTextBoxColumn
-            // 
-            this.tenNhanVienDataGridViewTextBoxColumn.DataPropertyName = "TenNhanVien";
-            this.tenNhanVienDataGridViewTextBoxColumn.HeaderText = "Tên Nhân Viên";
-            this.tenNhanVienDataGridViewTextBoxColumn.Name = "tenNhanVienDataGridViewTextBoxColumn";
-            this.tenNhanVienDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenNhanVienDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // tenKhachHangDataGridViewTextBoxColumn
-            // 
-            this.tenKhachHangDataGridViewTextBoxColumn.DataPropertyName = "TenKhachHang";
-            this.tenKhachHangDataGridViewTextBoxColumn.HeaderText = "Tên Khách Hàng";
-            this.tenKhachHangDataGridViewTextBoxColumn.Name = "tenKhachHangDataGridViewTextBoxColumn";
-            this.tenKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenKhachHangDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // thoiGianThanhToanDataGridViewTextBoxColumn
-            // 
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianThanhToan";
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.HeaderText = "Thời gian thanh toán";
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.Name = "thoiGianThanhToanDataGridViewTextBoxColumn";
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // phuThuDataGridViewTextBoxColumn
-            // 
-            this.phuThuDataGridViewTextBoxColumn.DataPropertyName = "PhuThu";
-            this.phuThuDataGridViewTextBoxColumn.HeaderText = "Phụ thu";
-            this.phuThuDataGridViewTextBoxColumn.Name = "phuThuDataGridViewTextBoxColumn";
-            this.phuThuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // giamGiaDataGridViewTextBoxColumn
-            // 
-            this.giamGiaDataGridViewTextBoxColumn.DataPropertyName = "GiamGia";
-            this.giamGiaDataGridViewTextBoxColumn.HeaderText = "Giảm giá";
-            this.giamGiaDataGridViewTextBoxColumn.Name = "giamGiaDataGridViewTextBoxColumn";
-            this.giamGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // thanhTienDataGridViewTextBoxColumn
-            // 
-            this.thanhTienDataGridViewTextBoxColumn.DataPropertyName = "ThanhTien";
-            this.thanhTienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
-            this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
-            this.thanhTienDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -653,8 +655,8 @@
             this.leftPanel.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -664,17 +666,17 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label billCountLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private CustomControl.JButton exitButton;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label revenueLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label customerCountLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel topPanel;
