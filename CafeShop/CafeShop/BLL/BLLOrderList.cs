@@ -29,7 +29,7 @@ namespace CafeShop.BLL
                 {
                     result.Add(new DonGoiMonView(i));
                 }
-            return result.OrderBy(p => p.ThoiGianTuKhiGoi).ToList();
+            return result.OrderByDescending(p => p.ThoiGianTuKhiGoi).ToList();
         }
         public void StateChange(string MaDonGoiMon)
         {

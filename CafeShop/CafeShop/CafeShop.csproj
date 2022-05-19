@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLInvoice.cs" />
     <Compile Include="BLL\BLLBill.cs" />
     <Compile Include="BLL\BLLDetailOrder.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="DTO\DonGoiMon.cs" />
     <Compile Include="DTO\DonGoiMonView.cs" />
     <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\HoaDonView.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\KhuVuc.cs" />
     <Compile Include="DTO\KhuvucCBItem.cs" />
@@ -266,6 +268,8 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMonView.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.HoaDon.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.HoaDonView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
