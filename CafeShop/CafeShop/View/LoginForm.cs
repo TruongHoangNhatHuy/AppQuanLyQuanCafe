@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeShop.DTO;
+using CafeShop.BLL;
+
 namespace CafeShop.View
 {
     public partial class LoginForm : Form
@@ -67,25 +69,56 @@ namespace CafeShop.View
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (userTextbox.Texts.Equals("admin") && passwordTextbox.Texts.Equals("admin"))
+            //if (userTextbox.Texts.Equals("admin") && passwordTextbox.Texts.Equals("admin"))
+            //{
+            //    AdminForm form = new AdminForm();
+            //    form.FormClosed += (s, args) =>this.Show();
+            //    SetTextDefault();
+            //    form.Show();
+            //    this.Hide();
+            //}
+            //else if(userTextbox.Texts.Equals("user") && passwordTextbox.Texts.Equals("user"))
+            //{
+            //    EmployeeForm form = new EmployeeForm();
+            //    form.FormClosed += (s, args) => this.Show();
+            //    SetTextDefault();
+            //    form.Show();
+            //    this.Hide(); 
+            //}
+            //else
+            //{
+            //    warningLabel.Text = "*Tên đăng nhập hoặc mật khẩu không đúng*";
+            //}
+            try
             {
-                AdminForm form = new AdminForm();
-                form.FormClosed += (s, args) =>this.Show();
-                SetTextDefault();
-                form.Show();
-                this.Hide();
+                string account = userTextbox.Texts;
+                string password = passwordTextbox.Texts;
+                if (account == "")
+                    throw new Exception("Thiếu tên tài khoản");
+                if (password == "")
+                    throw new Exception("Thiếu mật khẩu");
+                else if (BLLLogin.Instance.ValidateAccount(account, password))
+                {
+                    // EmpForm
+                    EmployeeForm form = new EmployeeForm();
+                    form.FormClosed += (s, args) => this.Show();
+                    SetTextDefault();
+                    form.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    // AdForm
+                    AdminForm form = new AdminForm();
+                    form.FormClosed += (s, args) => this.Show();
+                    SetTextDefault();
+                    form.Show();
+                    this.Hide();
+                }
             }
-            else if( userTextbox.Texts.Equals("user") && passwordTextbox.Texts.Equals("user"))
+            catch (Exception ex)
             {
-                EmployeeForm form = new EmployeeForm();
-                form.FormClosed += (s, args) => this.Show();
-                SetTextDefault();
-                form.Show();
-                this.Hide(); 
-            }
-            else
-            {
-                warningLabel.Text = "*Tên đăng nhập hoặc mật khẩu không đúng*";
+                MessageBox.Show(ex.Message);
             }
         }
         public void SetTextDefault()

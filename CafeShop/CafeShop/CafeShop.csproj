@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="BLL\BLLBill.cs" />
     <Compile Include="BLL\BLLDetailOrder.cs" />
+    <Compile Include="BLL\BLLLogin.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
     <Compile Include="BLL\BLLOrderList.cs" />
     <Compile Include="BLL\BLLTable.cs" />

@@ -63,6 +63,7 @@ namespace CafeShop.BLL
             HoaDon bill = GetHoaDonByMaBan(MaBan);
             bill.IDKhachHang = GetKHBySDT(sdt).IDKhachHang;
             bill.IDNhanVien = "TK00000000";
+            bill.MaBan = "B000000000";
             bill.PhuThu = PhuThu;
             bill.GiamGia = GiamGia;
             bill.ThanhTien = ThanhTien;

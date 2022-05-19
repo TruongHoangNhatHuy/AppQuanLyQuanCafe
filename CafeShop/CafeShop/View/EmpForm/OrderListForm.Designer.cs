@@ -65,13 +65,14 @@
             this.thoiGianTuKhiGoiDataGridViewTextBoxColumn,
             this.tinhTrangDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.donGoiMonViewBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 125);
+            this.dataGridView1.Location = new System.Drawing.Point(69, 192);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(841, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(1262, 655);
             this.dataGridView1.TabIndex = 0;
             // 
             // maDonGoiMonDataGridViewTextBoxColumn
@@ -148,9 +149,10 @@
             this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jButton2.ForeColor = System.Drawing.Color.Black;
-            this.jButton2.Location = new System.Drawing.Point(46, 69);
+            this.jButton2.Location = new System.Drawing.Point(69, 106);
+            this.jButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.jButton2.Name = "jButton2";
-            this.jButton2.Size = new System.Drawing.Size(95, 32);
+            this.jButton2.Size = new System.Drawing.Size(142, 49);
             this.jButton2.TabIndex = 10;
             this.jButton2.Text = "Sắp xếp";
             this.jButton2.TextColor = System.Drawing.Color.Black;
@@ -159,9 +161,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 76);
+            this.comboBox1.Location = new System.Drawing.Point(250, 117);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 21);
+            this.comboBox1.Size = new System.Drawing.Size(217, 28);
             this.comboBox1.TabIndex = 11;
             // 
             // searchTextbox
@@ -174,14 +177,15 @@
             this.searchTextbox.BorderSize = 2;
             this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextbox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.searchTextbox.Location = new System.Drawing.Point(402, 69);
+            this.searchTextbox.Location = new System.Drawing.Point(603, 106);
+            this.searchTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchTextbox.Multiline = false;
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.searchTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.searchTextbox.PasswordChar = false;
             this.searchTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
             this.searchTextbox.PlaceholderText = "         Tìm kiếm.......";
-            this.searchTextbox.Size = new System.Drawing.Size(386, 32);
+            this.searchTextbox.Size = new System.Drawing.Size(579, 48);
             this.searchTextbox.TabIndex = 12;
             this.searchTextbox.Texts = "";
             this.searchTextbox.UnderlinedStyle = false;
@@ -199,9 +203,10 @@
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.Black;
             this.searchButton.Image = global::CafeShop.Properties.Resources.magnifying_glass;
-            this.searchButton.Location = new System.Drawing.Point(803, 69);
+            this.searchButton.Location = new System.Drawing.Point(1204, 106);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(84, 32);
+            this.searchButton.Size = new System.Drawing.Size(126, 49);
             this.searchButton.TabIndex = 13;
             this.searchButton.TextColor = System.Drawing.Color.Black;
             this.searchButton.UseVisualStyleBackColor = false;
@@ -218,9 +223,10 @@
             this.performButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.performButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.performButton.ForeColor = System.Drawing.Color.Black;
-            this.performButton.Location = new System.Drawing.Point(925, 125);
+            this.performButton.Location = new System.Drawing.Point(1388, 192);
+            this.performButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.performButton.Name = "performButton";
-            this.performButton.Size = new System.Drawing.Size(101, 51);
+            this.performButton.Size = new System.Drawing.Size(152, 78);
             this.performButton.TabIndex = 14;
             this.performButton.Text = "Thực hiện";
             this.performButton.TextColor = System.Drawing.Color.Black;
@@ -229,10 +235,10 @@
             // 
             // OrderListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1138, 595);
+            this.ClientSize = new System.Drawing.Size(1707, 915);
             this.ControlBox = false;
             this.Controls.Add(this.performButton);
             this.Controls.Add(this.searchButton);
@@ -240,6 +246,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.jButton2);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "OrderListForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGoiMonViewBindingSource)).EndInit();
