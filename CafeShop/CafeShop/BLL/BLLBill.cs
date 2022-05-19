@@ -30,7 +30,7 @@ namespace CafeShop.BLL
         }
         public void GetBillCostOfTable(string MaBan)
         {
-
+            this.tongTien = 0;
             string maHoaDon = GetHoaDonByMaBan(MaBan).MaHoaDon;
             var listDonGoiMon = DBModel.Instance.DonGoiMons.Where(x => x.TinhTrang == "Hoàn thành" && x.MaHoaDon == maHoaDon).ToList();
             foreach (var i in listDonGoiMon)
