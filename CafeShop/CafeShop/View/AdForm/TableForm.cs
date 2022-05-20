@@ -21,10 +21,11 @@ namespace CafeShop.View.AdForm
         }
         public void LoadComboboxItem()
         {
-            areaCombobox.Items.Clear();
+            areaJCombobox.Items.Clear();
             areaNameCombobox.Items.Clear();
-            areaCombobox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
-            areaCombobox.Items.AddRange(BLLTable.Instance.GetKhuvucCBItem().ToArray());
+            
+            areaJCombobox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
+            areaJCombobox.Items.AddRange(BLLTable.Instance.GetKhuvucCBItem().ToArray());
             areaNameCombobox.Items.AddRange(BLLTable.Instance.GetKhuvucCBItem().ToArray());
         }
         private void exitButton_Click(object sender, EventArgs e)
@@ -41,14 +42,14 @@ namespace CafeShop.View.AdForm
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            string MaKhuVuc = (areaCombobox.SelectedItem as KhuvucCBItem).ID;
+            string MaKhuVuc = (areaJCombobox.SelectedItem as KhuvucCBItem).ID;
             string searchText = searchTextbox.Texts;
             Show(MaKhuVuc, searchText);
         }
 
-        private void areaCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        private void areaJCombobox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            string MaKhuVuc = (areaCombobox.SelectedItem as KhuvucCBItem).ID;
+            string MaKhuVuc = (areaJCombobox.SelectedItem as KhuvucCBItem).ID;
             Show(MaKhuVuc);
         }
         #endregion
@@ -147,6 +148,7 @@ namespace CafeShop.View.AdForm
                     }
             }
         }
+       
     }
     enum ExecuteState
     {

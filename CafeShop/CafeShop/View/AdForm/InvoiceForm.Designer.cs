@@ -47,7 +47,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.sortCombobox = new System.Windows.Forms.ComboBox();
+            this.sortJCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.sortButton = new CafeShop.View.CustomControl.JButton();
             this.toPicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.toLabel = new System.Windows.Forms.Label();
@@ -289,7 +289,7 @@
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.sortCombobox);
+            this.topPanel.Controls.Add(this.sortJCombobox);
             this.topPanel.Controls.Add(this.sortButton);
             this.topPanel.Controls.Add(this.toPicker);
             this.topPanel.Controls.Add(this.toLabel);
@@ -301,14 +301,24 @@
             this.topPanel.Size = new System.Drawing.Size(1154, 69);
             this.topPanel.TabIndex = 7;
             // 
-            // sortCombobox
+            // sortJCombobox
             // 
-            this.sortCombobox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.sortCombobox.FormattingEnabled = true;
-            this.sortCombobox.Location = new System.Drawing.Point(840, 34);
-            this.sortCombobox.Name = "sortCombobox";
-            this.sortCombobox.Size = new System.Drawing.Size(121, 21);
-            this.sortCombobox.TabIndex = 5;
+            this.sortJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sortJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortJCombobox.BorderSize = 2;
+            this.sortJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.sortJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortJCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.sortJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.sortJCombobox.ListTextColor = System.Drawing.Color.Black;
+            this.sortJCombobox.Location = new System.Drawing.Point(775, 29);
+            this.sortJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.sortJCombobox.Name = "sortJCombobox";
+            this.sortJCombobox.Padding = new System.Windows.Forms.Padding(2);
+            this.sortJCombobox.Size = new System.Drawing.Size(200, 30);
+            this.sortJCombobox.TabIndex = 6;
+            this.sortJCombobox.Texts = "";
             // 
             // sortButton
             // 
@@ -335,20 +345,20 @@
             // 
             this.toPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.toPicker.BorderSize = 0;
-            this.toPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.toPicker.Location = new System.Drawing.Point(547, 28);
+            this.toPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toPicker.Location = new System.Drawing.Point(521, 28);
             this.toPicker.MinimumSize = new System.Drawing.Size(4, 35);
             this.toPicker.Name = "toPicker";
             this.toPicker.Size = new System.Drawing.Size(218, 35);
             this.toPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.toPicker.TabIndex = 3;
-            this.toPicker.TextColor = System.Drawing.Color.White;
+            this.toPicker.TextColor = System.Drawing.Color.Black;
             // 
             // toLabel
             // 
             this.toLabel.AutoSize = true;
             this.toLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toLabel.Location = new System.Drawing.Point(499, 36);
+            this.toLabel.Location = new System.Drawing.Point(480, 36);
             this.toLabel.Name = "toLabel";
             this.toLabel.Size = new System.Drawing.Size(39, 20);
             this.toLabel.TabIndex = 2;
@@ -358,20 +368,20 @@
             // 
             this.fromPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.fromPicker.BorderSize = 0;
-            this.fromPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.fromPicker.Location = new System.Drawing.Point(266, 28);
+            this.fromPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromPicker.Location = new System.Drawing.Point(253, 28);
             this.fromPicker.MinimumSize = new System.Drawing.Size(4, 35);
             this.fromPicker.Name = "fromPicker";
             this.fromPicker.Size = new System.Drawing.Size(218, 35);
             this.fromPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.fromPicker.TabIndex = 1;
-            this.fromPicker.TextColor = System.Drawing.Color.White;
+            this.fromPicker.TextColor = System.Drawing.Color.Black;
             // 
             // fromLabel
             // 
             this.fromLabel.AutoSize = true;
             this.fromLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromLabel.Location = new System.Drawing.Point(233, 36);
+            this.fromLabel.Location = new System.Drawing.Point(218, 36);
             this.fromLabel.Name = "fromLabel";
             this.fromLabel.Size = new System.Drawing.Size(27, 20);
             this.fromLabel.TabIndex = 0;
@@ -460,7 +470,7 @@
             this.searchButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchButton.FlatAppearance.BorderSize = 0;
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.SeaShell;
             this.searchButton.Location = new System.Drawing.Point(10, 10);
             this.searchButton.Name = "searchButton";
@@ -686,7 +696,6 @@
         private CustomControl.JNewTextbox empTextbox;
         private CustomControl.JNewTextbox invoiceTextbox;
         private CustomControl.JButton searchButton;
-        private System.Windows.Forms.ComboBox sortCombobox;
         private CustomControl.JButton sortButton;
         private CustomControl.JDatetimepicker toPicker;
         private System.Windows.Forms.Label toLabel;
@@ -707,5 +716,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giamGiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhTienDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource hoaDonViewBindingSource;
+        private CustomControl.JComboBox sortJCombobox;
     }
 }

@@ -14,18 +14,17 @@ namespace CafeShop.View.EmpForm
 
         public OrderForm()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
         private void OrderForm_Load(object sender, EventArgs e)
         {
-            areaComboBox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
-            areaComboBox.Items.AddRange(BLLOrder.Instance.GetKhuvucCBItem().ToArray());
+            areaJCombobox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
+            areaJCombobox.Items.AddRange(BLLOrder.Instance.GetKhuvucCBItem().ToArray());
             LoadTableFromDB();
             LoadCategoryFood();
             HidePanel();
         }
-        #region Create dynamic Components
+        #region CreateDynamicComponents
         private void LoadCategoryFood()
         {
             foreach (var danhmuc in BLLOrder.Instance.GetDanhMucThucDon())
@@ -172,12 +171,11 @@ namespace CafeShop.View.EmpForm
                 panelList.ForEach(panel => panel.Visible = panel.Name.Equals(MaKhuVuc));
 
         }
-        private void areaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void areaJCombobox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            string MaKhuVuc = (areaComboBox.SelectedItem as KhuvucCBItem).ID;
+            string MaKhuVuc = (areaJCombobox.SelectedItem as KhuvucCBItem).ID;
             LoadTableByLocation(MaKhuVuc);
         }
-
         private void ChangeStateTable()
         {
             if (currentTableButton.Status.Equals("Còn trống"))
@@ -202,9 +200,6 @@ namespace CafeShop.View.EmpForm
                 SetInfoTable(currentTable.MaBan);
             }
         }
-
-        #endregion
-
         private void chargeButton_Click(object sender, EventArgs e)
         {
             BillForm form = new BillForm(currentTable.MaBan);
@@ -213,5 +208,10 @@ namespace CafeShop.View.EmpForm
             form.ShowDialog();
 
         }
+
+        #endregion
+
+
+
     }
 }

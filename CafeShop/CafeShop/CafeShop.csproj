@@ -151,6 +151,9 @@
     <Compile Include="View\CustomControl\JButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="View\CustomControl\JCombobox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="View\CustomControl\JDatetimepicker.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -21,7 +21,7 @@ namespace CafeShop.View.AdForm
         }
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
-            sortCombobox.Items.AddRange(new string[] { "Theo mã hoá đơn", "Theo thời gian", "Theo giá trị" });
+            sortJCombobox.Items.AddRange(new string[] { "Theo mã hoá đơn", "Theo thời gian", "Theo giá trị" });
             fromPicker.Value = new DateTime(2022, 1, 1);
             dataGridView1.DataSource = BLLInvoice.Instance.GetAllHoaDonView();         
         }
@@ -44,15 +44,15 @@ namespace CafeShop.View.AdForm
             dataGridView1.DataSource = BLLInvoice.Instance.ChangeView(GetHoaDon());   
         }
         public string lastOrder;
+        bool SortDirection = false;
         private void sortButton_Click(object sender, EventArgs e)
         {
-            if (sortCombobox.SelectedItem != null)
+            if (sortJCombobox.SelectedItem != null)
             {
                 //DateTime from = fromPicker.Value, to = toPicker.Value;
                 //string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;     
                 //var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
-                string orderBy = sortCombobox.SelectedItem.ToString();
-                bool SortDirection = false;
+                string orderBy = sortJCombobox.SelectedItem.ToString();                
                 if (orderBy.Equals(lastOrder))
                     SortDirection = !SortDirection;
                 else
