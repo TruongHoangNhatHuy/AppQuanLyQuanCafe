@@ -120,13 +120,13 @@ namespace CafeShop.View.AdForm
         }
         #endregion
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 string MaHoaDon = dataGridView1.SelectedRows[0].Cells["MaHoaDon"].Value.ToString();
-                MessageBox.Show(MaHoaDon);
+                DetailOrderListForm form = new DetailOrderListForm(MaHoaDon);
+                form.ShowDialog();
             }
         }
     }

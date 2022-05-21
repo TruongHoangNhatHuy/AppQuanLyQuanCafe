@@ -97,7 +97,7 @@ namespace CafeShop.View
             ActivateButton(sender);
             this.label1.Text = "Quản Lý Nhân Viên";
             AdForm.EmpInfoForm form = new AdForm.EmpInfoForm();
-            form.reload = Reload;
+            form.reload += Reload;
             openChildForm(form);
         }
 
@@ -107,7 +107,7 @@ namespace CafeShop.View
             this.label1.Text = "Quản Lý Khách Hàng";
             //AdForm.EmpInfoForm form = new AdForm.EmpInfoForm();
             AdForm.CustomerInfoForm form = new AdForm.CustomerInfoForm();
-            form.reload = Reload;
+            form.reload += Reload;
             openChildForm(form);
         }
         #endregion
@@ -124,7 +124,7 @@ namespace CafeShop.View
             ActivateButton(sender);
             this.label1.Text = "Bàn";
             AdForm.TableForm form = new AdForm.TableForm();
-            form.reload = Reload;
+            form.reload += Reload;
             openChildForm(form);
         }
 
@@ -147,7 +147,7 @@ namespace CafeShop.View
             ActivateButton(sender);
             this.label1.Text = "Hoá Đơn";
             AdForm.InvoiceForm form = new AdForm.InvoiceForm();
-            form.reload = Reload;
+            form.reload += Reload;
             openChildForm(form);
 
         }
@@ -156,6 +156,9 @@ namespace CafeShop.View
         {
             ActivateButton(sender);
             this.label1.Text = "Doanh Thu";
+            AdForm.RevenueForm form = new AdForm.RevenueForm();
+            form.reload += Reload;
+            openChildForm(form);
         }
 
         private void changeButton_Click(object sender, EventArgs e)
