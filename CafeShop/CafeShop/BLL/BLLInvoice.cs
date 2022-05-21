@@ -82,5 +82,7 @@ namespace CafeShop.BLL
                 return ChangeView(list.Skip((page - 1) * pageSize).ToList());
             return ChangeView(list.Skip((page - 1) * pageSize).Take(pageSize).ToList());
         }
+
+        public HoaDon GetHoaDonByMaHoaDon(string MaHoaDon) => DBModel.Instance.HoaDons.Find(MaHoaDon);
     }
 }

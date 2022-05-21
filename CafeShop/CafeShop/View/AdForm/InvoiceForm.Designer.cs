@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,29 +53,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.sortJCombobox = new CafeShop.View.CustomControl.JComboBox();
+            this.sortButton = new CafeShop.View.CustomControl.JButton();
+            this.toPicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.toLabel = new System.Windows.Forms.Label();
+            this.fromPicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.fromLabel = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.firstPageButton = new System.Windows.Forms.Button();
-            this.previousPageButton = new System.Windows.Forms.Button();
-            this.pageLabel = new System.Windows.Forms.Label();
-            this.nextPageButton = new System.Windows.Forms.Button();
-            this.lastPageButton = new System.Windows.Forms.Button();
-            this.hoaDonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.empTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.invoiceTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.searchButton = new CafeShop.View.CustomControl.JButton();
-            this.sortJCombobox = new CafeShop.View.CustomControl.JComboBox();
-            this.sortButton = new CafeShop.View.CustomControl.JButton();
-            this.toPicker = new CafeShop.View.CustomControl.JDatetimepicker();
-            this.fromPicker = new CafeShop.View.CustomControl.JDatetimepicker();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNhanVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +75,14 @@
             this.phuThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giamGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoaDonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.firstPageButton = new System.Windows.Forms.Button();
+            this.previousPageButton = new System.Windows.Forms.Button();
+            this.pageLabel = new System.Windows.Forms.Label();
+            this.nextPageButton = new System.Windows.Forms.Button();
+            this.lastPageButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -89,8 +97,8 @@
             this.leftPanel.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -269,6 +277,25 @@
             this.panel2.Size = new System.Drawing.Size(207, 100);
             this.panel2.TabIndex = 0;
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Crimson;
+            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitButton.BorderRadius = 30;
+            this.exitButton.BorderSize = 0;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.exitButton.Location = new System.Drawing.Point(23, 30);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(55, 40);
+            this.exitButton.TabIndex = 1;
+            this.exitButton.TextColor = System.Drawing.Color.White;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // topPanel
             // 
             this.topPanel.Controls.Add(this.sortJCombobox);
@@ -283,6 +310,60 @@
             this.topPanel.Size = new System.Drawing.Size(1154, 69);
             this.topPanel.TabIndex = 7;
             // 
+            // sortJCombobox
+            // 
+            this.sortJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sortJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortJCombobox.BorderSize = 2;
+            this.sortJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.sortJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortJCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.sortJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.sortJCombobox.ListTextColor = System.Drawing.Color.Black;
+            this.sortJCombobox.Location = new System.Drawing.Point(775, 29);
+            this.sortJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.sortJCombobox.Name = "sortJCombobox";
+            this.sortJCombobox.Padding = new System.Windows.Forms.Padding(2);
+            this.sortJCombobox.Size = new System.Drawing.Size(200, 30);
+            this.sortJCombobox.TabIndex = 6;
+            this.sortJCombobox.Texts = "";
+            // 
+            // sortButton
+            // 
+            this.sortButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.sortButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sortButton.BorderRadius = 30;
+            this.sortButton.BorderSize = 0;
+            this.sortButton.FlatAppearance.BorderSize = 0;
+            this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortButton.ForeColor = System.Drawing.Color.White;
+            this.sortButton.Location = new System.Drawing.Point(981, 23);
+            this.sortButton.Name = "sortButton";
+            this.sortButton.Size = new System.Drawing.Size(123, 40);
+            this.sortButton.TabIndex = 4;
+            this.sortButton.Text = "Sắp xếp";
+            this.sortButton.TextColor = System.Drawing.Color.White;
+            this.sortButton.UseVisualStyleBackColor = false;
+            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
+            // 
+            // toPicker
+            // 
+            this.toPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.toPicker.BorderSize = 0;
+            this.toPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toPicker.Location = new System.Drawing.Point(521, 28);
+            this.toPicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.toPicker.Name = "toPicker";
+            this.toPicker.Size = new System.Drawing.Size(218, 35);
+            this.toPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.toPicker.TabIndex = 3;
+            this.toPicker.TextColor = System.Drawing.Color.Black;
+            this.toPicker.ValueChanged += new System.EventHandler(this.Picker_ValueChanged);
+            // 
             // toLabel
             // 
             this.toLabel.AutoSize = true;
@@ -292,6 +373,20 @@
             this.toLabel.Size = new System.Drawing.Size(39, 20);
             this.toLabel.TabIndex = 2;
             this.toLabel.Text = "Đến";
+            // 
+            // fromPicker
+            // 
+            this.fromPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.fromPicker.BorderSize = 0;
+            this.fromPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromPicker.Location = new System.Drawing.Point(253, 28);
+            this.fromPicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.fromPicker.Name = "fromPicker";
+            this.fromPicker.Size = new System.Drawing.Size(218, 35);
+            this.fromPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.fromPicker.TabIndex = 1;
+            this.fromPicker.TextColor = System.Drawing.Color.Black;
+            this.fromPicker.ValueChanged += new System.EventHandler(this.Picker_ValueChanged);
             // 
             // fromLabel
             // 
@@ -316,6 +411,90 @@
             this.leftPanel.Size = new System.Drawing.Size(217, 442);
             this.leftPanel.TabIndex = 8;
             // 
+            // customerTextbox
+            // 
+            this.customerTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customerTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customerTextbox.BorderRadius = 5;
+            this.customerTextbox.BorderSize = 2;
+            this.customerTextbox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.customerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerTextbox.Location = new System.Drawing.Point(10, 114);
+            this.customerTextbox.Multiline = false;
+            this.customerTextbox.Name = "customerTextbox";
+            this.customerTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customerTextbox.PasswordChar = false;
+            this.customerTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.customerTextbox.PlaceholderText = "     Theo tên khách hàng";
+            this.customerTextbox.Size = new System.Drawing.Size(197, 32);
+            this.customerTextbox.TabIndex = 3;
+            this.customerTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.customerTextbox.Texts = "";
+            this.customerTextbox.UnderlinedStyle = false;
+            // 
+            // empTextbox
+            // 
+            this.empTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.empTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.empTextbox.BorderRadius = 5;
+            this.empTextbox.BorderSize = 2;
+            this.empTextbox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.empTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empTextbox.Location = new System.Drawing.Point(10, 82);
+            this.empTextbox.Multiline = false;
+            this.empTextbox.Name = "empTextbox";
+            this.empTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.empTextbox.PasswordChar = false;
+            this.empTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.empTextbox.PlaceholderText = "     Theo tên nhân viên";
+            this.empTextbox.Size = new System.Drawing.Size(197, 32);
+            this.empTextbox.TabIndex = 2;
+            this.empTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.empTextbox.Texts = "";
+            this.empTextbox.UnderlinedStyle = false;
+            // 
+            // invoiceTextbox
+            // 
+            this.invoiceTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.invoiceTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.invoiceTextbox.BorderRadius = 5;
+            this.invoiceTextbox.BorderSize = 2;
+            this.invoiceTextbox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.invoiceTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invoiceTextbox.Location = new System.Drawing.Point(10, 50);
+            this.invoiceTextbox.Multiline = false;
+            this.invoiceTextbox.Name = "invoiceTextbox";
+            this.invoiceTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.invoiceTextbox.PasswordChar = false;
+            this.invoiceTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.invoiceTextbox.PlaceholderText = "     Theo mã hoá đơn";
+            this.invoiceTextbox.Size = new System.Drawing.Size(197, 32);
+            this.invoiceTextbox.TabIndex = 1;
+            this.invoiceTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.invoiceTextbox.Texts = "";
+            this.invoiceTextbox.UnderlinedStyle = false;
+            // 
+            // searchButton
+            // 
+            this.searchButton.BackColor = System.Drawing.Color.Navy;
+            this.searchButton.BackgroundColor = System.Drawing.Color.Navy;
+            this.searchButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.searchButton.BorderRadius = 30;
+            this.searchButton.BorderSize = 0;
+            this.searchButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchButton.FlatAppearance.BorderSize = 0;
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.Color.SeaShell;
+            this.searchButton.Location = new System.Drawing.Point(10, 10);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(197, 40);
+            this.searchButton.TabIndex = 0;
+            this.searchButton.Text = "Tìm kiếm";
+            this.searchButton.TextColor = System.Drawing.Color.SeaShell;
+            this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.dataGridView1);
@@ -330,6 +509,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHoaDon,
@@ -349,7 +536,82 @@
             this.dataGridView1.Size = new System.Drawing.Size(887, 405);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.DataPropertyName = "MaHoaDon";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaHoaDon.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaHoaDon.Frozen = true;
+            this.MaHoaDon.HeaderText = "Mã Hoá Đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
+            this.MaHoaDon.Width = 120;
+            // 
+            // tenNhanVienDataGridViewTextBoxColumn
+            // 
+            this.tenNhanVienDataGridViewTextBoxColumn.DataPropertyName = "TenNhanVien";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.tenNhanVienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tenNhanVienDataGridViewTextBoxColumn.HeaderText = "Tên Nhân Viên";
+            this.tenNhanVienDataGridViewTextBoxColumn.Name = "tenNhanVienDataGridViewTextBoxColumn";
+            this.tenNhanVienDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenNhanVienDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // tenKhachHangDataGridViewTextBoxColumn
+            // 
+            this.tenKhachHangDataGridViewTextBoxColumn.DataPropertyName = "TenKhachHang";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.tenKhachHangDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.tenKhachHangDataGridViewTextBoxColumn.HeaderText = "Tên Khách Hàng";
+            this.tenKhachHangDataGridViewTextBoxColumn.Name = "tenKhachHangDataGridViewTextBoxColumn";
+            this.tenKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenKhachHangDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // thoiGianThanhToanDataGridViewTextBoxColumn
+            // 
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianThanhToan";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.HeaderText = "Thời gian thanh toán";
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.Name = "thoiGianThanhToanDataGridViewTextBoxColumn";
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.ReadOnly = true;
+            this.thoiGianThanhToanDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // phuThuDataGridViewTextBoxColumn
+            // 
+            this.phuThuDataGridViewTextBoxColumn.DataPropertyName = "PhuThu";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.phuThuDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.phuThuDataGridViewTextBoxColumn.HeaderText = "Phụ thu";
+            this.phuThuDataGridViewTextBoxColumn.Name = "phuThuDataGridViewTextBoxColumn";
+            this.phuThuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phuThuDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // giamGiaDataGridViewTextBoxColumn
+            // 
+            this.giamGiaDataGridViewTextBoxColumn.DataPropertyName = "GiamGia";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.giamGiaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.giamGiaDataGridViewTextBoxColumn.HeaderText = "Giảm giá";
+            this.giamGiaDataGridViewTextBoxColumn.Name = "giamGiaDataGridViewTextBoxColumn";
+            this.giamGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giamGiaDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // thanhTienDataGridViewTextBoxColumn
+            // 
+            this.thanhTienDataGridViewTextBoxColumn.DataPropertyName = "ThanhTien";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.thanhTienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.thanhTienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
+            this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
+            this.thanhTienDataGridViewTextBoxColumn.ReadOnly = true;
+            this.thanhTienDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // hoaDonViewBindingSource
+            // 
+            this.hoaDonViewBindingSource.DataSource = typeof(CafeShop.DTO.HoaDonView);
             // 
             // panel6
             // 
@@ -429,229 +691,6 @@
             this.lastPageButton.UseVisualStyleBackColor = true;
             this.lastPageButton.Click += new System.EventHandler(this.lastPageButton_Click);
             // 
-            // hoaDonViewBindingSource
-            // 
-            this.hoaDonViewBindingSource.DataSource = typeof(CafeShop.DTO.HoaDonView);
-            // 
-            // customerTextbox
-            // 
-            this.customerTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customerTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customerTextbox.BorderRadius = 5;
-            this.customerTextbox.BorderSize = 2;
-            this.customerTextbox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.customerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerTextbox.Location = new System.Drawing.Point(10, 114);
-            this.customerTextbox.Multiline = false;
-            this.customerTextbox.Name = "customerTextbox";
-            this.customerTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customerTextbox.PasswordChar = false;
-            this.customerTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.customerTextbox.PlaceholderText = "     Theo tên khách hàng";
-            this.customerTextbox.Size = new System.Drawing.Size(197, 32);
-            this.customerTextbox.TabIndex = 3;
-            this.customerTextbox.Texts = "";
-            this.customerTextbox.UnderlinedStyle = false;
-            // 
-            // empTextbox
-            // 
-            this.empTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.empTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.empTextbox.BorderRadius = 5;
-            this.empTextbox.BorderSize = 2;
-            this.empTextbox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.empTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empTextbox.Location = new System.Drawing.Point(10, 82);
-            this.empTextbox.Multiline = false;
-            this.empTextbox.Name = "empTextbox";
-            this.empTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.empTextbox.PasswordChar = false;
-            this.empTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.empTextbox.PlaceholderText = "     Theo tên nhân viên";
-            this.empTextbox.Size = new System.Drawing.Size(197, 32);
-            this.empTextbox.TabIndex = 2;
-            this.empTextbox.Texts = "";
-            this.empTextbox.UnderlinedStyle = false;
-            // 
-            // invoiceTextbox
-            // 
-            this.invoiceTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.invoiceTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.invoiceTextbox.BorderRadius = 5;
-            this.invoiceTextbox.BorderSize = 2;
-            this.invoiceTextbox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.invoiceTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.invoiceTextbox.Location = new System.Drawing.Point(10, 50);
-            this.invoiceTextbox.Multiline = false;
-            this.invoiceTextbox.Name = "invoiceTextbox";
-            this.invoiceTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.invoiceTextbox.PasswordChar = false;
-            this.invoiceTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.invoiceTextbox.PlaceholderText = "     Theo mã hoá đơn";
-            this.invoiceTextbox.Size = new System.Drawing.Size(197, 32);
-            this.invoiceTextbox.TabIndex = 1;
-            this.invoiceTextbox.Texts = "";
-            this.invoiceTextbox.UnderlinedStyle = false;
-            // 
-            // searchButton
-            // 
-            this.searchButton.BackColor = System.Drawing.Color.Navy;
-            this.searchButton.BackgroundColor = System.Drawing.Color.Navy;
-            this.searchButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.searchButton.BorderRadius = 30;
-            this.searchButton.BorderSize = 0;
-            this.searchButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchButton.FlatAppearance.BorderSize = 0;
-            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.ForeColor = System.Drawing.Color.SeaShell;
-            this.searchButton.Location = new System.Drawing.Point(10, 10);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(197, 40);
-            this.searchButton.TabIndex = 0;
-            this.searchButton.Text = "Tìm kiếm";
-            this.searchButton.TextColor = System.Drawing.Color.SeaShell;
-            this.searchButton.UseVisualStyleBackColor = false;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
-            // sortJCombobox
-            // 
-            this.sortJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.sortJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortJCombobox.BorderSize = 2;
-            this.sortJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.sortJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortJCombobox.ForeColor = System.Drawing.Color.DimGray;
-            this.sortJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.sortJCombobox.ListTextColor = System.Drawing.Color.Black;
-            this.sortJCombobox.Location = new System.Drawing.Point(775, 29);
-            this.sortJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.sortJCombobox.Name = "sortJCombobox";
-            this.sortJCombobox.Padding = new System.Windows.Forms.Padding(2);
-            this.sortJCombobox.Size = new System.Drawing.Size(200, 30);
-            this.sortJCombobox.TabIndex = 6;
-            this.sortJCombobox.Texts = "";
-            // 
-            // sortButton
-            // 
-            this.sortButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.sortButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sortButton.BorderRadius = 30;
-            this.sortButton.BorderSize = 0;
-            this.sortButton.FlatAppearance.BorderSize = 0;
-            this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortButton.ForeColor = System.Drawing.Color.White;
-            this.sortButton.Location = new System.Drawing.Point(981, 23);
-            this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(123, 40);
-            this.sortButton.TabIndex = 4;
-            this.sortButton.Text = "Sắp xếp";
-            this.sortButton.TextColor = System.Drawing.Color.White;
-            this.sortButton.UseVisualStyleBackColor = false;
-            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
-            // 
-            // toPicker
-            // 
-            this.toPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.toPicker.BorderSize = 0;
-            this.toPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toPicker.Location = new System.Drawing.Point(521, 28);
-            this.toPicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.toPicker.Name = "toPicker";
-            this.toPicker.Size = new System.Drawing.Size(218, 35);
-            this.toPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.toPicker.TabIndex = 3;
-            this.toPicker.TextColor = System.Drawing.Color.Black;
-            // 
-            // fromPicker
-            // 
-            this.fromPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.fromPicker.BorderSize = 0;
-            this.fromPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromPicker.Location = new System.Drawing.Point(253, 28);
-            this.fromPicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.fromPicker.Name = "fromPicker";
-            this.fromPicker.Size = new System.Drawing.Size(218, 35);
-            this.fromPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.fromPicker.TabIndex = 1;
-            this.fromPicker.TextColor = System.Drawing.Color.Black;
-            // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(23, 30);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(55, 40);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // MaHoaDon
-            // 
-            this.MaHoaDon.DataPropertyName = "MaHoaDon";
-            this.MaHoaDon.Frozen = true;
-            this.MaHoaDon.HeaderText = "Mã Hoá Đơn";
-            this.MaHoaDon.Name = "MaHoaDon";
-            this.MaHoaDon.ReadOnly = true;
-            // 
-            // tenNhanVienDataGridViewTextBoxColumn
-            // 
-            this.tenNhanVienDataGridViewTextBoxColumn.DataPropertyName = "TenNhanVien";
-            this.tenNhanVienDataGridViewTextBoxColumn.HeaderText = "Tên Nhân Viên";
-            this.tenNhanVienDataGridViewTextBoxColumn.Name = "tenNhanVienDataGridViewTextBoxColumn";
-            this.tenNhanVienDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenNhanVienDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // tenKhachHangDataGridViewTextBoxColumn
-            // 
-            this.tenKhachHangDataGridViewTextBoxColumn.DataPropertyName = "TenKhachHang";
-            this.tenKhachHangDataGridViewTextBoxColumn.HeaderText = "Tên Khách Hàng";
-            this.tenKhachHangDataGridViewTextBoxColumn.Name = "tenKhachHangDataGridViewTextBoxColumn";
-            this.tenKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenKhachHangDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // thoiGianThanhToanDataGridViewTextBoxColumn
-            // 
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianThanhToan";
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.HeaderText = "Thời gian thanh toán";
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.Name = "thoiGianThanhToanDataGridViewTextBoxColumn";
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.thoiGianThanhToanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // phuThuDataGridViewTextBoxColumn
-            // 
-            this.phuThuDataGridViewTextBoxColumn.DataPropertyName = "PhuThu";
-            this.phuThuDataGridViewTextBoxColumn.HeaderText = "Phụ thu";
-            this.phuThuDataGridViewTextBoxColumn.Name = "phuThuDataGridViewTextBoxColumn";
-            this.phuThuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // giamGiaDataGridViewTextBoxColumn
-            // 
-            this.giamGiaDataGridViewTextBoxColumn.DataPropertyName = "GiamGia";
-            this.giamGiaDataGridViewTextBoxColumn.HeaderText = "Giảm giá";
-            this.giamGiaDataGridViewTextBoxColumn.Name = "giamGiaDataGridViewTextBoxColumn";
-            this.giamGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // thanhTienDataGridViewTextBoxColumn
-            // 
-            this.thanhTienDataGridViewTextBoxColumn.DataPropertyName = "ThanhTien";
-            this.thanhTienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
-            this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
-            this.thanhTienDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,9 +723,9 @@
             this.leftPanel.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

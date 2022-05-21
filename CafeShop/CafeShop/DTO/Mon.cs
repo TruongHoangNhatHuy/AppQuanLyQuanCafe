@@ -30,5 +30,9 @@ namespace CafeShop.DTO
         public virtual DanhMucThucDon DanhMucThucDon { get; set; }
         public virtual ICollection<CongThuc> CongThucs { get; set; }
         public virtual ICollection<DonGoiMon> DonGoiMons { get; set; }
+        public override string ToString()
+        {
+            return TenMon;
+        }
     }
 }

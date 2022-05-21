@@ -106,6 +106,12 @@
     <Compile Include="View\AdForm\CustomerDetailForm.Designer.cs">
       <DependentUpon>CustomerDetailForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AdForm\DetailOrderListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\DetailOrderListForm.Designer.cs">
+      <DependentUpon>DetailOrderListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AdForm\EmpDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="View\AdForm\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdForm\RevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\RevenueForm.Designer.cs">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AdForm\TableForm.cs">
       <SubType>Form</SubType>
@@ -216,6 +228,9 @@
     <EmbeddedResource Include="View\AdForm\CustomerDetailForm.resx">
       <DependentUpon>CustomerDetailForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\DetailOrderListForm.resx">
+      <DependentUpon>DetailOrderListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\EmpDetailForm.resx">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\RevenueForm.resx">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
