@@ -34,7 +34,12 @@ namespace CafeShop.View.AdForm
         }
         private void SetHoaDon()
         {
-            DateTime from = fromPicker.Value, to = toPicker.Value;  
+            DateTime from = fromPicker.Value, to = toPicker.Value;
+            if(from > to)
+            {
+                from = to;
+                fromPicker.Value = toPicker.Value = from;
+            }
             string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;
             var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
             this.billList = list;
@@ -128,6 +133,11 @@ namespace CafeShop.View.AdForm
                 DetailOrderListForm form = new DetailOrderListForm(MaHoaDon);
                 form.ShowDialog();
             }
+        }
+
+        private void Picker_ValueChanged(object sender, EventArgs e)
+        {
+            searchButton_Click(sender, e);
         }
     }
 }

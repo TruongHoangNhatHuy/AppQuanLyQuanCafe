@@ -362,6 +362,7 @@
             this.toPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.toPicker.TabIndex = 3;
             this.toPicker.TextColor = System.Drawing.Color.Black;
+            this.toPicker.ValueChanged += new System.EventHandler(this.Picker_ValueChanged);
             // 
             // toLabel
             // 
@@ -385,6 +386,7 @@
             this.fromPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.fromPicker.TabIndex = 1;
             this.fromPicker.TextColor = System.Drawing.Color.Black;
+            this.fromPicker.ValueChanged += new System.EventHandler(this.Picker_ValueChanged);
             // 
             // fromLabel
             // 

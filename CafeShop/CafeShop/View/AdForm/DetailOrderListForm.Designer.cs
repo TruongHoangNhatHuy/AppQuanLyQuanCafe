@@ -38,30 +38,30 @@
             this.billIDLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.controlBarPanel = new System.Windows.Forms.Panel();
-            this.minimizeButton = new CafeShop.View.CustomControl.JButton();
-            this.closeButton = new CafeShop.View.CustomControl.JButton();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.infoPanel = new System.Windows.Forms.Panel();
-            this.employeeNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.customerNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.timeTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.billIDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.totalTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.totalLabel = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.dataPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.donGoiMonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.monDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoiGianGoiMonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGoiMonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.totalTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.employeeNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.customerNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.timeTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.billIDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.minimizeButton = new CafeShop.View.CustomControl.JButton();
+            this.closeButton = new CafeShop.View.CustomControl.JButton();
             this.controlBarPanel.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
@@ -103,48 +103,6 @@
             this.controlBarPanel.Size = new System.Drawing.Size(824, 31);
             this.controlBarPanel.TabIndex = 2;
             // 
-            // minimizeButton
-            // 
-            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
-            this.minimizeButton.BackgroundColor = System.Drawing.Color.Transparent;
-            this.minimizeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.minimizeButton.BorderRadius = 0;
-            this.minimizeButton.BorderSize = 0;
-            this.minimizeButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.ForeColor = System.Drawing.Color.White;
-            this.minimizeButton.Image = global::CafeShop.Properties.Resources.minimize_sign;
-            this.minimizeButton.Location = new System.Drawing.Point(716, 0);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(54, 31);
-            this.minimizeButton.TabIndex = 1;
-            this.minimizeButton.TextColor = System.Drawing.Color.White;
-            this.minimizeButton.UseVisualStyleBackColor = false;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.BackgroundColor = System.Drawing.Color.Transparent;
-            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeButton.BorderRadius = 0;
-            this.closeButton.BorderSize = 0;
-            this.closeButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Image = global::CafeShop.Properties.Resources.closelogin;
-            this.closeButton.Location = new System.Drawing.Point(770, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(54, 31);
-            this.closeButton.TabIndex = 0;
-            this.closeButton.TextColor = System.Drawing.Color.White;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
-            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
-            // 
             // titlePanel
             // 
             this.titlePanel.Controls.Add(this.titleLabel);
@@ -169,90 +127,6 @@
             this.infoPanel.Name = "infoPanel";
             this.infoPanel.Size = new System.Drawing.Size(824, 98);
             this.infoPanel.TabIndex = 4;
-            // 
-            // employeeNameTextbox
-            // 
-            this.employeeNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.employeeNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.employeeNameTextbox.BorderRadius = 5;
-            this.employeeNameTextbox.BorderSize = 2;
-            this.employeeNameTextbox.Enabled = false;
-            this.employeeNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeNameTextbox.ForeColor = System.Drawing.Color.Crimson;
-            this.employeeNameTextbox.Location = new System.Drawing.Point(560, 47);
-            this.employeeNameTextbox.Multiline = false;
-            this.employeeNameTextbox.Name = "employeeNameTextbox";
-            this.employeeNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.employeeNameTextbox.PasswordChar = false;
-            this.employeeNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.employeeNameTextbox.PlaceholderText = "";
-            this.employeeNameTextbox.Size = new System.Drawing.Size(210, 33);
-            this.employeeNameTextbox.TabIndex = 7;
-            this.employeeNameTextbox.Texts = "";
-            this.employeeNameTextbox.UnderlinedStyle = false;
-            // 
-            // customerNameTextbox
-            // 
-            this.customerNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customerNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customerNameTextbox.BorderRadius = 5;
-            this.customerNameTextbox.BorderSize = 2;
-            this.customerNameTextbox.Enabled = false;
-            this.customerNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerNameTextbox.ForeColor = System.Drawing.Color.Crimson;
-            this.customerNameTextbox.Location = new System.Drawing.Point(560, 8);
-            this.customerNameTextbox.Multiline = false;
-            this.customerNameTextbox.Name = "customerNameTextbox";
-            this.customerNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customerNameTextbox.PasswordChar = false;
-            this.customerNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customerNameTextbox.PlaceholderText = "";
-            this.customerNameTextbox.Size = new System.Drawing.Size(210, 33);
-            this.customerNameTextbox.TabIndex = 6;
-            this.customerNameTextbox.Texts = "";
-            this.customerNameTextbox.UnderlinedStyle = false;
-            // 
-            // timeTextbox
-            // 
-            this.timeTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.timeTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.timeTextbox.BorderRadius = 5;
-            this.timeTextbox.BorderSize = 2;
-            this.timeTextbox.Enabled = false;
-            this.timeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeTextbox.ForeColor = System.Drawing.Color.Crimson;
-            this.timeTextbox.Location = new System.Drawing.Point(148, 47);
-            this.timeTextbox.Multiline = false;
-            this.timeTextbox.Name = "timeTextbox";
-            this.timeTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.timeTextbox.PasswordChar = false;
-            this.timeTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.timeTextbox.PlaceholderText = "";
-            this.timeTextbox.Size = new System.Drawing.Size(210, 33);
-            this.timeTextbox.TabIndex = 5;
-            this.timeTextbox.Texts = "";
-            this.timeTextbox.UnderlinedStyle = false;
-            // 
-            // billIDTextbox
-            // 
-            this.billIDTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.billIDTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.billIDTextbox.BorderRadius = 5;
-            this.billIDTextbox.BorderSize = 2;
-            this.billIDTextbox.Enabled = false;
-            this.billIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billIDTextbox.ForeColor = System.Drawing.Color.Crimson;
-            this.billIDTextbox.Location = new System.Drawing.Point(148, 8);
-            this.billIDTextbox.Multiline = false;
-            this.billIDTextbox.Name = "billIDTextbox";
-            this.billIDTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.billIDTextbox.PasswordChar = false;
-            this.billIDTextbox.PlaceholderColor = System.Drawing.Color.Black;
-            this.billIDTextbox.PlaceholderText = "";
-            this.billIDTextbox.Size = new System.Drawing.Size(210, 33);
-            this.billIDTextbox.TabIndex = 4;
-            this.billIDTextbox.Texts = "";
-            this.billIDTextbox.UnderlinedStyle = false;
             // 
             // label3
             // 
@@ -293,25 +167,6 @@
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(824, 70);
             this.bottomPanel.TabIndex = 5;
-            // 
-            // totalTextbox
-            // 
-            this.totalTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.totalTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.totalTextbox.BorderRadius = 5;
-            this.totalTextbox.BorderSize = 2;
-            this.totalTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextbox.Location = new System.Drawing.Point(574, 21);
-            this.totalTextbox.Multiline = false;
-            this.totalTextbox.Name = "totalTextbox";
-            this.totalTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.totalTextbox.PasswordChar = false;
-            this.totalTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.totalTextbox.PlaceholderText = "";
-            this.totalTextbox.Size = new System.Drawing.Size(196, 32);
-            this.totalTextbox.TabIndex = 1;
-            this.totalTextbox.Texts = "";
-            this.totalTextbox.UnderlinedStyle = false;
             // 
             // totalLabel
             // 
@@ -377,10 +232,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(721, 274);
             this.dataGridView1.TabIndex = 0;
             // 
-            // donGoiMonBindingSource
-            // 
-            this.donGoiMonBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMon);
-            // 
             // monDataGridViewTextBoxColumn
             // 
             this.monDataGridViewTextBoxColumn.DataPropertyName = "Mon";
@@ -430,6 +281,161 @@
             this.giaTienDataGridViewTextBoxColumn.Name = "giaTienDataGridViewTextBoxColumn";
             this.giaTienDataGridViewTextBoxColumn.ReadOnly = true;
             this.giaTienDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // donGoiMonBindingSource
+            // 
+            this.donGoiMonBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMon);
+            // 
+            // totalTextbox
+            // 
+            this.totalTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.totalTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.totalTextbox.BorderRadius = 5;
+            this.totalTextbox.BorderSize = 2;
+            this.totalTextbox.Enabled = false;
+            this.totalTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextbox.Location = new System.Drawing.Point(574, 21);
+            this.totalTextbox.Multiline = false;
+            this.totalTextbox.Name = "totalTextbox";
+            this.totalTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.totalTextbox.PasswordChar = false;
+            this.totalTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.totalTextbox.PlaceholderText = "";
+            this.totalTextbox.Size = new System.Drawing.Size(196, 32);
+            this.totalTextbox.TabIndex = 1;
+            this.totalTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Right;
+            this.totalTextbox.Texts = "";
+            this.totalTextbox.UnderlinedStyle = false;
+            // 
+            // employeeNameTextbox
+            // 
+            this.employeeNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.employeeNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.employeeNameTextbox.BorderRadius = 5;
+            this.employeeNameTextbox.BorderSize = 2;
+            this.employeeNameTextbox.Enabled = false;
+            this.employeeNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNameTextbox.ForeColor = System.Drawing.Color.Crimson;
+            this.employeeNameTextbox.Location = new System.Drawing.Point(560, 47);
+            this.employeeNameTextbox.Multiline = false;
+            this.employeeNameTextbox.Name = "employeeNameTextbox";
+            this.employeeNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.employeeNameTextbox.PasswordChar = false;
+            this.employeeNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.employeeNameTextbox.PlaceholderText = "";
+            this.employeeNameTextbox.Size = new System.Drawing.Size(210, 33);
+            this.employeeNameTextbox.TabIndex = 7;
+            this.employeeNameTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.employeeNameTextbox.Texts = "";
+            this.employeeNameTextbox.UnderlinedStyle = false;
+            // 
+            // customerNameTextbox
+            // 
+            this.customerNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customerNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customerNameTextbox.BorderRadius = 5;
+            this.customerNameTextbox.BorderSize = 2;
+            this.customerNameTextbox.Enabled = false;
+            this.customerNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerNameTextbox.ForeColor = System.Drawing.Color.Crimson;
+            this.customerNameTextbox.Location = new System.Drawing.Point(560, 8);
+            this.customerNameTextbox.Multiline = false;
+            this.customerNameTextbox.Name = "customerNameTextbox";
+            this.customerNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customerNameTextbox.PasswordChar = false;
+            this.customerNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customerNameTextbox.PlaceholderText = "";
+            this.customerNameTextbox.Size = new System.Drawing.Size(210, 33);
+            this.customerNameTextbox.TabIndex = 6;
+            this.customerNameTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.customerNameTextbox.Texts = "";
+            this.customerNameTextbox.UnderlinedStyle = false;
+            // 
+            // timeTextbox
+            // 
+            this.timeTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.timeTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.timeTextbox.BorderRadius = 5;
+            this.timeTextbox.BorderSize = 2;
+            this.timeTextbox.Enabled = false;
+            this.timeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeTextbox.ForeColor = System.Drawing.Color.Crimson;
+            this.timeTextbox.Location = new System.Drawing.Point(148, 47);
+            this.timeTextbox.Multiline = false;
+            this.timeTextbox.Name = "timeTextbox";
+            this.timeTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.timeTextbox.PasswordChar = false;
+            this.timeTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.timeTextbox.PlaceholderText = "";
+            this.timeTextbox.Size = new System.Drawing.Size(210, 33);
+            this.timeTextbox.TabIndex = 5;
+            this.timeTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.timeTextbox.Texts = "";
+            this.timeTextbox.UnderlinedStyle = false;
+            // 
+            // billIDTextbox
+            // 
+            this.billIDTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.billIDTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.billIDTextbox.BorderRadius = 5;
+            this.billIDTextbox.BorderSize = 2;
+            this.billIDTextbox.Enabled = false;
+            this.billIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billIDTextbox.ForeColor = System.Drawing.Color.Crimson;
+            this.billIDTextbox.Location = new System.Drawing.Point(148, 8);
+            this.billIDTextbox.Multiline = false;
+            this.billIDTextbox.Name = "billIDTextbox";
+            this.billIDTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.billIDTextbox.PasswordChar = false;
+            this.billIDTextbox.PlaceholderColor = System.Drawing.Color.Black;
+            this.billIDTextbox.PlaceholderText = "";
+            this.billIDTextbox.Size = new System.Drawing.Size(210, 33);
+            this.billIDTextbox.TabIndex = 4;
+            this.billIDTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.billIDTextbox.Texts = "";
+            this.billIDTextbox.UnderlinedStyle = false;
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.BackgroundColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.minimizeButton.BorderRadius = 0;
+            this.minimizeButton.BorderSize = 0;
+            this.minimizeButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.ForeColor = System.Drawing.Color.White;
+            this.minimizeButton.Image = global::CafeShop.Properties.Resources.minimize_sign;
+            this.minimizeButton.Location = new System.Drawing.Point(716, 0);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(54, 31);
+            this.minimizeButton.TabIndex = 1;
+            this.minimizeButton.TextColor = System.Drawing.Color.White;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.BackgroundColor = System.Drawing.Color.Transparent;
+            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeButton.BorderRadius = 0;
+            this.closeButton.BorderSize = 0;
+            this.closeButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Image = global::CafeShop.Properties.Resources.closelogin;
+            this.closeButton.Location = new System.Drawing.Point(770, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(54, 31);
+            this.closeButton.TabIndex = 0;
+            this.closeButton.TextColor = System.Drawing.Color.White;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // DetailOrderListForm
             // 

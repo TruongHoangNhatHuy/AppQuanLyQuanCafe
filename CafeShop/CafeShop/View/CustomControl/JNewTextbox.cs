@@ -163,6 +163,15 @@ namespace CafeShop.View.CustomControl
                 SetPlaceholder();
             }
         }
+        [Category("Textbox Properties")]
+        public HorizontalAlignment TextAlignment
+        {
+            get { return textBox1.TextAlign; }
+            set
+            {
+                textBox1.TextAlign = value;
+            }
+        }
         #endregion
 
         #region -> Private methods
