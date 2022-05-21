@@ -122,12 +122,12 @@ namespace CafeShop.View.AdForm
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            if(dataGridView1.SelectedRows.Count == 1)
+
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 string MaHoaDon = dataGridView1.SelectedRows[0].Cells["MaHoaDon"].Value.ToString();
                 MessageBox.Show(MaHoaDon);
-            }    
+            }
         }
     }
 }
