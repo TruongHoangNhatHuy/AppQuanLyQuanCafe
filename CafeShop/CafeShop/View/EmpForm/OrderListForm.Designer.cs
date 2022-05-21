@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.donGoiMonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.performButton = new CafeShop.View.CustomControl.JButton();
             this.searchButton = new CafeShop.View.CustomControl.JButton();
             this.searchTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.jButton2 = new CafeShop.View.CustomControl.JButton();
-            this.donGoiMonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.donGoiMonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maDonGoiMonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +77,10 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1262, 655);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // donGoiMonViewBindingSource
+            // 
+            this.donGoiMonViewBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMonView);
             // 
             // comboBox1
             // 
@@ -150,6 +154,7 @@
             this.searchTextbox.PlaceholderText = "         Tìm kiếm.......";
             this.searchTextbox.Size = new System.Drawing.Size(579, 48);
             this.searchTextbox.TabIndex = 12;
+            this.searchTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.searchTextbox.Texts = "";
             this.searchTextbox.UnderlinedStyle = false;
             // 
@@ -173,10 +178,6 @@
             this.jButton2.TextColor = System.Drawing.Color.Black;
             this.jButton2.UseVisualStyleBackColor = false;
             // 
-            // donGoiMonViewBindingSource
-            // 
-            this.donGoiMonViewBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMonView);
-            // 
             // donGoiMonBindingSource
             // 
             this.donGoiMonBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMon);
@@ -193,7 +194,7 @@
             // TenBan
             // 
             this.TenBan.DataPropertyName = "TenBan";
-            this.TenBan.HeaderText = "Tên Bàn";
+            this.TenBan.HeaderText = "Tên bàn";
             this.TenBan.MinimumWidth = 8;
             this.TenBan.Name = "TenBan";
             this.TenBan.ReadOnly = true;
