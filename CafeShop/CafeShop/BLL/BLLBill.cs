@@ -35,7 +35,7 @@ namespace CafeShop.BLL
             var listDonGoiMon = DBModel.Instance.DonGoiMons.Where(x => x.TinhTrang == "Hoàn thành" && x.MaHoaDon == maHoaDon).ToList();
             foreach (var i in listDonGoiMon)
             {
-                tongTien += i.GiaTien * i.SoLuong;
+                tongTien += i.GiaTien;
             }
         }
         public double SurchargeAndDiscount(double surcharge = 0, bool isSurchargePercent = false, double discount = 0, bool isDiscountPercent = false)
