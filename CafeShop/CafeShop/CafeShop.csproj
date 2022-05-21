@@ -270,6 +270,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CafeShop.DTO.Ban.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMonView.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDon.datasource" />

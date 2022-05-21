@@ -1,9 +1,7 @@
-﻿using System;
+﻿using CafeShop.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CafeShop.DTO;
 namespace CafeShop.BLL
 {
     public class BLLInvoice
@@ -17,9 +15,9 @@ namespace CafeShop.BLL
                     _Instance = new BLLInvoice();
                 return _Instance;
             }
-            private set {}
+            private set { }
         }
-        public List<HoaDon> GetAllHoaDon() => DBModel.Instance.HoaDons.ToList();
+        public List<HoaDon> GetAllHoaDon() => DBModel.Instance.HoaDons.Where(p => p.MaBan.Equals("B000000000")).ToList();
         public List<HoaDonView> ChangeView(List<HoaDon> list)
         {
             return list.Select(d => new HoaDonView()
@@ -51,26 +49,38 @@ namespace CafeShop.BLL
                 p.MaHoaDon.Contains(MaHoaDon)
                 ).ToList();
         }
-        public List<HoaDonView> Sort(List<HoaDon> list, string orderBy, bool SortDirection)
+        
+        public List<HoaDon> Sort(List<HoaDon> list, string orderBy, bool SortDirection)
         {
             switch (orderBy)
             {
                 case "Theo mã hoá đơn":
-                    list.Sort((p1, p2) => p1.MaHoaDon.CompareTo(p2.MaHoaDon));
+                    //list.Sort((p1, p2) => p1.MaHoaDon.CompareTo(p2.MaHoaDon));
+                    list = list.OrderBy(p => p.MaHoaDon).ToList();
                     break;
                 case "Theo thời gian":
-                    list.Sort((p1, p2) => p1.ThoiGianThanhToan.CompareTo(p2.ThoiGianThanhToan));
+                    //list.Sort((p1, p2) => p1.ThoiGianThanhToan.CompareTo(p2.ThoiGianThanhToan));
+                    list = list.OrderBy(p => p.ThoiGianThanhToan).ToList();
                     break;
                 case "Theo giá trị":
-                    list.Sort((p1, p2) => p1.ThanhTien.CompareTo(p2.ThanhTien));
+                    //list.Sort((p1, p2) => p1.ThanhTien.CompareTo(p2.ThanhTien));
+                    list = list.OrderBy(p => p.ThanhTien).ToList();
                     break;
             }
             if (SortDirection)
                 list.Reverse();
-            return ChangeView(list);
+            return list;
         }
         public string GetBillCount(List<HoaDon> list) => list.Count.ToString();
         public string GetCustomerCount(List<HoaDon> list) => list.Select(p => new { p.KhachHang }).Distinct().Count().ToString();
         public string GetRevenue(List<HoaDon> list) => list.Sum(p => p.ThanhTien).ToString();
+
+        //Pagination
+        public List<HoaDonView> GetCurrentReCord(int page, int pageSize, List<HoaDon> list)
+        {
+            if ((list.Count / pageSize + 1) == page)
+                return ChangeView(list.Skip((page - 1) * pageSize).ToList());
+            return ChangeView(list.Skip((page - 1) * pageSize).Take(pageSize).ToList());
+        }
     }
 }

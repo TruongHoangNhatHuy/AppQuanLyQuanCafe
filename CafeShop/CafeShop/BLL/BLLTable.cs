@@ -20,17 +20,20 @@ namespace CafeShop.BLL
             private set { }
         }
         private BLLTable() { }
+        //public List<KhuvucCBItem> GetKhuvucCBItem()
+        //{
+        //    List<KhuvucCBItem> data = new List<KhuvucCBItem>();
+        //    foreach (KhuVuc khuvuc in DBModel.Instance.KhuVucs)
+        //    {
+        //        data.Add(new KhuvucCBItem { ID = khuvuc.MaKhuVuc, Name = khuvuc.TenKhuVuc });
+        //    }
+        //    return data;
+        //}
         public List<KhuvucCBItem> GetKhuvucCBItem()
-        {
-            List<KhuvucCBItem> data = new List<KhuvucCBItem>();
-            foreach (KhuVuc khuvuc in DBModel.Instance.KhuVucs)
-            {
-                data.Add(new KhuvucCBItem { ID = khuvuc.MaKhuVuc, Name = khuvuc.TenKhuVuc });
-            }
-            return data;
-        }
-        public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList();
-        public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList();
+            => DBModel.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
+        public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList().Skip(1).ToList();
+        //public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList();
+        public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList().Skip(1).ToList();
         public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
 
         public KhuVuc GetKhuVucByMaKhuVuc(string MaKhuVuc) => DBModel.Instance.KhuVucs.Find(MaKhuVuc);

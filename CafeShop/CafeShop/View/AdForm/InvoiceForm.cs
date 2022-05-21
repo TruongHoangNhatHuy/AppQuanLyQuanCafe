@@ -19,29 +19,34 @@ namespace CafeShop.View.AdForm
         {
             InitializeComponent();
         }
+        private List<HoaDon> billList;
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
             sortJCombobox.Items.AddRange(new string[] { "Theo mã hoá đơn", "Theo thời gian", "Theo giá trị" });
             fromPicker.Value = new DateTime(2022, 1, 1);
-            dataGridView1.DataSource = BLLInvoice.Instance.GetAllHoaDonView();         
+            SetHoaDon();
+            SetPage();
         }
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
             reload?.Invoke();
         }
-        private List<HoaDon> GetHoaDon()
+        private void SetHoaDon()
         {
             DateTime from = fromPicker.Value, to = toPicker.Value;  
             string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;
-            return BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
+            var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
+            this.billList = list;
+            TotalPage = this.billList.Count / PageSize;
+            if (this.billList.Count % PageSize > 0)
+                TotalPage++;
         }
         private void searchButton_Click(object sender, EventArgs e)
         {
-            //DateTime from = fromPicker.Value, to = toPicker.Value;
-            //string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;
-            //var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
-            dataGridView1.DataSource = BLLInvoice.Instance.ChangeView(GetHoaDon());   
+            SetHoaDon();
+            CurrentIndex = 1;
+            SetPage();
         }
         public string lastOrder;
         bool SortDirection = false;
@@ -49,9 +54,6 @@ namespace CafeShop.View.AdForm
         {
             if (sortJCombobox.SelectedItem != null)
             {
-                //DateTime from = fromPicker.Value, to = toPicker.Value;
-                //string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;     
-                //var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
                 string orderBy = sortJCombobox.SelectedItem.ToString();                
                 if (orderBy.Equals(lastOrder))
                     SortDirection = !SortDirection;
@@ -59,21 +61,73 @@ namespace CafeShop.View.AdForm
                 {
                     lastOrder = orderBy;
                     SortDirection = false;
-                }                    
-                dataGridView1.DataSource = BLLInvoice.Instance.Sort(GetHoaDon(), orderBy, SortDirection);
-                
+                }
+                SetHoaDon();
+                this.billList = BLLInvoice.Instance.Sort(this.billList, orderBy, SortDirection);
+                CurrentIndex = 1;
+                SetPage();
             }
         }
 
         private void dataGridView1_DataSourceChanged(object sender, EventArgs e)
         {
-            //DateTime from = fromPicker.Value, to = toPicker.Value;
-            //string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;
-            //var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
-            var list = GetHoaDon();
-            billCountLabel.Text = BLLInvoice.Instance.GetBillCount(list);
-            customerCountLabel.Text = BLLInvoice.Instance.GetCustomerCount(list);
-            revenueLabel.Text = BLLInvoice.Instance.GetRevenue(list);
+            //SetHoaDon();
+            billCountLabel.Text = BLLInvoice.Instance.GetBillCount(this.billList);
+            customerCountLabel.Text = BLLInvoice.Instance.GetCustomerCount(this.billList);
+            revenueLabel.Text = BLLInvoice.Instance.GetRevenue(this.billList);
+        }
+
+        #region Pagination
+        private const int PageSize = 6;
+        private int CurrentIndex = 1;
+        private int TotalPage = 0;
+        private void SetPage()
+        {
+            if(this.billList != null)
+            {
+                dataGridView1.DataSource = BLLInvoice.Instance.GetCurrentReCord(CurrentIndex, PageSize, this.billList);
+                pageLabel.Text = $" {CurrentIndex}  /  {TotalPage} ";
+            }                
+        }
+        private void firstPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentIndex = 1;
+            SetPage();
+        }
+
+        private void lastPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentIndex = TotalPage;
+            SetPage();
+        }
+
+        private void previousPageButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentIndex > 1)
+            {
+                CurrentIndex--;
+                SetPage();
+            }
+        }
+
+        private void nextPageButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentIndex < TotalPage)
+            {
+                CurrentIndex++;
+                SetPage();
+            }
+        }
+        #endregion
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if(dataGridView1.SelectedRows.Count == 1)
+            {
+                string MaHoaDon = dataGridView1.SelectedRows[0].Cells["MaHoaDon"].Value.ToString();
+                MessageBox.Show(MaHoaDon);
+            }    
         }
     }
 }

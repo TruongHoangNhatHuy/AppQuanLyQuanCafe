@@ -45,35 +45,36 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.sortJCombobox = new CafeShop.View.CustomControl.JComboBox();
-            this.sortButton = new CafeShop.View.CustomControl.JButton();
-            this.toPicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.toLabel = new System.Windows.Forms.Label();
-            this.fromPicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.fromLabel = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.firstPageButton = new System.Windows.Forms.Button();
+            this.previousPageButton = new System.Windows.Forms.Button();
+            this.pageLabel = new System.Windows.Forms.Label();
+            this.nextPageButton = new System.Windows.Forms.Button();
+            this.lastPageButton = new System.Windows.Forms.Button();
+            this.hoaDonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.empTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.invoiceTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.searchButton = new CafeShop.View.CustomControl.JButton();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sortJCombobox = new CafeShop.View.CustomControl.JComboBox();
+            this.sortButton = new CafeShop.View.CustomControl.JButton();
+            this.toPicker = new CafeShop.View.CustomControl.JDatetimepicker();
+            this.fromPicker = new CafeShop.View.CustomControl.JDatetimepicker();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNhanVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoiGianThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phuThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giamGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoaDonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.firstPageButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,8 +89,8 @@
             this.leftPanel.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -268,25 +269,6 @@
             this.panel2.Size = new System.Drawing.Size(207, 100);
             this.panel2.TabIndex = 0;
             // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(23, 30);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(55, 40);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
             // topPanel
             // 
             this.topPanel.Controls.Add(this.sortJCombobox);
@@ -301,59 +283,6 @@
             this.topPanel.Size = new System.Drawing.Size(1154, 69);
             this.topPanel.TabIndex = 7;
             // 
-            // sortJCombobox
-            // 
-            this.sortJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.sortJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortJCombobox.BorderSize = 2;
-            this.sortJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.sortJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortJCombobox.ForeColor = System.Drawing.Color.DimGray;
-            this.sortJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.sortJCombobox.ListTextColor = System.Drawing.Color.Black;
-            this.sortJCombobox.Location = new System.Drawing.Point(775, 29);
-            this.sortJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.sortJCombobox.Name = "sortJCombobox";
-            this.sortJCombobox.Padding = new System.Windows.Forms.Padding(2);
-            this.sortJCombobox.Size = new System.Drawing.Size(200, 30);
-            this.sortJCombobox.TabIndex = 6;
-            this.sortJCombobox.Texts = "";
-            // 
-            // sortButton
-            // 
-            this.sortButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.sortButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sortButton.BorderRadius = 30;
-            this.sortButton.BorderSize = 0;
-            this.sortButton.FlatAppearance.BorderSize = 0;
-            this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortButton.ForeColor = System.Drawing.Color.White;
-            this.sortButton.Location = new System.Drawing.Point(981, 23);
-            this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(123, 40);
-            this.sortButton.TabIndex = 4;
-            this.sortButton.Text = "Sắp xếp";
-            this.sortButton.TextColor = System.Drawing.Color.White;
-            this.sortButton.UseVisualStyleBackColor = false;
-            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
-            // 
-            // toPicker
-            // 
-            this.toPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.toPicker.BorderSize = 0;
-            this.toPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toPicker.Location = new System.Drawing.Point(521, 28);
-            this.toPicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.toPicker.Name = "toPicker";
-            this.toPicker.Size = new System.Drawing.Size(218, 35);
-            this.toPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.toPicker.TabIndex = 3;
-            this.toPicker.TextColor = System.Drawing.Color.Black;
-            // 
             // toLabel
             // 
             this.toLabel.AutoSize = true;
@@ -363,19 +292,6 @@
             this.toLabel.Size = new System.Drawing.Size(39, 20);
             this.toLabel.TabIndex = 2;
             this.toLabel.Text = "Đến";
-            // 
-            // fromPicker
-            // 
-            this.fromPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.fromPicker.BorderSize = 0;
-            this.fromPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromPicker.Location = new System.Drawing.Point(253, 28);
-            this.fromPicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.fromPicker.Name = "fromPicker";
-            this.fromPicker.Size = new System.Drawing.Size(218, 35);
-            this.fromPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.fromPicker.TabIndex = 1;
-            this.fromPicker.TextColor = System.Drawing.Color.Black;
             // 
             // fromLabel
             // 
@@ -399,6 +315,123 @@
             this.leftPanel.Padding = new System.Windows.Forms.Padding(10);
             this.leftPanel.Size = new System.Drawing.Size(217, 442);
             this.leftPanel.TabIndex = 8;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.dataGridView1);
+            this.panel10.Controls.Add(this.panel6);
+            this.panel10.Controls.Add(this.flowLayoutPanel2);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(217, 169);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(937, 442);
+            this.panel10.TabIndex = 11;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHoaDon,
+            this.tenNhanVienDataGridViewTextBoxColumn,
+            this.tenKhachHangDataGridViewTextBoxColumn,
+            this.thoiGianThanhToanDataGridViewTextBoxColumn,
+            this.phuThuDataGridViewTextBoxColumn,
+            this.giamGiaDataGridViewTextBoxColumn,
+            this.thanhTienDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.hoaDonViewBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(887, 405);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(887, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(50, 405);
+            this.panel6.TabIndex = 1;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.firstPageButton);
+            this.flowLayoutPanel2.Controls.Add(this.previousPageButton);
+            this.flowLayoutPanel2.Controls.Add(this.pageLabel);
+            this.flowLayoutPanel2.Controls.Add(this.nextPageButton);
+            this.flowLayoutPanel2.Controls.Add(this.lastPageButton);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 405);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(937, 37);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // firstPageButton
+            // 
+            this.firstPageButton.Location = new System.Drawing.Point(0, 0);
+            this.firstPageButton.Margin = new System.Windows.Forms.Padding(0);
+            this.firstPageButton.Name = "firstPageButton";
+            this.firstPageButton.Size = new System.Drawing.Size(117, 23);
+            this.firstPageButton.TabIndex = 0;
+            this.firstPageButton.Text = "<<Trang đầu";
+            this.firstPageButton.UseVisualStyleBackColor = true;
+            this.firstPageButton.Click += new System.EventHandler(this.firstPageButton_Click);
+            // 
+            // previousPageButton
+            // 
+            this.previousPageButton.Location = new System.Drawing.Point(117, 0);
+            this.previousPageButton.Margin = new System.Windows.Forms.Padding(0);
+            this.previousPageButton.Name = "previousPageButton";
+            this.previousPageButton.Size = new System.Drawing.Size(117, 23);
+            this.previousPageButton.TabIndex = 1;
+            this.previousPageButton.Text = "<Trang trước";
+            this.previousPageButton.UseVisualStyleBackColor = true;
+            this.previousPageButton.Click += new System.EventHandler(this.previousPageButton_Click);
+            // 
+            // pageLabel
+            // 
+            this.pageLabel.AutoSize = true;
+            this.pageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pageLabel.Location = new System.Drawing.Point(237, 3);
+            this.pageLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.pageLabel.Name = "pageLabel";
+            this.pageLabel.Size = new System.Drawing.Size(28, 16);
+            this.pageLabel.TabIndex = 4;
+            this.pageLabel.Text = "1/2";
+            this.pageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nextPageButton
+            // 
+            this.nextPageButton.Location = new System.Drawing.Point(268, 0);
+            this.nextPageButton.Margin = new System.Windows.Forms.Padding(0);
+            this.nextPageButton.Name = "nextPageButton";
+            this.nextPageButton.Size = new System.Drawing.Size(117, 23);
+            this.nextPageButton.TabIndex = 5;
+            this.nextPageButton.Text = "Trang sau>";
+            this.nextPageButton.UseVisualStyleBackColor = true;
+            this.nextPageButton.Click += new System.EventHandler(this.nextPageButton_Click);
+            // 
+            // lastPageButton
+            // 
+            this.lastPageButton.Location = new System.Drawing.Point(385, 0);
+            this.lastPageButton.Margin = new System.Windows.Forms.Padding(0);
+            this.lastPageButton.Name = "lastPageButton";
+            this.lastPageButton.Size = new System.Drawing.Size(117, 23);
+            this.lastPageButton.TabIndex = 6;
+            this.lastPageButton.Text = "Trang cuối>>";
+            this.lastPageButton.UseVisualStyleBackColor = true;
+            this.lastPageButton.Click += new System.EventHandler(this.lastPageButton_Click);
+            // 
+            // hoaDonViewBindingSource
+            // 
+            this.hoaDonViewBindingSource.DataSource = typeof(CafeShop.DTO.HoaDonView);
             // 
             // customerTextbox
             // 
@@ -481,47 +514,98 @@
             this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // panel10
+            // sortJCombobox
             // 
-            this.panel10.Controls.Add(this.dataGridView1);
-            this.panel10.Controls.Add(this.panel6);
-            this.panel10.Controls.Add(this.flowLayoutPanel2);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(217, 169);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(937, 442);
-            this.panel10.TabIndex = 11;
+            this.sortJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sortJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortJCombobox.BorderSize = 2;
+            this.sortJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.sortJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortJCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.sortJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.sortJCombobox.ListTextColor = System.Drawing.Color.Black;
+            this.sortJCombobox.Location = new System.Drawing.Point(775, 29);
+            this.sortJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.sortJCombobox.Name = "sortJCombobox";
+            this.sortJCombobox.Padding = new System.Windows.Forms.Padding(2);
+            this.sortJCombobox.Size = new System.Drawing.Size(200, 30);
+            this.sortJCombobox.TabIndex = 6;
+            this.sortJCombobox.Texts = "";
             // 
-            // dataGridView1
+            // sortButton
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maHoaDonDataGridViewTextBoxColumn,
-            this.tenNhanVienDataGridViewTextBoxColumn,
-            this.tenKhachHangDataGridViewTextBoxColumn,
-            this.thoiGianThanhToanDataGridViewTextBoxColumn,
-            this.phuThuDataGridViewTextBoxColumn,
-            this.giamGiaDataGridViewTextBoxColumn,
-            this.thanhTienDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.hoaDonViewBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(887, 405);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
+            this.sortButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.sortButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sortButton.BorderRadius = 30;
+            this.sortButton.BorderSize = 0;
+            this.sortButton.FlatAppearance.BorderSize = 0;
+            this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortButton.ForeColor = System.Drawing.Color.White;
+            this.sortButton.Location = new System.Drawing.Point(981, 23);
+            this.sortButton.Name = "sortButton";
+            this.sortButton.Size = new System.Drawing.Size(123, 40);
+            this.sortButton.TabIndex = 4;
+            this.sortButton.Text = "Sắp xếp";
+            this.sortButton.TextColor = System.Drawing.Color.White;
+            this.sortButton.UseVisualStyleBackColor = false;
+            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
             // 
-            // maHoaDonDataGridViewTextBoxColumn
+            // toPicker
             // 
-            this.maHoaDonDataGridViewTextBoxColumn.DataPropertyName = "MaHoaDon";
-            this.maHoaDonDataGridViewTextBoxColumn.Frozen = true;
-            this.maHoaDonDataGridViewTextBoxColumn.HeaderText = "Mã Hoá Đơn";
-            this.maHoaDonDataGridViewTextBoxColumn.Name = "maHoaDonDataGridViewTextBoxColumn";
-            this.maHoaDonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.toPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.toPicker.BorderSize = 0;
+            this.toPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toPicker.Location = new System.Drawing.Point(521, 28);
+            this.toPicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.toPicker.Name = "toPicker";
+            this.toPicker.Size = new System.Drawing.Size(218, 35);
+            this.toPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.toPicker.TabIndex = 3;
+            this.toPicker.TextColor = System.Drawing.Color.Black;
+            // 
+            // fromPicker
+            // 
+            this.fromPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.fromPicker.BorderSize = 0;
+            this.fromPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromPicker.Location = new System.Drawing.Point(253, 28);
+            this.fromPicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.fromPicker.Name = "fromPicker";
+            this.fromPicker.Size = new System.Drawing.Size(218, 35);
+            this.fromPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.fromPicker.TabIndex = 1;
+            this.fromPicker.TextColor = System.Drawing.Color.Black;
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Crimson;
+            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitButton.BorderRadius = 30;
+            this.exitButton.BorderSize = 0;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.exitButton.Location = new System.Drawing.Point(23, 30);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(55, 40);
+            this.exitButton.TabIndex = 1;
+            this.exitButton.TextColor = System.Drawing.Color.White;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.DataPropertyName = "MaHoaDon";
+            this.MaHoaDon.Frozen = true;
+            this.MaHoaDon.HeaderText = "Mã Hoá Đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
             // 
             // tenNhanVienDataGridViewTextBoxColumn
             // 
@@ -568,71 +652,6 @@
             this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
             this.thanhTienDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // hoaDonViewBindingSource
-            // 
-            this.hoaDonViewBindingSource.DataSource = typeof(CafeShop.DTO.HoaDonView);
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(887, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(50, 405);
-            this.panel6.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.firstPageButton);
-            this.flowLayoutPanel2.Controls.Add(this.button1);
-            this.flowLayoutPanel2.Controls.Add(this.button2);
-            this.flowLayoutPanel2.Controls.Add(this.button3);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 405);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(937, 37);
-            this.flowLayoutPanel2.TabIndex = 0;
-            // 
-            // firstPageButton
-            // 
-            this.firstPageButton.Location = new System.Drawing.Point(0, 0);
-            this.firstPageButton.Margin = new System.Windows.Forms.Padding(0);
-            this.firstPageButton.Name = "firstPageButton";
-            this.firstPageButton.Size = new System.Drawing.Size(117, 23);
-            this.firstPageButton.TabIndex = 0;
-            this.firstPageButton.Text = "<<Trang đầu";
-            this.firstPageButton.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(117, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "<Trang trước";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(234, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Trang sau>";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(351, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Trang cuối>>";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,8 +684,9 @@
             this.leftPanel.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,17 +725,18 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button firstPageButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maHoaDonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button previousPageButton;
+        private System.Windows.Forms.BindingSource hoaDonViewBindingSource;
+        private CustomControl.JComboBox sortJCombobox;
+        private System.Windows.Forms.Label pageLabel;
+        private System.Windows.Forms.Button nextPageButton;
+        private System.Windows.Forms.Button lastPageButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNhanVienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenKhachHangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thoiGianThanhToanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phuThuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giamGiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhTienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource hoaDonViewBindingSource;
-        private CustomControl.JComboBox sortJCombobox;
     }
 }
