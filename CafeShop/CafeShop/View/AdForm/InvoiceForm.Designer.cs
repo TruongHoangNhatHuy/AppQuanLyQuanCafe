@@ -428,6 +428,7 @@
             this.customerTextbox.PlaceholderText = "     Theo tên khách hàng";
             this.customerTextbox.Size = new System.Drawing.Size(197, 32);
             this.customerTextbox.TabIndex = 3;
+            this.customerTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.customerTextbox.Texts = "";
             this.customerTextbox.UnderlinedStyle = false;
             // 
@@ -448,6 +449,7 @@
             this.empTextbox.PlaceholderText = "     Theo tên nhân viên";
             this.empTextbox.Size = new System.Drawing.Size(197, 32);
             this.empTextbox.TabIndex = 2;
+            this.empTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.empTextbox.Texts = "";
             this.empTextbox.UnderlinedStyle = false;
             // 
@@ -468,6 +470,7 @@
             this.invoiceTextbox.PlaceholderText = "     Theo mã hoá đơn";
             this.invoiceTextbox.Size = new System.Drawing.Size(197, 32);
             this.invoiceTextbox.TabIndex = 1;
+            this.invoiceTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.invoiceTextbox.Texts = "";
             this.invoiceTextbox.UnderlinedStyle = false;
             // 

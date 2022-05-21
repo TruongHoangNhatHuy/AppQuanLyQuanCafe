@@ -207,6 +207,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,7 +241,6 @@
             this.monDataGridViewTextBoxColumn.HeaderText = "Tên món";
             this.monDataGridViewTextBoxColumn.Name = "monDataGridViewTextBoxColumn";
             this.monDataGridViewTextBoxColumn.ReadOnly = true;
-            this.monDataGridViewTextBoxColumn.Width = 130;
             // 
             // soLuongDataGridViewTextBoxColumn
             // 
@@ -250,7 +250,6 @@
             this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số lượng";
             this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
             this.soLuongDataGridViewTextBoxColumn.ReadOnly = true;
-            this.soLuongDataGridViewTextBoxColumn.Width = 80;
             // 
             // ghiChuDataGridViewTextBoxColumn
             // 
@@ -260,7 +259,6 @@
             this.ghiChuDataGridViewTextBoxColumn.HeaderText = "Ghi chú";
             this.ghiChuDataGridViewTextBoxColumn.Name = "ghiChuDataGridViewTextBoxColumn";
             this.ghiChuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ghiChuDataGridViewTextBoxColumn.Width = 150;
             // 
             // thoiGianGoiMonDataGridViewTextBoxColumn
             // 
@@ -270,7 +268,6 @@
             this.thoiGianGoiMonDataGridViewTextBoxColumn.HeaderText = "Thời gian gọi món";
             this.thoiGianGoiMonDataGridViewTextBoxColumn.Name = "thoiGianGoiMonDataGridViewTextBoxColumn";
             this.thoiGianGoiMonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.thoiGianGoiMonDataGridViewTextBoxColumn.Width = 140;
             // 
             // giaTienDataGridViewTextBoxColumn
             // 
@@ -280,7 +277,6 @@
             this.giaTienDataGridViewTextBoxColumn.HeaderText = "Giá tiền";
             this.giaTienDataGridViewTextBoxColumn.Name = "giaTienDataGridViewTextBoxColumn";
             this.giaTienDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giaTienDataGridViewTextBoxColumn.Width = 150;
             // 
             // donGoiMonBindingSource
             // 
