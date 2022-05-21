@@ -41,8 +41,7 @@ namespace CafeShop.BLL
         // Phương thức tạo khóa chính cho HoaDon và DonGoiMon
         public static string OrderBillPrimaryKey()
         {
-            DateTime now = DateTime.Now;
-            return now.Year.ToString() + now.Month.ToString() + now.Day.ToString() + now.Hour.ToString() + now.Minute.ToString() + now.Second.ToString() + now.Millisecond.ToString();
+            return DateTime.Now.ToString("yyyy:MM:dd:HH:mm:ss:fff").Replace(":", String.Empty);
         }
     }
 }
