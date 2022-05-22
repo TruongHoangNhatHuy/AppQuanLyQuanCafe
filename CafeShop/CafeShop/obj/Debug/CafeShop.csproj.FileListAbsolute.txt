@@ -62,3 +62,97 @@ C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeS
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerDetailForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerDetailForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerInfoForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.exe.config
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.exe
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.pdb
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerDetailForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpDetailForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerInfoForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpInfoForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.InvoiceForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.MenuForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.TableForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdminForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JNewTextbox.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JTextbox.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.BillForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.DetailOrderForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderListForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmployeeForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.TablesButton.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.LoginForm.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.exe
+C:\Users\Admin\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.pdb
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.exe.config
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.exe
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.pdb
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.dll
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.xml
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.AssemblyReference.cache
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerDetailForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpDetailForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerInfoForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpInfoForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.InvoiceForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.MenuForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.TableForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdminForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JNewTextbox.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JTextbox.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.BillForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.DetailOrderForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderListForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmployeeForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.TablesButton.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.LoginForm.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.Properties.Resources.resources
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.GenerateResource.cache
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CoreCompileInputs.cache
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CopyComplete
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.exe
+D:\OneDrive - tav9122\Users\Downloads\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.pdb
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.exe.config
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.exe
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\CafeShop.pdb
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerDetailForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpDetailForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.CustomerInfoForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpInfoForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.InvoiceForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.MenuForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.TableForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdminForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JNewTextbox.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.JTextbox.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.BillForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.DetailOrderForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderListForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmployeeForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.TablesButton.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.LoginForm.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.Properties.Resources.resources
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CopyComplete
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.exe
+C:\Users\Admin\Downloads\AppQuanLyQuanCafe\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.pdb

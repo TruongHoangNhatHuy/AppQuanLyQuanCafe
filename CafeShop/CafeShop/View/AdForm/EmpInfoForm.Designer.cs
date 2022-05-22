@@ -47,9 +47,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(90, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(120, 123);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(966, 437);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1288, 538);
             this.dataGridView1.TabIndex = 0;
             // 
             // searchButton
@@ -64,12 +67,14 @@
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.Black;
             this.searchButton.Image = global::CafeShop.Properties.Resources.magnifying_glass;
-            this.searchButton.Location = new System.Drawing.Point(90, 48);
+            this.searchButton.Location = new System.Drawing.Point(120, 59);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(113, 32);
+            this.searchButton.Size = new System.Drawing.Size(151, 39);
             this.searchButton.TabIndex = 5;
             this.searchButton.TextColor = System.Drawing.Color.Black;
             this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // searchTextbox
             // 
@@ -82,14 +87,15 @@
             this.searchTextbox.BorderSize = 2;
             this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextbox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.searchTextbox.Location = new System.Drawing.Point(228, 48);
+            this.searchTextbox.Location = new System.Drawing.Point(304, 59);
+            this.searchTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchTextbox.Multiline = false;
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.searchTextbox.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.searchTextbox.PasswordChar = false;
             this.searchTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
             this.searchTextbox.PlaceholderText = "         Tìm kiếm.......";
-            this.searchTextbox.Size = new System.Drawing.Size(475, 32);
+            this.searchTextbox.Size = new System.Drawing.Size(633, 39);
             this.searchTextbox.TabIndex = 4;
             this.searchTextbox.Texts = "";
             this.searchTextbox.UnderlinedStyle = false;
@@ -106,9 +112,10 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addButton.Location = new System.Drawing.Point(769, 543);
+            this.addButton.Location = new System.Drawing.Point(1025, 668);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(154, 40);
+            this.addButton.Size = new System.Drawing.Size(205, 49);
             this.addButton.TabIndex = 3;
             this.addButton.Text = "Thêm";
             this.addButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -127,14 +134,16 @@
             this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.updateButton.Location = new System.Drawing.Point(565, 543);
+            this.updateButton.Location = new System.Drawing.Point(753, 668);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updateButton.Name = "updateButton";
             this.updateButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.updateButton.Size = new System.Drawing.Size(154, 40);
+            this.updateButton.Size = new System.Drawing.Size(205, 49);
             this.updateButton.TabIndex = 2;
             this.updateButton.Text = "Cập nhật";
             this.updateButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // deleteButton
             // 
@@ -148,22 +157,25 @@
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.deleteButton.Location = new System.Drawing.Point(191, 543);
+            this.deleteButton.Location = new System.Drawing.Point(255, 668);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(154, 40);
+            this.deleteButton.Size = new System.Drawing.Size(205, 49);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "Xoá";
             this.deleteButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // sortComboBox
             // 
             this.sortComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sortComboBox.FormattingEnabled = true;
-            this.sortComboBox.Location = new System.Drawing.Point(751, 55);
+            this.sortComboBox.Location = new System.Drawing.Point(1001, 68);
+            this.sortComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortComboBox.Name = "sortComboBox";
-            this.sortComboBox.Size = new System.Drawing.Size(157, 21);
+            this.sortComboBox.Size = new System.Drawing.Size(208, 24);
             this.sortComboBox.TabIndex = 6;
             // 
             // sortButton
@@ -178,9 +190,10 @@
             this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sortButton.ForeColor = System.Drawing.Color.Black;
-            this.sortButton.Location = new System.Drawing.Point(943, 48);
+            this.sortButton.Location = new System.Drawing.Point(1257, 59);
+            this.sortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(113, 32);
+            this.sortButton.Size = new System.Drawing.Size(151, 39);
             this.sortButton.TabIndex = 7;
             this.sortButton.Text = "Sắp xếp";
             this.sortButton.TextColor = System.Drawing.Color.Black;
@@ -197,9 +210,10 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.White;
             this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(12, 3);
+            this.exitButton.Location = new System.Drawing.Point(16, 4);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(46, 40);
+            this.exitButton.Size = new System.Drawing.Size(61, 49);
             this.exitButton.TabIndex = 8;
             this.exitButton.TextColor = System.Drawing.Color.White;
             this.exitButton.UseVisualStyleBackColor = false;
@@ -217,20 +231,22 @@
             this.resetPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetPasswordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetPasswordButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.resetPasswordButton.Location = new System.Drawing.Point(373, 543);
+            this.resetPasswordButton.Location = new System.Drawing.Point(497, 668);
+            this.resetPasswordButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.resetPasswordButton.Name = "resetPasswordButton";
-            this.resetPasswordButton.Size = new System.Drawing.Size(154, 40);
+            this.resetPasswordButton.Size = new System.Drawing.Size(205, 49);
             this.resetPasswordButton.TabIndex = 9;
             this.resetPasswordButton.Text = "Reset mật khẩu";
             this.resetPasswordButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.resetPasswordButton.UseVisualStyleBackColor = false;
+            this.resetPasswordButton.Click += new System.EventHandler(this.resetPasswordButton_Click);
             // 
             // EmpInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1154, 611);
+            this.ClientSize = new System.Drawing.Size(1539, 752);
             this.Controls.Add(this.resetPasswordButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.sortButton);
@@ -242,6 +258,7 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EmpInfoForm";
             this.Text = "EmployeeForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

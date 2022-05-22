@@ -115,7 +115,7 @@
             // 
             // IDTextbox
             // 
-            this.IDTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.IDTextbox.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.IDTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
             this.IDTextbox.BorderRadius = 10;
             this.IDTextbox.BorderSize = 2;
@@ -127,7 +127,7 @@
             this.IDTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.IDTextbox.PasswordChar = false;
             this.IDTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.IDTextbox.PlaceholderText = "    Mã nhân viên";
+            this.IDTextbox.PlaceholderText = "";
             this.IDTextbox.Size = new System.Drawing.Size(196, 32);
             this.IDTextbox.TabIndex = 1;
             this.IDTextbox.Texts = "";
@@ -171,6 +171,7 @@
             this.confirmButton.Text = "Xác nhận";
             this.confirmButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // nameTextbox
             // 
