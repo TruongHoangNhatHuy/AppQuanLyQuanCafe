@@ -28,41 +28,196 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.phoneNumberTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.addressTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.accountTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.IDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.cancelButton = new CafeShop.View.CustomControl.JButton();
-            this.confirmButton = new CafeShop.View.CustomControl.JButton();
-            this.nameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.birthdayTextbox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.roleCombobox = new System.Windows.Forms.ComboBox();
             this.roleLabel = new System.Windows.Forms.Label();
             this.genderGroupbox = new System.Windows.Forms.GroupBox();
             this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.maleRadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.birthdayPicker = new CafeShop.View.CustomControl.JDatetimepicker();
+            this.nameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.addressTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.phoneNumberTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.roleCombobox = new CafeShop.View.CustomControl.JComboBox();
+            this.IDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.accountTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.confirmButton = new CafeShop.View.CustomControl.JButton();
+            this.cancelButton = new CafeShop.View.CustomControl.JButton();
             this.genderGroupbox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // phoneNumberTextbox
+            // titleLabel
             // 
-            this.phoneNumberTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.phoneNumberTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.phoneNumberTextbox.BorderRadius = 10;
-            this.phoneNumberTextbox.BorderSize = 2;
-            this.phoneNumberTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneNumberTextbox.Location = new System.Drawing.Point(285, 133);
-            this.phoneNumberTextbox.Multiline = false;
-            this.phoneNumberTextbox.Name = "phoneNumberTextbox";
-            this.phoneNumberTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.phoneNumberTextbox.PasswordChar = false;
-            this.phoneNumberTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.phoneNumberTextbox.PlaceholderText = "    Số điện thoại";
-            this.phoneNumberTextbox.Size = new System.Drawing.Size(196, 32);
-            this.phoneNumberTextbox.TabIndex = 6;
-            this.phoneNumberTextbox.Texts = "";
-            this.phoneNumberTextbox.UnderlinedStyle = false;
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Candara", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.ForeColor = System.Drawing.Color.Tomato;
+            this.titleLabel.Location = new System.Drawing.Point(212, 29);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(355, 54);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = " Thông tin chi tiết";
+            // 
+            // roleLabel
+            // 
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.roleLabel.Location = new System.Drawing.Point(12, 260);
+            this.roleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(75, 25);
+            this.roleLabel.TabIndex = 99;
+            this.roleLabel.Text = "Vai trò";
+            // 
+            // genderGroupbox
+            // 
+            this.genderGroupbox.Controls.Add(this.femaleRadioButton);
+            this.genderGroupbox.Controls.Add(this.maleRadioButton);
+            this.genderGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderGroupbox.ForeColor = System.Drawing.Color.Crimson;
+            this.genderGroupbox.Location = new System.Drawing.Point(390, 450);
+            this.genderGroupbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.genderGroupbox.Name = "genderGroupbox";
+            this.genderGroupbox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.genderGroupbox.Size = new System.Drawing.Size(336, 94);
+            this.genderGroupbox.TabIndex = 8;
+            this.genderGroupbox.TabStop = false;
+            this.genderGroupbox.Text = "Giới tính";
+            // 
+            // femaleRadioButton
+            // 
+            this.femaleRadioButton.AutoSize = true;
+            this.femaleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.femaleRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.femaleRadioButton.Location = new System.Drawing.Point(170, 46);
+            this.femaleRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.femaleRadioButton.Name = "femaleRadioButton";
+            this.femaleRadioButton.Size = new System.Drawing.Size(64, 29);
+            this.femaleRadioButton.TabIndex = 10;
+            this.femaleRadioButton.TabStop = true;
+            this.femaleRadioButton.Text = "Nữ";
+            this.femaleRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // maleRadioButton
+            // 
+            this.maleRadioButton.AutoSize = true;
+            this.maleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maleRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.maleRadioButton.Location = new System.Drawing.Point(26, 46);
+            this.maleRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maleRadioButton.Name = "maleRadioButton";
+            this.maleRadioButton.Size = new System.Drawing.Size(81, 29);
+            this.maleRadioButton.TabIndex = 9;
+            this.maleRadioButton.TabStop = true;
+            this.maleRadioButton.Text = "Nam";
+            this.maleRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.birthdayPicker);
+            this.groupBox1.Controls.Add(this.nameTextbox);
+            this.groupBox1.Controls.Add(this.addressTextbox);
+            this.groupBox1.Controls.Add(this.phoneNumberTextbox);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox1.Location = new System.Drawing.Point(35, 86);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(348, 460);
+            this.groupBox1.TabIndex = 100;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin cá nhân";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(20, 260);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(139, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Số điện thoại";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(20, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Địa chỉ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(20, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 25);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Họ tên";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(20, 364);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Ngày sinh";
+            // 
+            // birthdayPicker
+            // 
+            this.birthdayPicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.birthdayPicker.BorderSize = 0;
+            this.birthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.birthdayPicker.Location = new System.Drawing.Point(25, 396);
+            this.birthdayPicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.birthdayPicker.Name = "birthdayPicker";
+            this.birthdayPicker.Size = new System.Drawing.Size(294, 35);
+            this.birthdayPicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.birthdayPicker.TabIndex = 7;
+            this.birthdayPicker.TextColor = System.Drawing.Color.White;
+            // 
+            // nameTextbox
+            // 
+            this.nameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.nameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.nameTextbox.BorderRadius = 10;
+            this.nameTextbox.BorderSize = 2;
+            this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.nameTextbox.Location = new System.Drawing.Point(25, 80);
+            this.nameTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nameTextbox.Multiline = false;
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.nameTextbox.PasswordChar = false;
+            this.nameTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.nameTextbox.PlaceholderText = "";
+            this.nameTextbox.Size = new System.Drawing.Size(294, 48);
+            this.nameTextbox.TabIndex = 3;
+            this.nameTextbox.Texts = "";
+            this.nameTextbox.UnderlinedStyle = false;
             // 
             // addressTextbox
             // 
@@ -71,47 +226,76 @@
             this.addressTextbox.BorderRadius = 10;
             this.addressTextbox.BorderSize = 2;
             this.addressTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextbox.Location = new System.Drawing.Point(286, 79);
+            this.addressTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.addressTextbox.Location = new System.Drawing.Point(25, 186);
+            this.addressTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addressTextbox.Multiline = false;
             this.addressTextbox.Name = "addressTextbox";
-            this.addressTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.addressTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.addressTextbox.PasswordChar = false;
             this.addressTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.addressTextbox.PlaceholderText = "    Địa chỉ";
-            this.addressTextbox.Size = new System.Drawing.Size(196, 32);
+            this.addressTextbox.PlaceholderText = "";
+            this.addressTextbox.Size = new System.Drawing.Size(294, 48);
             this.addressTextbox.TabIndex = 5;
             this.addressTextbox.Texts = "";
             this.addressTextbox.UnderlinedStyle = false;
             // 
-            // accountTextbox
+            // phoneNumberTextbox
             // 
-            this.accountTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.accountTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.accountTextbox.BorderRadius = 10;
-            this.accountTextbox.BorderSize = 2;
-            this.accountTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountTextbox.Location = new System.Drawing.Point(25, 133);
-            this.accountTextbox.Multiline = false;
-            this.accountTextbox.Name = "accountTextbox";
-            this.accountTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.accountTextbox.PasswordChar = false;
-            this.accountTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.accountTextbox.PlaceholderText = "    Tên tài khoản";
-            this.accountTextbox.Size = new System.Drawing.Size(196, 32);
-            this.accountTextbox.TabIndex = 2;
-            this.accountTextbox.Texts = "";
-            this.accountTextbox.UnderlinedStyle = false;
+            this.phoneNumberTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.phoneNumberTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.phoneNumberTextbox.BorderRadius = 10;
+            this.phoneNumberTextbox.BorderSize = 2;
+            this.phoneNumberTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneNumberTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.phoneNumberTextbox.Location = new System.Drawing.Point(25, 294);
+            this.phoneNumberTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phoneNumberTextbox.Multiline = false;
+            this.phoneNumberTextbox.Name = "phoneNumberTextbox";
+            this.phoneNumberTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.phoneNumberTextbox.PasswordChar = false;
+            this.phoneNumberTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.phoneNumberTextbox.PlaceholderText = "";
+            this.phoneNumberTextbox.Size = new System.Drawing.Size(294, 48);
+            this.phoneNumberTextbox.TabIndex = 6;
+            this.phoneNumberTextbox.Texts = "";
+            this.phoneNumberTextbox.UnderlinedStyle = false;
             // 
-            // titleLabel
+            // groupBox2
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Candara", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.ForeColor = System.Drawing.Color.Tomato;
-            this.titleLabel.Location = new System.Drawing.Point(141, 19);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(232, 36);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = " Thông tin chi tiết";
+            this.groupBox2.Controls.Add(this.roleCombobox);
+            this.groupBox2.Controls.Add(this.IDTextbox);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.accountTextbox);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.roleLabel);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox2.Location = new System.Drawing.Point(389, 86);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(337, 356);
+            this.groupBox2.TabIndex = 101;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin tài khoản";
+            // 
+            // roleCombobox
+            // 
+            this.roleCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roleCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.roleCombobox.BorderSize = 1;
+            this.roleCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.roleCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.roleCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.roleCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.roleCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.roleCombobox.ListTextColor = System.Drawing.Color.DimGray;
+            this.roleCombobox.Location = new System.Drawing.Point(15, 297);
+            this.roleCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.roleCombobox.Name = "roleCombobox";
+            this.roleCombobox.Padding = new System.Windows.Forms.Padding(1);
+            this.roleCombobox.Size = new System.Drawing.Size(295, 39);
+            this.roleCombobox.TabIndex = 102;
+            this.roleCombobox.Texts = "";
             // 
             // IDTextbox
             // 
@@ -121,37 +305,63 @@
             this.IDTextbox.BorderSize = 2;
             this.IDTextbox.Enabled = false;
             this.IDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDTextbox.Location = new System.Drawing.Point(25, 79);
+            this.IDTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.IDTextbox.Location = new System.Drawing.Point(15, 80);
+            this.IDTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IDTextbox.Multiline = false;
             this.IDTextbox.Name = "IDTextbox";
-            this.IDTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.IDTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.IDTextbox.PasswordChar = false;
             this.IDTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
             this.IDTextbox.PlaceholderText = "";
-            this.IDTextbox.Size = new System.Drawing.Size(196, 32);
+            this.IDTextbox.Size = new System.Drawing.Size(294, 48);
             this.IDTextbox.TabIndex = 1;
+            this.IDTextbox.TabStop = false;
             this.IDTextbox.Texts = "";
             this.IDTextbox.UnderlinedStyle = false;
             // 
-            // cancelButton
+            // label6
             // 
-            this.cancelButton.BackColor = System.Drawing.Color.Crimson;
-            this.cancelButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.cancelButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cancelButton.BorderRadius = 30;
-            this.cancelButton.BorderSize = 0;
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cancelButton.Location = new System.Drawing.Point(59, 360);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(150, 40);
-            this.cancelButton.TabIndex = 11;
-            this.cancelButton.Text = "Huỷ";
-            this.cancelButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(11, 152);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 25);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Tên đăng nhập";
+            // 
+            // accountTextbox
+            // 
+            this.accountTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.accountTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.accountTextbox.BorderRadius = 10;
+            this.accountTextbox.BorderSize = 2;
+            this.accountTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountTextbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.accountTextbox.Location = new System.Drawing.Point(15, 186);
+            this.accountTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.accountTextbox.Multiline = false;
+            this.accountTextbox.Name = "accountTextbox";
+            this.accountTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.accountTextbox.PasswordChar = false;
+            this.accountTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.accountTextbox.PlaceholderText = "";
+            this.accountTextbox.Size = new System.Drawing.Size(294, 48);
+            this.accountTextbox.TabIndex = 2;
+            this.accountTextbox.Texts = "";
+            this.accountTextbox.UnderlinedStyle = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(15, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "ID";
             // 
             // confirmButton
             // 
@@ -164,134 +374,59 @@
             this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.confirmButton.Location = new System.Drawing.Point(258, 360);
+            this.confirmButton.Location = new System.Drawing.Point(387, 554);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(150, 40);
+            this.confirmButton.Size = new System.Drawing.Size(225, 62);
             this.confirmButton.TabIndex = 12;
             this.confirmButton.Text = "Xác nhận";
             this.confirmButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // nameTextbox
+            // cancelButton
             // 
-            this.nameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.nameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.nameTextbox.BorderRadius = 10;
-            this.nameTextbox.BorderSize = 2;
-            this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextbox.Location = new System.Drawing.Point(25, 189);
-            this.nameTextbox.Multiline = false;
-            this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.nameTextbox.PasswordChar = false;
-            this.nameTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.nameTextbox.PlaceholderText = "    Họ và tên";
-            this.nameTextbox.Size = new System.Drawing.Size(196, 32);
-            this.nameTextbox.TabIndex = 3;
-            this.nameTextbox.Texts = "";
-            this.nameTextbox.UnderlinedStyle = false;
-            // 
-            // birthdayTextbox
-            // 
-            this.birthdayTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.birthdayTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.birthdayTextbox.BorderRadius = 10;
-            this.birthdayTextbox.BorderSize = 2;
-            this.birthdayTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthdayTextbox.Location = new System.Drawing.Point(25, 252);
-            this.birthdayTextbox.Multiline = false;
-            this.birthdayTextbox.Name = "birthdayTextbox";
-            this.birthdayTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.birthdayTextbox.PasswordChar = false;
-            this.birthdayTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.birthdayTextbox.PlaceholderText = "    Ngày sinh";
-            this.birthdayTextbox.Size = new System.Drawing.Size(196, 32);
-            this.birthdayTextbox.TabIndex = 4;
-            this.birthdayTextbox.Texts = "";
-            this.birthdayTextbox.UnderlinedStyle = false;
-            // 
-            // roleCombobox
-            // 
-            this.roleCombobox.FormattingEnabled = true;
-            this.roleCombobox.Location = new System.Drawing.Point(373, 199);
-            this.roleCombobox.Name = "roleCombobox";
-            this.roleCombobox.Size = new System.Drawing.Size(108, 21);
-            this.roleCombobox.TabIndex = 7;
-            // 
-            // roleLabel
-            // 
-            this.roleLabel.AutoSize = true;
-            this.roleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.roleLabel.Location = new System.Drawing.Point(295, 201);
-            this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(62, 20);
-            this.roleLabel.TabIndex = 99;
-            this.roleLabel.Text = "Vai trò";
-            // 
-            // genderGroupbox
-            // 
-            this.genderGroupbox.Controls.Add(this.femaleRadioButton);
-            this.genderGroupbox.Controls.Add(this.maleRadioButton);
-            this.genderGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderGroupbox.ForeColor = System.Drawing.Color.Crimson;
-            this.genderGroupbox.Location = new System.Drawing.Point(299, 243);
-            this.genderGroupbox.Name = "genderGroupbox";
-            this.genderGroupbox.Size = new System.Drawing.Size(200, 53);
-            this.genderGroupbox.TabIndex = 8;
-            this.genderGroupbox.TabStop = false;
-            this.genderGroupbox.Text = "Giới tính";
-            // 
-            // femaleRadioButton
-            // 
-            this.femaleRadioButton.AutoSize = true;
-            this.femaleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.femaleRadioButton.ForeColor = System.Drawing.Color.Black;
-            this.femaleRadioButton.Location = new System.Drawing.Point(113, 27);
-            this.femaleRadioButton.Name = "femaleRadioButton";
-            this.femaleRadioButton.Size = new System.Drawing.Size(44, 20);
-            this.femaleRadioButton.TabIndex = 10;
-            this.femaleRadioButton.TabStop = true;
-            this.femaleRadioButton.Text = "Nữ";
-            this.femaleRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // maleRadioButton
-            // 
-            this.maleRadioButton.AutoSize = true;
-            this.maleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maleRadioButton.ForeColor = System.Drawing.Color.Black;
-            this.maleRadioButton.Location = new System.Drawing.Point(17, 27);
-            this.maleRadioButton.Name = "maleRadioButton";
-            this.maleRadioButton.Size = new System.Drawing.Size(57, 20);
-            this.maleRadioButton.TabIndex = 9;
-            this.maleRadioButton.TabStop = true;
-            this.maleRadioButton.Text = "Nam";
-            this.maleRadioButton.UseVisualStyleBackColor = true;
+            this.cancelButton.BackColor = System.Drawing.Color.Crimson;
+            this.cancelButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.cancelButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cancelButton.BorderRadius = 30;
+            this.cancelButton.BorderSize = 0;
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cancelButton.Location = new System.Drawing.Point(88, 554);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(225, 62);
+            this.cancelButton.TabIndex = 11;
+            this.cancelButton.Text = "Huỷ";
+            this.cancelButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // EmpDetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 450);
+            this.ClientSize = new System.Drawing.Size(800, 692);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.genderGroupbox);
-            this.Controls.Add(this.roleLabel);
-            this.Controls.Add(this.roleCombobox);
-            this.Controls.Add(this.birthdayTextbox);
-            this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.IDTextbox);
             this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.phoneNumberTextbox);
-            this.Controls.Add(this.addressTextbox);
-            this.Controls.Add(this.accountTextbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EmpDetailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EmpDetailForm";
             this.genderGroupbox.ResumeLayout(false);
             this.genderGroupbox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,11 +442,19 @@
         private CustomControl.JButton cancelButton;
         private CustomControl.JButton confirmButton;
         private CustomControl.JNewTextbox nameTextbox;
-        private CustomControl.JNewTextbox birthdayTextbox;
-        private System.Windows.Forms.ComboBox roleCombobox;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.GroupBox genderGroupbox;
         private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.RadioButton maleRadioButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private CustomControl.JDatetimepicker birthdayPicker;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private CustomControl.JComboBox roleCombobox;
     }
 }

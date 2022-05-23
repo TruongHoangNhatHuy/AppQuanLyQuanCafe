@@ -8,41 +8,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeShop.BLL;
+using CafeShop.DTO;
 
 namespace CafeShop.View.AdForm
 {
     public partial class EmpDetailForm : Form
     {
-        public bool typeUpdate = false;
-        public EmpDetailForm()
+        public EmpDetailForm(string ID = "")
         {
             InitializeComponent();
-            typeUpdate = false;
-            IDTextbox.Texts = CafeShop.BLL.PrimaryKeyGenerator.NextPrimaryKey(CafeShop.BLL.PrimaryKeyGenerator.GetCurrentKey(CafeShop.DTO.DBModel.Instance.TaiKhoans.Select(x => x.ID).ToList()));
-            foreach (string str in CafeShop.DTO.DBModel.Instance.VaiTroes.Select(x => x.TenVaiTro).ToList())
-            {
-                roleCombobox.Items.Add(str);
-            }
+            GUI(ID);
         }
-        public EmpDetailForm(string ID)
+        public void GUI(string ID = "")
         {
-            InitializeComponent();
-            foreach (string str in CafeShop.DTO.DBModel.Instance.VaiTroes.Select(x => x.TenVaiTro).ToList())
+            roleCombobox.Items.AddRange(BLLEmpDetail.Instance.GetVaiTro().ToArray());
+            if (ID == "")
             {
-                roleCombobox.Items.Add(str);
+                nameTextbox.PlaceholderText = "Bắt buộc";
+                accountTextbox.PlaceholderText = "Bắt buộc";
+                phoneNumberTextbox.PlaceholderText = "Bắt buộc";
+                roleCombobox.Texts = "Bắt buộc";
+                string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBModel.Instance.TaiKhoans.Select(x => x.ID).ToList());
+                IDTextbox.Texts = PrimaryKeyGenerator.NextPrimaryKey(currentKey);
             }
-            typeUpdate = true;
-            var i = CafeShop.DTO.DBModel.Instance.TaiKhoans.Where(x => x.ID == ID).FirstOrDefault();
-            IDTextbox.Texts = i.ID;
-            accountTextbox.Texts = i.TenTaiKhoan;
-            nameTextbox.Texts = i.HoTen;
-            birthdayTextbox.Texts = i.NgaySinh.ToString();
-            addressTextbox.Texts = i.DiaChi;
-            phoneNumberTextbox.Texts = i.SoDienThoai;
-            roleCombobox.Text = CafeShop.DTO.DBModel.Instance.VaiTroes.SingleOrDefault(x => x.MaVaiTro == i.VaiTro.MaVaiTro).TenVaiTro;
-            maleRadioButton.Checked = i.GioiTinh;
+            else
+            {
+                TaiKhoan tk = BLLEmpDetail.Instance.GetInfo(ID);
+                IDTextbox.Texts = tk.ID;
+                accountTextbox.Texts = tk.TenTaiKhoan;
+                nameTextbox.Texts = tk.HoTen;
+                birthdayPicker.Value = tk.NgaySinh;
+                addressTextbox.Texts = tk.DiaChi;
+                phoneNumberTextbox.Texts = tk.SoDienThoai;
+                roleCombobox.SelectedItem = BLLEmpDetail.Instance.GetVaiTroByMaVaiTro(tk.MaVaiTro);
+                maleRadioButton.Checked = tk.GioiTinh;
+            }
         }
-
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -50,36 +52,27 @@ namespace CafeShop.View.AdForm
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            if (typeUpdate == true)
+            try
             {
-                var i = CafeShop.DTO.DBModel.Instance.TaiKhoans.Where(x => x.ID == IDTextbox.Texts).FirstOrDefault();
-                i.TenTaiKhoan = accountTextbox.Texts;
-                i.HoTen = nameTextbox.Texts;
-                i.NgaySinh = DateTime.Parse(birthdayTextbox.Texts);
-                i.DiaChi = addressTextbox.Texts;
-                i.SoDienThoai = phoneNumberTextbox.Texts;
-                i.VaiTro.MaVaiTro = CafeShop.DTO.DBModel.Instance.VaiTroes.Where(x => x.TenVaiTro == roleCombobox.Text).FirstOrDefault().MaVaiTro;
-                i.GioiTinh = maleRadioButton.Checked;
-                CafeShop.DTO.DBModel.Instance.SaveChanges();
-                this.Close();
-            }
-            else
-            {
-                CafeShop.DTO.DBModel.Instance.TaiKhoans.Add(new DTO.TaiKhoan
+                if (nameTextbox.Texts == "" || phoneNumberTextbox.Texts == "" || accountTextbox.Texts == "" || roleCombobox.SelectedItem == null)
+                    throw new Exception("Thiếu thông tin.");
+                TaiKhoan tk = new TaiKhoan
                 {
                     ID = IDTextbox.Texts,
                     TenTaiKhoan = accountTextbox.Texts,
                     HoTen = nameTextbox.Texts,
-                    NgaySinh = DateTime.Parse(birthdayTextbox.Texts),
+                    NgaySinh = birthdayPicker.Value,
                     DiaChi = addressTextbox.Texts,
-                    NgayBatDauLamViec = DateTime.Now,
                     SoDienThoai = phoneNumberTextbox.Texts,
-                    MaVaiTro = CafeShop.DTO.DBModel.Instance.VaiTroes.Where(x => x.TenVaiTro == roleCombobox.Text).FirstOrDefault().MaVaiTro,
-                    GioiTinh = maleRadioButton.Checked,
-                    MatKhau = DateTime.Parse(birthdayTextbox.Texts).ToString("ddMMyyyy"),
-                }); ;
-                CafeShop.DTO.DBModel.Instance.SaveChanges();
+                    MaVaiTro = (roleCombobox.SelectedItem as VaiTro).MaVaiTro,
+                    GioiTinh = maleRadioButton.Checked
+                };
+                BLLEmpDetail.Instance.ExecuteDB(tk);
                 this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

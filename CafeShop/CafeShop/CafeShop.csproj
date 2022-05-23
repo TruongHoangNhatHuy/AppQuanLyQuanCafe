@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CafeShop</RootNamespace>
     <AssemblyName>CafeShop</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -71,9 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BLLCustomerDetail.cs" />
-    <Compile Include="BLL\BLLCustomerInfo.cs" />
-    <Compile Include="BLL\BLLEmpDeTail.cs" />
+    <Compile Include="BLL\BLLEmpDetail.cs" />
     <Compile Include="BLL\BLLEmpInfo.cs" />
     <Compile Include="BLL\BLLInvoice.cs" />
     <Compile Include="BLL\BLLBill.cs" />
@@ -99,6 +97,7 @@
     <Compile Include="DTO\NguyenLieu.cs" />
     <Compile Include="BLL\PrimaryKeyGenerator.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="DTO\TaiKhoanView.cs" />
     <Compile Include="DTO\VaiTro.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -279,6 +278,7 @@
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMonView.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDonView.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.TaiKhoanView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
