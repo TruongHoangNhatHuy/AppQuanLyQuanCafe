@@ -21,15 +21,9 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        public List<VaiTro> GetVaiTro()
-        {
-            return DBModel.Instance.VaiTroes.Where(p => p.MaVaiTro != "VT00000000").ToList();
-        }
+        public List<VaiTro> GetVaiTro() => DBModel.Instance.VaiTroes.Where(p => p.MaVaiTro != "VT00000000").ToList();
         public VaiTro GetVaiTroByMaVaiTro(string MaVaiTro) => DBModel.Instance.VaiTroes.Find(MaVaiTro);
-        public TaiKhoan GetInfo(string ID)
-        {
-            return DBModel.Instance.TaiKhoans.Where(x => x.ID == ID).FirstOrDefault();
-        }
+        public TaiKhoan GetInfo(string ID) => DBModel.Instance.TaiKhoans.Where(x => x.ID == ID).FirstOrDefault();
         public bool ExistedAccount(string ID)
         {
             if (DBModel.Instance.TaiKhoans.Find(ID) == null)
@@ -37,26 +31,6 @@ namespace CafeShop.BLL
             else
                 return true;
         }
-        //public void Update(TaiKhoan update)
-        //{
-        //    TaiKhoan tk = GetInfo(update.ID);
-        //    tk.TenTaiKhoan = update.TenTaiKhoan;
-        //    tk.HoTen = update.HoTen;
-        //    tk.NgaySinh = update.NgaySinh;
-        //    tk.DiaChi = update.DiaChi;
-        //    tk.SoDienThoai = update.SoDienThoai;
-        //    tk.GioiTinh = update.GioiTinh;
-        //    tk.MaVaiTro = update.MaVaiTro;
-        //    DBModel.Instance.SaveChanges();
-        //}
-        //public void Add(TaiKhoan tk)
-        //{
-        //    tk.MatKhau = tk.NgaySinh.ToString("ddMMyyyy");
-        //    tk.NgayBatDauLamViec = DateTime.Now;
-        //    DBModel.Instance.TaiKhoans.Add(tk);
-        //    DBModel.Instance.SaveChanges();
-        //    MessageBox.Show("Mật khẩu là: " + tk.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
-        //}
         public void ExecuteDB(TaiKhoan tk)
         {
             if (ExistedAccount(tk.ID))

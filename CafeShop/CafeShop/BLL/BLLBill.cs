@@ -54,10 +54,7 @@ namespace CafeShop.BLL
             double totalPercent = 1 + surchargePercent - discountPercent;
             return (tongTien * totalPercent) + surcharge - discount;
         }
-        public KhachHang GetKHBySDT(string sdt)
-        {
-            return DBModel.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
-        }
+        public KhachHang GetKHBySDT(string sdt) => DBModel.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
         public void ConfirmBill(string MaBan, string sdt, string PhuThu, string GiamGia, int ThanhTien)
         {
             HoaDon bill = GetHoaDonByMaBan(MaBan);

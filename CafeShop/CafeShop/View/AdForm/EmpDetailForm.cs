@@ -20,7 +20,7 @@ namespace CafeShop.View.AdForm
             InitializeComponent();
             GUI(ID);
         }
-        public void GUI(string ID = "")
+        public void GUI(string ID)
         {
             roleCombobox.Items.AddRange(BLLEmpDetail.Instance.GetVaiTro().ToArray());
             if (ID == "")

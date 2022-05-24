@@ -28,31 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sortComboBox = new System.Windows.Forms.ComboBox();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.sortButton = new CafeShop.View.CustomControl.JButton();
             this.searchButton = new CafeShop.View.CustomControl.JButton();
             this.searchTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.addButton = new CafeShop.View.CustomControl.JButton();
             this.updateButton = new CafeShop.View.CustomControl.JButton();
             this.deleteButton = new CafeShop.View.CustomControl.JButton();
-            this.sortComboBox = new System.Windows.Forms.ComboBox();
-            this.sortButton = new CafeShop.View.CustomControl.JButton();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDienThoaiKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinhKHDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayDangKiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(120, 123);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDKhachHangDataGridViewTextBoxColumn,
+            this.hoTenKHDataGridViewTextBoxColumn,
+            this.soDienThoaiKHDataGridViewTextBoxColumn,
+            this.gioiTinhKHDataGridViewCheckBoxColumn,
+            this.ngaySinhKHDataGridViewTextBoxColumn,
+            this.diaChiKHDataGridViewTextBoxColumn,
+            this.ngayDangKiDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.khachHangBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(135, 154);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1288, 538);
+            this.dataGridView1.Size = new System.Drawing.Size(1449, 672);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // sortComboBox
+            // 
+            this.sortComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sortComboBox.FormattingEnabled = true;
+            this.sortComboBox.Location = new System.Drawing.Point(1126, 85);
+            this.sortComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sortComboBox.Name = "sortComboBox";
+            this.sortComboBox.Size = new System.Drawing.Size(234, 28);
+            this.sortComboBox.TabIndex = 6;
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Crimson;
+            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitButton.BorderRadius = 30;
+            this.exitButton.BorderSize = 0;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.exitButton.Location = new System.Drawing.Point(18, 5);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(69, 61);
+            this.exitButton.TabIndex = 8;
+            this.exitButton.TextColor = System.Drawing.Color.White;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // sortButton
+            // 
+            this.sortButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sortButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.sortButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sortButton.BorderRadius = 15;
+            this.sortButton.BorderSize = 0;
+            this.sortButton.FlatAppearance.BorderSize = 0;
+            this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortButton.ForeColor = System.Drawing.Color.Black;
+            this.sortButton.Location = new System.Drawing.Point(1414, 74);
+            this.sortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sortButton.Name = "sortButton";
+            this.sortButton.Size = new System.Drawing.Size(170, 49);
+            this.sortButton.TabIndex = 7;
+            this.sortButton.Text = "Sắp xếp";
+            this.sortButton.TextColor = System.Drawing.Color.Black;
+            this.sortButton.UseVisualStyleBackColor = false;
+            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
             // 
             // searchButton
             // 
@@ -66,10 +143,10 @@
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.Black;
             this.searchButton.Image = global::CafeShop.Properties.Resources.magnifying_glass;
-            this.searchButton.Location = new System.Drawing.Point(120, 59);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchButton.Location = new System.Drawing.Point(135, 74);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(151, 39);
+            this.searchButton.Size = new System.Drawing.Size(170, 49);
             this.searchButton.TabIndex = 5;
             this.searchButton.TextColor = System.Drawing.Color.Black;
             this.searchButton.UseVisualStyleBackColor = false;
@@ -86,15 +163,15 @@
             this.searchTextbox.BorderSize = 2;
             this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextbox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.searchTextbox.Location = new System.Drawing.Point(304, 59);
-            this.searchTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchTextbox.Location = new System.Drawing.Point(342, 74);
+            this.searchTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchTextbox.Multiline = false;
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.searchTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.searchTextbox.PasswordChar = false;
             this.searchTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
             this.searchTextbox.PlaceholderText = "         Tìm kiếm.......";
-            this.searchTextbox.Size = new System.Drawing.Size(633, 39);
+            this.searchTextbox.Size = new System.Drawing.Size(712, 48);
             this.searchTextbox.TabIndex = 4;
             this.searchTextbox.Texts = "";
             this.searchTextbox.UnderlinedStyle = false;
@@ -111,10 +188,10 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addButton.Location = new System.Drawing.Point(1025, 668);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Location = new System.Drawing.Point(1153, 835);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(205, 49);
+            this.addButton.Size = new System.Drawing.Size(231, 61);
             this.addButton.TabIndex = 3;
             this.addButton.Text = "Thêm";
             this.addButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -133,11 +210,11 @@
             this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.updateButton.Location = new System.Drawing.Point(637, 668);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updateButton.Location = new System.Drawing.Point(717, 835);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updateButton.Name = "updateButton";
             this.updateButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.updateButton.Size = new System.Drawing.Size(205, 49);
+            this.updateButton.Size = new System.Drawing.Size(231, 61);
             this.updateButton.TabIndex = 2;
             this.updateButton.Text = "Cập nhật";
             this.updateButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -156,75 +233,91 @@
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.deleteButton.Location = new System.Drawing.Point(255, 668);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteButton.Location = new System.Drawing.Point(287, 835);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(205, 49);
+            this.deleteButton.Size = new System.Drawing.Size(231, 61);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "Xoá";
             this.deleteButton.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // sortComboBox
+            // khachHangBindingSource
             // 
-            this.sortComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sortComboBox.FormattingEnabled = true;
-            this.sortComboBox.Location = new System.Drawing.Point(1001, 68);
-            this.sortComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.sortComboBox.Name = "sortComboBox";
-            this.sortComboBox.Size = new System.Drawing.Size(208, 24);
-            this.sortComboBox.TabIndex = 6;
+            this.khachHangBindingSource.DataSource = typeof(CafeShop.DTO.KhachHang);
             // 
-            // sortButton
+            // iDKhachHangDataGridViewTextBoxColumn
             // 
-            this.sortButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sortButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.sortButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sortButton.BorderRadius = 15;
-            this.sortButton.BorderSize = 0;
-            this.sortButton.FlatAppearance.BorderSize = 0;
-            this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortButton.ForeColor = System.Drawing.Color.Black;
-            this.sortButton.Location = new System.Drawing.Point(1257, 59);
-            this.sortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(151, 39);
-            this.sortButton.TabIndex = 7;
-            this.sortButton.Text = "Sắp xếp";
-            this.sortButton.TextColor = System.Drawing.Color.Black;
-            this.sortButton.UseVisualStyleBackColor = false;
-            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
+            this.iDKhachHangDataGridViewTextBoxColumn.DataPropertyName = "IDKhachHang";
+            this.iDKhachHangDataGridViewTextBoxColumn.HeaderText = "ID Khách hàng";
+            this.iDKhachHangDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.iDKhachHangDataGridViewTextBoxColumn.Name = "iDKhachHangDataGridViewTextBoxColumn";
+            this.iDKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDKhachHangDataGridViewTextBoxColumn.Width = 150;
             // 
-            // exitButton
+            // hoTenKHDataGridViewTextBoxColumn
             // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(16, 4);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(61, 49);
-            this.exitButton.TabIndex = 8;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.hoTenKHDataGridViewTextBoxColumn.DataPropertyName = "HoTenKH";
+            this.hoTenKHDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hoTenKHDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.hoTenKHDataGridViewTextBoxColumn.Name = "hoTenKHDataGridViewTextBoxColumn";
+            this.hoTenKHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hoTenKHDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // soDienThoaiKHDataGridViewTextBoxColumn
+            // 
+            this.soDienThoaiKHDataGridViewTextBoxColumn.DataPropertyName = "SoDienThoaiKH";
+            this.soDienThoaiKHDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
+            this.soDienThoaiKHDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.soDienThoaiKHDataGridViewTextBoxColumn.Name = "soDienThoaiKHDataGridViewTextBoxColumn";
+            this.soDienThoaiKHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.soDienThoaiKHDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // gioiTinhKHDataGridViewCheckBoxColumn
+            // 
+            this.gioiTinhKHDataGridViewCheckBoxColumn.DataPropertyName = "GioiTinhKH";
+            this.gioiTinhKHDataGridViewCheckBoxColumn.HeaderText = "Giới tính (Là nam)";
+            this.gioiTinhKHDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.gioiTinhKHDataGridViewCheckBoxColumn.Name = "gioiTinhKHDataGridViewCheckBoxColumn";
+            this.gioiTinhKHDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.gioiTinhKHDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gioiTinhKHDataGridViewCheckBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.gioiTinhKHDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // ngaySinhKHDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhKHDataGridViewTextBoxColumn.DataPropertyName = "NgaySinhKH";
+            this.ngaySinhKHDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.ngaySinhKHDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.ngaySinhKHDataGridViewTextBoxColumn.Name = "ngaySinhKHDataGridViewTextBoxColumn";
+            this.ngaySinhKHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngaySinhKHDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // diaChiKHDataGridViewTextBoxColumn
+            // 
+            this.diaChiKHDataGridViewTextBoxColumn.DataPropertyName = "DiaChiKH";
+            this.diaChiKHDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diaChiKHDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.diaChiKHDataGridViewTextBoxColumn.Name = "diaChiKHDataGridViewTextBoxColumn";
+            this.diaChiKHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diaChiKHDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // ngayDangKiDataGridViewTextBoxColumn
+            // 
+            this.ngayDangKiDataGridViewTextBoxColumn.DataPropertyName = "NgayDangKi";
+            this.ngayDangKiDataGridViewTextBoxColumn.HeaderText = "Ngày đăng kí";
+            this.ngayDangKiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.ngayDangKiDataGridViewTextBoxColumn.Name = "ngayDangKiDataGridViewTextBoxColumn";
+            this.ngayDangKiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngayDangKiDataGridViewTextBoxColumn.Width = 150;
             // 
             // CustomerInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1539, 752);
+            this.ClientSize = new System.Drawing.Size(1731, 940);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.sortButton);
             this.Controls.Add(this.sortComboBox);
@@ -235,10 +328,11 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerInfoForm";
             this.Text = "EmployeeForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,5 +348,13 @@
         private System.Windows.Forms.ComboBox sortComboBox;
         private CustomControl.JButton sortButton;
         private CustomControl.JButton exitButton;
+        private System.Windows.Forms.BindingSource khachHangBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDKhachHangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soDienThoaiKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhKHDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayDangKiDataGridViewTextBoxColumn;
     }
 }

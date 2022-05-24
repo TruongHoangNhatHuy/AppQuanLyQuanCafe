@@ -71,6 +71,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLCustomerDetail.cs" />
+    <Compile Include="BLL\BLLCustomerInfo.cs" />
     <Compile Include="BLL\BLLEmpDetail.cs" />
     <Compile Include="BLL\BLLEmpInfo.cs" />
     <Compile Include="BLL\BLLInvoice.cs" />
@@ -278,6 +280,7 @@
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMonView.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDonView.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.KhachHang.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.TaiKhoanView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
