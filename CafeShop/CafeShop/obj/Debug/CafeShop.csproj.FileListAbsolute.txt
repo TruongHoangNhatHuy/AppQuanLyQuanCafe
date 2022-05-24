@@ -35,7 +35,6 @@ C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\Entit
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.AssemblyReference.cache
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpDetailForm.resources
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.EmpInfoForm.resources
