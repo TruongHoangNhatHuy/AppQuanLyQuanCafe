@@ -30,6 +30,7 @@ namespace CafeShop.BLL
             }
             return result.OrderBy(p => p.ID).ToList();
         }
+        public TaiKhoanView GetAccountByID(string ID) => GetAccountList().Where(p => p.ID == ID).FirstOrDefault();
         public void ResetPassword(string ID)
         {
             var i = DBModel.Instance.TaiKhoans.Find(ID);
@@ -41,6 +42,62 @@ namespace CafeShop.BLL
         {
             DBModel.Instance.TaiKhoans.Remove(DBModel.Instance.TaiKhoans.Find(ID));
             DBModel.Instance.SaveChanges();
+        }
+        public List<TaiKhoanView> SearchAccountList(string searchString, string searchBy)
+        {
+            List<TaiKhoanView> result = GetAccountList();
+            if (searchString != null)
+            {
+                switch (searchBy)
+                {
+                    case "Theo ID":
+                        {
+                            result = result.Where(p => p.ID.Contains(searchString)).ToList();
+                            break;
+                        }
+                    case "Theo tên đăng nhập":
+                        {
+                            result = result.Where(p => p.TenTaiKhoan.Contains(searchString)).ToList();
+                            break;
+                        }
+                    case "Theo họ tên":
+                        {
+                            result = result.Where(p => p.HoTen.Contains(searchString)).ToList();
+                            break;
+                        }
+                    case "Theo ngày sinh":
+                        {
+                            result = result.Where(p => p.NgaySinh.ToString().Contains(searchString)).ToList();
+                            break;
+                        }
+                    case "Theo địa chỉ":
+                        {
+                            result = result.Where(p => p.DiaChi.Contains(searchString)).ToList();
+                            break;
+                        }
+                    case "Theo số điện thoại":
+                        {
+                            result = result.Where(p => p.SoDienThoai.Contains(searchString)).ToList();
+                            break;
+                        }
+                    case "Theo ngày bắt đầu":
+                        {
+                            result = result.Where(p => p.NgayBatDauLamViec.Contains(searchString)).ToList();
+                            break;
+                        }
+                    case "Theo vai trò":
+                        {
+                            result = result.Where(p => p.TenVaiTro.Contains(searchString)).ToList();
+                            break;
+                        }
+                }
+            }
+            return result.OrderBy(p => p.ID).ToList();
+        }
+        public List<TaiKhoanView> SortAccountList(List<TaiKhoanView> list)
+        {
+            list.Reverse();
+            return list;
         }
     }
 }

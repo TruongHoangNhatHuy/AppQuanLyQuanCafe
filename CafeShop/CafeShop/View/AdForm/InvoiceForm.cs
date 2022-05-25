@@ -38,9 +38,6 @@ namespace CafeShop.View.AdForm
         }
         private void searchButton_Click(object sender, EventArgs e)
         {
-            //DateTime from = fromPicker.Value, to = toPicker.Value;
-            //string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;
-            //var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
             dataGridView1.DataSource = BLLInvoice.Instance.ChangeView(GetHoaDon());   
         }
         public string lastOrder;
@@ -49,9 +46,6 @@ namespace CafeShop.View.AdForm
         {
             if (sortJCombobox.SelectedItem != null)
             {
-                //DateTime from = fromPicker.Value, to = toPicker.Value;
-                //string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;     
-                //var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
                 string orderBy = sortJCombobox.SelectedItem.ToString();                
                 if (orderBy.Equals(lastOrder))
                     SortDirection = !SortDirection;
@@ -60,16 +54,12 @@ namespace CafeShop.View.AdForm
                     lastOrder = orderBy;
                     SortDirection = false;
                 }                    
-                dataGridView1.DataSource = BLLInvoice.Instance.Sort(GetHoaDon(), orderBy, SortDirection);
-                
+                dataGridView1.DataSource = BLLInvoice.Instance.Sort(GetHoaDon(), orderBy, SortDirection);     
             }
         }
 
         private void dataGridView1_DataSourceChanged(object sender, EventArgs e)
         {
-            //DateTime from = fromPicker.Value, to = toPicker.Value;
-            //string MaHoaDon = invoiceTextbox.Texts, TenNhanVien = empTextbox.Texts, TenKhachHang = customerTextbox.Texts;
-            //var list = BLLInvoice.Instance.Search(from, to, MaHoaDon, TenNhanVien, TenKhachHang);
             var list = GetHoaDon();
             billCountLabel.Text = BLLInvoice.Instance.GetBillCount(list);
             customerCountLabel.Text = BLLInvoice.Instance.GetCustomerCount(list);

@@ -20,10 +20,11 @@ namespace CafeShop.View.AdForm
         {
             InitializeComponent();
             dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
+            searchByComboBox.Items.AddRange(new string[] { "Theo ID", "Theo tên đăng nhập", "Theo họ tên", "Theo ngày sinh", "Theo địa chỉ", "Theo số điện thoại", "Theo ngày bắt đầu", "Theo vai trò" });
         }
         private void adButton_Click(object sender, EventArgs e)
         {
-            AdForm.EmpDetailForm form = new EmpDetailForm();
+            EmpDetailForm form = new EmpDetailForm();
             form.ShowDialog();
             dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
         }
@@ -51,14 +52,26 @@ namespace CafeShop.View.AdForm
         private void updateButton_Click(object sender, EventArgs e)
         {
             string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            AdForm.EmpDetailForm form = new EmpDetailForm(ID);
+            EmpDetailForm form = new EmpDetailForm(ID);
             form.ShowDialog();
             dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void search(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DBModel.Instance.KhachHangs.Where(x => x.HoTenKH.Contains(searchTextbox.Texts)).ToList();
+            string searchBy = searchByComboBox.Texts;
+            string searchString = searchTextbox.Texts;
+            dataGridView1.DataSource = BLLEmpInfo.Instance.SearchAccountList(searchString, searchBy);
+        }
+
+        private void sortButton_Click(object sender, EventArgs e)
+        {
+            List<TaiKhoanView> list = new List<TaiKhoanView>();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                list.Add(BLLEmpInfo.Instance.GetAccountByID(row.Cells[0].Value.ToString()));
+            }
+            dataGridView1.DataSource = BLLEmpInfo.Instance.SortAccountList(list);
         }
     }
 }

@@ -20,11 +20,12 @@ namespace CafeShop.View.AdForm
         {
             InitializeComponent();
             dataGridView1.DataSource = BLLCustomerInfo.Instance.GetCustomerList();
+            searchByComboBox.Items.AddRange(new string[] { "Theo ID khách hàng", "Theo họ tên", "Theo số điện thoại", "Theo ngày sinh", "Theo địa chỉ", "Theo ngày đăng kí" });
         }
 
         private void adButton_Click(object sender, EventArgs e)
         {
-            AdForm.CustomerDetailForm form = new CustomerDetailForm();
+            CustomerDetailForm form = new CustomerDetailForm();
             form.ShowDialog();
             dataGridView1.DataSource = BLLCustomerInfo.Instance.GetCustomerList();
         }
@@ -45,20 +46,26 @@ namespace CafeShop.View.AdForm
         private void updateButton_Click(object sender, EventArgs e)
         {
             string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            AdForm.CustomerDetailForm form = new CustomerDetailForm(ID);
+            CustomerDetailForm form = new CustomerDetailForm(ID);
             form.ShowDialog();
             dataGridView1.DataSource = BLLCustomerInfo.Instance.GetCustomerList();
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void search(object sender, EventArgs e)
         {
-            //tìm kiếm theo tên
-            dataGridView1.DataSource = DBModel.Instance.KhachHangs.Where(x => x.HoTenKH.Contains(searchTextbox.Texts)).ToList();
+            string searchBy = searchByComboBox.Texts;
+            string searchString = searchTextbox.Texts;
+            dataGridView1.DataSource = BLLCustomerInfo.Instance.SearchCustomerList(searchString, searchBy);
         }
 
         private void sortButton_Click(object sender, EventArgs e)
         {
-            
+            List<KhachHang> list = new List<KhachHang>();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                list.Add(BLLCustomerInfo.Instance.GetCustomerByID(row.Cells[0].Value.ToString()));
+            }
+            dataGridView1.DataSource = BLLCustomerInfo.Instance.SortCustomerList(list);
         }
     }
 }
