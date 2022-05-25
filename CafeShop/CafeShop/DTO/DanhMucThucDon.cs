@@ -21,5 +21,9 @@ namespace CafeShop.DTO
         [StringLength(50)]
         public string TenDanhMuc { get; set; }
         public virtual ICollection<Mon> Mons { get; set; }
+        public override string ToString()
+        {
+            return TenDanhMuc;
+        }
     }
 }

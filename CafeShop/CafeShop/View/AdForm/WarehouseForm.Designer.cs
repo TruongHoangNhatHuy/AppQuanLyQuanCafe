@@ -34,16 +34,16 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.exportRadioButton = new System.Windows.Forms.RadioButton();
-            this.importRadioButton = new System.Windows.Forms.RadioButton();
-            this.goodsNameLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.showInfoButton = new CafeShop.View.CustomControl.JButton();
             this.totalTextbox = new CafeShop.View.CustomControl.JTextbox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.goodsNameLabel = new System.Windows.Forms.Label();
             this.goodsNameTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.quantityTextbox = new CafeShop.View.CustomControl.JTextbox();
-            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.exportRadioButton = new System.Windows.Forms.RadioButton();
+            this.importRadioButton = new System.Windows.Forms.RadioButton();
+            this.updateButton = new CafeShop.View.CustomControl.JButton();
+            this.showInfoButton = new CafeShop.View.CustomControl.JButton();
             this.editButton = new CafeShop.View.CustomControl.JButton();
             this.addButton = new CafeShop.View.CustomControl.JButton();
             this.deleteButton = new CafeShop.View.CustomControl.JButton();
@@ -95,7 +95,7 @@
             this.groupBox1.Controls.Add(this.quantityTextbox);
             this.groupBox1.Controls.Add(this.exportRadioButton);
             this.groupBox1.Controls.Add(this.importRadioButton);
-            this.groupBox1.Controls.Add(this.jButton2);
+            this.groupBox1.Controls.Add(this.updateButton);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(732, 68);
             this.groupBox1.Name = "groupBox1";
@@ -103,6 +103,97 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập xuất form";
+            // 
+            // totalTextbox
+            // 
+            this.totalTextbox.BackColor = System.Drawing.SystemColors.Window;
+            this.totalTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.totalTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.totalTextbox.BorderSize = 2;
+            this.totalTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.totalTextbox.Location = new System.Drawing.Point(64, 331);
+            this.totalTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextbox.Multiline = false;
+            this.totalTextbox.Name = "totalTextbox";
+            this.totalTextbox.Padding = new System.Windows.Forms.Padding(7);
+            this.totalTextbox.PasswordChar = false;
+            this.totalTextbox.Size = new System.Drawing.Size(270, 32);
+            this.totalTextbox.TabIndex = 11;
+            this.totalTextbox.Texts = "";
+            this.totalTextbox.UnderlinedStyle = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Crimson;
+            this.label2.Location = new System.Drawing.Point(61, 307);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Tiền thanh toán";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(61, 201);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Số lượng";
+            // 
+            // goodsNameLabel
+            // 
+            this.goodsNameLabel.AutoSize = true;
+            this.goodsNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goodsNameLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.goodsNameLabel.Location = new System.Drawing.Point(61, 106);
+            this.goodsNameLabel.Name = "goodsNameLabel";
+            this.goodsNameLabel.Size = new System.Drawing.Size(119, 20);
+            this.goodsNameLabel.TabIndex = 8;
+            this.goodsNameLabel.Text = "Tên hàng hoá";
+            // 
+            // goodsNameTextbox
+            // 
+            this.goodsNameTextbox.BackColor = System.Drawing.SystemColors.Window;
+            this.goodsNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.goodsNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.goodsNameTextbox.BorderSize = 2;
+            this.goodsNameTextbox.Enabled = false;
+            this.goodsNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goodsNameTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.goodsNameTextbox.Location = new System.Drawing.Point(65, 130);
+            this.goodsNameTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.goodsNameTextbox.Multiline = false;
+            this.goodsNameTextbox.Name = "goodsNameTextbox";
+            this.goodsNameTextbox.Padding = new System.Windows.Forms.Padding(7);
+            this.goodsNameTextbox.PasswordChar = false;
+            this.goodsNameTextbox.Size = new System.Drawing.Size(269, 32);
+            this.goodsNameTextbox.TabIndex = 6;
+            this.goodsNameTextbox.Texts = "";
+            this.goodsNameTextbox.UnderlinedStyle = false;
+            // 
+            // quantityTextbox
+            // 
+            this.quantityTextbox.BackColor = System.Drawing.SystemColors.Window;
+            this.quantityTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.quantityTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.quantityTextbox.BorderSize = 2;
+            this.quantityTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.quantityTextbox.Location = new System.Drawing.Point(65, 225);
+            this.quantityTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.quantityTextbox.Multiline = false;
+            this.quantityTextbox.Name = "quantityTextbox";
+            this.quantityTextbox.Padding = new System.Windows.Forms.Padding(7);
+            this.quantityTextbox.PasswordChar = false;
+            this.quantityTextbox.Size = new System.Drawing.Size(269, 32);
+            this.quantityTextbox.TabIndex = 5;
+            this.quantityTextbox.Texts = "";
+            this.quantityTextbox.UnderlinedStyle = false;
             // 
             // exportRadioButton
             // 
@@ -127,38 +218,25 @@
             this.importRadioButton.UseVisualStyleBackColor = true;
             this.importRadioButton.CheckedChanged += new System.EventHandler(this.importRadioButton_CheckedChanged);
             // 
-            // goodsNameLabel
+            // updateButton
             // 
-            this.goodsNameLabel.AutoSize = true;
-            this.goodsNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goodsNameLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.goodsNameLabel.Location = new System.Drawing.Point(61, 106);
-            this.goodsNameLabel.Name = "goodsNameLabel";
-            this.goodsNameLabel.Size = new System.Drawing.Size(119, 20);
-            this.goodsNameLabel.TabIndex = 8;
-            this.goodsNameLabel.Text = "Tên hàng hoá";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(61, 201);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Số lượng";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(61, 307);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Tiền thanh toán";
+            this.updateButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.updateButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.updateButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.updateButton.BorderRadius = 30;
+            this.updateButton.BorderSize = 0;
+            this.updateButton.FlatAppearance.BorderSize = 0;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.ForeColor = System.Drawing.Color.Black;
+            this.updateButton.Location = new System.Drawing.Point(126, 415);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(150, 40);
+            this.updateButton.TabIndex = 2;
+            this.updateButton.Text = "Cập nhật";
+            this.updateButton.TextColor = System.Drawing.Color.Black;
+            this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // showInfoButton
             // 
@@ -179,83 +257,6 @@
             this.showInfoButton.TextColor = System.Drawing.Color.Black;
             this.showInfoButton.UseVisualStyleBackColor = false;
             this.showInfoButton.Click += new System.EventHandler(this.showInfoButton_Click);
-            // 
-            // totalTextbox
-            // 
-            this.totalTextbox.BackColor = System.Drawing.SystemColors.Window;
-            this.totalTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.totalTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.totalTextbox.BorderSize = 2;
-            this.totalTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextbox.ForeColor = System.Drawing.Color.DimGray;
-            this.totalTextbox.Location = new System.Drawing.Point(64, 331);
-            this.totalTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.totalTextbox.Multiline = false;
-            this.totalTextbox.Name = "totalTextbox";
-            this.totalTextbox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.totalTextbox.PasswordChar = false;
-            this.totalTextbox.Size = new System.Drawing.Size(270, 32);
-            this.totalTextbox.TabIndex = 11;
-            this.totalTextbox.Texts = "";
-            this.totalTextbox.UnderlinedStyle = false;
-            // 
-            // goodsNameTextbox
-            // 
-            this.goodsNameTextbox.BackColor = System.Drawing.SystemColors.Window;
-            this.goodsNameTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.goodsNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.goodsNameTextbox.BorderSize = 2;
-            this.goodsNameTextbox.Enabled = false;
-            this.goodsNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goodsNameTextbox.ForeColor = System.Drawing.Color.DimGray;
-            this.goodsNameTextbox.Location = new System.Drawing.Point(65, 130);
-            this.goodsNameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.goodsNameTextbox.Multiline = false;
-            this.goodsNameTextbox.Name = "goodsNameTextbox";
-            this.goodsNameTextbox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.goodsNameTextbox.PasswordChar = false;
-            this.goodsNameTextbox.Size = new System.Drawing.Size(269, 32);
-            this.goodsNameTextbox.TabIndex = 6;
-            this.goodsNameTextbox.Texts = "";
-            this.goodsNameTextbox.UnderlinedStyle = false;
-            // 
-            // quantityTextbox
-            // 
-            this.quantityTextbox.BackColor = System.Drawing.SystemColors.Window;
-            this.quantityTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.quantityTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.quantityTextbox.BorderSize = 2;
-            this.quantityTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityTextbox.ForeColor = System.Drawing.Color.DimGray;
-            this.quantityTextbox.Location = new System.Drawing.Point(65, 225);
-            this.quantityTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.quantityTextbox.Multiline = false;
-            this.quantityTextbox.Name = "quantityTextbox";
-            this.quantityTextbox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.quantityTextbox.PasswordChar = false;
-            this.quantityTextbox.Size = new System.Drawing.Size(269, 32);
-            this.quantityTextbox.TabIndex = 5;
-            this.quantityTextbox.Texts = "";
-            this.quantityTextbox.UnderlinedStyle = false;
-            // 
-            // jButton2
-            // 
-            this.jButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton2.BorderRadius = 30;
-            this.jButton2.BorderSize = 0;
-            this.jButton2.FlatAppearance.BorderSize = 0;
-            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton2.ForeColor = System.Drawing.Color.Black;
-            this.jButton2.Location = new System.Drawing.Point(126, 415);
-            this.jButton2.Name = "jButton2";
-            this.jButton2.Size = new System.Drawing.Size(150, 40);
-            this.jButton2.TabIndex = 2;
-            this.jButton2.Text = "Cập nhật";
-            this.jButton2.TextColor = System.Drawing.Color.Black;
-            this.jButton2.UseVisualStyleBackColor = false;
             // 
             // editButton
             // 
@@ -294,6 +295,7 @@
             this.addButton.Text = "Thêm";
             this.addButton.TextColor = System.Drawing.Color.Black;
             this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -330,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1154, 611);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
@@ -358,7 +360,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private CustomControl.JButton deleteButton;
-        private CustomControl.JButton jButton2;
+        private CustomControl.JButton updateButton;
         private CustomControl.JButton addButton;
         private CustomControl.JButton editButton;
         private System.Windows.Forms.GroupBox groupBox1;

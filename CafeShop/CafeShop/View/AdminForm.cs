@@ -132,7 +132,7 @@ namespace CafeShop.View
         {
             ActivateButton(sender);
             this.label1.Text = "Kho Hàng";
-            AdForm.GoodsForm form  = new AdForm.GoodsForm();
+            AdForm.WarehouseForm form  = new AdForm.WarehouseForm();
             openChildForm(form);
         }
         #endregion

@@ -40,8 +40,14 @@ namespace CafeShop.BLL
         }
         public void ExportGoods(string MaHangHoa, int SoLuongXuat)
         {
-            //HangHoa hangHoa = GetHangHoaByMa(MaHangHoa);
-            //hangHoa.SoLuong -= SoLuongXuat;
+            HangHoa hangHoa = GetHangHoaByMa(MaHangHoa);
+            hangHoa.SoLuong -= SoLuongXuat;
+            DBModel.Instance.SaveChanges();
+        }
+        public void AddGoods(HangHoa goods)
+        {
+            DBModel.Instance.HangHoas.Add(goods);
+            DBModel.Instance.SaveChanges();
         }
     }
 }

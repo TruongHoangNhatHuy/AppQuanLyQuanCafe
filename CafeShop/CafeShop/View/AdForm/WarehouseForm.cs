@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CafeShop.BLL;
+using System;
 using System.Windows.Forms;
 using CafeShop.DTO;
-using CafeShop.BLL;
 namespace CafeShop.View.AdForm
 {
     public partial class WarehouseForm : Form
@@ -28,11 +21,12 @@ namespace CafeShop.View.AdForm
 
         private void showInfoButton_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count == 1)
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 string MaHangHoa = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 GoodsInfoForm form = new GoodsInfoForm(MaHangHoa);
-            }    
+                form.ShowDialog();
+            }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -46,6 +40,24 @@ namespace CafeShop.View.AdForm
                 else
                     BLLWarehouse.Instance.DeleteGoods(goods);
             }
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            GoodsForm form = new GoodsForm();
+            form.ShowDialog();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            if(importRadioButton.Checked)
+            {
+                
+            }    
+            else
+            {
+
+            }    
         }
     }
 }

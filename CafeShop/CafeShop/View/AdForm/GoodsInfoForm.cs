@@ -24,6 +24,7 @@ namespace CafeShop.View.AdForm
         {
             goodsNameTextbox.Texts = goods.TenHangHoa;
             quantityTextbox.Texts = goods.SoLuong.ToString();
+            dataGridView1.DataSource = goods.LoHangs.ToList();
         }
         private void closeButton_Click(object sender, EventArgs e)
         {
