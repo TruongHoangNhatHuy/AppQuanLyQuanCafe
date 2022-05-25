@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//khong dung
+
 namespace CafeShop.DTO
 {
     [Table("CongThuc")]

@@ -61,6 +61,7 @@ namespace CafeShop.DTO
             });
             context.DanhMucThucDons.AddRange(new DanhMucThucDon[]
             {
+                new DanhMucThucDon { MaDanhMuc = "DM00000000", TenDanhMuc = ""},
                 new DanhMucThucDon { MaDanhMuc = "DM00000001", TenDanhMuc = "Cà phê"},
                 new DanhMucThucDon { MaDanhMuc = "DM00000002", TenDanhMuc = "Trà"},
                 new DanhMucThucDon { MaDanhMuc = "DM00000003", TenDanhMuc = "Giải khát"},
@@ -70,6 +71,7 @@ namespace CafeShop.DTO
             });
             context.Mons.AddRange(new Mon[]
             {
+                new Mon { MaMon = "M00000000", TenMon = "", DonGia = 0, DonVi = "", MaDanhMuc = "DM00000000"},
                 new Mon { MaMon = "M00000001", TenMon = "Cà phê đen", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
                 new Mon { MaMon = "M00000002", TenMon = "Cà phê sữa", DonGia = 12000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
                 new Mon { MaMon = "M00000003", TenMon = "Trà gừng", DonGia = 20000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
@@ -77,28 +79,28 @@ namespace CafeShop.DTO
                 new Mon { MaMon = "M00000005", TenMon = "Cola chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"},
                 new Mon { MaMon = "M00000006", TenMon = "Sting chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"}
             });
-            context.NguyenLieux.AddRange(new NguyenLieu[]
-            {
-                new NguyenLieu { MaNguyenLieu = "NL00000001", TenNguyenLieu = "Cà phê hạt", SoLuong = 0, DonVi = "g"},
-                new NguyenLieu { MaNguyenLieu = "NL00000002", TenNguyenLieu = "Sữa đặc", SoLuong = 0, DonVi = "ml"},
-                new NguyenLieu { MaNguyenLieu = "NL00000003", TenNguyenLieu = "Trà", SoLuong = 0, DonVi = "g"},
-                new NguyenLieu { MaNguyenLieu = "NL00000004", TenNguyenLieu = "Gừng khô", SoLuong = 0, DonVi = "g"},
-                new NguyenLieu { MaNguyenLieu = "NL00000005", TenNguyenLieu = "Chanh tươi", SoLuong = 0, DonVi = "quả"},
-                new NguyenLieu { MaNguyenLieu = "NL00000006", TenNguyenLieu = "Cola chai", SoLuong = 0, DonVi = "chai"},
-                new NguyenLieu { MaNguyenLieu = "NL00000007", TenNguyenLieu = "Sting chai", SoLuong = 0, DonVi = "chai"}
-            });
-            context.CongThucs.AddRange(new CongThuc[]
-            {
-                new CongThuc { MaCongThuc = "CT00000001", MaMon = "M00000001", MaNguyenLieu = "NL00000001", DinhLuong = 100},
-                new CongThuc { MaCongThuc = "CT00000002", MaMon = "M00000002", MaNguyenLieu = "NL00000001", DinhLuong = 100},
-                new CongThuc { MaCongThuc = "CT00000003", MaMon = "M00000002", MaNguyenLieu = "NL00000002", DinhLuong = 50},
-                new CongThuc { MaCongThuc = "CT00000004", MaMon = "M00000003", MaNguyenLieu = "NL00000003", DinhLuong = 100},
-                new CongThuc { MaCongThuc = "CT00000005", MaMon = "M00000003", MaNguyenLieu = "NL00000004", DinhLuong = 30},
-                new CongThuc { MaCongThuc = "CT00000006", MaMon = "M00000004", MaNguyenLieu = "NL00000003", DinhLuong = 100},
-                new CongThuc { MaCongThuc = "CT00000007", MaMon = "M00000004", MaNguyenLieu = "NL00000005", DinhLuong = 1},
-                new CongThuc { MaCongThuc = "CT00000008", MaMon = "M00000005", MaNguyenLieu = "NL00000006", DinhLuong = 1},
-                new CongThuc { MaCongThuc = "CT00000009", MaMon = "M00000006", MaNguyenLieu = "NL00000007", DinhLuong = 1}
-            });
+            //context.NguyenLieux.AddRange(new NguyenLieu[]
+            //{
+            //    new NguyenLieu { MaNguyenLieu = "NL00000001", TenNguyenLieu = "Cà phê hạt", SoLuong = 0, DonVi = "g"},
+            //    new NguyenLieu { MaNguyenLieu = "NL00000002", TenNguyenLieu = "Sữa đặc", SoLuong = 0, DonVi = "ml"},
+            //    new NguyenLieu { MaNguyenLieu = "NL00000003", TenNguyenLieu = "Trà", SoLuong = 0, DonVi = "g"},
+            //    new NguyenLieu { MaNguyenLieu = "NL00000004", TenNguyenLieu = "Gừng khô", SoLuong = 0, DonVi = "g"},
+            //    new NguyenLieu { MaNguyenLieu = "NL00000005", TenNguyenLieu = "Chanh tươi", SoLuong = 0, DonVi = "quả"},
+            //    new NguyenLieu { MaNguyenLieu = "NL00000006", TenNguyenLieu = "Cola chai", SoLuong = 0, DonVi = "chai"},
+            //    new NguyenLieu { MaNguyenLieu = "NL00000007", TenNguyenLieu = "Sting chai", SoLuong = 0, DonVi = "chai"}
+            //});
+            //context.CongThucs.AddRange(new CongThuc[]
+            //{
+            //    new CongThuc { MaCongThuc = "CT00000001", MaMon = "M00000001", MaNguyenLieu = "NL00000001", DinhLuong = 100},
+            //    new CongThuc { MaCongThuc = "CT00000002", MaMon = "M00000002", MaNguyenLieu = "NL00000001", DinhLuong = 100},
+            //    new CongThuc { MaCongThuc = "CT00000003", MaMon = "M00000002", MaNguyenLieu = "NL00000002", DinhLuong = 50},
+            //    new CongThuc { MaCongThuc = "CT00000004", MaMon = "M00000003", MaNguyenLieu = "NL00000003", DinhLuong = 100},
+            //    new CongThuc { MaCongThuc = "CT00000005", MaMon = "M00000003", MaNguyenLieu = "NL00000004", DinhLuong = 30},
+            //    new CongThuc { MaCongThuc = "CT00000006", MaMon = "M00000004", MaNguyenLieu = "NL00000003", DinhLuong = 100},
+            //    new CongThuc { MaCongThuc = "CT00000007", MaMon = "M00000004", MaNguyenLieu = "NL00000005", DinhLuong = 1},
+            //    new CongThuc { MaCongThuc = "CT00000008", MaMon = "M00000005", MaNguyenLieu = "NL00000006", DinhLuong = 1},
+            //    new CongThuc { MaCongThuc = "CT00000009", MaMon = "M00000006", MaNguyenLieu = "NL00000007", DinhLuong = 1}
+            //});
             //context.HoaDons.AddRange(new HoaDon[]
             //{
             //    new HoaDon { MaHoaDon = "2022051117352773", IDNhanVien = "TK00000002", IDKhachHang = "KH00000000", MaBan = "B000000001", PhuThu = "0", GiamGia = "0", ThanhTien = 0, ThoiGianThanhToan = DateTime.MinValue},

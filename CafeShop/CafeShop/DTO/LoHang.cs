@@ -15,13 +15,14 @@ namespace CafeShop.DTO
         [StringLength(10)]
         public string MaLoHang { get; set; }
         [StringLength(10)]
-        public string MaNguyenLieu { get; set; }
-        public int SoLuong { get; set; }
+        public string MaHangHoa { get; set; }
+        public int SoLuongNhap { get; set; }
         public DateTime NgayNhapKho { get; set; }
+        public int TienThanhToan { get; set; }
         [StringLength(10)]
         public string IDNhanVien { get; set; }
-        [ForeignKey("MaNguyenLieu")]
-        public virtual NguyenLieu NguyenLieu { get; set; }
+        [ForeignKey("MaHangHoa")]
+        public virtual HangHoa HangHoa { get; set; }
         [ForeignKey("IDNhanVien")]
         public virtual TaiKhoan TaiKhoan { get; set; }
     }

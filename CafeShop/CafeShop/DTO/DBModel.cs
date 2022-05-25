@@ -32,10 +32,11 @@ namespace CafeShop.DTO
         public virtual DbSet<KhuVuc> KhuVucs { get; set; }
         public virtual DbSet<LoHang> LoHangs { get; set; }
         public virtual DbSet<Mon> Mons { get; set; }
-        public virtual DbSet<NguyenLieu> NguyenLieux { get; set; }
+        public virtual DbSet<HangHoa> HangHoas { get; set; } 
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<VaiTro> VaiTroes { get; set; }
-        public virtual DbSet<CongThuc> CongThucs { get; set; }
+        //public virtual DbSet<CongThuc> CongThucs { get; set; }
+        //public virtual DbSet<NguyenLieu> NguyenLieux { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

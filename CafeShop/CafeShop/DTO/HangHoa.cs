@@ -1,32 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-//khong dung
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CafeShop.DTO
 {
-    [Table("NguyenLieu")]
-    public class NguyenLieu
+    [Table("HangHoa")]
+    public class HangHoa
     {
-        public NguyenLieu()
+        public HangHoa()
         {
             this.LoHangs = new HashSet<LoHang>();
-            this.CongThucs = new HashSet<CongThuc>();
         }
         [Key]
         [StringLength(10)]
-        public string MaNguyenLieu { get; set; }
+        public string MaHangHoa { get; set; }
         [StringLength(50)]
-        public string TenNguyenLieu { get; set; }
+        public string TenHangHoa { get; set; }
         public int SoLuong { get; set; }
         [StringLength(10)]
         public string DonVi { get; set; }
+        [StringLength(10)]
+        public string MaMon { get; set; }
+        [ForeignKey("MaMon")]
+        public virtual Mon Mon { get; set; }
+
         public virtual ICollection<LoHang> LoHangs { get; set; }
-        public virtual ICollection<CongThuc> CongThucs { get; set; }
     }
 }

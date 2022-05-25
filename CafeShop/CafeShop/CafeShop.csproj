@@ -79,6 +79,7 @@
     <Compile Include="BLL\BLLOrderList.cs" />
     <Compile Include="BLL\BLLRevenue.cs" />
     <Compile Include="BLL\BLLTable.cs" />
+    <Compile Include="BLL\BLLWarehouse.cs" />
     <Compile Include="DTO\Ban.cs" />
     <Compile Include="DTO\CongThuc.cs" />
     <Compile Include="DTO\CreateDB.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="DTO\DBModel.cs" />
     <Compile Include="DTO\DonGoiMon.cs" />
     <Compile Include="DTO\DonGoiMonView.cs" />
+    <Compile Include="DTO\HangHoa.cs" />
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\HoaDonView.cs" />
     <Compile Include="DTO\KhachHang.cs" />
@@ -132,6 +134,18 @@
     <Compile Include="View\AdForm\EmpInfoForm.Designer.cs">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AdForm\GoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\GoodsForm.Designer.cs">
+      <DependentUpon>GoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdForm\GoodsInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\GoodsInfoForm.Designer.cs">
+      <DependentUpon>GoodsInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AdForm\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +169,12 @@
     </Compile>
     <Compile Include="View\AdForm\TableForm.Designer.cs">
       <DependentUpon>TableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdForm\WarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\WarehouseForm.Designer.cs">
+      <DependentUpon>WarehouseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
@@ -242,6 +262,12 @@
     <EmbeddedResource Include="View\AdForm\EmpInfoForm.resx">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\GoodsForm.resx">
+      <DependentUpon>GoodsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\GoodsInfoForm.resx">
+      <DependentUpon>GoodsInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\WarehouseForm.resx">
+      <DependentUpon>WarehouseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>

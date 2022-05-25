@@ -65,3 +65,6 @@ C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeS
 C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.RevenueForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.DetailOrderListForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.RevenueForm.resources
+C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.GoodsForm.resources
+C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.GoodsInfoForm.resources
+C:\Users\Admin\Desktop\AppQL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.WarehouseForm.resources
