@@ -52,7 +52,6 @@ namespace CafeShop.View.AdForm
             SetHoaDon();
             CurrentIndex = 1;
             SetPage();
-            dataGridView1.DataSource = BLLInvoice.Instance.ChangeView(GetHoaDon());   
         }
         public string lastOrder;
         bool SortDirection = false;
@@ -72,8 +71,6 @@ namespace CafeShop.View.AdForm
                 this.billList = BLLInvoice.Instance.Sort(this.billList, orderBy, SortDirection);
                 CurrentIndex = 1;
                 SetPage();
-                }                    
-                dataGridView1.DataSource = BLLInvoice.Instance.Sort(GetHoaDon(), orderBy, SortDirection);     
             }
         }
 
@@ -141,10 +138,6 @@ namespace CafeShop.View.AdForm
         private void Picker_ValueChanged(object sender, EventArgs e)
         {
             searchButton_Click(sender, e);
-            var list = GetHoaDon();
-            billCountLabel.Text = BLLInvoice.Instance.GetBillCount(list);
-            customerCountLabel.Text = BLLInvoice.Instance.GetCustomerCount(list);
-            revenueLabel.Text = BLLInvoice.Instance.GetRevenue(list);
         }
     }
 }
