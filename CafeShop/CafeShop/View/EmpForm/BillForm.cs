@@ -29,27 +29,10 @@ namespace CafeShop.View.EmpForm
             ThanhTienTextBox.Texts = BLLBill.Instance.SurchargeAndDiscount().ToString();
             surchargeTextbox.Texts = "0";
             discountTextbox.Texts = "0";
-            //surchargeTextbox.Enabled = false;
-            //discountTextbox.Enabled = false;
         }
 
         private void CalculateCharge(object sender, EventArgs e)
         {
-            //if (((TextBox)sender).Text[0].Equals(0) && ((TextBox)sender).Text.Length > 2)
-            //{
-            //    ((TextBox)sender).Text = ((TextBox)sender).Text.Remove(0, 1);
-            //}
-            //if (surchargePercent.Checked == true)
-            //    if (discountPercent.Checked == true)
-            //        soTienSauCungTextBox.Texts = (BLLBill.Instance.GetBillCostOfTable(MaBan) * (1 + Convert.ToDouble(surchargeTextbox.Texts) / 100 - Convert.ToDouble(discountTextbox.Texts) / 100)).ToString();
-            //    else
-            //        soTienSauCungTextBox.Texts = (BLLBill.Instance.GetBillCostOfTable(MaBan) * (1 + Convert.ToInt32(surchargeTextbox.Texts) / 100) - Convert.ToInt32(discountTextbox.Texts)).ToString();
-            //else if (discountPercent.Checked == true)
-            //    soTienSauCungTextBox.Texts = (BLLBill.Instance.GetBillCostOfTable(MaBan) * (1 - Convert.ToInt32(discountTextbox.Texts) / 100) + Convert.ToInt32(surchargeTextbox.Texts)).ToString();
-            //else
-            //    soTienSauCungTextBox.Texts = (BLLBill.Instance.GetBillCostOfTable(MaBan) + Convert.ToInt32(surchargeTextbox.Texts) - Convert.ToInt32(discountTextbox.Texts)).ToString();
-
-            //tienThuaTextBox.Texts = (Convert.ToInt32(soTienKhachDuaTextBox.Texts) - Convert.ToInt32(soTienSauCungTextBox.Texts)).ToString();
             try
             {
                 int surcharge, discount;
@@ -71,20 +54,18 @@ namespace CafeShop.View.EmpForm
 
         private void jButton1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    tenKHTextBox.Texts = BLLBill.Instance.GetKHBySDT(SDTKhachHangTextBox.Texts).HoTenKH;
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Khách hàng không phải là thành viên");
-            //    SDTKhachHangTextBox.Texts = "";
-            //}
             KhachHang kh = BLLBill.Instance.GetKHBySDT(SDTKhachHangTextBox.Texts);
             if (kh != null)
                 tenKHTextBox.Texts = kh.HoTenKH;
             else
-                tenKHTextBox.Texts = "Không phải là thành viên";
+            {
+                DialogResult result = MessageBox.Show("Khách hàng chưa phải là thành viên.\nĐăng kí thành viên mới?", "", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    CustomerDetailForm form = new CustomerDetailForm(SDTKhachHangTextBox.Texts);
+                    form.ShowDialog();
+                }
+            }
         }
 
         private void jButton2_Click(object sender, EventArgs e)
@@ -94,22 +75,6 @@ namespace CafeShop.View.EmpForm
 
         private void jButton3_Click(object sender, EventArgs e)
         {
-            //string IDKhachHang = db.KhachHangs.Where(x => x.SoDienThoaiKH == SDTKhachHangTextBox.Texts).FirstOrDefault().IDKhachHang;
-            //string maBan = db.Bans.Where(x => x.MaBan == MaBan).FirstOrDefault().MaBan;
-            //string maHoaDon = db.HoaDons.Where(x => x.MaBan == maBan).FirstOrDefault().MaHoaDon;
-            //var objectHoaDon = db.HoaDons.Where(x => x.MaHoaDon == maHoaDon).FirstOrDefault();
-            //objectHoaDon.ThanhTien = Convert.ToInt32(soTienSauCungTextBox.Texts);
-            //objectHoaDon.IDKhachHang = IDKhachHang;
-            //if (surchargePercent.Checked == true)
-            //    objectHoaDon.PhuThu = Convert.ToInt32(surchargeTextbox.Texts).ToString() + "%";
-            //else
-            //    objectHoaDon.PhuThu = Convert.ToInt32(surchargeTextbox.Texts).ToString();
-
-            //if (discountPercent.Checked == true)
-            //    objectHoaDon.GiamGia = Convert.ToInt32(discountTextbox.Texts).ToString() + "%";
-            //else 
-            //    objectHoaDon.GiamGia = Convert.ToInt32(discountTextbox.Texts).ToString();
-            //db.SaveChanges();
             try
             {
                 double TienThua = Convert.ToDouble(tienThuaTextBox.Texts);
@@ -145,19 +110,5 @@ namespace CafeShop.View.EmpForm
                 MessageBox.Show(ex.Message);
             }
         }
-
-        //private void soTienKhachDuaTextBox__TextChanged(object sender, EventArgs e)
-        //{
-        //    if (soTienKhachDuaTextBox.Texts == "")
-        //    {
-        //        surchargeTextbox.Enabled = false;
-        //        discountTextbox.Enabled = false;
-        //    }
-        //    else
-        //    {
-        //        surchargeTextbox.Enabled = true;
-        //        discountTextbox.Enabled = true;
-        //    }    
-        //}
     }
 }

@@ -8,6 +8,7 @@ namespace CafeShop.BLL
 {
     public class PrimaryKeyGenerator
     {
+        //input là một list string là các primarykey hiện tại, output là key lớn nhất, click vô reference để thấy ví dụ:   
         public static string GetCurrentKey(List<string> strings)
         {
             string firstTwo = strings[0].Substring(0, 2);
@@ -29,6 +30,7 @@ namespace CafeShop.BLL
             }
             return firstTwo + zeroArray + ints.Max().ToString();
         }
+
         // Phương thức tạo khóa chính tiếp theo cho các bảng
         public static string NextPrimaryKey(string currentKey)
         {
