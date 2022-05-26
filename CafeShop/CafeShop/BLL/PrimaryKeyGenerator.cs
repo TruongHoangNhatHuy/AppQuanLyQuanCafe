@@ -8,6 +8,27 @@ namespace CafeShop.BLL
 {
     public class PrimaryKeyGenerator
     {
+        public static string GetCurrentKey(List<string> strings)
+        {
+            string firstTwo = strings[0].Substring(0, 2);
+            string zeroArray = "";
+            int j = 0;
+            while (strings[0].Substring(2)[j] == '0' && j < 7)
+            {
+                zeroArray += '0';
+                j++;
+            }
+            for (int i = 0; i < strings.Count; i++)
+            {
+                strings[i] = strings[i].Substring(2);
+            }
+            List<int> ints = new List<int>();
+            foreach (string i in strings)
+            {
+                ints.Add(Convert.ToInt32(i));
+            }
+            return firstTwo + zeroArray + ints.Max().ToString();
+        }
         // Phương thức tạo khóa chính tiếp theo cho các bảng
         public static string NextPrimaryKey(string currentKey)
         {

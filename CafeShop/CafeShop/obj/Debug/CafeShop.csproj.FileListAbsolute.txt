@@ -105,3 +105,6 @@ C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeSh
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.CopyComplete
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.exe
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.pdb
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.GoodsForm.resources
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.GoodsInfoForm.resources
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.WarehouseForm.resources

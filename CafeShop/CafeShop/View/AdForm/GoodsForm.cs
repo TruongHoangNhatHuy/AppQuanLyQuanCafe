@@ -16,18 +16,24 @@ namespace CafeShop.View.AdForm
         public GoodsForm(string MaHangHoa = "")
         {
             InitializeComponent();
-            var goods = BLLWarehouse.Instance.GetHangHoaByMa(MaHangHoa);
             categoryCombobox.Items.AddRange(BLLOrder.Instance.GetDanhMucThucDon().ToArray());
-            if (goods != null)
-                InitGUI(goods);
-
+            GUI(MaHangHoa);
         }
 
-        private void InitGUI(HangHoa goods)
-        {
-            goodsIDTextbox.Texts = goods.MaHangHoa;
-            goodsNameLabel.Text = goods.TenHangHoa;
-            unitTextbox.Texts = goods.DonVi;
+        private void GUI(string MaHangHoa)
+        {  
+            if (MaHangHoa != "")
+            {
+                HangHoa goods = BLLWarehouse.Instance.GetHangHoaByMa(MaHangHoa);
+                goodsIDTextbox.Texts = goods.MaHangHoa;
+                goodsNameLabel.Text = goods.TenHangHoa;
+                unitTextbox.Texts = goods.DonVi;
+                //lien ket mon
+            }
+            else
+            {
+                goodsIDTextbox.Texts = BLLWarehouse.Instance.NewGoodsID();
+            }
         }
         private void minimizeButton_Click(object sender, EventArgs e)
         {
@@ -44,13 +50,13 @@ namespace CafeShop.View.AdForm
             //check condition first
             HangHoa goods = new HangHoa()
             {
-                MaHangHoa = "1234567890",
-                TenHangHoa = goodsIDTextbox.Texts,
+                MaHangHoa = goodsIDTextbox.Texts,
+                TenHangHoa = goodsNameTextbox.Texts,
                 DonVi = unitTextbox.Texts,
                 SoLuong = 0,
                 MaMon = (foodNameCombobox.SelectedItem as Mon).MaMon                
             };
-            BLLWarehouse.Instance.AddGoods(goods);
+            BLLWarehouse.Instance.ExecuteDB(goods);
             this.Close();
         }
 

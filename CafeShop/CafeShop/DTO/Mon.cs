@@ -13,7 +13,6 @@ namespace CafeShop.DTO
     {
         public Mon()
         {
-            this.CongThucs = new HashSet<CongThuc>();
             this.DonGoiMons = new HashSet<DonGoiMon>();
         }
         [Key]
@@ -28,8 +27,8 @@ namespace CafeShop.DTO
         public string MaDanhMuc { get; set; }
         [ForeignKey("MaDanhMuc")]
         public virtual DanhMucThucDon DanhMucThucDon { get; set; }
-        public virtual ICollection<CongThuc> CongThucs { get; set; }
         public virtual ICollection<DonGoiMon> DonGoiMons { get; set; }
+        public virtual HangHoa HangHoa { get; set; }
         public override string ToString()
         {
             return TenMon;

@@ -322,6 +322,7 @@
     <None Include="Properties\DataSources\CafeShop.DTO.Ban.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMonView.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.HangHoa.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDonView.datasource" />
     <None Include="Properties\Settings.settings">

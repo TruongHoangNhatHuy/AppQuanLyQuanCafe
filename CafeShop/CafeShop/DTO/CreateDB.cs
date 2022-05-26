@@ -79,6 +79,10 @@ namespace CafeShop.DTO
                 new Mon { MaMon = "M00000005", TenMon = "Cola chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"},
                 new Mon { MaMon = "M00000006", TenMon = "Sting chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"}
             });
+            context.HangHoas.AddRange(new HangHoa[]
+            {
+                new HangHoa { MaHangHoa = "HH00000000", TenHangHoa = "", SoLuong = 0, DonVi = "", MaMon = ""}
+            });
             //context.NguyenLieux.AddRange(new NguyenLieu[]
             //{
             //    new NguyenLieu { MaNguyenLieu = "NL00000001", TenNguyenLieu = "Cà phê hạt", SoLuong = 0, DonVi = "g"},

@@ -25,8 +25,8 @@ namespace CafeShop.DTO
         public string DonVi { get; set; }
         [StringLength(10)]
         public string MaMon { get; set; }
-        [ForeignKey("MaMon")]
-        public virtual Mon Mon { get; set; }
+        //[ForeignKey("MaMon")]
+        //public virtual Mon Mon { get; set; }
 
         public virtual ICollection<LoHang> LoHangs { get; set; }
     }

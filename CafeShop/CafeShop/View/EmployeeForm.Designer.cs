@@ -56,8 +56,9 @@
             this.sideMenuPanel.Controls.Add(this.mainPanel);
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.sideMenuPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sideMenuPanel.Name = "sideMenuPanel";
-            this.sideMenuPanel.Size = new System.Drawing.Size(190, 675);
+            this.sideMenuPanel.Size = new System.Drawing.Size(253, 831);
             this.sideMenuPanel.TabIndex = 0;
             // 
             // sheduleButton
@@ -68,9 +69,10 @@
             this.sheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sheduleButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
             this.sheduleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sheduleButton.Location = new System.Drawing.Point(0, 180);
+            this.sheduleButton.Location = new System.Drawing.Point(0, 222);
+            this.sheduleButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sheduleButton.Name = "sheduleButton";
-            this.sheduleButton.Size = new System.Drawing.Size(190, 50);
+            this.sheduleButton.Size = new System.Drawing.Size(253, 62);
             this.sheduleButton.TabIndex = 11;
             this.sheduleButton.Text = "Lịch làm việc";
             this.sheduleButton.UseVisualStyleBackColor = true;
@@ -82,9 +84,10 @@
             this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.Image = global::CafeShop.Properties.Resources.log_out;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 625);
+            this.logoutButton.Location = new System.Drawing.Point(0, 769);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(190, 50);
+            this.logoutButton.Size = new System.Drawing.Size(253, 62);
             this.logoutButton.TabIndex = 10;
             this.logoutButton.Text = "Thoát";
             this.logoutButton.UseVisualStyleBackColor = true;
@@ -98,9 +101,10 @@
             this.orderListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderListButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
             this.orderListButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderListButton.Location = new System.Drawing.Point(0, 130);
+            this.orderListButton.Location = new System.Drawing.Point(0, 160);
+            this.orderListButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.orderListButton.Name = "orderListButton";
-            this.orderListButton.Size = new System.Drawing.Size(190, 50);
+            this.orderListButton.Size = new System.Drawing.Size(253, 62);
             this.orderListButton.TabIndex = 7;
             this.orderListButton.Text = "Đơn gọi món";
             this.orderListButton.UseVisualStyleBackColor = true;
@@ -114,9 +118,10 @@
             this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderButton.Image = global::CafeShop.Properties.Resources.order;
             this.orderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderButton.Location = new System.Drawing.Point(0, 80);
+            this.orderButton.Location = new System.Drawing.Point(0, 98);
+            this.orderButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.orderButton.Name = "orderButton";
-            this.orderButton.Size = new System.Drawing.Size(190, 50);
+            this.orderButton.Size = new System.Drawing.Size(253, 62);
             this.orderButton.TabIndex = 3;
             this.orderButton.Text = "Đặt món";
             this.orderButton.UseVisualStyleBackColor = true;
@@ -128,18 +133,18 @@
             this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(190, 80);
+            this.mainPanel.Size = new System.Drawing.Size(253, 98);
             this.mainPanel.TabIndex = 1;
             // 
             // EmpNameLabel
             // 
             this.EmpNameLabel.AutoSize = true;
             this.EmpNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.EmpNameLabel.Location = new System.Drawing.Point(3, 23);
-            this.EmpNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.EmpNameLabel.Location = new System.Drawing.Point(4, 28);
             this.EmpNameLabel.Name = "EmpNameLabel";
-            this.EmpNameLabel.Size = new System.Drawing.Size(110, 20);
+            this.EmpNameLabel.Size = new System.Drawing.Size(140, 25);
             this.EmpNameLabel.TabIndex = 0;
             this.EmpNameLabel.Text = "Tên Nhân viên";
             // 
@@ -147,10 +152,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(3, 4);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(4, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
+            this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nhân viên";
             // 
@@ -161,9 +165,10 @@
             this.titleBarPanel.Controls.Add(this.zoomButton);
             this.titleBarPanel.Controls.Add(this.label1);
             this.titleBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titleBarPanel.Location = new System.Drawing.Point(190, 0);
+            this.titleBarPanel.Location = new System.Drawing.Point(253, 0);
+            this.titleBarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.titleBarPanel.Name = "titleBarPanel";
-            this.titleBarPanel.Size = new System.Drawing.Size(1138, 80);
+            this.titleBarPanel.Size = new System.Drawing.Size(1518, 98);
             this.titleBarPanel.TabIndex = 2;
             // 
             // minimizeButton
@@ -179,9 +184,10 @@
             this.minimizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeButton.ForeColor = System.Drawing.Color.Black;
             this.minimizeButton.Image = global::CafeShop.Properties.Resources.minimize_sign;
-            this.minimizeButton.Location = new System.Drawing.Point(1032, 4);
+            this.minimizeButton.Location = new System.Drawing.Point(1377, 5);
+            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(44, 29);
+            this.minimizeButton.Size = new System.Drawing.Size(59, 36);
             this.minimizeButton.TabIndex = 4;
             this.minimizeButton.TextColor = System.Drawing.Color.Black;
             this.minimizeButton.UseVisualStyleBackColor = false;
@@ -202,9 +208,10 @@
             this.zoomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zoomButton.ForeColor = System.Drawing.Color.Black;
             this.zoomButton.Image = global::CafeShop.Properties.Resources.full_screen;
-            this.zoomButton.Location = new System.Drawing.Point(1082, 3);
+            this.zoomButton.Location = new System.Drawing.Point(1444, 4);
+            this.zoomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.zoomButton.Name = "zoomButton";
-            this.zoomButton.Size = new System.Drawing.Size(44, 29);
+            this.zoomButton.Size = new System.Drawing.Size(59, 36);
             this.zoomButton.TabIndex = 3;
             this.zoomButton.TextColor = System.Drawing.Color.Black;
             this.zoomButton.UseVisualStyleBackColor = false;
@@ -217,9 +224,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 16);
+            this.label1.Location = new System.Drawing.Point(48, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 47);
+            this.label1.Size = new System.Drawing.Size(236, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "Trang Chủ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,21 +236,23 @@
             // 
             this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childFormPanel.Location = new System.Drawing.Point(190, 80);
+            this.childFormPanel.Location = new System.Drawing.Point(253, 98);
+            this.childFormPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.childFormPanel.Name = "childFormPanel";
-            this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.childFormPanel.Size = new System.Drawing.Size(1138, 595);
+            this.childFormPanel.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.childFormPanel.Size = new System.Drawing.Size(1518, 733);
             this.childFormPanel.TabIndex = 3;
             // 
             // EmployeeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 675);
+            this.ClientSize = new System.Drawing.Size(1771, 831);
             this.ControlBox = false;
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.titleBarPanel);
             this.Controls.Add(this.sideMenuPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

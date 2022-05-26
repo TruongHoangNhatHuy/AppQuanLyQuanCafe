@@ -1,4 +1,5 @@
 ﻿using CafeShop.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 namespace CafeShop.BLL
@@ -18,36 +19,56 @@ namespace CafeShop.BLL
             }
             private set { }
         }
+        #region Warehouse
         public List<HangHoa> GetAllHangHoa() => DBModel.Instance.HangHoas.ToList();
         public HangHoa GetHangHoaByMa(string MaHangHoa) => DBModel.Instance.HangHoas.Find(MaHangHoa);
         public void DeleteGoods(HangHoa hangHoa)
         {
-            //ở view xử lý số lượng : 
-            // = 0: xoá luôn
-            // > 0: xác nhận rồi mới xoá
             DBModel.Instance.HangHoas.Remove(hangHoa);
             DBModel.Instance.SaveChanges();
         }
-        public void ImportExportGoods(string MaHangHoa, LoHang loHang = null)
+        public void ImportGoods(string MaHangHoa, LoHang loHang = null)
         {
-            if(loHang != null)
+            if (loHang != null)
             {
                 DBModel.Instance.LoHangs.Add(loHang);
                 HangHoa hangHoa = GetHangHoaByMa(MaHangHoa);
                 hangHoa.SoLuong += loHang.SoLuongNhap;
-            }   
+            }
             DBModel.Instance.SaveChanges();
         }
-        public void ExportGoods(string MaHangHoa, int SoLuongXuat)
+        public void ExportGoods(string MaHangHoa, int SoLuong)
         {
             HangHoa hangHoa = GetHangHoaByMa(MaHangHoa);
-            hangHoa.SoLuong -= SoLuongXuat;
+            if (hangHoa.SoLuong > SoLuong)
+                hangHoa.SoLuong = SoLuong;
+            else
+                throw new Exception("Số lượng còn lại phải nhỏ hơn số lượng hiện tại.");
             DBModel.Instance.SaveChanges();
         }
-        public void AddGoods(HangHoa goods)
+        #endregion
+
+        #region Goods
+        public string NewGoodsID()
         {
-            DBModel.Instance.HangHoas.Add(goods);
+            string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBModel.Instance.HangHoas.Select(p => p.MaHangHoa).ToList());
+            return PrimaryKeyGenerator.NextPrimaryKey(currentKey);
+        }
+        public void ExecuteDB(HangHoa goods)
+        {
+            HangHoa existed = GetHangHoaByMa(goods.MaHangHoa);
+            if (existed == null)
+            {
+                DBModel.Instance.HangHoas.Add(goods);
+            }
+            else
+            {
+                existed.TenHangHoa = goods.TenHangHoa;
+                existed.DonVi = goods.DonVi;
+                existed.MaMon = goods.MaMon;
+            }
             DBModel.Instance.SaveChanges();
         }
+        #endregion
     }
 }
