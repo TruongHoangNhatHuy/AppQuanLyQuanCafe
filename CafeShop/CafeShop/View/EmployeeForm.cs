@@ -16,9 +16,21 @@ namespace CafeShop.View
         public EmployeeForm()
         {
             InitializeComponent();
-            EmpNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
+            //EmpNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
         }
-
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            logInfoTextbox.Texts = BLLLogin.Instance.GetCurrentIDName();
+            jDropDownMenu1.IsMainMenu = true;
+            jDropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
+            jDropDownMenu1.Items[0].Click += (Sender, E) => new AdForm.EmpDetailForm(BLLLogin.Instance.currentID, true).ShowDialog();
+            jDropDownMenu1.Items[1].Click += (Sender, E) => new ChangePasswordForm(BLLLogin.Instance.currentID).ShowDialog();
+            jDropDownMenu1.Items[2].Click += (Sender, E) => logoutButton_Click(Sender, E);
+        }
+        private void logInfoTextbox_Click(object sender, EventArgs e)
+        {
+            jDropDownMenu1.Show(logInfoTextbox, 0, logInfoTextbox.Height);
+        }
         #region ChangColorButton
         private Button currentButton = null;
         private void ActivateButton(object sender)
@@ -60,14 +72,14 @@ namespace CafeShop.View
         private void homeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Trang Chủ";
+            this.funcNameLabel.Text = "Trang Chủ";
 
         }
 
         private void orderButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Đặt món";
+            this.funcNameLabel.Text = "Đặt món";
             openChildForm(new EmpForm.OrderForm());
         }
 
@@ -105,8 +117,10 @@ namespace CafeShop.View
         private void orderListButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Đơn gọi món";
+            this.funcNameLabel.Text = "Đơn gọi món";
             openChildForm(new EmpForm.OrderListForm());
         }
+
+        
     }
 }

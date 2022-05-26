@@ -110,6 +110,12 @@ namespace CafeShop.View.CustomControl
             get { return borderFocusColor; }
             set { borderFocusColor = value; }
         }
+        [Category("Textbox Properties")]
+        public bool ReadOnly
+        {
+            get { return textBox1.ReadOnly; }
+            set { textBox1.ReadOnly = value; }
+        }
         #endregion
 
         private void UpdateControlHeight()
