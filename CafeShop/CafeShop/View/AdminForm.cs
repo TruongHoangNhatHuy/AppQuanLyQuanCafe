@@ -12,9 +12,21 @@ namespace CafeShop.View
             InitializeComponent();
             customizeDesigning();
             homeButton_Click(null, null);
-            AdNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
+            //AdNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
         }
-
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            logInfoTextbox.Texts = BLLLogin.Instance.GetCurrentIDName();
+            jDropDownMenu1.IsMainMenu = true;
+            jDropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
+            jDropDownMenu1.Items[0].Click += (Sender, E ) => new AdForm.EmpDetailForm(BLLLogin.Instance.currentID,true).ShowDialog();
+            jDropDownMenu1.Items[1].Click += (Sender, E) => new ChangePasswordForm(BLLLogin.Instance.currentID).ShowDialog();
+            jDropDownMenu1.Items[2].Click += (Sender, E) => logoutButton_Click(Sender,E);
+        }
+        private void logInfoTextbox_Click(object sender, EventArgs e)
+        {
+            jDropDownMenu1.Show(logInfoTextbox, 0, logInfoTextbox.Height);
+        }
         #region SubMenu
         private void customizeDesigning()
         {
@@ -95,7 +107,7 @@ namespace CafeShop.View
         private void empButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Quản Lý Nhân Viên";
+            this.funcNameLabel.Text = "Quản Lý Nhân Viên";
             AdForm.EmpInfoForm form = new AdForm.EmpInfoForm();
             form.reload += Reload;
             openChildForm(form);
@@ -104,7 +116,7 @@ namespace CafeShop.View
         private void cusButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Quản Lý Khách Hàng";
+            this.funcNameLabel.Text = "Quản Lý Khách Hàng";
             //AdForm.EmpInfoForm form = new AdForm.EmpInfoForm();
             AdForm.CustomerInfoForm form = new AdForm.CustomerInfoForm();
             form.reload += Reload;
@@ -122,7 +134,7 @@ namespace CafeShop.View
         private void tableButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Bàn";
+            this.funcNameLabel.Text = "Bàn";
             AdForm.TableForm form = new AdForm.TableForm();
             form.reload += Reload;
             openChildForm(form);
@@ -131,7 +143,7 @@ namespace CafeShop.View
         private void warehouseButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Kho Hàng";
+            this.funcNameLabel.Text = "Kho Hàng";
             AdForm.WarehouseForm form  = new AdForm.WarehouseForm();
             openChildForm(form);
         }
@@ -147,7 +159,7 @@ namespace CafeShop.View
         private void invoiceButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Hoá Đơn";
+            this.funcNameLabel.Text = "Hoá Đơn";
             AdForm.InvoiceForm form = new AdForm.InvoiceForm();
             form.reload += Reload;
             openChildForm(form);
@@ -157,7 +169,7 @@ namespace CafeShop.View
         private void revenueButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Doanh Thu";
+            this.funcNameLabel.Text = "Doanh Thu";
             AdForm.RevenueForm form = new AdForm.RevenueForm();
             form.reload += Reload;
             openChildForm(form);
@@ -166,7 +178,7 @@ namespace CafeShop.View
         private void changeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Sổ Thu Chi";
+            this.funcNameLabel.Text = "Sổ Thu Chi";
         }
         #endregion
 
@@ -174,7 +186,7 @@ namespace CafeShop.View
         private void homeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Trang Chủ";
+            this.funcNameLabel.Text = "Trang Chủ";
             hideSubMenu();
             //code
         }
@@ -182,7 +194,7 @@ namespace CafeShop.View
         private void menuButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Thực đơn";
+            this.funcNameLabel.Text = "Thực đơn";
             hideSubMenu();
             AdForm.MenuForm form = new AdForm.MenuForm();
             form.reload += Reload;
@@ -193,7 +205,7 @@ namespace CafeShop.View
         private void scheduleButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Lịch làm việc";
+            this.funcNameLabel.Text = "Lịch làm việc";
             hideSubMenu();
             //code
         }
@@ -232,5 +244,9 @@ namespace CafeShop.View
             button.BorderSize = 0;
         }
         #endregion
+
+        
+
+        
     }
 }

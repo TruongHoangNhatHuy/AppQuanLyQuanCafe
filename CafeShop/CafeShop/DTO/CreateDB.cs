@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace CafeShop.DTO
 {
     public class CreateDB :
-            CreateDatabaseIfNotExists<DBModel>
+            //CreateDatabaseIfNotExists<DBModel>
             //DropCreateDatabaseIfModelChanges<DBModel>
-            //DropCreateDatabaseAlways<DBModel>
+            DropCreateDatabaseAlways<DBModel>
     {
         protected override void Seed(DBModel context)
         {

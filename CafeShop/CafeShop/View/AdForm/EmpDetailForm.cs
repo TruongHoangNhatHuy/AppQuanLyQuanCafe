@@ -15,9 +15,11 @@ namespace CafeShop.View.AdForm
 {
     public partial class EmpDetailForm : Form
     {
-        public EmpDetailForm(string ID = "")
+        public EmpDetailForm(string ID = "", bool mode = false)
         {
             InitializeComponent();
+            if (mode)
+                roleCombobox.Enabled = false;
             GUI(ID);
         }
         public void GUI(string ID)
