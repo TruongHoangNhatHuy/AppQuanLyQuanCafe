@@ -148,3 +148,4 @@ C:\Users\Admin\Desktop\PBL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeSho
 C:\Users\Admin\Desktop\PBL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.exe
 C:\Users\Admin\Desktop\PBL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.pdb
 C:\Users\Admin\Desktop\PBL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.ChangePasswordForm.resources
+C:\Users\Admin\Desktop\PBL\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.Form1.resources

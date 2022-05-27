@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace CafeShop.DTO
 {
     public class CreateDB :
-            CreateDatabaseIfNotExists<DBModel>
+            //CreateDatabaseIfNotExists<DBModel>
             //DropCreateDatabaseIfModelChanges<DBModel>
-            //DropCreateDatabaseAlways<DBModel>
+            DropCreateDatabaseAlways<DBModel>
     {
         protected override void Seed(DBModel context)
         {
@@ -71,13 +71,13 @@ namespace CafeShop.DTO
             });
             context.Mons.AddRange(new Mon[]
             {
-                new Mon { MaMon = "M00000000", TenMon = "", DonGia = 0, DonVi = "", MaDanhMuc = "DM00000000"},
-                new Mon { MaMon = "M00000001", TenMon = "Cà phê đen", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
-                new Mon { MaMon = "M00000002", TenMon = "Cà phê sữa", DonGia = 12000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
-                new Mon { MaMon = "M00000003", TenMon = "Trà gừng", DonGia = 20000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
-                new Mon { MaMon = "M00000004", TenMon = "Trà chanh", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
-                new Mon { MaMon = "M00000005", TenMon = "Cola chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"},
-                new Mon { MaMon = "M00000006", TenMon = "Sting chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"}
+                new Mon { MaMon = "M000000000", TenMon = "", DonGia = 0, DonVi = "", MaDanhMuc = "DM00000000"},
+                new Mon { MaMon = "M000000001", TenMon = "Cà phê đen", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
+                new Mon { MaMon = "M000000002", TenMon = "Cà phê sữa", DonGia = 12000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
+                new Mon { MaMon = "M000000003", TenMon = "Trà gừng", DonGia = 20000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
+                new Mon { MaMon = "M000000004", TenMon = "Trà chanh", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
+                new Mon { MaMon = "M000000005", TenMon = "Cola chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"},
+                new Mon { MaMon = "M000000006", TenMon = "Sting chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"}
             });
             context.HangHoas.AddRange(new HangHoa[]
             {

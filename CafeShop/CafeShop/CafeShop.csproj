@@ -84,6 +84,7 @@
     <Compile Include="BLL\BLLBill.cs" />
     <Compile Include="BLL\BLLDetailOrder.cs" />
     <Compile Include="BLL\BLLLogin.cs" />
+    <Compile Include="BLL\BLLMenu.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
     <Compile Include="BLL\BLLOrderList.cs" />
     <Compile Include="BLL\BLLRevenue.cs" />
@@ -143,6 +144,12 @@
     </Compile>
     <Compile Include="View\AdForm\EmpInfoForm.Designer.cs">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdForm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AdForm\GoodsForm.cs">
       <SubType>Form</SubType>
@@ -289,6 +296,9 @@
     <EmbeddedResource Include="View\AdForm\EmpInfoForm.resx">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\GoodsForm.resx">
       <DependentUpon>GoodsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,12 +363,14 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CafeShop.DTO.Ban.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.DanhMucThucDon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.DonGoiMonView.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HangHoa.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDonView.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.KhachHang.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.Mon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.TaiKhoanView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
