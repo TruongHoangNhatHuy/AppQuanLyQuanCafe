@@ -124,7 +124,7 @@ namespace CafeShop.View
         private void warehouseButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.label1.Text = "Kho hàng";
+            this.funcNameLabel.Text = "Kho hàng";
             openChildForm(new EmpForm.WarehouseForm());
         }
     }
