@@ -122,8 +122,7 @@ namespace CafeShop.View.AdForm
                 BLLMenu.Instance.ExecuteFood(food);
             }
             LoadData();
-            //categoryFoodPanel.Visible = false;
-            //foodPanel.Visible = false;
+            RefreshData();
         }
         public void RefreshData()
         {
