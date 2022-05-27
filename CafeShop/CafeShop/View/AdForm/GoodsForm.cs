@@ -26,13 +26,23 @@ namespace CafeShop.View.AdForm
             {
                 HangHoa goods = BLLWarehouse.Instance.GetHangHoaByMa(MaHangHoa);
                 goodsIDTextbox.Texts = goods.MaHangHoa;
-                goodsNameLabel.Text = goods.TenHangHoa;
+                goodsNameTextbox.Texts = goods.TenHangHoa;
                 unitTextbox.Texts = goods.DonVi;
-                //lien ket mon
+                foreach (DanhMucThucDon i in categoryCombobox.Items)
+                {
+                    if (i.MaDanhMuc == goods.Mon.MaDanhMuc)
+                        categoryCombobox.SelectedItem = i;
+                }
+                foreach (Mon i in foodNameCombobox.Items)
+                {
+                    if (i.MaMon == goods.MaMon)
+                        foodNameCombobox.SelectedItem = i;
+                }
             }
             else
             {
                 goodsIDTextbox.Texts = BLLWarehouse.Instance.NewGoodsID();
+                categoryCombobox.SelectedIndex = 0;
             }
         }
         private void minimizeButton_Click(object sender, EventArgs e)
@@ -47,14 +57,14 @@ namespace CafeShop.View.AdForm
 
         private void acceptButton_Click(object sender, EventArgs e)
         {
-            //check condition first
+            string maMon = (categoryCombobox.SelectedIndex == 0) ? "M000000000" : (foodNameCombobox.SelectedItem as Mon).MaMon;
             HangHoa goods = new HangHoa()
             {
                 MaHangHoa = goodsIDTextbox.Texts,
                 TenHangHoa = goodsNameTextbox.Texts,
                 DonVi = unitTextbox.Texts,
                 SoLuong = 0,
-                MaMon = (foodNameCombobox.SelectedItem as Mon).MaMon                
+                MaMon = maMon
             };
             BLLWarehouse.Instance.ExecuteDB(goods);
             this.Close();
@@ -65,8 +75,11 @@ namespace CafeShop.View.AdForm
             foodNameCombobox.Items.Clear();
             foodNameCombobox.Texts = "";
             foodNameCombobox.SelectedItem = null;
-            string MaDanhMuc = (categoryCombobox.SelectedItem as DanhMucThucDon).MaDanhMuc;
-            foodNameCombobox.Items.AddRange(BLLOrder.Instance.GetMonByMaDanhMuc(MaDanhMuc).ToArray());
+            if (categoryCombobox.SelectedItem.ToString() != "Không có")
+            {
+                string MaDanhMuc = (categoryCombobox.SelectedItem as DanhMucThucDon).MaDanhMuc;
+                foodNameCombobox.Items.AddRange(BLLOrder.Instance.GetMonByMaDanhMuc(MaDanhMuc).ToArray());
+            }
         }
     }
 }

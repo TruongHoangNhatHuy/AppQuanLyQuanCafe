@@ -1,4 +1,4 @@
-﻿namespace CafeShop.View.AdForm
+﻿namespace CafeShop.View.EmpForm
 {
     partial class GoodsInfoForm
     {

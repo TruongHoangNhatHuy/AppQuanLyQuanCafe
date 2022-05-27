@@ -38,19 +38,19 @@ namespace CafeShop.View.EmpForm
             try
             {
                 SoLuong = Convert.ToInt32(quantityTextbox.Texts);
+                if (SoLuong > 0)
+                {
+                    string GhiChu = descriptionTextbox.Texts;
+                    BLLDetailOrder.Instance.ConfirmDetailOrder(SoLuong, GhiChu);
+                    this.Close();
+                }
+                else
+                    throw new Exception("Số lượng phải lớn hơn 0.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Chưa nhập đúng định dạng số", "Cảnh Báo");
-                return;
+                MessageBox.Show(ex.Message);
             }
-            if (SoLuong > 0)
-            {
-                string GhiChu = descriptionTextbox.Texts;
-                BLLDetailOrder.Instance.ConfirmDetailOrder(SoLuong, GhiChu);
-                this.Close();
-            }
-
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

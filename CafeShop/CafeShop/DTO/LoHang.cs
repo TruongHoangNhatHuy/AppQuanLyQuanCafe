@@ -12,7 +12,7 @@ namespace CafeShop.DTO
     public class LoHang
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(20)]
         public string MaLoHang { get; set; }
         [StringLength(10)]
         public string MaHangHoa { get; set; }

@@ -40,5 +40,9 @@ namespace CafeShop.DTO
         public virtual VaiTro VaiTro { get; set; }
         public virtual ICollection<LoHang> LoHangs { get; set; }
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public override string ToString()
+        {
+            return HoTen;
+        }
     }
 }

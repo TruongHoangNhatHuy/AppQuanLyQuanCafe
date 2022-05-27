@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.sideMenuPanel = new System.Windows.Forms.Panel();
-            this.sheduleButton = new System.Windows.Forms.Button();
+            this.warehouseButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
             this.orderListButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
@@ -49,33 +49,34 @@
             // sideMenuPanel
             // 
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
-            this.sideMenuPanel.Controls.Add(this.sheduleButton);
+            this.sideMenuPanel.Controls.Add(this.warehouseButton);
             this.sideMenuPanel.Controls.Add(this.logoutButton);
             this.sideMenuPanel.Controls.Add(this.orderListButton);
             this.sideMenuPanel.Controls.Add(this.orderButton);
             this.sideMenuPanel.Controls.Add(this.mainPanel);
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.sideMenuPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sideMenuPanel.Margin = new System.Windows.Forms.Padding(4);
             this.sideMenuPanel.Name = "sideMenuPanel";
             this.sideMenuPanel.Size = new System.Drawing.Size(253, 831);
             this.sideMenuPanel.TabIndex = 0;
             // 
-            // sheduleButton
+            // warehouseButton
             // 
-            this.sheduleButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sheduleButton.FlatAppearance.BorderSize = 0;
-            this.sheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sheduleButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
-            this.sheduleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sheduleButton.Location = new System.Drawing.Point(0, 222);
-            this.sheduleButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.sheduleButton.Name = "sheduleButton";
-            this.sheduleButton.Size = new System.Drawing.Size(253, 62);
-            this.sheduleButton.TabIndex = 11;
-            this.sheduleButton.Text = "Lịch làm việc";
-            this.sheduleButton.UseVisualStyleBackColor = true;
+            this.warehouseButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.warehouseButton.FlatAppearance.BorderSize = 0;
+            this.warehouseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warehouseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warehouseButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
+            this.warehouseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.warehouseButton.Location = new System.Drawing.Point(0, 222);
+            this.warehouseButton.Margin = new System.Windows.Forms.Padding(4);
+            this.warehouseButton.Name = "warehouseButton";
+            this.warehouseButton.Size = new System.Drawing.Size(253, 62);
+            this.warehouseButton.TabIndex = 11;
+            this.warehouseButton.Text = "Kho hàng";
+            this.warehouseButton.UseVisualStyleBackColor = true;
+            this.warehouseButton.Click += new System.EventHandler(this.warehouseButton_Click);
             // 
             // logoutButton
             // 
@@ -85,7 +86,7 @@
             this.logoutButton.Image = global::CafeShop.Properties.Resources.log_out;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutButton.Location = new System.Drawing.Point(0, 769);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(253, 62);
             this.logoutButton.TabIndex = 10;
@@ -102,7 +103,7 @@
             this.orderListButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
             this.orderListButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.orderListButton.Location = new System.Drawing.Point(0, 160);
-            this.orderListButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderListButton.Margin = new System.Windows.Forms.Padding(4);
             this.orderListButton.Name = "orderListButton";
             this.orderListButton.Size = new System.Drawing.Size(253, 62);
             this.orderListButton.TabIndex = 7;
@@ -119,7 +120,7 @@
             this.orderButton.Image = global::CafeShop.Properties.Resources.order;
             this.orderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.orderButton.Location = new System.Drawing.Point(0, 98);
-            this.orderButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderButton.Margin = new System.Windows.Forms.Padding(4);
             this.orderButton.Name = "orderButton";
             this.orderButton.Size = new System.Drawing.Size(253, 62);
             this.orderButton.TabIndex = 3;
@@ -133,7 +134,7 @@
             this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(253, 98);
             this.mainPanel.TabIndex = 1;
@@ -166,7 +167,7 @@
             this.titleBarPanel.Controls.Add(this.label1);
             this.titleBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleBarPanel.Location = new System.Drawing.Point(253, 0);
-            this.titleBarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.titleBarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.titleBarPanel.Name = "titleBarPanel";
             this.titleBarPanel.Size = new System.Drawing.Size(1518, 98);
             this.titleBarPanel.TabIndex = 2;
@@ -185,7 +186,7 @@
             this.minimizeButton.ForeColor = System.Drawing.Color.Black;
             this.minimizeButton.Image = global::CafeShop.Properties.Resources.minimize_sign;
             this.minimizeButton.Location = new System.Drawing.Point(1377, 5);
-            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(59, 36);
             this.minimizeButton.TabIndex = 4;
@@ -209,7 +210,7 @@
             this.zoomButton.ForeColor = System.Drawing.Color.Black;
             this.zoomButton.Image = global::CafeShop.Properties.Resources.full_screen;
             this.zoomButton.Location = new System.Drawing.Point(1444, 4);
-            this.zoomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zoomButton.Margin = new System.Windows.Forms.Padding(4);
             this.zoomButton.Name = "zoomButton";
             this.zoomButton.Size = new System.Drawing.Size(59, 36);
             this.zoomButton.TabIndex = 3;
@@ -237,7 +238,7 @@
             this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.childFormPanel.Location = new System.Drawing.Point(253, 98);
-            this.childFormPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.childFormPanel.Margin = new System.Windows.Forms.Padding(4);
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.childFormPanel.Size = new System.Drawing.Size(1518, 733);
@@ -252,7 +253,7 @@
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.titleBarPanel);
             this.Controls.Add(this.sideMenuPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -277,7 +278,7 @@
         private System.Windows.Forms.Button logoutButton;
         private CustomControl.JButton zoomButton;
         private CustomControl.JButton minimizeButton;
-        private System.Windows.Forms.Button sheduleButton;
+        private System.Windows.Forms.Button warehouseButton;
         private System.Windows.Forms.Label EmpNameLabel;
         private System.Windows.Forms.Label label2;
     }

@@ -20,7 +20,7 @@ namespace CafeShop.BLL
             private set { }
         }
         #region Warehouse
-        public List<HangHoa> GetAllHangHoa() => DBModel.Instance.HangHoas.ToList();
+        public List<HangHoa> GetAllHangHoa() => DBModel.Instance.HangHoas.OrderBy(p => p.MaHangHoa).Skip(1).ToList();
         public HangHoa GetHangHoaByMa(string MaHangHoa) => DBModel.Instance.HangHoas.Find(MaHangHoa);
         public void DeleteGoods(HangHoa hangHoa)
         {

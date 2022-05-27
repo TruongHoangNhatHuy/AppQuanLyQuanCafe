@@ -108,5 +108,12 @@ namespace CafeShop.View
             this.label1.Text = "Đơn gọi món";
             openChildForm(new EmpForm.OrderListForm());
         }
+
+        private void warehouseButton_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            this.label1.Text = "Kho hàng";
+            openChildForm(new EmpForm.WarehouseForm());
+        }
     }
 }

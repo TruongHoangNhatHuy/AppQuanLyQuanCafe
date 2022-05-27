@@ -40,10 +40,24 @@ namespace CafeShop.BLL
         {
             return mon.DonGia * SoLuong;
         }
-        // phương thức kiểm tra kho còn đủ nguyên liệu không
-        public void CheckGoods() { }
+        // phương thức kiểm tra kho còn đủ hàng hóa không
+        public void CheckGoods(int SoLuong) 
+        {
+            HangHoa goods = mon.HangHoa.FirstOrDefault();
+            if (goods != null)
+            {
+                if (goods.SoLuong < SoLuong)
+                    throw new Exception("Hiện tại kho chỉ có " + goods.SoLuong + " " + goods.DonVi.ToLower());
+                else
+                {
+                    goods.SoLuong -= SoLuong;
+                    DBModel.Instance.SaveChanges();
+                }
+            }
+        }
         public void ConfirmDetailOrder(int SoLuong, string GhiChu)
         {
+            CheckGoods(SoLuong);
             DonGoiMon result = new DonGoiMon
             {
                 MaDonGoiMon = PrimaryKeyGenerator.OrderBillPrimaryKey(),

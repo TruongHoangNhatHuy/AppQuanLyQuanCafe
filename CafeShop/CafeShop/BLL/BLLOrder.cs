@@ -22,15 +22,6 @@ namespace CafeShop.BLL
         private List<HoaDon> currentBill = DBModel.Instance.HoaDons.Where(p => p.MaBan != "B000000000").ToList();
         private BLLOrder() 
         { }
-        //public List<KhuvucCBItem> GetKhuvucCBItem()
-        //{
-        //    List<KhuvucCBItem> data = new List<KhuvucCBItem> ();
-        //    foreach(KhuVuc khuvuc in DBModel.Instance.KhuVucs)
-        //    {
-        //        data.Add(new KhuvucCBItem { ID = khuvuc.MaKhuVuc, Name = khuvuc.TenKhuVuc });
-        //    } 
-        //    return data;
-        //}
         public List<KhuvucCBItem> GetKhuvucCBItem() 
             => DBModel.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
         public KhuVuc GetKhuVucByMaKhuVuc(string ID) => DBModel.Instance.KhuVucs.Find(ID);

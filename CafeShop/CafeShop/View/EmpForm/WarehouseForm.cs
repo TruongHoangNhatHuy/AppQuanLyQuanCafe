@@ -2,20 +2,21 @@
 using System;
 using System.Windows.Forms;
 using CafeShop.DTO;
-namespace CafeShop.View.AdForm
+namespace CafeShop.View.EmpForm
 {
     public partial class WarehouseForm : Form
     {
         public WarehouseForm()
         {
             InitializeComponent();
+            label1.Text = "";
             GUI();
         }
         public void GUI()
         {
             dataGridView1.DataSource = BLLWarehouse.Instance.GetAllHangHoa();
             quantityTextbox.Texts = "";
-            totalTextbox.Texts = "";
+            totalTextbox.Texts = "0";
         }
 
         private void updateMode(object sender, DataGridViewCellEventArgs e)
@@ -62,40 +63,6 @@ namespace CafeShop.View.AdForm
                 string MaHangHoa = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 GoodsInfoForm form = new GoodsInfoForm(MaHangHoa);
                 form.ShowDialog();
-            }
-        }
-
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                string MaHangHoa = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                var goods = BLLWarehouse.Instance.GetHangHoaByMa(MaHangHoa);
-                if (goods.SoLuong > 0)
-                {
-                    DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.No)
-                        return;
-                }
-                BLLWarehouse.Instance.DeleteGoods(goods);
-                GUI();
-            }
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            GoodsForm form = new GoodsForm();
-            form.ShowDialog();
-            GUI();
-        }
-
-        private void editButton_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                GoodsForm form = new GoodsForm(dataGridView1.SelectedRows[0].Cells["MaHangHoa"].Value.ToString());
-                form.ShowDialog();
-                GUI();
             }
         }
 

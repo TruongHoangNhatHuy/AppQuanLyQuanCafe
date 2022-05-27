@@ -89,7 +89,6 @@
     <Compile Include="BLL\BLLTable.cs" />
     <Compile Include="BLL\BLLWarehouse.cs" />
     <Compile Include="DTO\Ban.cs" />
-    <Compile Include="DTO\CongThuc.cs" />
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DanhMucThucDon.cs" />
     <Compile Include="DTO\DBModel.cs" />
@@ -103,7 +102,6 @@
     <Compile Include="DTO\KhuvucCBItem.cs" />
     <Compile Include="DTO\LoHang.cs" />
     <Compile Include="DTO\Mon.cs" />
-    <Compile Include="DTO\NguyenLieu.cs" />
     <Compile Include="BLL\PrimaryKeyGenerator.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\TaiKhoanView.cs" />
@@ -230,11 +228,23 @@
     <Compile Include="View\EmpForm\DetailOrderForm.Designer.cs">
       <DependentUpon>DetailOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EmpForm\GoodsInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmpForm\GoodsInfoForm.Designer.cs">
+      <DependentUpon>GoodsInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EmpForm\OrderListForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\EmpForm\OrderListForm.Designer.cs">
       <DependentUpon>OrderListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmpForm\WarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmpForm\WarehouseForm.Designer.cs">
+      <DependentUpon>WarehouseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\EmployeeForm.cs">
       <SubType>Form</SubType>
@@ -316,8 +326,14 @@
     <EmbeddedResource Include="View\EmpForm\DetailOrderForm.resx">
       <DependentUpon>DetailOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\EmpForm\GoodsInfoForm.resx">
+      <DependentUpon>GoodsInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\EmpForm\OrderListForm.resx">
       <DependentUpon>OrderListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmpForm\WarehouseForm.resx">
+      <DependentUpon>WarehouseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
@@ -344,6 +360,7 @@
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDon.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.HoaDonView.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.KhachHang.datasource" />
+    <None Include="Properties\DataSources\CafeShop.DTO.LoHang.datasource" />
     <None Include="Properties\DataSources\CafeShop.DTO.TaiKhoanView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
