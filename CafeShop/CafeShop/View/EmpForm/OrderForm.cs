@@ -59,7 +59,7 @@ namespace CafeShop.View.EmpForm
                 foodNameLabel.Name = mon.MaMon;
                 foodNameLabel.ForeColor = Color.Crimson;
                 foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                foodNameLabel.Dock = DockStyle.Left;
+                foodNameLabel.Dock = DockStyle.Fill;
                 foodNameLabel.Click += new EventHandler(openDetailOrderForm);
                 //
                 //fooodPriceLabel
@@ -75,9 +75,9 @@ namespace CafeShop.View.EmpForm
                 foodDetailPanel.Width = foodPanel.Width - 5;
                 foodDetailPanel.BackColor = SystemColors.ControlLight;
                 foodDetailPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-                foodDetailPanel.BorderStyle = BorderStyle.FixedSingle;
-                foodDetailPanel.Controls.Add(foodNameLabel);
+                foodDetailPanel.BorderStyle = BorderStyle.FixedSingle;                
                 foodDetailPanel.Controls.Add(foodPriceLabel);
+                foodDetailPanel.Controls.Add(foodNameLabel);
                 foodDetailPanel.Height = 40;
                 foodDetailPanel.BringToFront();
                 foodDetailPanel.Click += new EventHandler(openDetailOrderForm);

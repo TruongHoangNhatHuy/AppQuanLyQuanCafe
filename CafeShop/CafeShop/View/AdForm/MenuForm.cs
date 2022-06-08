@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeShop.BLL;
 using CafeShop.DTO;
+
 namespace CafeShop.View.AdForm
 {
     public partial class MenuForm : Form
@@ -17,35 +18,64 @@ namespace CafeShop.View.AdForm
         public Reload reload;
         public MenuForm()
         {
-            InitializeComponent();
+            InitializeComponent();        
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            reload?.Invoke();
-        }
-
-        private void MenuForm_Load(object sender, EventArgs e)
+        private void NewMenuForm_Load(object sender, EventArgs e)
         {
             foodPanel.Visible = false;
             categoryFoodPanel.Visible = false;
             categoryCombobox.Items.AddRange(BLLMenu.Instance.GetDanhMucThucDon().ToArray());
+            selectionCombobox.SelectedIndex = 0;
             LoadData();
         }
         private void LoadData()
         {
             categoryFoodData.DataSource = BLLMenu.Instance.GetDanhMucThucDon();
-            foodData.DataSource = BLLMenu.Instance.GetAllMon();
+            //foodData.DataSource = BLLMenu.Instance.GetAllMon();
             //categoryCombobox.Items.AddRange(BLLMenu.Instance.GetDanhMucThucDon().ToArray());
         }
-        private void categoryFoodData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private string MaDanhMuc = null;
+        private void categoryFoodData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(categoryFoodData.SelectedRows.Count == 1)
+            if (categoryFoodData.SelectedRows.Count == 1)
             {
-                string MaHangMuc = categoryFoodData.SelectedRows[0].Cells["MaDanhMuc"].Value.ToString();
-                foodData.DataSource = BLLMenu.Instance.GetMonByMaDanhMuc(MaHangMuc);
-            }    
+                MaDanhMuc = categoryFoodData.SelectedRows[0].Cells[0].Value.ToString();
+                foodData.DataSource = BLLMenu.Instance.GetMonByMaDanhMuc(MaDanhMuc);
+                if (Convert.ToBoolean(categoryFoodData.SelectedRows[0].Cells[2].Value))
+                    deleteCButton.Text = "Ẩn";
+                else
+                    deleteCButton.Text = "Hiện";
+            }
+        }
+        private void foodData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (foodData.SelectedRows.Count == 1)
+            {
+                if (Convert.ToBoolean(foodData.SelectedRows[0].Cells["Visible"].Value))
+                    deleteFButton.Text = "Ẩn";
+                else
+                    deleteFButton.Text = "Hiện";
+            }
+        }
+        private void ShowAllButton_Click(object sender, EventArgs e)
+        {
+            foodData.DataSource = BLLMenu.Instance.GetAllMon();
+            MaDanhMuc = null;
+        }
+
+        private void selectionCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selection = selectionCombobox.SelectedIndex;
+            var list = BLLMenu.Instance.GetMonByMaDanhMuc(MaDanhMuc);
+
+            if (selection == 0)
+                foodData.DataSource = list;
+            else if (selection == 1)
+                foodData.DataSource = BLLMenu.Instance.GetVisibleMon(list);
+
+            else if (selection == 2)
+                foodData.DataSource = BLLMenu.Instance.GetHiddenMon(list);
         }
 
         private void editCButton_Click(object sender, EventArgs e)
@@ -55,7 +85,7 @@ namespace CafeShop.View.AdForm
                 RefreshData();
                 //foodPanel.Visible = false;
                 categoryFoodPanel.Visible = true;
-                categoryIDTextbox.Texts = categoryFoodData.SelectedRows[0].Cells["MaDanhMuc"].Value.ToString();
+                categoryIDTextbox.Texts = categoryFoodData.SelectedRows[0].Cells[0].Value.ToString();
                 categoryNameTextbox.Texts = categoryFoodData.SelectedRows[0].Cells["TenDanhMuc"].Value.ToString();
             }
         }
@@ -81,11 +111,11 @@ namespace CafeShop.View.AdForm
                 var food = BLLMenu.Instance.GetMonByMaMon(foodData.SelectedRows[0].Cells["MaMon"].Value.ToString());
                 foreach (DanhMucThucDon item in categoryCombobox.Items)
                 {
-                    if(item.MaDanhMuc == food.MaDanhMuc)
+                    if (item.MaDanhMuc == food.MaDanhMuc)
                     {
                         categoryCombobox.SelectedItem = item;
                         break;
-                    }    
+                    }
                 }
             }
         }
@@ -100,16 +130,17 @@ namespace CafeShop.View.AdForm
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            if(categoryFoodPanel.Visible)
+            if (categoryFoodPanel.Visible)
             {
-                DanhMucThucDon category = new DanhMucThucDon() 
+                DanhMucThucDon category = new DanhMucThucDon()
                 {
-                    MaDanhMuc = categoryIDTextbox.Texts, 
-                    TenDanhMuc = categoryNameTextbox.Texts 
+                    MaDanhMuc = categoryIDTextbox.Texts,
+                    TenDanhMuc = categoryNameTextbox.Texts,
+                    Visible = true
                 };
                 BLLMenu.Instance.ExecuteCategory(category);
-            }    
-            else if(foodPanel.Visible)
+            }
+            else if (foodPanel.Visible)
             {
                 Mon food = new Mon()
                 {
@@ -117,7 +148,8 @@ namespace CafeShop.View.AdForm
                     TenMon = foodNameTextbox.Texts,
                     DonGia = Convert.ToInt32(priceTextbox.Texts),
                     DonVi = unitTextbox.Texts,
-                    MaDanhMuc = (categoryCombobox.SelectedItem as DanhMucThucDon).MaDanhMuc
+                    MaDanhMuc = (categoryCombobox.SelectedItem as DanhMucThucDon).MaDanhMuc,
+                    Visible = true
                 };
                 BLLMenu.Instance.ExecuteFood(food);
             }
@@ -136,6 +168,24 @@ namespace CafeShop.View.AdForm
             unitTextbox.Texts = "";
             foodPanel.Visible = false;
             categoryFoodPanel.Visible = false;
+        }
+
+        private void deleteCButton_Click(object sender, EventArgs e)
+        {
+            if (categoryFoodData.SelectedRows.Count == 1)
+                BLLMenu.Instance.ChangeCategoryState(categoryFoodData.SelectedRows[0].Cells[0].Value.ToString());
+        }
+
+        private void deleteFButton_Click(object sender, EventArgs e)
+        {
+            if (foodData.SelectedRows.Count == 1)
+                BLLMenu.Instance.ChangeFoodState(foodData.SelectedRows[0].Cells["MaMon"].Value.ToString());
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            reload?.Invoke();
         }
     }
 }

@@ -199,7 +199,6 @@ namespace CafeShop.View
             AdForm.MenuForm form = new AdForm.MenuForm();
             form.reload += Reload;
             openChildForm(form);
-            //code
         }
 
         private void scheduleButton_Click(object sender, EventArgs e)

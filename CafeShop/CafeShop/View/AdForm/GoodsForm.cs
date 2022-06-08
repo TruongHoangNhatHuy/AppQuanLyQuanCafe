@@ -16,7 +16,7 @@ namespace CafeShop.View.AdForm
         public GoodsForm(string MaHangHoa = "")
         {
             InitializeComponent();
-            categoryCombobox.Items.AddRange(BLLOrder.Instance.GetDanhMucThucDon().ToArray());
+            categoryCombobox.Items.AddRange(BLLWarehouse.Instance.GetDanhMucThucDon().ToArray());
             GUI(MaHangHoa);
         }
 

@@ -18,6 +18,7 @@ namespace CafeShop.DTO
         [Key]
         [StringLength(10)]
         public string MaDanhMuc { get; set; }
+        public bool Visible { get; set; }
         [StringLength(50)]
         public string TenDanhMuc { get; set; }
         public virtual ICollection<Mon> Mons { get; set; }

@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 namespace CafeShop.DTO
 {
     public class CreateDB :
-            //CreateDatabaseIfNotExists<DBModel>
+            CreateDatabaseIfNotExists<DBModel>
             //DropCreateDatabaseIfModelChanges<DBModel>
-            DropCreateDatabaseAlways<DBModel>
+            //DropCreateDatabaseAlways<DBModel>
     {
         private DateTime min = new DateTime(1990, 01, 01);
         protected override void Seed(DBModel context)
@@ -64,23 +64,23 @@ namespace CafeShop.DTO
             });
             context.DanhMucThucDons.AddRange(new DanhMucThucDon[]
             {
-                new DanhMucThucDon { MaDanhMuc = "DM00000000", TenDanhMuc = "Không có"},
-                new DanhMucThucDon { MaDanhMuc = "DM00000001", TenDanhMuc = "Cà phê"},
-                new DanhMucThucDon { MaDanhMuc = "DM00000002", TenDanhMuc = "Trà"},
-                new DanhMucThucDon { MaDanhMuc = "DM00000003", TenDanhMuc = "Giải khát"},
-                new DanhMucThucDon { MaDanhMuc = "DM00000004", TenDanhMuc = "Bánh mặn"},
-                new DanhMucThucDon { MaDanhMuc = "DM00000005", TenDanhMuc = "Nước lọc"},
-                new DanhMucThucDon { MaDanhMuc = "DM00000006", TenDanhMuc = "Bánh ngọt"}
+                new DanhMucThucDon { MaDanhMuc = "DM00000000", TenDanhMuc = "Không có", Visible = false},
+                new DanhMucThucDon { MaDanhMuc = "DM00000001", TenDanhMuc = "Cà phê", Visible = true},
+                new DanhMucThucDon { MaDanhMuc = "DM00000002", TenDanhMuc = "Trà", Visible = true },
+                new DanhMucThucDon { MaDanhMuc = "DM00000003", TenDanhMuc = "Giải khát", Visible = true},
+                new DanhMucThucDon { MaDanhMuc = "DM00000004", TenDanhMuc = "Bánh mặn", Visible = true},
+                new DanhMucThucDon { MaDanhMuc = "DM00000005", TenDanhMuc = "Nước lọc", Visible = true},
+                new DanhMucThucDon { MaDanhMuc = "DM00000006", TenDanhMuc = "Bánh ngọt", Visible = true}
             });
             context.Mons.AddRange(new Mon[]
             {
-                new Mon { MaMon = "M000000000", TenMon = "", DonGia = 0, DonVi = "", MaDanhMuc = "DM00000000"},
-                new Mon { MaMon = "M000000001", TenMon = "Cà phê đen", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
-                new Mon { MaMon = "M000000002", TenMon = "Cà phê sữa", DonGia = 12000, DonVi = "Ly", MaDanhMuc = "DM00000001"},
-                new Mon { MaMon = "M000000003", TenMon = "Trà gừng", DonGia = 20000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
-                new Mon { MaMon = "M000000004", TenMon = "Trà chanh", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000002"},
-                new Mon { MaMon = "M000000005", TenMon = "Cola chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"},
-                new Mon { MaMon = "M000000006", TenMon = "Sting chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003"}
+                new Mon { MaMon = "M000000000", TenMon = "", DonGia = 0, DonVi = "", MaDanhMuc = "DM00000000", Visible = false},
+                new Mon { MaMon = "M000000001", TenMon = "Cà phê đen", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000001", Visible = true},
+                new Mon { MaMon = "M000000002", TenMon = "Cà phê sữa", DonGia = 12000, DonVi = "Ly", MaDanhMuc = "DM00000001", Visible = true},
+                new Mon { MaMon = "M000000003", TenMon = "Trà gừng", DonGia = 20000, DonVi = "Ly", MaDanhMuc = "DM00000002", Visible = true},
+                new Mon { MaMon = "M000000004", TenMon = "Trà chanh", DonGia = 10000, DonVi = "Ly", MaDanhMuc = "DM00000002", Visible = true},
+                new Mon { MaMon = "M000000005", TenMon = "Cola chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003", Visible = true},
+                new Mon { MaMon = "M000000006", TenMon = "Sting chai", DonGia = 12000, DonVi = "Chai", MaDanhMuc = "DM00000003", Visible = true}
             });
             context.HangHoas.AddRange(new HangHoa[]
             {

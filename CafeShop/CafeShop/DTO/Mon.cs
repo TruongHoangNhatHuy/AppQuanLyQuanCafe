@@ -24,6 +24,7 @@ namespace CafeShop.DTO
         public int DonGia { get; set; }
         [StringLength(10)]
         public string DonVi { get; set; }
+        public bool Visible { get; set; }
         [StringLength(10)]
         public string MaDanhMuc { get; set; }
         [ForeignKey("MaDanhMuc")]

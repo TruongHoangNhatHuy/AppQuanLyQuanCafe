@@ -69,6 +69,14 @@ namespace CafeShop.BLL
             }
             DBModel.Instance.SaveChanges();
         }
+
+        public List<DanhMucThucDon> GetDanhMucThucDon()
+        {
+            List<DanhMucThucDon> list = new List<DanhMucThucDon>();
+            list.Add(DBModel.Instance.DanhMucThucDons.First());
+            list.AddRange(DBModel.Instance.DanhMucThucDons.Where(p => p.Visible == true));
+            return list;
+        }
         #endregion
     }
 }

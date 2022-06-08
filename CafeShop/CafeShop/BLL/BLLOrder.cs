@@ -28,9 +28,9 @@ namespace CafeShop.BLL
 
         public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList();
         public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList().Skip(1).ToList();
-        public List<DanhMucThucDon> GetDanhMucThucDon() => DBModel.Instance.DanhMucThucDons.ToList();
+        public List<DanhMucThucDon> GetDanhMucThucDon() => DBModel.Instance.DanhMucThucDons.Where(p => p.Visible == true).ToList();
 
-        public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc) => DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc).ToList();
+        public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc) => DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc && p.Visible == true).ToList();
 
         public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
 

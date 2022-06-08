@@ -85,7 +85,6 @@ C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeSh
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.GoodsForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.GoodsInfoForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.InvoiceForm.resources
-C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.MenuForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.RevenueForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.TableForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.WarehouseForm.resources
@@ -116,3 +115,4 @@ C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeSh
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.CustomerDetailForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.GoodsInfoForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.WarehouseForm.resources
+C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.MenuForm.resources

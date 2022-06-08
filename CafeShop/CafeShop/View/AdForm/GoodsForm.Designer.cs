@@ -53,9 +53,8 @@
             this.controlBarPanel.Controls.Add(this.minimizeButton);
             this.controlBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.controlBarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.controlBarPanel.Name = "controlBarPanel";
-            this.controlBarPanel.Size = new System.Drawing.Size(500, 38);
+            this.controlBarPanel.Size = new System.Drawing.Size(375, 31);
             this.controlBarPanel.TabIndex = 9;
             // 
             // goodsIDLabel
@@ -63,10 +62,9 @@
             this.goodsIDLabel.AutoSize = true;
             this.goodsIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goodsIDLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.goodsIDLabel.Location = new System.Drawing.Point(51, 69);
-            this.goodsIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.goodsIDLabel.Location = new System.Drawing.Point(38, 56);
             this.goodsIDLabel.Name = "goodsIDLabel";
-            this.goodsIDLabel.Size = new System.Drawing.Size(138, 25);
+            this.goodsIDLabel.Size = new System.Drawing.Size(113, 20);
             this.goodsIDLabel.TabIndex = 11;
             this.goodsIDLabel.Text = "Mã hàng hoá";
             // 
@@ -75,10 +73,9 @@
             this.goodsNameLabel.AutoSize = true;
             this.goodsNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goodsNameLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.goodsNameLabel.Location = new System.Drawing.Point(51, 155);
-            this.goodsNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.goodsNameLabel.Location = new System.Drawing.Point(38, 126);
             this.goodsNameLabel.Name = "goodsNameLabel";
-            this.goodsNameLabel.Size = new System.Drawing.Size(146, 25);
+            this.goodsNameLabel.Size = new System.Drawing.Size(119, 20);
             this.goodsNameLabel.TabIndex = 12;
             this.goodsNameLabel.Text = "Tên hàng hoá";
             // 
@@ -87,10 +84,9 @@
             this.unitLabel.AutoSize = true;
             this.unitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unitLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.unitLabel.Location = new System.Drawing.Point(51, 245);
-            this.unitLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.unitLabel.Location = new System.Drawing.Point(38, 199);
             this.unitLabel.Name = "unitLabel";
-            this.unitLabel.Size = new System.Drawing.Size(73, 25);
+            this.unitLabel.Size = new System.Drawing.Size(59, 20);
             this.unitLabel.TabIndex = 13;
             this.unitLabel.Text = "Đơn vị";
             // 
@@ -99,10 +95,9 @@
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.categoryLabel.Location = new System.Drawing.Point(14, 83);
-            this.categoryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.categoryLabel.Location = new System.Drawing.Point(13, 92);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(115, 25);
+            this.categoryLabel.Size = new System.Drawing.Size(94, 20);
             this.categoryLabel.TabIndex = 14;
             this.categoryLabel.Text = "Nhóm món";
             // 
@@ -111,10 +106,9 @@
             this.foodNameLabel.AutoSize = true;
             this.foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodNameLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.foodNameLabel.Location = new System.Drawing.Point(14, 158);
-            this.foodNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.foodNameLabel.Location = new System.Drawing.Point(13, 165);
             this.foodNameLabel.Name = "foodNameLabel";
-            this.foodNameLabel.Size = new System.Drawing.Size(97, 25);
+            this.foodNameLabel.Size = new System.Drawing.Size(78, 20);
             this.foodNameLabel.TabIndex = 15;
             this.foodNameLabel.Text = "Tên món";
             // 
@@ -126,9 +120,11 @@
             this.groupBox1.Controls.Add(this.categoryCombobox);
             this.groupBox1.Controls.Add(this.foodNameCombobox);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(33, 319);
+            this.groupBox1.Location = new System.Drawing.Point(25, 259);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 240);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(314, 241);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Liên kết món (Tùy chọn)";
@@ -137,9 +133,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 30);
+            this.label1.Location = new System.Drawing.Point(14, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 44);
+            this.label1.Size = new System.Drawing.Size(198, 36);
             this.label1.TabIndex = 16;
             this.label1.Text = "Chỉ liên kết khi hàng hóa \r\nlà 1 món trong menu.";
             // 
@@ -147,19 +144,18 @@
             // 
             this.categoryCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.categoryCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.categoryCombobox.BorderSize = 1;
+            this.categoryCombobox.BorderSize = 2;
             this.categoryCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.categoryCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.categoryCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryCombobox.ForeColor = System.Drawing.Color.DimGray;
             this.categoryCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.categoryCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.categoryCombobox.ListTextColor = System.Drawing.Color.DimGray;
-            this.categoryCombobox.Location = new System.Drawing.Point(19, 112);
-            this.categoryCombobox.Margin = new System.Windows.Forms.Padding(4);
-            this.categoryCombobox.MinimumSize = new System.Drawing.Size(267, 37);
+            this.categoryCombobox.Location = new System.Drawing.Point(17, 115);
+            this.categoryCombobox.MinimumSize = new System.Drawing.Size(200, 30);
             this.categoryCombobox.Name = "categoryCombobox";
-            this.categoryCombobox.Padding = new System.Windows.Forms.Padding(1);
-            this.categoryCombobox.Size = new System.Drawing.Size(372, 37);
+            this.categoryCombobox.Padding = new System.Windows.Forms.Padding(2);
+            this.categoryCombobox.Size = new System.Drawing.Size(279, 39);
             this.categoryCombobox.TabIndex = 3;
             this.categoryCombobox.Texts = "";
             this.categoryCombobox.OnSelectedIndexChanged += new System.EventHandler(this.categoryCombobox_OnSelectedIndexChanged);
@@ -168,19 +164,18 @@
             // 
             this.foodNameCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.foodNameCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.foodNameCombobox.BorderSize = 1;
+            this.foodNameCombobox.BorderSize = 2;
             this.foodNameCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.foodNameCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.foodNameCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodNameCombobox.ForeColor = System.Drawing.Color.DimGray;
             this.foodNameCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.foodNameCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.foodNameCombobox.ListTextColor = System.Drawing.Color.DimGray;
-            this.foodNameCombobox.Location = new System.Drawing.Point(19, 186);
-            this.foodNameCombobox.Margin = new System.Windows.Forms.Padding(4);
-            this.foodNameCombobox.MinimumSize = new System.Drawing.Size(267, 37);
+            this.foodNameCombobox.Location = new System.Drawing.Point(17, 188);
+            this.foodNameCombobox.MinimumSize = new System.Drawing.Size(200, 30);
             this.foodNameCombobox.Name = "foodNameCombobox";
-            this.foodNameCombobox.Padding = new System.Windows.Forms.Padding(1);
-            this.foodNameCombobox.Size = new System.Drawing.Size(372, 37);
+            this.foodNameCombobox.Padding = new System.Windows.Forms.Padding(2);
+            this.foodNameCombobox.Size = new System.Drawing.Size(279, 39);
             this.foodNameCombobox.TabIndex = 4;
             this.foodNameCombobox.Texts = "";
             // 
@@ -195,10 +190,9 @@
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelButton.Location = new System.Drawing.Point(52, 576);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelButton.Location = new System.Drawing.Point(39, 505);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(161, 49);
+            this.cancelButton.Size = new System.Drawing.Size(121, 40);
             this.cancelButton.TabIndex = 10;
             this.cancelButton.Text = "Huỷ";
             this.cancelButton.TextColor = System.Drawing.Color.Black;
@@ -217,10 +211,9 @@
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.White;
             this.minimizeButton.Image = global::CafeShop.Properties.Resources.minimize_sign;
-            this.minimizeButton.Location = new System.Drawing.Point(428, 0);
-            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.minimizeButton.Location = new System.Drawing.Point(321, 0);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(72, 38);
+            this.minimizeButton.Size = new System.Drawing.Size(54, 31);
             this.minimizeButton.TabIndex = 1;
             this.minimizeButton.TextColor = System.Drawing.Color.White;
             this.minimizeButton.UseVisualStyleBackColor = false;
@@ -237,10 +230,9 @@
             this.acceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.acceptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.acceptButton.ForeColor = System.Drawing.Color.Black;
-            this.acceptButton.Location = new System.Drawing.Point(267, 576);
-            this.acceptButton.Margin = new System.Windows.Forms.Padding(4);
+            this.acceptButton.Location = new System.Drawing.Point(200, 505);
             this.acceptButton.Name = "acceptButton";
-            this.acceptButton.Size = new System.Drawing.Size(161, 49);
+            this.acceptButton.Size = new System.Drawing.Size(121, 40);
             this.acceptButton.TabIndex = 6;
             this.acceptButton.Text = "Xác nhận";
             this.acceptButton.TextColor = System.Drawing.Color.Black;
@@ -253,16 +245,15 @@
             this.unitTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
             this.unitTextbox.BorderRadius = 0;
             this.unitTextbox.BorderSize = 2;
-            this.unitTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unitTextbox.Location = new System.Drawing.Point(52, 273);
-            this.unitTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.unitTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitTextbox.Location = new System.Drawing.Point(39, 222);
             this.unitTextbox.Multiline = false;
             this.unitTextbox.Name = "unitTextbox";
-            this.unitTextbox.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.unitTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.unitTextbox.PasswordChar = false;
             this.unitTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.unitTextbox.PlaceholderText = "";
-            this.unitTextbox.Size = new System.Drawing.Size(376, 39);
+            this.unitTextbox.Size = new System.Drawing.Size(282, 35);
             this.unitTextbox.TabIndex = 2;
             this.unitTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.unitTextbox.Texts = "";
@@ -274,16 +265,15 @@
             this.goodsNameTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
             this.goodsNameTextbox.BorderRadius = 0;
             this.goodsNameTextbox.BorderSize = 2;
-            this.goodsNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goodsNameTextbox.Location = new System.Drawing.Point(56, 183);
-            this.goodsNameTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.goodsNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goodsNameTextbox.Location = new System.Drawing.Point(39, 149);
             this.goodsNameTextbox.Multiline = false;
             this.goodsNameTextbox.Name = "goodsNameTextbox";
-            this.goodsNameTextbox.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.goodsNameTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.goodsNameTextbox.PasswordChar = false;
             this.goodsNameTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.goodsNameTextbox.PlaceholderText = "";
-            this.goodsNameTextbox.Size = new System.Drawing.Size(372, 39);
+            this.goodsNameTextbox.Size = new System.Drawing.Size(282, 35);
             this.goodsNameTextbox.TabIndex = 1;
             this.goodsNameTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.goodsNameTextbox.Texts = "";
@@ -296,16 +286,15 @@
             this.goodsIDTextbox.BorderRadius = 0;
             this.goodsIDTextbox.BorderSize = 2;
             this.goodsIDTextbox.Enabled = false;
-            this.goodsIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goodsIDTextbox.Location = new System.Drawing.Point(52, 97);
-            this.goodsIDTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.goodsIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goodsIDTextbox.Location = new System.Drawing.Point(39, 79);
             this.goodsIDTextbox.Multiline = false;
             this.goodsIDTextbox.Name = "goodsIDTextbox";
-            this.goodsIDTextbox.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.goodsIDTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.goodsIDTextbox.PasswordChar = false;
             this.goodsIDTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.goodsIDTextbox.PlaceholderText = "";
-            this.goodsIDTextbox.Size = new System.Drawing.Size(376, 39);
+            this.goodsIDTextbox.Size = new System.Drawing.Size(282, 33);
             this.goodsIDTextbox.TabIndex = 0;
             this.goodsIDTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.goodsIDTextbox.Texts = "";
@@ -313,9 +302,9 @@
             // 
             // GoodsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 656);
+            this.ClientSize = new System.Drawing.Size(375, 570);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.unitLabel);
@@ -328,7 +317,6 @@
             this.Controls.Add(this.goodsNameTextbox);
             this.Controls.Add(this.goodsIDTextbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GoodsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.controlBarPanel.ResumeLayout(false);
