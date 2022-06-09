@@ -56,6 +56,17 @@ namespace CafeShop.BLL
             ban.TinhTrang = !ban.TinhTrang;
             DBModel.Instance.SaveChanges();
         }
+        public void DeleteEmptyBill(string MaBan)
+        {
+            var bill = GetHoaDonByMaBan(MaBan);
+            if(bill.DonGoiMons.Count == 0)
+            {
+                DBModel.Instance.HoaDons.Remove(bill);
+                DBModel.Instance.SaveChanges();
+            }    
+            
+        }
         public HoaDon GetHoaDonByMaBan(string MaBan) => currentBill.Where(p => p.MaBan == MaBan).FirstOrDefault();
+        public List<DonGoiMonView> GetDonGoiMonViewsByMaBan(string MaBan) => GetHoaDonByMaBan(MaBan).DonGoiMons.Select(p => new DonGoiMonView(p)).ToList();
     }
 }

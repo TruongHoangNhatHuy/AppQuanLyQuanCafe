@@ -31,10 +31,12 @@
             this.areaPanel = new System.Windows.Forms.Panel();
             this.areaFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.areaJCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.areaLabel = new System.Windows.Forms.Label();
             this.detailPanel = new System.Windows.Forms.Panel();
-            this.buttonPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.stateButton = new CafeShop.View.CustomControl.JButton();
+            this.orderButton = new CafeShop.View.CustomControl.JButton();
             this.tableInfoTable = new System.Windows.Forms.Panel();
             this.timeInfoLabel = new System.Windows.Forms.Label();
             this.statusTable = new System.Windows.Forms.Label();
@@ -47,17 +49,9 @@
             this.itemPanel = new System.Windows.Forms.Panel();
             this.categoryFoodPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.foodPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.chargeButton = new CafeShop.View.CustomControl.JButton();
-            this.jButton3 = new CafeShop.View.CustomControl.JButton();
-            this.jButton2 = new CafeShop.View.CustomControl.JButton();
-            this.jButton1 = new CafeShop.View.CustomControl.JButton();
-            this.openButton = new CafeShop.View.CustomControl.JButton();
-            this.orderButton = new CafeShop.View.CustomControl.JButton();
-            this.areaJCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.areaPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.detailPanel.SuspendLayout();
-            this.buttonPanel2.SuspendLayout();
             this.buttonPanel1.SuspendLayout();
             this.tableInfoTable.SuspendLayout();
             this.itemPanel.SuspendLayout();
@@ -95,6 +89,26 @@
             this.panel5.Size = new System.Drawing.Size(327, 62);
             this.panel5.TabIndex = 0;
             // 
+            // areaJCombobox
+            // 
+            this.areaJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.areaJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.areaJCombobox.BorderSize = 2;
+            this.areaJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.areaJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.areaJCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.areaJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.areaJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.areaJCombobox.ListTextColor = System.Drawing.Color.Black;
+            this.areaJCombobox.Location = new System.Drawing.Point(108, 26);
+            this.areaJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.areaJCombobox.Name = "areaJCombobox";
+            this.areaJCombobox.Padding = new System.Windows.Forms.Padding(2);
+            this.areaJCombobox.Size = new System.Drawing.Size(200, 30);
+            this.areaJCombobox.TabIndex = 2;
+            this.areaJCombobox.Texts = "";
+            this.areaJCombobox.OnSelectedIndexChanged += new System.EventHandler(this.areaJCombobox_OnSelectedIndexChanged);
+            // 
             // areaLabel
             // 
             this.areaLabel.AutoSize = true;
@@ -108,7 +122,6 @@
             // detailPanel
             // 
             this.detailPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.detailPanel.Controls.Add(this.buttonPanel2);
             this.detailPanel.Controls.Add(this.buttonPanel1);
             this.detailPanel.Controls.Add(this.tableInfoTable);
             this.detailPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -116,26 +129,6 @@
             this.detailPanel.Name = "detailPanel";
             this.detailPanel.Size = new System.Drawing.Size(313, 611);
             this.detailPanel.TabIndex = 1;
-            // 
-            // buttonPanel2
-            // 
-            this.buttonPanel2.ColumnCount = 4;
-            this.buttonPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.buttonPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.buttonPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.buttonPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.buttonPanel2.Controls.Add(this.chargeButton, 3, 0);
-            this.buttonPanel2.Controls.Add(this.jButton3, 2, 0);
-            this.buttonPanel2.Controls.Add(this.jButton2, 1, 0);
-            this.buttonPanel2.Controls.Add(this.jButton1, 0, 0);
-            this.buttonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPanel2.Location = new System.Drawing.Point(0, 292);
-            this.buttonPanel2.Name = "buttonPanel2";
-            this.buttonPanel2.RowCount = 1;
-            this.buttonPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.buttonPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.buttonPanel2.Size = new System.Drawing.Size(311, 47);
-            this.buttonPanel2.TabIndex = 2;
             // 
             // buttonPanel1
             // 
@@ -145,7 +138,7 @@
             this.buttonPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.buttonPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.buttonPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.buttonPanel1.Controls.Add(this.openButton, 1, 0);
+            this.buttonPanel1.Controls.Add(this.stateButton, 1, 0);
             this.buttonPanel1.Controls.Add(this.orderButton, 3, 0);
             this.buttonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonPanel1.Location = new System.Drawing.Point(0, 242);
@@ -155,6 +148,48 @@
             this.buttonPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.buttonPanel1.Size = new System.Drawing.Size(311, 50);
             this.buttonPanel1.TabIndex = 1;
+            // 
+            // stateButton
+            // 
+            this.stateButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.stateButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.stateButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.stateButton.BorderRadius = 30;
+            this.stateButton.BorderSize = 0;
+            this.stateButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stateButton.FlatAppearance.BorderSize = 0;
+            this.stateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stateButton.ForeColor = System.Drawing.Color.White;
+            this.stateButton.Location = new System.Drawing.Point(23, 3);
+            this.stateButton.Name = "stateButton";
+            this.stateButton.Size = new System.Drawing.Size(124, 44);
+            this.stateButton.TabIndex = 0;
+            this.stateButton.Text = "Mở bàn";
+            this.stateButton.TextColor = System.Drawing.Color.White;
+            this.stateButton.UseVisualStyleBackColor = false;
+            this.stateButton.Click += new System.EventHandler(this.openButton_Click);
+            // 
+            // orderButton
+            // 
+            this.orderButton.BackColor = System.Drawing.Color.Crimson;
+            this.orderButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.orderButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.orderButton.BorderRadius = 30;
+            this.orderButton.BorderSize = 0;
+            this.orderButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderButton.FlatAppearance.BorderSize = 0;
+            this.orderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderButton.ForeColor = System.Drawing.Color.White;
+            this.orderButton.Location = new System.Drawing.Point(163, 3);
+            this.orderButton.Name = "orderButton";
+            this.orderButton.Size = new System.Drawing.Size(124, 44);
+            this.orderButton.TabIndex = 1;
+            this.orderButton.Text = "Gọi Món";
+            this.orderButton.TextColor = System.Drawing.Color.White;
+            this.orderButton.UseVisualStyleBackColor = false;
+            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
             // tableInfoTable
             // 
@@ -289,149 +324,6 @@
             this.foodPanel.TabIndex = 3;
             this.foodPanel.Visible = false;
             // 
-            // chargeButton
-            // 
-            this.chargeButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.chargeButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.chargeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.chargeButton.BorderRadius = 30;
-            this.chargeButton.BorderSize = 0;
-            this.chargeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chargeButton.FlatAppearance.BorderSize = 0;
-            this.chargeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chargeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chargeButton.ForeColor = System.Drawing.Color.White;
-            this.chargeButton.Location = new System.Drawing.Point(234, 3);
-            this.chargeButton.Name = "chargeButton";
-            this.chargeButton.Size = new System.Drawing.Size(74, 41);
-            this.chargeButton.TabIndex = 3;
-            this.chargeButton.Text = "Thanh toán";
-            this.chargeButton.TextColor = System.Drawing.Color.White;
-            this.chargeButton.UseVisualStyleBackColor = false;
-            this.chargeButton.Click += new System.EventHandler(this.chargeButton_Click);
-            // 
-            // jButton3
-            // 
-            this.jButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton3.BorderRadius = 30;
-            this.jButton3.BorderSize = 0;
-            this.jButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton3.FlatAppearance.BorderSize = 0;
-            this.jButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton3.ForeColor = System.Drawing.Color.White;
-            this.jButton3.Location = new System.Drawing.Point(157, 3);
-            this.jButton3.Name = "jButton3";
-            this.jButton3.Size = new System.Drawing.Size(71, 41);
-            this.jButton3.TabIndex = 2;
-            this.jButton3.Text = "Ghép bàn";
-            this.jButton3.TextColor = System.Drawing.Color.White;
-            this.jButton3.UseVisualStyleBackColor = false;
-            // 
-            // jButton2
-            // 
-            this.jButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton2.BorderRadius = 30;
-            this.jButton2.BorderSize = 0;
-            this.jButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton2.FlatAppearance.BorderSize = 0;
-            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton2.ForeColor = System.Drawing.Color.White;
-            this.jButton2.Location = new System.Drawing.Point(80, 3);
-            this.jButton2.Name = "jButton2";
-            this.jButton2.Size = new System.Drawing.Size(71, 41);
-            this.jButton2.TabIndex = 1;
-            this.jButton2.Text = "Chuyển bàn";
-            this.jButton2.TextColor = System.Drawing.Color.White;
-            this.jButton2.UseVisualStyleBackColor = false;
-            // 
-            // jButton1
-            // 
-            this.jButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton1.BorderRadius = 30;
-            this.jButton1.BorderSize = 0;
-            this.jButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jButton1.FlatAppearance.BorderSize = 0;
-            this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton1.ForeColor = System.Drawing.Color.White;
-            this.jButton1.Location = new System.Drawing.Point(3, 3);
-            this.jButton1.Name = "jButton1";
-            this.jButton1.Size = new System.Drawing.Size(71, 41);
-            this.jButton1.TabIndex = 0;
-            this.jButton1.Text = "Đặt chỗ";
-            this.jButton1.TextColor = System.Drawing.Color.White;
-            this.jButton1.UseVisualStyleBackColor = false;
-            // 
-            // openButton
-            // 
-            this.openButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.openButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.openButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.openButton.BorderRadius = 30;
-            this.openButton.BorderSize = 0;
-            this.openButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.openButton.FlatAppearance.BorderSize = 0;
-            this.openButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openButton.ForeColor = System.Drawing.Color.White;
-            this.openButton.Location = new System.Drawing.Point(23, 3);
-            this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(124, 44);
-            this.openButton.TabIndex = 0;
-            this.openButton.Text = "Mở bàn";
-            this.openButton.TextColor = System.Drawing.Color.White;
-            this.openButton.UseVisualStyleBackColor = false;
-            this.openButton.Click += new System.EventHandler(this.openButton_Click);
-            // 
-            // orderButton
-            // 
-            this.orderButton.BackColor = System.Drawing.Color.Crimson;
-            this.orderButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.orderButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.orderButton.BorderRadius = 30;
-            this.orderButton.BorderSize = 0;
-            this.orderButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderButton.FlatAppearance.BorderSize = 0;
-            this.orderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderButton.ForeColor = System.Drawing.Color.White;
-            this.orderButton.Location = new System.Drawing.Point(163, 3);
-            this.orderButton.Name = "orderButton";
-            this.orderButton.Size = new System.Drawing.Size(124, 44);
-            this.orderButton.TabIndex = 1;
-            this.orderButton.Text = "Gọi Món";
-            this.orderButton.TextColor = System.Drawing.Color.White;
-            this.orderButton.UseVisualStyleBackColor = false;
-            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
-            // 
-            // areaJCombobox
-            // 
-            this.areaJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.areaJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.areaJCombobox.BorderSize = 2;
-            this.areaJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.areaJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaJCombobox.ForeColor = System.Drawing.Color.DimGray;
-            this.areaJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.areaJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.areaJCombobox.ListTextColor = System.Drawing.Color.Black;
-            this.areaJCombobox.Location = new System.Drawing.Point(108, 26);
-            this.areaJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.areaJCombobox.Name = "areaJCombobox";
-            this.areaJCombobox.Padding = new System.Windows.Forms.Padding(2);
-            this.areaJCombobox.Size = new System.Drawing.Size(200, 30);
-            this.areaJCombobox.TabIndex = 2;
-            this.areaJCombobox.Texts = "";
-            this.areaJCombobox.OnSelectedIndexChanged += new System.EventHandler(this.areaJCombobox_OnSelectedIndexChanged);
-            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,7 +342,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.detailPanel.ResumeLayout(false);
-            this.buttonPanel2.ResumeLayout(false);
             this.buttonPanel1.ResumeLayout(false);
             this.tableInfoTable.ResumeLayout(false);
             this.tableInfoTable.PerformLayout();
@@ -467,13 +358,8 @@
         private System.Windows.Forms.Label areaLabel;
         private System.Windows.Forms.Panel detailPanel;
         private System.Windows.Forms.Panel itemPanel;
-        private System.Windows.Forms.TableLayoutPanel buttonPanel2;
-        private CustomControl.JButton chargeButton;
-        private CustomControl.JButton jButton3;
-        private CustomControl.JButton jButton2;
-        private CustomControl.JButton jButton1;
         private System.Windows.Forms.TableLayoutPanel buttonPanel1;
-        private CustomControl.JButton openButton;
+        private CustomControl.JButton stateButton;
         private CustomControl.JButton orderButton;
         private System.Windows.Forms.Panel tableInfoTable;
         private System.Windows.Forms.Label timeOutLabel;

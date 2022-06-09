@@ -6,9 +6,8 @@ namespace CafeShop.View.EmpForm
 {
     public partial class DetailOrderForm : Form
     {
-        //string MaMon = "M00000001";
-        public delegate void DetailOrderDel(HoaDon bill);
-        public DetailOrderDel orderDel;
+        //public delegate void ReloadTableInfoDelegate(string MaBan);
+        //public ReloadTableInfoDelegate ReloadInfo { get; set; }
         public DetailOrderForm(string MaMon, string MaHoaDon)
         {
             InitializeComponent();
@@ -42,6 +41,7 @@ namespace CafeShop.View.EmpForm
                 {
                     string GhiChu = descriptionTextbox.Texts;
                     BLLDetailOrder.Instance.ConfirmDetailOrder(SoLuong, GhiChu);
+                    //ReloadInfo?.Invoke();
                     this.Close();
                 }
                 else

@@ -130,16 +130,17 @@ namespace CafeShop.View.EmpForm
             string MaHoaDon = BLLOrder.Instance.GetHoaDonByMaBan(currentTable.MaBan).MaHoaDon;
             DetailOrderForm form = new DetailOrderForm(MaMon, MaHoaDon);
             form.ShowDialog();
+            SetInfoTable(currentTable.MaBan);
         }
 
         private void HidePanel()
         {
-            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible =
+            tableInfoTable.Visible = buttonPanel1.Visible =
             foodPanel.Visible = categoryFoodPanel.Visible = false;
         }
         private void ShowPanel()
         {
-            tableInfoTable.Visible = buttonPanel1.Visible = buttonPanel2.Visible = true;
+            tableInfoTable.Visible = buttonPanel1.Visible = true;
         }
         private void ShowInfoTable(object sender, EventArgs e)
         {
@@ -157,10 +158,23 @@ namespace CafeShop.View.EmpForm
             orderButton.Enabled = currentTableButton.Status.Equals("Bận");
             tableNameLabel.Text = this.currentTable.TenBan;
             statusTable.Text = this.currentTable.TinhTrang ? "Còn trống" : "Bận";
-            if (statusTable.Text == "Bận")
-                timeInfoLabel.Text = BLLOrder.Instance.GetHoaDonByMaBan(MaBan).ThoiGianThanhToan.ToString();
-            else
+            //if (statusTable.Text == "Bận")
+            //    timeInfoLabel.Text = BLLOrder.Instance.GetHoaDonByMaBan(MaBan).ThoiGianThanhToan.ToString();
+            //else
+            //    timeInfoLabel.Text = "";
+            if (statusTable.Text == "Còn trống")
+            {
                 timeInfoLabel.Text = "";
+                stateButton.Text = "Mở bàn";
+            }
+            else
+            {
+                timeInfoLabel.Text = BLLOrder.Instance.GetHoaDonByMaBan(MaBan).ThoiGianThanhToan.ToString();
+                if (BLLOrder.Instance.GetDonGoiMonViewsByMaBan(currentTable.MaBan).Count == 0)
+                    stateButton.Text = "Đóng bàn";
+                else
+                    stateButton.Text = "Thanh toán";
+            }    
         }
 
         public void LoadTableByLocation(string MaKhuVuc)
@@ -192,21 +206,33 @@ namespace CafeShop.View.EmpForm
 
         private void openButton_Click(object sender, EventArgs e)
         {
-            if (currentTableButton.Status.Equals("Còn trống"))
-            {
-                orderButton.Enabled = true;
-                ChangeStateTable();
-                BLLOrder.Instance.CreateNewBill(currentTable.MaBan);
-                SetInfoTable(currentTable.MaBan);
-            }
+            if (currentTableButton.Status.Equals("Còn trống"))                
+                OpenTable();
+            else
+                if (BLLOrder.Instance.GetDonGoiMonViewsByMaBan(currentTable.MaBan).Count == 0)
+                    CloseTable();
+                else
+                    chargeBill();
         }
-        private void chargeButton_Click(object sender, EventArgs e)
+        private void OpenTable()
+        {
+            orderButton.Enabled = true;
+            ChangeStateTable();
+            BLLOrder.Instance.CreateNewBill(currentTable.MaBan);
+            SetInfoTable(currentTable.MaBan);
+        }
+        private void chargeBill()
         {
             BillForm form = new BillForm(currentTable.MaBan);
             form.ReloadTable += new BillForm.ReloadTableDelegate(ChangeStateTable);
             form.ReloadInfo += new BillForm.ReloadTableInfoDelegate(SetInfoTable);
             form.ShowDialog();
-
+        }
+        private void CloseTable()
+        {
+            BLLOrder.Instance.DeleteEmptyBill(currentTable.MaBan);
+            ChangeStateTable();
+            SetInfoTable(currentTable.MaBan);
         }
 
         #endregion
