@@ -233,5 +233,12 @@ namespace CafeShop.View.AdForm
             this.Close();
             reload?.Invoke();
         }
+
+        private void searchTextbox__TextChanged(object sender, EventArgs e)
+        {
+            string text = searchTextbox.Texts;
+            List<Mon> list = foodData.DataSource as List<Mon>;
+            foodData.DataSource = BLLMenu.Instance.SearchFood(list, text.ToLower());
+        }
     }
 }

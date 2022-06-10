@@ -183,7 +183,6 @@ namespace CafeShop.View.EmpForm
                 panelList.ForEach(panel => panel.Visible = true);
             else if (MaKhuVuc != null)
                 panelList.ForEach(panel => panel.Visible = panel.Name.Equals(MaKhuVuc));
-
         }
         private void areaJCombobox_OnSelectedIndexChanged(object sender, EventArgs e)
         {

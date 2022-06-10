@@ -30,76 +30,76 @@
         {
             this.components = new System.ComponentModel.Container();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.mainPanel = new System.Windows.Forms.TableLayoutPanel();
             this.categoryPanel = new System.Windows.Forms.TableLayoutPanel();
             this.categoryFoodData = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.foodData = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.selectionCombobox = new System.Windows.Forms.ComboBox();
-            this.detailFoodLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.foodPanel = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.categoryFoodPanel = new System.Windows.Forms.Panel();
-            this.categoryNameLabel = new System.Windows.Forms.Label();
-            this.categoryFoodLabel = new System.Windows.Forms.Label();
-            this.buttonPanel = new System.Windows.Forms.Panel();
-            this.exceptionLabel = new System.Windows.Forms.Label();
             this.maDanhMucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visibleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.danhMucThucDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
             this.deleteCButton = new CafeShop.View.CustomControl.JButton();
             this.editCButton = new CafeShop.View.CustomControl.JButton();
             this.addCButton = new CafeShop.View.CustomControl.JButton();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.ShowAllButton = new CafeShop.View.CustomControl.JButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.deleteFButton = new CafeShop.View.CustomControl.JButton();
             this.editFButton = new CafeShop.View.CustomControl.JButton();
             this.addFButton = new CafeShop.View.CustomControl.JButton();
+            this.foodData = new System.Windows.Forms.DataGridView();
             this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Visible = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jNewTextbox1 = new CafeShop.View.CustomControl.JNewTextbox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.selectionCombobox = new System.Windows.Forms.ComboBox();
+            this.searchTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.detailFoodLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonPanel = new System.Windows.Forms.Panel();
+            this.exceptionLabel = new System.Windows.Forms.Label();
             this.cancelButton = new CafeShop.View.CustomControl.JButton();
             this.confirmButton = new CafeShop.View.CustomControl.JButton();
+            this.foodPanel = new System.Windows.Forms.Panel();
             this.categoryCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.priceTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.unitTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.foodNameTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.foodIDTextbox = new CafeShop.View.CustomControl.JTextbox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.categoryFoodPanel = new System.Windows.Forms.Panel();
             this.categoryNameTextbox = new CafeShop.View.CustomControl.JTextbox();
+            this.categoryNameLabel = new System.Windows.Forms.Label();
             this.categoryIDTextbox = new CafeShop.View.CustomControl.JTextbox();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.categoryFoodLabel = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.categoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryFoodData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhMucThucDonBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foodData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.buttonPanel.SuspendLayout();
             this.foodPanel.SuspendLayout();
             this.categoryFoodPanel.SuspendLayout();
-            this.buttonPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucThucDonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -110,6 +110,25 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1154, 55);
             this.topPanel.TabIndex = 21;
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Crimson;
+            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitButton.BorderRadius = 30;
+            this.exitButton.BorderSize = 0;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.exitButton.Location = new System.Drawing.Point(15, 3);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(51, 40);
+            this.exitButton.TabIndex = 16;
+            this.exitButton.TextColor = System.Drawing.Color.White;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // mainPanel
             // 
@@ -174,268 +193,6 @@
             this.categoryFoodData.TabIndex = 2;
             this.categoryFoodData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoryFoodData_CellClick);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.deleteCButton);
-            this.panel3.Controls.Add(this.editCButton);
-            this.panel3.Controls.Add(this.addCButton);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 493);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 54);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.ShowAllButton);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(253, 34);
-            this.panel5.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(1, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Danh mục";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.foodData, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(308, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(471, 550);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.deleteFButton);
-            this.panel4.Controls.Add(this.editFButton);
-            this.panel4.Controls.Add(this.addFButton);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 493);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(465, 54);
-            this.panel4.TabIndex = 4;
-            // 
-            // foodData
-            // 
-            this.foodData.AllowUserToAddRows = false;
-            this.foodData.AllowUserToDeleteRows = false;
-            this.foodData.AllowUserToResizeColumns = false;
-            this.foodData.AllowUserToResizeRows = false;
-            this.foodData.AutoGenerateColumns = false;
-            this.foodData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.foodData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.foodData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaMon,
-            this.TenMon,
-            this.DonGia,
-            this.DonVi,
-            this.Visible});
-            this.foodData.DataSource = this.monBindingSource;
-            this.foodData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.foodData.Location = new System.Drawing.Point(3, 43);
-            this.foodData.MultiSelect = false;
-            this.foodData.Name = "foodData";
-            this.foodData.ReadOnly = true;
-            this.foodData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.foodData.Size = new System.Drawing.Size(465, 444);
-            this.foodData.TabIndex = 2;
-            this.foodData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodData_CellClick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.selectionCombobox);
-            this.panel1.Controls.Add(this.jNewTextbox1);
-            this.panel1.Controls.Add(this.detailFoodLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 34);
-            this.panel1.TabIndex = 3;
-            // 
-            // selectionCombobox
-            // 
-            this.selectionCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectionCombobox.FormattingEnabled = true;
-            this.selectionCombobox.Items.AddRange(new object[] {
-            "Tất cả",
-            "Visible",
-            "Hidden"});
-            this.selectionCombobox.Location = new System.Drawing.Point(134, 6);
-            this.selectionCombobox.Name = "selectionCombobox";
-            this.selectionCombobox.Size = new System.Drawing.Size(121, 21);
-            this.selectionCombobox.TabIndex = 12;
-            this.selectionCombobox.SelectedIndexChanged += new System.EventHandler(this.selectionCombobox_SelectedIndexChanged);
-            // 
-            // detailFoodLabel
-            // 
-            this.detailFoodLabel.AutoSize = true;
-            this.detailFoodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detailFoodLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.detailFoodLabel.Location = new System.Drawing.Point(3, 7);
-            this.detailFoodLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
-            this.detailFoodLabel.Name = "detailFoodLabel";
-            this.detailFoodLabel.Size = new System.Drawing.Size(93, 16);
-            this.detailFoodLabel.TabIndex = 3;
-            this.detailFoodLabel.Text = "Chi tiết món ăn";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(805, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(312, 550);
-            this.panel2.TabIndex = 2;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.groupBox1.Controls.Add(this.buttonPanel);
-            this.groupBox1.Controls.Add(this.foodPanel);
-            this.groupBox1.Controls.Add(this.categoryFoodPanel);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(312, 550);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin chi tiết";
-            // 
-            // foodPanel
-            // 
-            this.foodPanel.Controls.Add(this.categoryCombobox);
-            this.foodPanel.Controls.Add(this.priceTextbox);
-            this.foodPanel.Controls.Add(this.unitTextbox);
-            this.foodPanel.Controls.Add(this.foodNameTextbox);
-            this.foodPanel.Controls.Add(this.foodIDTextbox);
-            this.foodPanel.Controls.Add(this.label6);
-            this.foodPanel.Controls.Add(this.label5);
-            this.foodPanel.Controls.Add(this.label4);
-            this.foodPanel.Controls.Add(this.label3);
-            this.foodPanel.Controls.Add(this.label2);
-            this.foodPanel.Location = new System.Drawing.Point(25, 25);
-            this.foodPanel.Name = "foodPanel";
-            this.foodPanel.Size = new System.Drawing.Size(291, 380);
-            this.foodPanel.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Tên danh mục";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 303);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Đơn giá";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Đơn vị";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tên món";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã món";
-            // 
-            // categoryFoodPanel
-            // 
-            this.categoryFoodPanel.Controls.Add(this.categoryNameTextbox);
-            this.categoryFoodPanel.Controls.Add(this.categoryNameLabel);
-            this.categoryFoodPanel.Controls.Add(this.categoryIDTextbox);
-            this.categoryFoodPanel.Controls.Add(this.categoryFoodLabel);
-            this.categoryFoodPanel.Location = new System.Drawing.Point(28, 26);
-            this.categoryFoodPanel.Name = "categoryFoodPanel";
-            this.categoryFoodPanel.Size = new System.Drawing.Size(291, 159);
-            this.categoryFoodPanel.TabIndex = 1;
-            // 
-            // categoryNameLabel
-            // 
-            this.categoryNameLabel.AutoSize = true;
-            this.categoryNameLabel.Location = new System.Drawing.Point(18, 80);
-            this.categoryNameLabel.Name = "categoryNameLabel";
-            this.categoryNameLabel.Size = new System.Drawing.Size(122, 20);
-            this.categoryNameLabel.TabIndex = 2;
-            this.categoryNameLabel.Text = "Tên danh mục";
-            // 
-            // categoryFoodLabel
-            // 
-            this.categoryFoodLabel.AutoSize = true;
-            this.categoryFoodLabel.Location = new System.Drawing.Point(18, 9);
-            this.categoryFoodLabel.Name = "categoryFoodLabel";
-            this.categoryFoodLabel.Size = new System.Drawing.Size(116, 20);
-            this.categoryFoodLabel.TabIndex = 0;
-            this.categoryFoodLabel.Text = "Mã danh mục";
-            // 
-            // buttonPanel
-            // 
-            this.buttonPanel.Controls.Add(this.exceptionLabel);
-            this.buttonPanel.Controls.Add(this.cancelButton);
-            this.buttonPanel.Controls.Add(this.confirmButton);
-            this.buttonPanel.Location = new System.Drawing.Point(25, 429);
-            this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(271, 94);
-            this.buttonPanel.TabIndex = 4;
-            // 
-            // exceptionLabel
-            // 
-            this.exceptionLabel.AutoSize = true;
-            this.exceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exceptionLabel.Location = new System.Drawing.Point(14, 6);
-            this.exceptionLabel.Name = "exceptionLabel";
-            this.exceptionLabel.Size = new System.Drawing.Size(130, 20);
-            this.exceptionLabel.TabIndex = 5;
-            this.exceptionLabel.Text = "exceptionLabel";
-            // 
             // maDanhMucDataGridViewTextBoxColumn
             // 
             this.maDanhMucDataGridViewTextBoxColumn.DataPropertyName = "MaDanhMuc";
@@ -460,6 +217,17 @@
             // danhMucThucDonBindingSource
             // 
             this.danhMucThucDonBindingSource.DataSource = typeof(CafeShop.DTO.DanhMucThucDon);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.deleteCButton);
+            this.panel3.Controls.Add(this.editCButton);
+            this.panel3.Controls.Add(this.addCButton);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 493);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(253, 54);
+            this.panel3.TabIndex = 3;
             // 
             // deleteCButton
             // 
@@ -524,6 +292,16 @@
             this.addCButton.UseVisualStyleBackColor = false;
             this.addCButton.Click += new System.EventHandler(this.addCButton_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.ShowAllButton);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(253, 34);
+            this.panel5.TabIndex = 4;
+            // 
             // ShowAllButton
             // 
             this.ShowAllButton.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -543,6 +321,48 @@
             this.ShowAllButton.TextColor = System.Drawing.Color.Black;
             this.ShowAllButton.UseVisualStyleBackColor = false;
             this.ShowAllButton.Click += new System.EventHandler(this.ShowAllButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(1, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Danh mục";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.foodData, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(308, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(471, 550);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.deleteFButton);
+            this.panel4.Controls.Add(this.editFButton);
+            this.panel4.Controls.Add(this.addFButton);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 493);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(465, 54);
+            this.panel4.TabIndex = 4;
             // 
             // deleteFButton
             // 
@@ -607,6 +427,32 @@
             this.addFButton.UseVisualStyleBackColor = false;
             this.addFButton.Click += new System.EventHandler(this.addFButton_Click);
             // 
+            // foodData
+            // 
+            this.foodData.AllowUserToAddRows = false;
+            this.foodData.AllowUserToDeleteRows = false;
+            this.foodData.AllowUserToResizeColumns = false;
+            this.foodData.AllowUserToResizeRows = false;
+            this.foodData.AutoGenerateColumns = false;
+            this.foodData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.foodData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.foodData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaMon,
+            this.TenMon,
+            this.DonGia,
+            this.DonVi,
+            this.Visible});
+            this.foodData.DataSource = this.monBindingSource;
+            this.foodData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.foodData.Location = new System.Drawing.Point(3, 43);
+            this.foodData.MultiSelect = false;
+            this.foodData.Name = "foodData";
+            this.foodData.ReadOnly = true;
+            this.foodData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.foodData.Size = new System.Drawing.Size(465, 444);
+            this.foodData.TabIndex = 2;
+            this.foodData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodData_CellClick);
+            // 
             // MaMon
             // 
             this.MaMon.DataPropertyName = "MaMon";
@@ -646,26 +492,109 @@
             // 
             this.monBindingSource.DataSource = typeof(CafeShop.DTO.Mon);
             // 
-            // jNewTextbox1
+            // panel1
             // 
-            this.jNewTextbox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.jNewTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.jNewTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.jNewTextbox1.BorderRadius = 5;
-            this.jNewTextbox1.BorderSize = 2;
-            this.jNewTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jNewTextbox1.Location = new System.Drawing.Point(269, 1);
-            this.jNewTextbox1.Multiline = false;
-            this.jNewTextbox1.Name = "jNewTextbox1";
-            this.jNewTextbox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.jNewTextbox1.PasswordChar = false;
-            this.jNewTextbox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.jNewTextbox1.PlaceholderText = "Tìm kiếm...";
-            this.jNewTextbox1.Size = new System.Drawing.Size(196, 32);
-            this.jNewTextbox1.TabIndex = 11;
-            this.jNewTextbox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jNewTextbox1.Texts = "";
-            this.jNewTextbox1.UnderlinedStyle = false;
+            this.panel1.Controls.Add(this.selectionCombobox);
+            this.panel1.Controls.Add(this.searchTextbox);
+            this.panel1.Controls.Add(this.detailFoodLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(465, 34);
+            this.panel1.TabIndex = 3;
+            // 
+            // selectionCombobox
+            // 
+            this.selectionCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectionCombobox.FormattingEnabled = true;
+            this.selectionCombobox.Items.AddRange(new object[] {
+            "Tất cả",
+            "Visible",
+            "Hidden"});
+            this.selectionCombobox.Location = new System.Drawing.Point(134, 6);
+            this.selectionCombobox.Name = "selectionCombobox";
+            this.selectionCombobox.Size = new System.Drawing.Size(121, 21);
+            this.selectionCombobox.TabIndex = 12;
+            this.selectionCombobox.SelectedIndexChanged += new System.EventHandler(this.selectionCombobox_SelectedIndexChanged);
+            // 
+            // searchTextbox
+            // 
+            this.searchTextbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.searchTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.searchTextbox.BorderRadius = 5;
+            this.searchTextbox.BorderSize = 2;
+            this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextbox.Location = new System.Drawing.Point(269, 1);
+            this.searchTextbox.Multiline = false;
+            this.searchTextbox.Name = "searchTextbox";
+            this.searchTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.searchTextbox.PasswordChar = false;
+            this.searchTextbox.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.searchTextbox.PlaceholderText = "Tìm kiếm...";
+            this.searchTextbox.Size = new System.Drawing.Size(196, 32);
+            this.searchTextbox.TabIndex = 11;
+            this.searchTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.searchTextbox.Texts = "";
+            this.searchTextbox.UnderlinedStyle = false;
+            this.searchTextbox._TextChanged += new System.EventHandler(this.searchTextbox__TextChanged);
+            // 
+            // detailFoodLabel
+            // 
+            this.detailFoodLabel.AutoSize = true;
+            this.detailFoodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailFoodLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.detailFoodLabel.Location = new System.Drawing.Point(3, 7);
+            this.detailFoodLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.detailFoodLabel.Name = "detailFoodLabel";
+            this.detailFoodLabel.Size = new System.Drawing.Size(93, 16);
+            this.detailFoodLabel.TabIndex = 3;
+            this.detailFoodLabel.Text = "Chi tiết món ăn";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(805, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(312, 550);
+            this.panel2.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox1.Controls.Add(this.buttonPanel);
+            this.groupBox1.Controls.Add(this.foodPanel);
+            this.groupBox1.Controls.Add(this.categoryFoodPanel);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(312, 550);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin chi tiết";
+            // 
+            // buttonPanel
+            // 
+            this.buttonPanel.Controls.Add(this.exceptionLabel);
+            this.buttonPanel.Controls.Add(this.cancelButton);
+            this.buttonPanel.Controls.Add(this.confirmButton);
+            this.buttonPanel.Location = new System.Drawing.Point(25, 429);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(271, 94);
+            this.buttonPanel.TabIndex = 4;
+            // 
+            // exceptionLabel
+            // 
+            this.exceptionLabel.AutoSize = true;
+            this.exceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exceptionLabel.Location = new System.Drawing.Point(14, 6);
+            this.exceptionLabel.Name = "exceptionLabel";
+            this.exceptionLabel.Size = new System.Drawing.Size(130, 20);
+            this.exceptionLabel.TabIndex = 5;
+            this.exceptionLabel.Text = "exceptionLabel";
             // 
             // cancelButton
             // 
@@ -708,6 +637,23 @@
             this.confirmButton.TextColor = System.Drawing.SystemColors.ControlText;
             this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
+            // 
+            // foodPanel
+            // 
+            this.foodPanel.Controls.Add(this.categoryCombobox);
+            this.foodPanel.Controls.Add(this.priceTextbox);
+            this.foodPanel.Controls.Add(this.unitTextbox);
+            this.foodPanel.Controls.Add(this.foodNameTextbox);
+            this.foodPanel.Controls.Add(this.foodIDTextbox);
+            this.foodPanel.Controls.Add(this.label6);
+            this.foodPanel.Controls.Add(this.label5);
+            this.foodPanel.Controls.Add(this.label4);
+            this.foodPanel.Controls.Add(this.label3);
+            this.foodPanel.Controls.Add(this.label2);
+            this.foodPanel.Location = new System.Drawing.Point(25, 25);
+            this.foodPanel.Name = "foodPanel";
+            this.foodPanel.Size = new System.Drawing.Size(291, 380);
+            this.foodPanel.TabIndex = 2;
             // 
             // categoryCombobox
             // 
@@ -809,6 +755,62 @@
             this.foodIDTextbox.Texts = "";
             this.foodIDTextbox.UnderlinedStyle = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 154);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Tên danh mục";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 303);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Đơn giá";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Đơn vị";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tên món";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mã món";
+            // 
+            // categoryFoodPanel
+            // 
+            this.categoryFoodPanel.Controls.Add(this.categoryNameTextbox);
+            this.categoryFoodPanel.Controls.Add(this.categoryNameLabel);
+            this.categoryFoodPanel.Controls.Add(this.categoryIDTextbox);
+            this.categoryFoodPanel.Controls.Add(this.categoryFoodLabel);
+            this.categoryFoodPanel.Location = new System.Drawing.Point(28, 26);
+            this.categoryFoodPanel.Name = "categoryFoodPanel";
+            this.categoryFoodPanel.Size = new System.Drawing.Size(291, 159);
+            this.categoryFoodPanel.TabIndex = 1;
+            // 
             // categoryNameTextbox
             // 
             this.categoryNameTextbox.BackColor = System.Drawing.SystemColors.Window;
@@ -828,6 +830,15 @@
             this.categoryNameTextbox.TabIndex = 3;
             this.categoryNameTextbox.Texts = "";
             this.categoryNameTextbox.UnderlinedStyle = false;
+            // 
+            // categoryNameLabel
+            // 
+            this.categoryNameLabel.AutoSize = true;
+            this.categoryNameLabel.Location = new System.Drawing.Point(18, 80);
+            this.categoryNameLabel.Name = "categoryNameLabel";
+            this.categoryNameLabel.Size = new System.Drawing.Size(122, 20);
+            this.categoryNameLabel.TabIndex = 2;
+            this.categoryNameLabel.Text = "Tên danh mục";
             // 
             // categoryIDTextbox
             // 
@@ -850,24 +861,14 @@
             this.categoryIDTextbox.Texts = "";
             this.categoryIDTextbox.UnderlinedStyle = false;
             // 
-            // exitButton
+            // categoryFoodLabel
             // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(15, 3);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(51, 40);
-            this.exitButton.TabIndex = 16;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.categoryFoodLabel.AutoSize = true;
+            this.categoryFoodLabel.Location = new System.Drawing.Point(18, 9);
+            this.categoryFoodLabel.Name = "categoryFoodLabel";
+            this.categoryFoodLabel.Size = new System.Drawing.Size(116, 20);
+            this.categoryFoodLabel.TabIndex = 0;
+            this.categoryFoodLabel.Text = "Mã danh mục";
             // 
             // MenuForm
             // 
@@ -885,24 +886,24 @@
             this.mainPanel.ResumeLayout(false);
             this.categoryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.categoryFoodData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhMucThucDonBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.foodData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.buttonPanel.ResumeLayout(false);
+            this.buttonPanel.PerformLayout();
             this.foodPanel.ResumeLayout(false);
             this.foodPanel.PerformLayout();
             this.categoryFoodPanel.ResumeLayout(false);
             this.categoryFoodPanel.PerformLayout();
-            this.buttonPanel.ResumeLayout(false);
-            this.buttonPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucThucDonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -918,7 +919,7 @@
         private System.Windows.Forms.DataGridView foodData;
         private System.Windows.Forms.DataGridView categoryFoodData;
         private System.Windows.Forms.Panel panel1;
-        private CustomControl.JNewTextbox jNewTextbox1;
+        private CustomControl.JNewTextbox searchTextbox;
         private System.Windows.Forms.Label detailFoodLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;

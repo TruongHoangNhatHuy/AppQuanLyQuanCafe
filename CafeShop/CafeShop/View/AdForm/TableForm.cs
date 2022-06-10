@@ -16,14 +16,14 @@ namespace CafeShop.View.AdForm
         }
         private void TableForm_Load(object sender, EventArgs e)
         {
-            LoadComboboxItem();
+            LoadComboboxItem();            
             ClearInfoTable();
+            areaJCombobox.SelectedIndex = 0;
         }
         public void LoadComboboxItem()
         {
             areaJCombobox.Items.Clear();
-            areaNameCombobox.Items.Clear();
-            
+            areaNameCombobox.Items.Clear();          
             areaJCombobox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
             areaJCombobox.Items.AddRange(BLLTable.Instance.GetKhuvucCBItem().ToArray());
             areaNameCombobox.Items.AddRange(BLLTable.Instance.GetKhuvucCBItem().ToArray());
@@ -83,6 +83,7 @@ namespace CafeShop.View.AdForm
         {
             ClearInfoTable();
             tableNameTextbox.Enabled = areaNameCombobox.Enabled = true;
+            tableIDTextbox.Texts = BLLTable.Instance.NewTableKey();
             state = ExecuteState.AddTable;
             notifycationLabel.Text = "*Bạn đã chọn thêm một bàn mới";
         }
@@ -107,9 +108,10 @@ namespace CafeShop.View.AdForm
                 {
                     MaKhuVuc = (areaNameCombobox.SelectedItem as KhuvucCBItem).ID,
                     TenBan = tableNameTextbox.Texts,
-                    MaBan = (state == ExecuteState.Update) ? tableIDTextbox.Texts : "B000000022",
-                    TinhTrang = false,
-                    KhuVuc = BLLTable.Instance.GetKhuVucByMaKhuVuc((areaNameCombobox.SelectedItem as KhuvucCBItem).ID)
+                    //MaBan = (state == ExecuteState.Update) ? tableIDTextbox.Texts : "B000000022",
+                    MaBan = tableIDTextbox.Texts,
+                    TinhTrang = true,
+                    //KhuVuc = BLLTable.Instance.GetKhuVucByMaKhuVuc((areaNameCombobox.SelectedItem as KhuvucCBItem).ID)
                 };
                 BLLTable.Instance.Execute(ban);
                 Show("0");
@@ -118,7 +120,7 @@ namespace CafeShop.View.AdForm
             {
                 KhuVuc khuVuc = new KhuVuc()
                 {
-                    MaKhuVuc = "KV00000013",
+                    MaKhuVuc = BLLTable.Instance.NewAreaKey(),
                     TenKhuVuc = areaIDTextbox.Texts,
                     SoLuongBan = 0
                 };

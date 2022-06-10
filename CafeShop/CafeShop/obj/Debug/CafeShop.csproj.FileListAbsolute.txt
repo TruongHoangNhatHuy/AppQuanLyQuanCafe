@@ -116,3 +116,5 @@ C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeSh
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.GoodsInfoForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.WarehouseForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.MenuForm.resources
+C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.AdminHomeForm.resources
+C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.TopFoodControl.resources

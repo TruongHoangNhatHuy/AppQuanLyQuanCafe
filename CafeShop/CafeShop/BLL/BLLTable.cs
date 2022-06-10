@@ -20,15 +20,6 @@ namespace CafeShop.BLL
             private set { }
         }
         private BLLTable() { }
-        //public List<KhuvucCBItem> GetKhuvucCBItem()
-        //{
-        //    List<KhuvucCBItem> data = new List<KhuvucCBItem>();
-        //    foreach (KhuVuc khuvuc in DBModel.Instance.KhuVucs)
-        //    {
-        //        data.Add(new KhuvucCBItem { ID = khuvuc.MaKhuVuc, Name = khuvuc.TenKhuVuc });
-        //    }
-        //    return data;
-        //}
         public List<KhuvucCBItem> GetKhuvucCBItem()
             => DBModel.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
         public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList().Skip(1).ToList();
@@ -79,6 +70,20 @@ namespace CafeShop.BLL
         {
             DBModel.Instance.KhuVucs.Add(khuvuc);
             DBModel.Instance.SaveChanges();
+        }
+
+        public List<string> GetTableKeyList() => DBModel.Instance.Bans.Select(p => p.MaBan).ToList();
+        public string NewTableKey()
+        {
+            string CurrentKey = PrimaryKeyGenerator.GetCurrentKey(GetTableKeyList());
+            return PrimaryKeyGenerator.NextPrimaryKey(CurrentKey);
+        }
+
+        public List<string> GetAreaKeyList() => DBModel.Instance.KhuVucs.Select(p => p.MaKhuVuc).ToList();
+        public string NewAreaKey()
+        {
+            string CurrentKey = PrimaryKeyGenerator.GetCurrentKey(GetAreaKeyList());
+            return PrimaryKeyGenerator.NextPrimaryKey(CurrentKey);
         }
     }
 

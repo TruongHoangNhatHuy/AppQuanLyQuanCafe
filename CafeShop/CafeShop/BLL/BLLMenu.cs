@@ -119,5 +119,6 @@ namespace CafeShop.BLL
             category.Visible = !category.Visible;
             DBModel.Instance.SaveChanges();
         }
+        public List<Mon> SearchFood(List<Mon> list, string text) => list.Where(p => p.TenMon.ToLower().Contains(text)).ToList();
     }
 }

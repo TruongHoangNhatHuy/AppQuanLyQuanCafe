@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLAdminHome.cs" />
     <Compile Include="BLL\BLLChangePassword.cs" />
     <Compile Include="BLL\BLLCustomerDetail.cs" />
     <Compile Include="BLL\BLLCustomerInfo.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="DTO\DBModel.cs" />
     <Compile Include="DTO\DonGoiMon.cs" />
     <Compile Include="DTO\DonGoiMonView.cs" />
+    <Compile Include="DTO\FoodStatistics.cs" />
     <Compile Include="DTO\HangHoa.cs" />
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\HoaDonView.cs" />
@@ -112,6 +114,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdForm\AdminHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\AdminHomeForm.Designer.cs">
+      <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AdForm\CustomerDetailForm.cs">
       <SubType>Form</SubType>
@@ -223,6 +231,12 @@
     <Compile Include="View\CustomControl\JTextbox.Designer.cs">
       <DependentUpon>JTextbox.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CustomControl\TopFoodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CustomControl\TopFoodControl.Designer.cs">
+      <DependentUpon>TopFoodControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EmpForm\BillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +299,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\AdForm\AdminHomeForm.resx">
+      <DependentUpon>AdminHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\CustomerDetailForm.resx">
       <DependentUpon>CustomerDetailForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CustomControl\JTextbox.resx">
       <DependentUpon>JTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CustomControl\TopFoodControl.resx">
+      <DependentUpon>TopFoodControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EmpForm\BillForm.resx">
       <DependentUpon>BillForm.cs</DependentUpon>

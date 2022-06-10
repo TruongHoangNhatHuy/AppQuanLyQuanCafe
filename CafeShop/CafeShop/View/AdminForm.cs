@@ -11,7 +11,7 @@ namespace CafeShop.View
         {
             InitializeComponent();
             customizeDesigning();
-            homeButton_Click(null, null);
+            homeButton_Click(this.homeButton, null);
             //AdNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
         }
         private void AdminForm_Load(object sender, EventArgs e)
@@ -189,6 +189,8 @@ namespace CafeShop.View
             this.funcNameLabel.Text = "Trang Chủ";
             hideSubMenu();
             //code
+            AdForm.AdminHomeForm form = new AdForm.AdminHomeForm();
+            openChildForm(form);
         }
 
         private void menuButton_Click(object sender, EventArgs e)
