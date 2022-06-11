@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using CafeShop.View.CustomControl;
 namespace CafeShop.View.EmpForm
 {
     public partial class OrderForm : Form
@@ -14,12 +15,13 @@ namespace CafeShop.View.EmpForm
 
         public OrderForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
         private void OrderForm_Load(object sender, EventArgs e)
         {
             areaJCombobox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
             areaJCombobox.Items.AddRange(BLLOrder.Instance.GetKhuvucCBItem().ToArray());
+            areaJCombobox.SelectedIndex = 0;
             LoadTableFromDB();
             LoadCategoryFood();
             HidePanel();
@@ -75,7 +77,7 @@ namespace CafeShop.View.EmpForm
                 foodDetailPanel.Width = foodPanel.Width - 5;
                 foodDetailPanel.BackColor = SystemColors.ControlLight;
                 foodDetailPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-                foodDetailPanel.BorderStyle = BorderStyle.FixedSingle;                
+                foodDetailPanel.BorderStyle = BorderStyle.FixedSingle;
                 foodDetailPanel.Controls.Add(foodPriceLabel);
                 foodDetailPanel.Controls.Add(foodNameLabel);
                 foodDetailPanel.Height = 40;
@@ -129,18 +131,20 @@ namespace CafeShop.View.EmpForm
             //string MaHoaDon = BLLOrder.Instance.CreateNewBill(currentTable.MaBan).MaHoaDon;
             string MaHoaDon = BLLOrder.Instance.GetHoaDonByMaBan(currentTable.MaBan).MaHoaDon;
             DetailOrderForm form = new DetailOrderForm(MaMon, MaHoaDon);
+            form.ReloadInfo += new DetailOrderForm.ReloadOrderList(LoadOrderList);
             form.ShowDialog();
             SetInfoTable(currentTable.MaBan);
         }
 
         private void HidePanel()
         {
-            tableInfoTable.Visible = buttonPanel1.Visible =
-            foodPanel.Visible = categoryFoodPanel.Visible = false;
+            tableInfoTable.Visible = buttonPanel1.Visible = orderDetailsDataPanel.Visible =
+            orderDetailsPanel.Visible = foodPanel.Visible = categoryFoodPanel.Visible = false;
         }
         private void ShowPanel()
         {
-            tableInfoTable.Visible = buttonPanel1.Visible = true;
+            tableInfoTable.Visible = buttonPanel1.Visible = orderDetailsDataPanel.Visible =
+            orderDetailsPanel.Visible = true;
         }
         private void ShowInfoTable(object sender, EventArgs e)
         {
@@ -149,8 +153,9 @@ namespace CafeShop.View.EmpForm
             TablesButton tablesButton = button.Parent as TablesButton;
             this.currentTableButton = tablesButton;
             this.currentTable = BLLOrder.Instance.GetBanByMaBan(tablesButton.MaBan);
-            SetInfoTable(tablesButton.MaBan);
+            SetInfoTable(tablesButton.MaBan);            
             ShowPanel();
+            LoadOrderList();
 
         }
         public void SetInfoTable(string MaBan)
@@ -174,9 +179,24 @@ namespace CafeShop.View.EmpForm
                     stateButton.Text = "Đóng bàn";
                 else
                     stateButton.Text = "Thanh toán";
-            }    
+            }
         }
-
+        public void LoadOrderList()
+        {
+            var list = BLLOrder.Instance.GetDonGoiMonViewsByMaBan(currentTable.MaBan);
+            if (list == null || list.Count == 0)
+            {
+                orderDetailsPanel.Visible = orderDetailsDataPanel.Visible = false;
+                orderListDataGridView.DataSource = null;
+            }
+            else
+            {
+                list.Reverse();
+                orderListDataGridView.DataSource = list;
+                ShowPanel();
+            }
+            //orderListDataGridView.DataSource = BLLOrder.Instance.GetDonGoiMonViewsByMaBan(currentTable.MaBan);
+        }
         public void LoadTableByLocation(string MaKhuVuc)
         {
             if (MaKhuVuc.Equals("0"))
@@ -205,13 +225,13 @@ namespace CafeShop.View.EmpForm
 
         private void openButton_Click(object sender, EventArgs e)
         {
-            if (currentTableButton.Status.Equals("Còn trống"))                
+            if (currentTableButton.Status.Equals("Còn trống"))
                 OpenTable();
             else
                 if (BLLOrder.Instance.GetDonGoiMonViewsByMaBan(currentTable.MaBan).Count == 0)
-                    CloseTable();
-                else
-                    chargeBill();
+                CloseTable();
+            else
+                chargeBill();
         }
         private void OpenTable()
         {

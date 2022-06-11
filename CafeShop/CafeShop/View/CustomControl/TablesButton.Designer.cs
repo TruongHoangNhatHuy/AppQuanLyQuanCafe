@@ -1,4 +1,4 @@
-﻿namespace CafeShop.View.EmpForm
+﻿namespace CafeShop.View.CustomControl
 {
     partial class TablesButton
     {
@@ -66,6 +66,6 @@
         #endregion
 
         private CustomControl.JButton TableButton;
-        
+
     }
 }

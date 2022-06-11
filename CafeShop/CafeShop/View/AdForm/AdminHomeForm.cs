@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeShop.DTO;
 using CafeShop.BLL;
-using CafeShop.View.EmpForm;
+using CafeShop.View.CustomControl;
 namespace CafeShop.View.AdForm
 {
     public partial class AdminHomeForm : Form
@@ -40,13 +40,13 @@ namespace CafeShop.View.AdForm
         }
         public void LoadTopFood()
         {
-            var result = BLLAdminHome.Instance.GetFoodStatistics(DateTime.Now);
+            var result = BLLAdminHome.Instance.GetFoodStatistics(DateTime.Now, 5);
             for (int i = 0; i < result.Count; i++)
             {
                 CustomControl.TopFoodControl line = new CustomControl.TopFoodControl()
                 {
                     OrderNumber = (i + 1).ToString(),
-                    FoodName = result[i].FoodName,
+                    FoodName = BLLAdminHome.Instance.GetTenMonByMaMon(result[i].FoodID),
                     Count = result[i].Count.ToString()
                 };
                 topFoodLayoutPanel.Controls.Add(line);
@@ -124,6 +124,11 @@ namespace CafeShop.View.AdForm
             string MaKhuVuc = (areaJCombobox.SelectedItem as KhuvucCBItem).ID;
             LoadTableByLocation(MaKhuVuc);
             tableInfoTable.Visible = false;
+        }
+
+        private void foodetailsButton_Click(object sender, EventArgs e)
+        {
+            new StatisticsFoodDetailForm().ShowDialog();
         }
     }
 }

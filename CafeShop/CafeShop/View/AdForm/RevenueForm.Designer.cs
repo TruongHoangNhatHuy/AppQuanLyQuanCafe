@@ -58,9 +58,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.menuBarPanel = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.toGroupbox = new System.Windows.Forms.GroupBox();
             this.toDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fromGroupbox = new System.Windows.Forms.GroupBox();
             this.fromDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.label1 = new System.Windows.Forms.Label();
             this.confirmButton = new CafeShop.View.CustomControl.JButton();
@@ -85,8 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuBarPanel.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.toGroupbox.SuspendLayout();
+            this.fromGroupbox.SuspendLayout();
             this.revenueChartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -291,8 +291,8 @@
             // 
             // menuBarPanel
             // 
-            this.menuBarPanel.Controls.Add(this.groupBox3);
-            this.menuBarPanel.Controls.Add(this.groupBox1);
+            this.menuBarPanel.Controls.Add(this.toGroupbox);
+            this.menuBarPanel.Controls.Add(this.fromGroupbox);
             this.menuBarPanel.Controls.Add(this.label1);
             this.menuBarPanel.Controls.Add(this.confirmButton);
             this.menuBarPanel.Controls.Add(this.statisticsTypeCombobox);
@@ -302,16 +302,16 @@
             this.menuBarPanel.Size = new System.Drawing.Size(1154, 86);
             this.menuBarPanel.TabIndex = 8;
             // 
-            // groupBox3
+            // toGroupbox
             // 
-            this.groupBox3.Controls.Add(this.toDatetimepicker);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(691, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(252, 59);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Đến";
+            this.toGroupbox.Controls.Add(this.toDatetimepicker);
+            this.toGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toGroupbox.Location = new System.Drawing.Point(691, 12);
+            this.toGroupbox.Name = "toGroupbox";
+            this.toGroupbox.Size = new System.Drawing.Size(252, 59);
+            this.toGroupbox.TabIndex = 13;
+            this.toGroupbox.TabStop = false;
+            this.toGroupbox.Text = "Đến";
             // 
             // toDatetimepicker
             // 
@@ -327,16 +327,16 @@
             this.toDatetimepicker.TabIndex = 12;
             this.toDatetimepicker.TextColor = System.Drawing.Color.White;
             // 
-            // groupBox1
+            // fromGroupbox
             // 
-            this.groupBox1.Controls.Add(this.fromDatetimepicker);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(420, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(252, 59);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Từ";
+            this.fromGroupbox.Controls.Add(this.fromDatetimepicker);
+            this.fromGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromGroupbox.Location = new System.Drawing.Point(420, 12);
+            this.fromGroupbox.Name = "fromGroupbox";
+            this.fromGroupbox.Size = new System.Drawing.Size(252, 59);
+            this.fromGroupbox.TabIndex = 9;
+            this.fromGroupbox.TabStop = false;
+            this.fromGroupbox.Text = "Từ";
             // 
             // fromDatetimepicker
             // 
@@ -358,9 +358,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 24);
+            this.label1.Size = new System.Drawing.Size(99, 24);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Thống kê theo";
+            this.label1.Text = "Thống kê";
             // 
             // confirmButton
             // 
@@ -393,13 +393,14 @@
             this.statisticsTypeCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.statisticsTypeCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.statisticsTypeCombobox.ListTextColor = System.Drawing.Color.DimGray;
-            this.statisticsTypeCombobox.Location = new System.Drawing.Point(186, 26);
+            this.statisticsTypeCombobox.Location = new System.Drawing.Point(141, 26);
             this.statisticsTypeCombobox.MinimumSize = new System.Drawing.Size(200, 30);
             this.statisticsTypeCombobox.Name = "statisticsTypeCombobox";
             this.statisticsTypeCombobox.Padding = new System.Windows.Forms.Padding(1);
             this.statisticsTypeCombobox.Size = new System.Drawing.Size(200, 30);
             this.statisticsTypeCombobox.TabIndex = 0;
             this.statisticsTypeCombobox.Texts = "";
+            this.statisticsTypeCombobox.OnSelectedIndexChanged += new System.EventHandler(this.statisticsTypeCombobox_OnSelectedIndexChanged);
             // 
             // leftPanel
             // 
@@ -558,8 +559,8 @@
             this.panel2.ResumeLayout(false);
             this.menuBarPanel.ResumeLayout(false);
             this.menuBarPanel.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.toGroupbox.ResumeLayout(false);
+            this.fromGroupbox.ResumeLayout(false);
             this.revenueChartPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -589,7 +590,7 @@
         private System.Windows.Forms.Panel panel2;
         private CustomControl.JButton exitButton;
         private System.Windows.Forms.Panel menuBarPanel;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox fromGroupbox;
         private System.Windows.Forms.Label label1;
         private CustomControl.JButton confirmButton;
         private CustomControl.JComboBox statisticsTypeCombobox;
@@ -604,6 +605,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart revenueChart;
         private CustomControl.JDatetimepicker toDatetimepicker;
         private CustomControl.JDatetimepicker fromDatetimepicker;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox toGroupbox;
     }
 }

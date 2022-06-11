@@ -67,6 +67,6 @@ namespace CafeShop.BLL
             
         }
         public HoaDon GetHoaDonByMaBan(string MaBan) => currentBill.Where(p => p.MaBan == MaBan).FirstOrDefault();
-        public List<DonGoiMonView> GetDonGoiMonViewsByMaBan(string MaBan) => GetHoaDonByMaBan(MaBan).DonGoiMons.Select(p => new DonGoiMonView(p)).ToList();
+        public List<DonGoiMonView> GetDonGoiMonViewsByMaBan(string MaBan) => GetHoaDonByMaBan(MaBan)?.DonGoiMons.Select(p => new DonGoiMonView(p)).ToList();
     }
 }

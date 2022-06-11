@@ -28,12 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.areaPanel = new System.Windows.Forms.Panel();
             this.areaFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.areaJCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.areaLabel = new System.Windows.Forms.Label();
             this.detailPanel = new System.Windows.Forms.Panel();
+            this.orderDetailsDataPanel = new System.Windows.Forms.Panel();
+            this.orderListDataGridView = new System.Windows.Forms.DataGridView();
+            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoiGianTuKhiGoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGoiMonViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderDetailsPanel = new System.Windows.Forms.Panel();
+            this.orderDetailsLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.buttonPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.stateButton = new CafeShop.View.CustomControl.JButton();
             this.orderButton = new CafeShop.View.CustomControl.JButton();
@@ -52,6 +65,10 @@
             this.areaPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.detailPanel.SuspendLayout();
+            this.orderDetailsDataPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderListDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGoiMonViewBindingSource)).BeginInit();
+            this.orderDetailsPanel.SuspendLayout();
             this.buttonPanel1.SuspendLayout();
             this.tableInfoTable.SuspendLayout();
             this.itemPanel.SuspendLayout();
@@ -70,6 +87,7 @@
             // 
             // areaFlowPanel
             // 
+            this.areaFlowPanel.AutoScroll = true;
             this.areaFlowPanel.BackColor = System.Drawing.Color.Wheat;
             this.areaFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.areaFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -77,6 +95,7 @@
             this.areaFlowPanel.Name = "areaFlowPanel";
             this.areaFlowPanel.Size = new System.Drawing.Size(327, 547);
             this.areaFlowPanel.TabIndex = 1;
+            this.areaFlowPanel.WrapContents = false;
             // 
             // panel5
             // 
@@ -122,6 +141,9 @@
             // detailPanel
             // 
             this.detailPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.detailPanel.Controls.Add(this.orderDetailsDataPanel);
+            this.detailPanel.Controls.Add(this.orderDetailsPanel);
+            this.detailPanel.Controls.Add(this.panel1);
             this.detailPanel.Controls.Add(this.buttonPanel1);
             this.detailPanel.Controls.Add(this.tableInfoTable);
             this.detailPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -129,6 +151,91 @@
             this.detailPanel.Name = "detailPanel";
             this.detailPanel.Size = new System.Drawing.Size(313, 611);
             this.detailPanel.TabIndex = 1;
+            // 
+            // orderDetailsDataPanel
+            // 
+            this.orderDetailsDataPanel.Controls.Add(this.orderListDataGridView);
+            this.orderDetailsDataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderDetailsDataPanel.Location = new System.Drawing.Point(0, 351);
+            this.orderDetailsDataPanel.Name = "orderDetailsDataPanel";
+            this.orderDetailsDataPanel.Size = new System.Drawing.Size(311, 258);
+            this.orderDetailsDataPanel.TabIndex = 4;
+            // 
+            // orderListDataGridView
+            // 
+            this.orderListDataGridView.AllowUserToAddRows = false;
+            this.orderListDataGridView.AllowUserToDeleteRows = false;
+            this.orderListDataGridView.AllowUserToResizeColumns = false;
+            this.orderListDataGridView.AllowUserToResizeRows = false;
+            this.orderListDataGridView.AutoGenerateColumns = false;
+            this.orderListDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.orderListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenMon,
+            this.SoLuong,
+            this.thoiGianTuKhiGoiDataGridViewTextBoxColumn});
+            this.orderListDataGridView.DataSource = this.donGoiMonViewBindingSource;
+            this.orderListDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderListDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.orderListDataGridView.Name = "orderListDataGridView";
+            this.orderListDataGridView.Size = new System.Drawing.Size(311, 258);
+            this.orderListDataGridView.TabIndex = 0;
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMon";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.TenMon.DefaultCellStyle = dataGridViewCellStyle1;
+            this.TenMon.HeaderText = "Tên món";
+            this.TenMon.Name = "TenMon";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // thoiGianTuKhiGoiDataGridViewTextBoxColumn
+            // 
+            this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianTuKhiGoi";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.HeaderText = "Thời gian từ khi gọi";
+            this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.Name = "thoiGianTuKhiGoiDataGridViewTextBoxColumn";
+            // 
+            // donGoiMonViewBindingSource
+            // 
+            this.donGoiMonViewBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMonView);
+            // 
+            // orderDetailsPanel
+            // 
+            this.orderDetailsPanel.Controls.Add(this.orderDetailsLabel);
+            this.orderDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.orderDetailsPanel.Location = new System.Drawing.Point(0, 308);
+            this.orderDetailsPanel.Name = "orderDetailsPanel";
+            this.orderDetailsPanel.Size = new System.Drawing.Size(311, 43);
+            this.orderDetailsPanel.TabIndex = 3;
+            // 
+            // orderDetailsLabel
+            // 
+            this.orderDetailsLabel.AutoSize = true;
+            this.orderDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDetailsLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.orderDetailsLabel.Location = new System.Drawing.Point(80, 11);
+            this.orderDetailsLabel.Name = "orderDetailsLabel";
+            this.orderDetailsLabel.Size = new System.Drawing.Size(158, 24);
+            this.orderDetailsLabel.TabIndex = 0;
+            this.orderDetailsLabel.Text = "Các món đã gọi";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 292);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(311, 16);
+            this.panel1.TabIndex = 2;
             // 
             // buttonPanel1
             // 
@@ -342,6 +449,11 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.detailPanel.ResumeLayout(false);
+            this.orderDetailsDataPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.orderListDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGoiMonViewBindingSource)).EndInit();
+            this.orderDetailsPanel.ResumeLayout(false);
+            this.orderDetailsPanel.PerformLayout();
             this.buttonPanel1.ResumeLayout(false);
             this.tableInfoTable.ResumeLayout(false);
             this.tableInfoTable.PerformLayout();
@@ -373,5 +485,14 @@
         private System.Windows.Forms.Label timeInfoLabel;
         private System.Windows.Forms.Label statusTableLabel;
         private CustomControl.JComboBox areaJCombobox;
+        private System.Windows.Forms.Panel orderDetailsPanel;
+        private System.Windows.Forms.Label orderDetailsLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel orderDetailsDataPanel;
+        private System.Windows.Forms.DataGridView orderListDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoiGianTuKhiGoiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource donGoiMonViewBindingSource;
     }
 }

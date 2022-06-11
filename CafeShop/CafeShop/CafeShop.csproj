@@ -181,6 +181,12 @@
     <Compile Include="View\AdForm\RevenueForm.Designer.cs">
       <DependentUpon>RevenueForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AdForm\StatisticsFoodDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdForm\StatisticsFoodDetailForm.Designer.cs">
+      <DependentUpon>StatisticsFoodDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AdForm\TableForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,10 +291,10 @@
     <Compile Include="View\EmpForm\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\EmpForm\TablesButton.cs">
+    <Compile Include="View\CustomControl\TablesButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\EmpForm\TablesButton.Designer.cs">
+    <Compile Include="View\CustomControl\TablesButton.Designer.cs">
       <DependentUpon>TablesButton.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginForm.cs">
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\RevenueForm.resx">
       <DependentUpon>RevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdForm\StatisticsFoodDetailForm.resx">
+      <DependentUpon>StatisticsFoodDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
@@ -377,7 +386,7 @@
     <EmbeddedResource Include="View\EmpForm\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\EmpForm\TablesButton.resx">
+    <EmbeddedResource Include="View\CustomControl\TablesButton.resx">
       <DependentUpon>TablesButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">

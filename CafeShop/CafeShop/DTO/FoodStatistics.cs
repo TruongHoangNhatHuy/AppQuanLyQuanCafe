@@ -8,7 +8,7 @@ namespace CafeShop.DTO
 {
     public class FoodStatistics
     {
-        public string FoodName { get; set; }
+        public string FoodID { get; set; }
         public int Count { get; set; }
     }
 }

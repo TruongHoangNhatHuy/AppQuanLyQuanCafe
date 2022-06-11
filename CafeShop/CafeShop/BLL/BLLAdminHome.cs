@@ -20,16 +20,30 @@ namespace CafeShop.BLL
             private set {}
         }
         private BLLAdminHome() { }
-        public List<FoodStatistics> GetFoodStatistics(DateTime time)
+        public List<FoodStatistics> GetFoodStatistics(DateTime time, int countFood = 0)
         {
-            return DBModel.Instance.DonGoiMons.Where(p => p.ThoiGianGoiMon.Year == time.Year && p.ThoiGianGoiMon.Month == time.Month).
+            var list = DBModel.Instance.DonGoiMons.Where(p => p.ThoiGianGoiMon.Year == time.Year && p.ThoiGianGoiMon.Month == time.Month).
                 GroupBy(p => p.Mon).Select(p => new FoodStatistics 
-                { 
-                    FoodName = p.Select(x => x.Mon.TenMon).FirstOrDefault(),
+                {                    
+                    FoodID = p.Select(x => x.Mon.MaMon).FirstOrDefault(),
                     Count = p.Sum(count => count.SoLuong)
                 }                    
-                ).OrderByDescending(p => p.Count).Take(5).ToList();
+                ).OrderByDescending(p => p.Count).ToList();
+            if (countFood > 0)
+                return list.Take(countFood).ToList();
+            else
+                return list;
         }
+        public List<string> GetAllMaMon() => DBModel.Instance.Mons.Where(p => p.Visible).Select(p => p.MaMon).ToList();
+        public List<FoodStatistics> GetAllFoodStatistics(DateTime time)
+        {
+            var list = GetFoodStatistics(time);
+            foreach(string MaMon in GetAllMaMon())
+                if (!list.Exists(p => p.FoodID == MaMon))
+                    list.Add(new FoodStatistics() { FoodID = MaMon, Count = 0}); 
+            return list;
+        }
+        public string GetTenMonByMaMon(string MaMon) => DBModel.Instance.Mons.Find(MaMon)?.TenMon;
         public List<HoaDon> GetHoaDonInDay(DateTime time)
         {
             return DBModel.Instance.HoaDons.Where(p => p.ThoiGianThanhToan.Day == time.Day && p.ThoiGianThanhToan.Month == time.Month && p.ThoiGianThanhToan.Year == time.Year).ToList();

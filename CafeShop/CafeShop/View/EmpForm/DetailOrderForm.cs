@@ -8,6 +8,8 @@ namespace CafeShop.View.EmpForm
     {
         //public delegate void ReloadTableInfoDelegate(string MaBan);
         //public ReloadTableInfoDelegate ReloadInfo { get; set; }
+        public delegate void ReloadOrderList();
+        public ReloadOrderList ReloadInfo { get; set; }
         public DetailOrderForm(string MaMon, string MaHoaDon)
         {
             InitializeComponent();
@@ -41,7 +43,7 @@ namespace CafeShop.View.EmpForm
                 {
                     string GhiChu = descriptionTextbox.Texts;
                     BLLDetailOrder.Instance.ConfirmDetailOrder(SoLuong, GhiChu);
-                    //ReloadInfo?.Invoke();
+                    ReloadInfo?.Invoke();
                     this.Close();
                 }
                 else

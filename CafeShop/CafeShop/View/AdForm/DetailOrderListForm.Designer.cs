@@ -49,12 +49,11 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.dataPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.monDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghiChuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoiGianGoiMonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.donGoiMonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discountTextbox = new CafeShop.View.CustomControl.JNewTextbox();
+            this.surchargeTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.totalTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.employeeNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.customerNameTextbox = new CafeShop.View.CustomControl.JNewTextbox();
@@ -62,6 +61,11 @@
             this.billIDTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.minimizeButton = new CafeShop.View.CustomControl.JButton();
             this.closeButton = new CafeShop.View.CustomControl.JButton();
+            this.monDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghiChuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoiGianGoiMonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controlBarPanel.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
@@ -160,6 +164,10 @@
             // 
             // bottomPanel
             // 
+            this.bottomPanel.Controls.Add(this.discountTextbox);
+            this.bottomPanel.Controls.Add(this.label5);
+            this.bottomPanel.Controls.Add(this.surchargeTextbox);
+            this.bottomPanel.Controls.Add(this.label4);
             this.bottomPanel.Controls.Add(this.totalTextbox);
             this.bottomPanel.Controls.Add(this.totalLabel);
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -233,54 +241,73 @@
             this.dataGridView1.Size = new System.Drawing.Size(721, 274);
             this.dataGridView1.TabIndex = 0;
             // 
-            // monDataGridViewTextBoxColumn
+            // label4
             // 
-            this.monDataGridViewTextBoxColumn.DataPropertyName = "Mon";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.monDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.monDataGridViewTextBoxColumn.HeaderText = "Tên món";
-            this.monDataGridViewTextBoxColumn.Name = "monDataGridViewTextBoxColumn";
-            this.monDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Crimson;
+            this.label4.Location = new System.Drawing.Point(49, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Phụ thu";
             // 
-            // soLuongDataGridViewTextBoxColumn
+            // label5
             // 
-            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.soLuongDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số lượng";
-            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            this.soLuongDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ghiChuDataGridViewTextBoxColumn
-            // 
-            this.ghiChuDataGridViewTextBoxColumn.DataPropertyName = "GhiChu";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ghiChuDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ghiChuDataGridViewTextBoxColumn.HeaderText = "Ghi chú";
-            this.ghiChuDataGridViewTextBoxColumn.Name = "ghiChuDataGridViewTextBoxColumn";
-            this.ghiChuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // thoiGianGoiMonDataGridViewTextBoxColumn
-            // 
-            this.thoiGianGoiMonDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianGoiMon";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.thoiGianGoiMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.thoiGianGoiMonDataGridViewTextBoxColumn.HeaderText = "Thời gian gọi món";
-            this.thoiGianGoiMonDataGridViewTextBoxColumn.Name = "thoiGianGoiMonDataGridViewTextBoxColumn";
-            this.thoiGianGoiMonDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // giaTienDataGridViewTextBoxColumn
-            // 
-            this.giaTienDataGridViewTextBoxColumn.DataPropertyName = "GiaTien";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.giaTienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.giaTienDataGridViewTextBoxColumn.HeaderText = "Giá tiền";
-            this.giaTienDataGridViewTextBoxColumn.Name = "giaTienDataGridViewTextBoxColumn";
-            this.giaTienDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Crimson;
+            this.label5.Location = new System.Drawing.Point(232, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Giảm giá";
             // 
             // donGoiMonBindingSource
             // 
             this.donGoiMonBindingSource.DataSource = typeof(CafeShop.DTO.DonGoiMon);
+            // 
+            // discountTextbox
+            // 
+            this.discountTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.discountTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.discountTextbox.BorderRadius = 5;
+            this.discountTextbox.BorderSize = 2;
+            this.discountTextbox.Enabled = false;
+            this.discountTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountTextbox.Location = new System.Drawing.Point(318, 21);
+            this.discountTextbox.Multiline = false;
+            this.discountTextbox.Name = "discountTextbox";
+            this.discountTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.discountTextbox.PasswordChar = false;
+            this.discountTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.discountTextbox.PlaceholderText = "";
+            this.discountTextbox.Size = new System.Drawing.Size(87, 32);
+            this.discountTextbox.TabIndex = 5;
+            this.discountTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Right;
+            this.discountTextbox.Texts = "";
+            this.discountTextbox.UnderlinedStyle = false;
+            // 
+            // surchargeTextbox
+            // 
+            this.surchargeTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.surchargeTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.surchargeTextbox.BorderRadius = 5;
+            this.surchargeTextbox.BorderSize = 2;
+            this.surchargeTextbox.Enabled = false;
+            this.surchargeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surchargeTextbox.Location = new System.Drawing.Point(126, 21);
+            this.surchargeTextbox.Multiline = false;
+            this.surchargeTextbox.Name = "surchargeTextbox";
+            this.surchargeTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.surchargeTextbox.PasswordChar = false;
+            this.surchargeTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.surchargeTextbox.PlaceholderText = "";
+            this.surchargeTextbox.Size = new System.Drawing.Size(87, 32);
+            this.surchargeTextbox.TabIndex = 3;
+            this.surchargeTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Right;
+            this.surchargeTextbox.Texts = "";
+            this.surchargeTextbox.UnderlinedStyle = false;
             // 
             // totalTextbox
             // 
@@ -433,6 +460,51 @@
             this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
+            // monDataGridViewTextBoxColumn
+            // 
+            this.monDataGridViewTextBoxColumn.DataPropertyName = "Mon";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.monDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.monDataGridViewTextBoxColumn.HeaderText = "Tên món";
+            this.monDataGridViewTextBoxColumn.Name = "monDataGridViewTextBoxColumn";
+            this.monDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.soLuongDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số lượng";
+            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            this.soLuongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ghiChuDataGridViewTextBoxColumn
+            // 
+            this.ghiChuDataGridViewTextBoxColumn.DataPropertyName = "GhiChu";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ghiChuDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ghiChuDataGridViewTextBoxColumn.HeaderText = "Ghi chú";
+            this.ghiChuDataGridViewTextBoxColumn.Name = "ghiChuDataGridViewTextBoxColumn";
+            this.ghiChuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // thoiGianGoiMonDataGridViewTextBoxColumn
+            // 
+            this.thoiGianGoiMonDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianGoiMon";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.thoiGianGoiMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.thoiGianGoiMonDataGridViewTextBoxColumn.HeaderText = "Thời gian gọi món";
+            this.thoiGianGoiMonDataGridViewTextBoxColumn.Name = "thoiGianGoiMonDataGridViewTextBoxColumn";
+            this.thoiGianGoiMonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // giaTienDataGridViewTextBoxColumn
+            // 
+            this.giaTienDataGridViewTextBoxColumn.DataPropertyName = "GiaTien";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.giaTienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.giaTienDataGridViewTextBoxColumn.HeaderText = "Giá tiền";
+            this.giaTienDataGridViewTextBoxColumn.Name = "giaTienDataGridViewTextBoxColumn";
+            this.giaTienDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // DetailOrderListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,6 +560,10 @@
         private System.Windows.Forms.BindingSource donGoiMonBindingSource;
         private CustomControl.JNewTextbox totalTextbox;
         private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label label5;
+        private CustomControl.JNewTextbox surchargeTextbox;
+        private System.Windows.Forms.Label label4;
+        private CustomControl.JNewTextbox discountTextbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn monDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChuDataGridViewTextBoxColumn;

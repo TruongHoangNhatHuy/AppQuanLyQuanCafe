@@ -32,6 +32,8 @@ namespace CafeShop.View.AdForm
             customerNameTextbox.Texts = bill.KhachHang.HoTenKH;
             employeeNameTextbox.Texts = bill.TaiKhoan.HoTen;
             totalTextbox.Texts = bill.ThanhTien.ToString();
+            surchargeTextbox.Texts = bill.PhuThu;
+            discountTextbox.Texts = bill.GiamGia;
             dataGridView1.DataSource = bill.DonGoiMons.ToList();
             
         }

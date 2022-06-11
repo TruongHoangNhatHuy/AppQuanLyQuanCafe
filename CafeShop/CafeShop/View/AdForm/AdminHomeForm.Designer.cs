@@ -44,10 +44,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.transitionPanel = new System.Windows.Forms.Panel();
             this.areaPanel = new System.Windows.Forms.Panel();
             this.areaFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.areaJCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.areaLabel = new System.Windows.Forms.Label();
             this.detailPanel = new System.Windows.Forms.Panel();
             this.tableInfoTable = new System.Windows.Forms.Panel();
@@ -61,10 +63,9 @@
             this.foodOverviewPanel = new System.Windows.Forms.Panel();
             this.topFoodLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.bottomPanel = new System.Windows.Forms.Panel();
+            this.foodetailsButton = new CafeShop.View.CustomControl.JButton();
             this.titleFoodPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.areaJCombobox = new CafeShop.View.CustomControl.JComboBox();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -80,6 +81,7 @@
             this.detailPanel.SuspendLayout();
             this.tableInfoTable.SuspendLayout();
             this.foodOverviewPanel.SuspendLayout();
+            this.bottomPanel.SuspendLayout();
             this.titleFoodPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,7 +141,7 @@
             this.revenueLabel.Name = "revenueLabel";
             this.revenueLabel.Size = new System.Drawing.Size(231, 28);
             this.revenueLabel.TabIndex = 2;
-            this.revenueLabel.Text = "20";
+            this.revenueLabel.Text = "0";
             this.revenueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox3
@@ -183,7 +185,7 @@
             this.customerCountLabel.Name = "customerCountLabel";
             this.customerCountLabel.Size = new System.Drawing.Size(231, 28);
             this.customerCountLabel.TabIndex = 2;
-            this.customerCountLabel.Text = "50";
+            this.customerCountLabel.Text = "0";
             this.customerCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox2
@@ -227,7 +229,7 @@
             this.billCountLabel.Name = "billCountLabel";
             this.billCountLabel.Size = new System.Drawing.Size(231, 28);
             this.billCountLabel.TabIndex = 2;
-            this.billCountLabel.Text = "100";
+            this.billCountLabel.Text = "0";
             this.billCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1
@@ -258,6 +260,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(207, 100);
             this.panel2.TabIndex = 0;
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Crimson;
+            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitButton.BorderRadius = 30;
+            this.exitButton.BorderSize = 0;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.exitButton.Location = new System.Drawing.Point(23, 30);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(55, 40);
+            this.exitButton.TabIndex = 1;
+            this.exitButton.TextColor = System.Drawing.Color.White;
+            this.exitButton.UseVisualStyleBackColor = false;
             // 
             // transitionPanel
             // 
@@ -300,6 +320,26 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(327, 62);
             this.panel6.TabIndex = 0;
+            // 
+            // areaJCombobox
+            // 
+            this.areaJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.areaJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.areaJCombobox.BorderSize = 2;
+            this.areaJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.areaJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.areaJCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.areaJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.areaJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.areaJCombobox.ListTextColor = System.Drawing.Color.Black;
+            this.areaJCombobox.Location = new System.Drawing.Point(108, 26);
+            this.areaJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.areaJCombobox.Name = "areaJCombobox";
+            this.areaJCombobox.Padding = new System.Windows.Forms.Padding(2);
+            this.areaJCombobox.Size = new System.Drawing.Size(200, 30);
+            this.areaJCombobox.TabIndex = 2;
+            this.areaJCombobox.Texts = "";
+            this.areaJCombobox.OnSelectedIndexChanged += new System.EventHandler(this.areaJCombobox_OnSelectedIndexChanged);
             // 
             // areaLabel
             // 
@@ -426,16 +466,37 @@
             this.topFoodLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.topFoodLayoutPanel.Location = new System.Drawing.Point(0, 51);
             this.topFoodLayoutPanel.Name = "topFoodLayoutPanel";
-            this.topFoodLayoutPanel.Size = new System.Drawing.Size(495, 391);
+            this.topFoodLayoutPanel.Size = new System.Drawing.Size(495, 363);
             this.topFoodLayoutPanel.TabIndex = 2;
             // 
             // bottomPanel
             // 
+            this.bottomPanel.Controls.Add(this.foodetailsButton);
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomPanel.Location = new System.Drawing.Point(0, 442);
+            this.bottomPanel.Location = new System.Drawing.Point(0, 414);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(495, 43);
+            this.bottomPanel.Size = new System.Drawing.Size(495, 71);
             this.bottomPanel.TabIndex = 1;
+            // 
+            // foodetailsButton
+            // 
+            this.foodetailsButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.foodetailsButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.foodetailsButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.foodetailsButton.BorderRadius = 15;
+            this.foodetailsButton.BorderSize = 0;
+            this.foodetailsButton.FlatAppearance.BorderSize = 0;
+            this.foodetailsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.foodetailsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foodetailsButton.ForeColor = System.Drawing.Color.Black;
+            this.foodetailsButton.Location = new System.Drawing.Point(201, 8);
+            this.foodetailsButton.Name = "foodetailsButton";
+            this.foodetailsButton.Size = new System.Drawing.Size(150, 40);
+            this.foodetailsButton.TabIndex = 1;
+            this.foodetailsButton.Text = "Xem chi tiết";
+            this.foodetailsButton.TextColor = System.Drawing.Color.Black;
+            this.foodetailsButton.UseVisualStyleBackColor = false;
+            this.foodetailsButton.Click += new System.EventHandler(this.foodetailsButton_Click);
             // 
             // titleFoodPanel
             // 
@@ -456,44 +517,6 @@
             this.label2.Size = new System.Drawing.Size(389, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Top món bán chạy nhất trong tháng";
-            // 
-            // areaJCombobox
-            // 
-            this.areaJCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.areaJCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.areaJCombobox.BorderSize = 2;
-            this.areaJCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.areaJCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaJCombobox.ForeColor = System.Drawing.Color.DimGray;
-            this.areaJCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.areaJCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.areaJCombobox.ListTextColor = System.Drawing.Color.Black;
-            this.areaJCombobox.Location = new System.Drawing.Point(108, 26);
-            this.areaJCombobox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.areaJCombobox.Name = "areaJCombobox";
-            this.areaJCombobox.Padding = new System.Windows.Forms.Padding(2);
-            this.areaJCombobox.Size = new System.Drawing.Size(200, 30);
-            this.areaJCombobox.TabIndex = 2;
-            this.areaJCombobox.Texts = "";
-            this.areaJCombobox.OnSelectedIndexChanged += new System.EventHandler(this.areaJCombobox_OnSelectedIndexChanged);
-            // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(23, 30);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(55, 40);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
             // 
             // AdminHomeForm
             // 
@@ -531,6 +554,7 @@
             this.tableInfoTable.ResumeLayout(false);
             this.tableInfoTable.PerformLayout();
             this.foodOverviewPanel.ResumeLayout(false);
+            this.bottomPanel.ResumeLayout(false);
             this.titleFoodPanel.ResumeLayout(false);
             this.titleFoodPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -576,5 +600,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel topFoodLayoutPanel;
         private System.Windows.Forms.Panel bottomPanel;
+        private CustomControl.JButton foodetailsButton;
     }
 }

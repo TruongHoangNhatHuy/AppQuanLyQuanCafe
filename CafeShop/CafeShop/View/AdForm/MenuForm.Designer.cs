@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.mainPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -51,11 +52,6 @@
             this.editFButton = new CafeShop.View.CustomControl.JButton();
             this.addFButton = new CafeShop.View.CustomControl.JButton();
             this.foodData = new System.Windows.Forms.DataGridView();
-            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Visible = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.selectionCombobox = new System.Windows.Forms.ComboBox();
@@ -83,6 +79,11 @@
             this.categoryNameLabel = new System.Windows.Forms.Label();
             this.categoryIDTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.categoryFoodLabel = new System.Windows.Forms.Label();
+            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Visible = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.categoryPanel.SuspendLayout();
@@ -452,41 +453,6 @@
             this.foodData.Size = new System.Drawing.Size(465, 444);
             this.foodData.TabIndex = 2;
             this.foodData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodData_CellClick);
-            // 
-            // MaMon
-            // 
-            this.MaMon.DataPropertyName = "MaMon";
-            this.MaMon.HeaderText = "Mã món";
-            this.MaMon.Name = "MaMon";
-            this.MaMon.ReadOnly = true;
-            // 
-            // TenMon
-            // 
-            this.TenMon.DataPropertyName = "TenMon";
-            this.TenMon.HeaderText = "Tên món";
-            this.TenMon.Name = "TenMon";
-            this.TenMon.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // DonVi
-            // 
-            this.DonVi.DataPropertyName = "DonVi";
-            this.DonVi.HeaderText = "Đơn vị";
-            this.DonVi.Name = "DonVi";
-            this.DonVi.ReadOnly = true;
-            // 
-            // Visible
-            // 
-            this.Visible.DataPropertyName = "Visible";
-            this.Visible.HeaderText = "Hiển thị";
-            this.Visible.Name = "Visible";
-            this.Visible.ReadOnly = true;
             // 
             // monBindingSource
             // 
@@ -870,6 +836,43 @@
             this.categoryFoodLabel.TabIndex = 0;
             this.categoryFoodLabel.Text = "Mã danh mục";
             // 
+            // MaMon
+            // 
+            this.MaMon.DataPropertyName = "MaMon";
+            this.MaMon.HeaderText = "Mã món";
+            this.MaMon.Name = "MaMon";
+            this.MaMon.ReadOnly = true;
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMon";
+            this.TenMon.HeaderText = "Tên món";
+            this.TenMon.Name = "TenMon";
+            this.TenMon.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "DonVi";
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.ReadOnly = true;
+            // 
+            // Visible
+            // 
+            this.Visible.DataPropertyName = "Visible";
+            this.Visible.HeaderText = "Hiển thị";
+            this.Visible.Name = "Visible";
+            this.Visible.ReadOnly = true;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -956,13 +959,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maDanhMucDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
         private System.Windows.Forms.DataGridViewCheckBoxColumn visibleDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Panel buttonPanel;
+        private CustomControl.JButton cancelButton;
+        private System.Windows.Forms.Label exceptionLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMon;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Visible;
-        private System.Windows.Forms.Panel buttonPanel;
-        private CustomControl.JButton cancelButton;
-        private System.Windows.Forms.Label exceptionLabel;
     }
 }

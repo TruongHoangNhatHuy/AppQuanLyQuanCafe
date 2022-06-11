@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CafeShop.View.EmpForm
+namespace CafeShop.View.CustomControl
 {
     public partial class TablesButton : UserControl
     {

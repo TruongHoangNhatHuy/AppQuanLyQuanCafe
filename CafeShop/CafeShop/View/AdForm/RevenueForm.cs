@@ -172,5 +172,22 @@ namespace CafeShop.View.AdForm
             customerCountLabel.Text = BLLInvoice.Instance.GetCustomerCount(bill);
             revenueLabel.Text = BLLInvoice.Instance.GetRevenue(bill);
         }
+
+        private void statisticsTypeCombobox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selection = statisticsTypeCombobox.SelectedIndex;
+            if (selection == 0)
+            {
+                toGroupbox.Visible = false;
+            }
+            else if (selection == 1)
+            {
+                toGroupbox.Visible = true;
+            }
+            else if (selection == 2)
+            {
+                toGroupbox.Visible = true;
+            }
+        }
     }
 }
