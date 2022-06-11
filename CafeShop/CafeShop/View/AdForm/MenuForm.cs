@@ -38,10 +38,10 @@ namespace CafeShop.View.AdForm
         {
             categoryFoodData.DataSource = BLLMenu.Instance.GetDanhMucThucDon();
         }
-        private void SetFoodDataGridView()
+        private void SetFoodDataGridView(string searchText = "")
         {
             int selection = selectionCombobox.SelectedIndex;
-            var list = BLLMenu.Instance.GetMonByMaDanhMuc(MaDanhMuc);
+            var list = BLLMenu.Instance.GetMonByMaDanhMuc(MaDanhMuc, searchText);
             if (selection == 0)
                 foodData.DataSource = list;
             else if (selection == 1)
@@ -76,8 +76,10 @@ namespace CafeShop.View.AdForm
         }
         private void ShowAllButton_Click(object sender, EventArgs e)
         {
-            foodData.DataSource = BLLMenu.Instance.GetAllMon();
+            //foodData.DataSource = BLLMenu.Instance.GetAllMon();
             MaDanhMuc = null;
+            SetFoodDataGridView();
+            
         }
 
         private void selectionCombobox_SelectedIndexChanged(object sender, EventArgs e)
@@ -236,9 +238,8 @@ namespace CafeShop.View.AdForm
 
         private void searchTextbox__TextChanged(object sender, EventArgs e)
         {
-            string text = searchTextbox.Texts;
-            List<Mon> list = foodData.DataSource as List<Mon>;
-            foodData.DataSource = BLLMenu.Instance.SearchFood(list, text.ToLower());
+            string searchText = searchTextbox.Texts;
+            SetFoodDataGridView(searchText);
         }
     }
 }

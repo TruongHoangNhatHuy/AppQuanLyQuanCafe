@@ -108,10 +108,8 @@ namespace CafeShop.View.AdForm
                 {
                     MaKhuVuc = (areaNameCombobox.SelectedItem as KhuvucCBItem).ID,
                     TenBan = tableNameTextbox.Texts,
-                    //MaBan = (state == ExecuteState.Update) ? tableIDTextbox.Texts : "B000000022",
                     MaBan = tableIDTextbox.Texts,
                     TinhTrang = true,
-                    //KhuVuc = BLLTable.Instance.GetKhuVucByMaKhuVuc((areaNameCombobox.SelectedItem as KhuvucCBItem).ID)
                 };
                 BLLTable.Instance.Execute(ban);
                 Show("0");

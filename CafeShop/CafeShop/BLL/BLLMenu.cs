@@ -22,24 +22,19 @@ namespace CafeShop.BLL
         private BLLMenu() { }
         public List<DanhMucThucDon> GetDanhMucThucDon() => DBModel.Instance.DanhMucThucDons.OrderBy(p => p.MaDanhMuc).Skip(1).ToList();
         public DanhMucThucDon GetDanhMucByMa(string MaDanhMuc) => DBModel.Instance.DanhMucThucDons.Find(MaDanhMuc);
-        //public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc) => DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc).ToList();
-        public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc)
+        public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc, string searchText = "")
         {
+            searchText = searchText.ToLower();
             if (MaDanhMuc == null)
-                return GetAllMon();
+                return GetAllMon().Where(p => p.TenMon.ToLower().Contains(searchText)).ToList();
             else
-                return DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc).ToList();
+                return DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc && p.TenMon.ToLower().Contains(searchText)).ToList();
         }
         public List<Mon> GetAllMon() => DBModel.Instance.Mons.OrderBy(p => p.MaMon).Skip(1).ToList();
         //--------------
         public List<Mon> GetVisibleMon(List<Mon> list) => list.Where(p => p.Visible == true).ToList();
 
         public List<Mon> GetHiddenMon(List<Mon> list) => list.Where(p => p.Visible == false).ToList();
-
-
-
-
-
         public Mon GetMonByMaMon(string MaMon) => DBModel.Instance.Mons.Find(MaMon);
         public bool CheckCategory(string MaDanhMuc)
         {
@@ -119,6 +114,5 @@ namespace CafeShop.BLL
             category.Visible = !category.Visible;
             DBModel.Instance.SaveChanges();
         }
-        public List<Mon> SearchFood(List<Mon> list, string text) => list.Where(p => p.TenMon.ToLower().Contains(text)).ToList();
     }
 }

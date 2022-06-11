@@ -28,7 +28,8 @@ namespace CafeShop.View.AdForm
 
         private void RevenueForm_Load(object sender, EventArgs e)
         {
-            statisticsTypeCombobox.Items.AddRange(new string[] { "Theo ngày trong tháng", "Theo tháng", "Theo năm" });           
+            statisticsTypeCombobox.Items.AddRange(new string[] { "Theo ngày trong tháng", "Theo tháng", "Theo năm" });
+            statisticsTypeCombobox.SelectedIndex = 0;
             //LoadRevenueChartByYear();
         }
 
@@ -139,7 +140,7 @@ namespace CafeShop.View.AdForm
         private void confirmButton_Click(object sender, EventArgs e)
         {
             DateTime from = fromDatetimepicker.Value, to = toDatetimepicker.Value;
-            if(from > to)
+            if(from.Date > to.Date)
             {
                 MessageBox.Show("Out of range");
                 return;

@@ -23,7 +23,6 @@ namespace CafeShop.BLL
         public List<KhuvucCBItem> GetKhuvucCBItem()
             => DBModel.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
         public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList().Skip(1).ToList();
-        //public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList();
         public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList().Skip(1).ToList();
         public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
 

@@ -280,6 +280,7 @@
             // 
             // areaFlowPanel
             // 
+            this.areaFlowPanel.AutoScroll = true;
             this.areaFlowPanel.BackColor = System.Drawing.Color.Wheat;
             this.areaFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.areaFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -287,6 +288,7 @@
             this.areaFlowPanel.Name = "areaFlowPanel";
             this.areaFlowPanel.Size = new System.Drawing.Size(327, 423);
             this.areaFlowPanel.TabIndex = 1;
+            this.areaFlowPanel.WrapContents = false;
             // 
             // panel6
             // 
@@ -408,6 +410,7 @@
             // 
             // foodOverviewPanel
             // 
+            this.foodOverviewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.foodOverviewPanel.Controls.Add(this.topFoodLayoutPanel);
             this.foodOverviewPanel.Controls.Add(this.bottomPanel);
             this.foodOverviewPanel.Controls.Add(this.titleFoodPanel);
@@ -421,17 +424,17 @@
             // 
             this.topFoodLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.topFoodLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.topFoodLayoutPanel.Location = new System.Drawing.Point(0, 63);
+            this.topFoodLayoutPanel.Location = new System.Drawing.Point(0, 51);
             this.topFoodLayoutPanel.Name = "topFoodLayoutPanel";
-            this.topFoodLayoutPanel.Size = new System.Drawing.Size(497, 381);
+            this.topFoodLayoutPanel.Size = new System.Drawing.Size(495, 391);
             this.topFoodLayoutPanel.TabIndex = 2;
             // 
             // bottomPanel
             // 
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomPanel.Location = new System.Drawing.Point(0, 444);
+            this.bottomPanel.Location = new System.Drawing.Point(0, 442);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(497, 43);
+            this.bottomPanel.Size = new System.Drawing.Size(495, 43);
             this.bottomPanel.TabIndex = 1;
             // 
             // titleFoodPanel
@@ -440,7 +443,7 @@
             this.titleFoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleFoodPanel.Location = new System.Drawing.Point(0, 0);
             this.titleFoodPanel.Name = "titleFoodPanel";
-            this.titleFoodPanel.Size = new System.Drawing.Size(497, 63);
+            this.titleFoodPanel.Size = new System.Drawing.Size(495, 51);
             this.titleFoodPanel.TabIndex = 0;
             // 
             // label2

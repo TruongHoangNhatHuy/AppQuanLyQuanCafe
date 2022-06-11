@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,9 +56,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.menuBarPanel = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.toDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fromDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.confirmButton = new CafeShop.View.CustomControl.JButton();
+            this.statisticsTypeCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.bottomPanel = new System.Windows.Forms.Panel();
@@ -68,12 +74,6 @@
             this.billChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.customerChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.splitPanel = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.toDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
-            this.fromDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
-            this.confirmButton = new CafeShop.View.CustomControl.JButton();
-            this.statisticsTypeCombobox = new CafeShop.View.CustomControl.JComboBox();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -85,13 +85,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuBarPanel.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.revenueChartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerChart)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -270,6 +270,25 @@
             this.panel2.Size = new System.Drawing.Size(207, 100);
             this.panel2.TabIndex = 0;
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Crimson;
+            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitButton.BorderRadius = 30;
+            this.exitButton.BorderSize = 0;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.exitButton.Location = new System.Drawing.Point(23, 30);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(55, 40);
+            this.exitButton.TabIndex = 1;
+            this.exitButton.TextColor = System.Drawing.Color.White;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // menuBarPanel
             // 
             this.menuBarPanel.Controls.Add(this.groupBox3);
@@ -283,6 +302,31 @@
             this.menuBarPanel.Size = new System.Drawing.Size(1154, 86);
             this.menuBarPanel.TabIndex = 8;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.toDatetimepicker);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(691, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(252, 59);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Đến";
+            // 
+            // toDatetimepicker
+            // 
+            this.toDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.toDatetimepicker.BorderSize = 0;
+            this.toDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.toDatetimepicker.Location = new System.Drawing.Point(3, 18);
+            this.toDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.toDatetimepicker.Name = "toDatetimepicker";
+            this.toDatetimepicker.Size = new System.Drawing.Size(246, 35);
+            this.toDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.toDatetimepicker.TabIndex = 12;
+            this.toDatetimepicker.TextColor = System.Drawing.Color.White;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.fromDatetimepicker);
@@ -294,6 +338,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Từ";
             // 
+            // fromDatetimepicker
+            // 
+            this.fromDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.fromDatetimepicker.BorderSize = 0;
+            this.fromDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fromDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.fromDatetimepicker.Location = new System.Drawing.Point(3, 18);
+            this.fromDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.fromDatetimepicker.Name = "fromDatetimepicker";
+            this.fromDatetimepicker.Size = new System.Drawing.Size(246, 35);
+            this.fromDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.fromDatetimepicker.TabIndex = 11;
+            this.fromDatetimepicker.TextColor = System.Drawing.Color.White;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -303,6 +361,45 @@
             this.label1.Size = new System.Drawing.Size(146, 24);
             this.label1.TabIndex = 8;
             this.label1.Text = "Thống kê theo";
+            // 
+            // confirmButton
+            // 
+            this.confirmButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.confirmButton.BorderRadius = 30;
+            this.confirmButton.BorderSize = 0;
+            this.confirmButton.FlatAppearance.BorderSize = 0;
+            this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.ForeColor = System.Drawing.Color.Black;
+            this.confirmButton.Location = new System.Drawing.Point(1008, 27);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(103, 40);
+            this.confirmButton.TabIndex = 7;
+            this.confirmButton.Text = "Xác nhận";
+            this.confirmButton.TextColor = System.Drawing.Color.Black;
+            this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
+            // 
+            // statisticsTypeCombobox
+            // 
+            this.statisticsTypeCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.statisticsTypeCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.statisticsTypeCombobox.BorderSize = 1;
+            this.statisticsTypeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.statisticsTypeCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.statisticsTypeCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.statisticsTypeCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.statisticsTypeCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.statisticsTypeCombobox.ListTextColor = System.Drawing.Color.DimGray;
+            this.statisticsTypeCombobox.Location = new System.Drawing.Point(186, 26);
+            this.statisticsTypeCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.statisticsTypeCombobox.Name = "statisticsTypeCombobox";
+            this.statisticsTypeCombobox.Padding = new System.Windows.Forms.Padding(1);
+            this.statisticsTypeCombobox.Size = new System.Drawing.Size(200, 30);
+            this.statisticsTypeCombobox.TabIndex = 0;
+            this.statisticsTypeCombobox.Texts = "";
             // 
             // leftPanel
             // 
@@ -340,25 +437,25 @@
             // 
             // revenueChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.revenueChart.ChartAreas.Add(chartArea4);
+            chartArea1.Name = "ChartArea1";
+            this.revenueChart.ChartAreas.Add(chartArea1);
             this.revenueChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.revenueChart.Legends.Add(legend4);
+            legend1.Name = "Legend1";
+            this.revenueChart.Legends.Add(legend1);
             this.revenueChart.Location = new System.Drawing.Point(0, 0);
             this.revenueChart.Name = "revenueChart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.revenueChart.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.revenueChart.Series.Add(series1);
             this.revenueChart.Size = new System.Drawing.Size(554, 409);
             this.revenueChart.SuppressExceptions = true;
             this.revenueChart.TabIndex = 0;
             this.revenueChart.Text = "chart1";
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Title1";
-            title4.Text = "Doanh thu";
-            this.revenueChart.Titles.Add(title4);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Doanh thu";
+            this.revenueChart.Titles.Add(title1);
             // 
             // tableLayoutPanel2
             // 
@@ -378,47 +475,47 @@
             // 
             // billChart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.billChart.ChartAreas.Add(chartArea5);
+            chartArea2.Name = "ChartArea1";
+            this.billChart.ChartAreas.Add(chartArea2);
             this.billChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.billChart.Legends.Add(legend5);
+            legend2.Name = "Legend1";
+            this.billChart.Legends.Add(legend2);
             this.billChart.Location = new System.Drawing.Point(3, 3);
             this.billChart.Name = "billChart";
             this.billChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.billChart.Series.Add(series5);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.billChart.Series.Add(series2);
             this.billChart.Size = new System.Drawing.Size(545, 188);
             this.billChart.TabIndex = 0;
             this.billChart.Text = "chart2";
-            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.Name = "Title1";
-            title5.Text = "Số lượng hoá đơn";
-            this.billChart.Titles.Add(title5);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Số lượng hoá đơn";
+            this.billChart.Titles.Add(title2);
             // 
             // customerChart
             // 
-            chartArea6.Name = "ChartArea1";
-            this.customerChart.ChartAreas.Add(chartArea6);
+            chartArea3.Name = "ChartArea1";
+            this.customerChart.ChartAreas.Add(chartArea3);
             this.customerChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Name = "Legend1";
-            this.customerChart.Legends.Add(legend6);
+            legend3.Name = "Legend1";
+            this.customerChart.Legends.Add(legend3);
             this.customerChart.Location = new System.Drawing.Point(3, 217);
             this.customerChart.Name = "customerChart";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.customerChart.Series.Add(series6);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.customerChart.Series.Add(series3);
             this.customerChart.Size = new System.Drawing.Size(545, 189);
             this.customerChart.TabIndex = 1;
             this.customerChart.Text = "chart3";
-            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title6.Name = "Title1";
-            title6.Text = "Tỉ lệ thành viên";
-            this.customerChart.Titles.Add(title6);
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Title1";
+            title3.Text = "Tỉ lệ thành viên";
+            this.customerChart.Titles.Add(title3);
             // 
             // splitPanel
             // 
@@ -427,103 +524,6 @@
             this.splitPanel.Name = "splitPanel";
             this.splitPanel.Size = new System.Drawing.Size(25, 409);
             this.splitPanel.TabIndex = 14;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.toDatetimepicker);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(691, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(252, 59);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Đến";
-            // 
-            // toDatetimepicker
-            // 
-            this.toDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.toDatetimepicker.BorderSize = 0;
-            this.toDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.toDatetimepicker.Location = new System.Drawing.Point(3, 18);
-            this.toDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.toDatetimepicker.Name = "toDatetimepicker";
-            this.toDatetimepicker.Size = new System.Drawing.Size(246, 35);
-            this.toDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.toDatetimepicker.TabIndex = 12;
-            this.toDatetimepicker.TextColor = System.Drawing.Color.White;
-            // 
-            // fromDatetimepicker
-            // 
-            this.fromDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.fromDatetimepicker.BorderSize = 0;
-            this.fromDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fromDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.fromDatetimepicker.Location = new System.Drawing.Point(3, 18);
-            this.fromDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.fromDatetimepicker.Name = "fromDatetimepicker";
-            this.fromDatetimepicker.Size = new System.Drawing.Size(246, 35);
-            this.fromDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.fromDatetimepicker.TabIndex = 11;
-            this.fromDatetimepicker.TextColor = System.Drawing.Color.White;
-            // 
-            // confirmButton
-            // 
-            this.confirmButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.confirmButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.confirmButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.confirmButton.BorderRadius = 30;
-            this.confirmButton.BorderSize = 0;
-            this.confirmButton.FlatAppearance.BorderSize = 0;
-            this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.ForeColor = System.Drawing.Color.Black;
-            this.confirmButton.Location = new System.Drawing.Point(1008, 34);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(103, 40);
-            this.confirmButton.TabIndex = 7;
-            this.confirmButton.Text = "Xác nhận";
-            this.confirmButton.TextColor = System.Drawing.Color.Black;
-            this.confirmButton.UseVisualStyleBackColor = false;
-            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
-            // 
-            // statisticsTypeCombobox
-            // 
-            this.statisticsTypeCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.statisticsTypeCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.statisticsTypeCombobox.BorderSize = 1;
-            this.statisticsTypeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.statisticsTypeCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.statisticsTypeCombobox.ForeColor = System.Drawing.Color.DimGray;
-            this.statisticsTypeCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.statisticsTypeCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.statisticsTypeCombobox.ListTextColor = System.Drawing.Color.DimGray;
-            this.statisticsTypeCombobox.Location = new System.Drawing.Point(186, 26);
-            this.statisticsTypeCombobox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.statisticsTypeCombobox.Name = "statisticsTypeCombobox";
-            this.statisticsTypeCombobox.Padding = new System.Windows.Forms.Padding(1);
-            this.statisticsTypeCombobox.Size = new System.Drawing.Size(200, 30);
-            this.statisticsTypeCombobox.TabIndex = 0;
-            this.statisticsTypeCombobox.Texts = "";
-            // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(23, 30);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(55, 40);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // RevenueForm
             // 
@@ -558,13 +558,13 @@
             this.panel2.ResumeLayout(false);
             this.menuBarPanel.ResumeLayout(false);
             this.menuBarPanel.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.revenueChartPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.billChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerChart)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
