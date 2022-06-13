@@ -25,6 +25,6 @@ namespace CafeShop.DTO
         public int SoLuong { get; set; }
         public string GhiChu { get; set; }
         public int ThoiGianTuKhiGoi { get; set; }
-        public string TinhTrang { get; set; }
+        public OrderState TinhTrang { get; set; }
     }
 }

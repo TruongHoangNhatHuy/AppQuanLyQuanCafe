@@ -163,10 +163,6 @@ namespace CafeShop.View.EmpForm
             orderButton.Enabled = currentTableButton.Status.Equals("Bận");
             tableNameLabel.Text = this.currentTable.TenBan;
             statusTable.Text = this.currentTable.TinhTrang ? "Còn trống" : "Bận";
-            //if (statusTable.Text == "Bận")
-            //    timeInfoLabel.Text = BLLOrder.Instance.GetHoaDonByMaBan(MaBan).ThoiGianThanhToan.ToString();
-            //else
-            //    timeInfoLabel.Text = "";
             if (statusTable.Text == "Còn trống")
             {
                 timeInfoLabel.Text = "";
@@ -216,6 +212,7 @@ namespace CafeShop.View.EmpForm
             else
                 currentTableButton.Status = "Còn trống";
             BLLOrder.Instance.SaveTableState(currentTable.MaBan);
+            //LoadOrderList();
             currentTableButton.GUI();
         }
         private void orderButton_Click(object sender, EventArgs e)
@@ -242,10 +239,18 @@ namespace CafeShop.View.EmpForm
         }
         private void chargeBill()
         {
-            BillForm form = new BillForm(currentTable.MaBan);
-            form.ReloadTable += new BillForm.ReloadTableDelegate(ChangeStateTable);
-            form.ReloadInfo += new BillForm.ReloadTableInfoDelegate(SetInfoTable);
-            form.ShowDialog();
+            if(BLLOrder.Instance.CheckPaymentCondition(currentTable.MaBan))
+            {
+                MessageBox.Show("Không thể thanh toán do còn món đang trong quá trình thực hiện");
+            }
+            else
+            {
+                BillForm form = new BillForm(currentTable.MaBan);
+                form.ReloadTable += new BillForm.ReloadTableDelegate(ChangeStateTable);
+                form.ReloadTable += new BillForm.ReloadTableDelegate(LoadOrderList);
+                form.ReloadInfo += new BillForm.ReloadTableInfoDelegate(SetInfoTable);
+                form.ShowDialog();
+            }            
         }
         private void CloseTable()
         {

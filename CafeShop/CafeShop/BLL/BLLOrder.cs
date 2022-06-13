@@ -68,5 +68,7 @@ namespace CafeShop.BLL
         }
         public HoaDon GetHoaDonByMaBan(string MaBan) => currentBill.Where(p => p.MaBan == MaBan).FirstOrDefault();
         public List<DonGoiMonView> GetDonGoiMonViewsByMaBan(string MaBan) => GetHoaDonByMaBan(MaBan)?.DonGoiMons.Select(p => new DonGoiMonView(p)).ToList();
+        public bool CheckPaymentCondition(string MaBan)
+            => GetHoaDonByMaBan(MaBan).DonGoiMons.ToList().Exists(p => p.TinhTrang == OrderState.Waiting || p.TinhTrang == OrderState.Processing);
     }
 }

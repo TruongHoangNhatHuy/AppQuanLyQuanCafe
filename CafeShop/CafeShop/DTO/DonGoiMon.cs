@@ -23,11 +23,18 @@ namespace CafeShop.DTO
         public string GhiChu { get; set; }
         public int GiaTien { get; set; }
         public DateTime ThoiGianGoiMon { get; set; }
-        [StringLength(20)]
-        public string TinhTrang { get; set; }   // "Đang chờ"/"Đang thực hiện"/"Hoàn thành"
+        //[StringLength(20)]
+        //public string TinhTrang { get; set; }   // "Đang chờ"/"Đang thực hiện"/"Hoàn thành"
+        public OrderState TinhTrang { get; set; }
         [ForeignKey("MaHoaDon")]
         public virtual HoaDon HoaDon { get; set; }
         [ForeignKey("MaMon")]
         public virtual Mon Mon { get; set; }
+    }
+    public enum OrderState
+    {
+        Waiting,
+        Processing,
+        Completed
     }
 }

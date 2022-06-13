@@ -14,7 +14,7 @@ namespace CafeShop.View.AdForm
 {
     public partial class AdminHomeForm : Form
     {
-        private static List<FlowLayoutPanel> panelList = new List<FlowLayoutPanel>();
+        private static List<FlowLayoutPanel> panelList;
         private TablesButton currentTableButton;
         private Ban currentTable;
         public AdminHomeForm()
@@ -23,11 +23,16 @@ namespace CafeShop.View.AdForm
         }
 
         private void AdminHomeForm_Load(object sender, EventArgs e)
+        {          
+            tableInfoTable.Visible = false;
+            Reload();
+            areaJCombobox.SelectedIndex = 0;
+        }
+        public void Reload()
         {
+            areaJCombobox.Items.Clear();
             areaJCombobox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
             areaJCombobox.Items.AddRange(BLLAdminHome.Instance.GetKhuvucCBItem().ToArray());
-            areaJCombobox.SelectedIndex = 0;
-            tableInfoTable.Visible = false;
             LoadTopFood();
             LoadTableFromDB();
             StatisticsInDay();
@@ -40,6 +45,7 @@ namespace CafeShop.View.AdForm
         }
         public void LoadTopFood()
         {
+            topFoodLayoutPanel.Controls.Clear();
             var result = BLLAdminHome.Instance.GetFoodStatistics(DateTime.Now, 5);
             for (int i = 0; i < result.Count; i++)
             {
@@ -54,6 +60,8 @@ namespace CafeShop.View.AdForm
         }
         public void LoadTableFromDB()
         {
+            areaFlowPanel.Controls.Clear();
+            panelList = new List<FlowLayoutPanel>();
             foreach (KhuVuc khuvuc in BLLAdminHome.Instance.GetAllKhuvuc())
             {
                 Label label = new Label();
@@ -129,6 +137,16 @@ namespace CafeShop.View.AdForm
         private void foodetailsButton_Click(object sender, EventArgs e)
         {
             new StatisticsFoodDetailForm().ShowDialog();
+        }
+
+        private void reloadTimer_Tick(object sender, EventArgs e)
+        {
+            Reload();
+        }
+
+        private void reloadButton_Click(object sender, EventArgs e)
+        {
+            Reload();
         }
     }
 }

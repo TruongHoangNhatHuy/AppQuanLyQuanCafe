@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,7 +45,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
+            this.reloadButton = new CafeShop.View.CustomControl.JButton();
             this.transitionPanel = new System.Windows.Forms.Panel();
             this.areaPanel = new System.Windows.Forms.Panel();
             this.areaFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -66,6 +67,7 @@
             this.foodetailsButton = new CafeShop.View.CustomControl.JButton();
             this.titleFoodPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.reloadTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -254,30 +256,31 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.exitButton);
+            this.panel2.Controls.Add(this.reloadButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(207, 100);
             this.panel2.TabIndex = 0;
             // 
-            // exitButton
+            // reloadButton
             // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(23, 30);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(55, 40);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
+            this.reloadButton.BackColor = System.Drawing.Color.Crimson;
+            this.reloadButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.reloadButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.reloadButton.BorderRadius = 30;
+            this.reloadButton.BorderSize = 0;
+            this.reloadButton.FlatAppearance.BorderSize = 0;
+            this.reloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reloadButton.ForeColor = System.Drawing.Color.White;
+            this.reloadButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.reloadButton.Location = new System.Drawing.Point(23, 30);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(55, 40);
+            this.reloadButton.TabIndex = 1;
+            this.reloadButton.TextColor = System.Drawing.Color.White;
+            this.reloadButton.UseVisualStyleBackColor = false;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
             // 
             // transitionPanel
             // 
@@ -518,6 +521,11 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Top món bán chạy nhất trong tháng";
             // 
+            // reloadTimer
+            // 
+            this.reloadTimer.Interval = 30000;
+            this.reloadTimer.Tick += new System.EventHandler(this.reloadTimer_Tick);
+            // 
             // AdminHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,7 +587,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private CustomControl.JButton exitButton;
+        private CustomControl.JButton reloadButton;
         private System.Windows.Forms.Panel transitionPanel;
         private System.Windows.Forms.Panel areaPanel;
         private System.Windows.Forms.FlowLayoutPanel areaFlowPanel;
@@ -601,5 +609,6 @@
         private System.Windows.Forms.FlowLayoutPanel topFoodLayoutPanel;
         private System.Windows.Forms.Panel bottomPanel;
         private CustomControl.JButton foodetailsButton;
+        private System.Windows.Forms.Timer reloadTimer;
     }
 }

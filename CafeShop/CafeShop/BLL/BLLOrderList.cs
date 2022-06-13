@@ -25,7 +25,7 @@ namespace CafeShop.BLL
         {
             List<DonGoiMonView> result = new List<DonGoiMonView>();
             foreach (DonGoiMon i in DBModel.Instance.DonGoiMons)
-                if (i.TinhTrang != "Hoàn thành")
+                if (i.TinhTrang != OrderState.Completed)
                 {
                     result.Add(new DonGoiMonView(i));
                 }
@@ -34,13 +34,25 @@ namespace CafeShop.BLL
         public void StateChange(string MaDonGoiMon)
         {
             DonGoiMon dgm = DBModel.Instance.DonGoiMons.Find(MaDonGoiMon);
-            string state = dgm.TinhTrang.ToString();
-            if (state == "Đang chờ")
-                state = "Đang thực hiện";
-            else if (state == "Đang thực hiện")
-                state = "Hoàn thành";
+            var state = dgm.TinhTrang;
+            if (state == OrderState.Waiting)
+                state = OrderState.Processing;
+            else if (state == OrderState.Processing)
+                state = OrderState.Completed;
             dgm.TinhTrang = state;
             DBModel.Instance.SaveChanges();
+        }
+        public bool CancelOrder(string MaDonGoiMon)
+        {
+            DonGoiMon dgm = DBModel.Instance.DonGoiMons.Find(MaDonGoiMon);
+            if (dgm != null && dgm.TinhTrang == OrderState.Waiting)
+            {
+                DBModel.Instance.DonGoiMons.Remove(dgm);
+                DBModel.Instance.SaveChanges();
+                return true;
+            }
+            else
+                return false;
         }
     }
 }

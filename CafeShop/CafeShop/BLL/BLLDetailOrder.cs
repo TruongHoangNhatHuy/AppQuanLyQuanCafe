@@ -67,7 +67,7 @@ namespace CafeShop.BLL
                 GhiChu = GhiChu,
                 GiaTien = CalculatePrice(SoLuong),
                 ThoiGianGoiMon = DateTime.Now,
-                TinhTrang = "Đang chờ"
+                TinhTrang = OrderState.Waiting
             };
             DBModel.Instance.DonGoiMons.Add(result);
             DBModel.Instance.SaveChanges();
