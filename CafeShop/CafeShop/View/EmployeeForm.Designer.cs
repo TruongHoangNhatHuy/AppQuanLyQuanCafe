@@ -43,6 +43,7 @@
             this.zoomButton = new CafeShop.View.CustomControl.JButton();
             this.funcNameLabel = new System.Windows.Forms.Label();
             this.childFormPanel = new System.Windows.Forms.Panel();
+            this.Clock_Timer = new System.Windows.Forms.Timer(this.components);
             this.jDropDownMenu1 = new CafeShop.View.CustomControl.DropDownMenu.JDropDownMenu(this.components);
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,10 +77,10 @@
             this.warehouseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warehouseButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
             this.warehouseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.warehouseButton.Location = new System.Drawing.Point(0, 222);
+            this.warehouseButton.Location = new System.Drawing.Point(0, 180);
             this.warehouseButton.Margin = new System.Windows.Forms.Padding(4);
             this.warehouseButton.Name = "warehouseButton";
-            this.warehouseButton.Size = new System.Drawing.Size(253, 62);
+            this.warehouseButton.Size = new System.Drawing.Size(190, 62);
             this.warehouseButton.TabIndex = 11;
             this.warehouseButton.Text = "Kho hàng";
             this.warehouseButton.UseVisualStyleBackColor = true;
@@ -89,17 +90,14 @@
             // 
             this.logoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.Image = global::CafeShop.Properties.Resources.log_out;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 769);
+            this.logoutButton.Location = new System.Drawing.Point(0, 625);
             this.logoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(190, 50);
             this.logoutButton.TabIndex = 10;
-            this.logoutButton.Text = "Thoát";
             this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // orderListButton
             // 
@@ -109,7 +107,7 @@
             this.orderListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderListButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
             this.orderListButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderListButton.Location = new System.Drawing.Point(0, 160);
+            this.orderListButton.Location = new System.Drawing.Point(0, 130);
             this.orderListButton.Margin = new System.Windows.Forms.Padding(4);
             this.orderListButton.Name = "orderListButton";
             this.orderListButton.Size = new System.Drawing.Size(190, 50);
@@ -126,7 +124,7 @@
             this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderButton.Image = global::CafeShop.Properties.Resources.order;
             this.orderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderButton.Location = new System.Drawing.Point(0, 98);
+            this.orderButton.Location = new System.Drawing.Point(0, 80);
             this.orderButton.Margin = new System.Windows.Forms.Padding(4);
             this.orderButton.Name = "orderButton";
             this.orderButton.Size = new System.Drawing.Size(190, 50);
@@ -176,7 +174,7 @@
             this.titleBarPanel.Controls.Add(this.zoomButton);
             this.titleBarPanel.Controls.Add(this.funcNameLabel);
             this.titleBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titleBarPanel.Location = new System.Drawing.Point(253, 0);
+            this.titleBarPanel.Location = new System.Drawing.Point(190, 0);
             this.titleBarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.titleBarPanel.Name = "titleBarPanel";
             this.titleBarPanel.Size = new System.Drawing.Size(1138, 80);
@@ -185,7 +183,7 @@
             // logInfoTextbox
             // 
             this.logInfoTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logInfoTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
+            this.logInfoTextbox.BackColor = System.Drawing.Color.DodgerBlue;
             this.logInfoTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.logInfoTextbox.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
             this.logInfoTextbox.BorderSize = 2;
@@ -268,12 +266,17 @@
             // 
             this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childFormPanel.Location = new System.Drawing.Point(253, 98);
+            this.childFormPanel.Location = new System.Drawing.Point(190, 80);
             this.childFormPanel.Margin = new System.Windows.Forms.Padding(4);
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
             this.childFormPanel.Size = new System.Drawing.Size(1138, 595);
             this.childFormPanel.TabIndex = 3;
+            // 
+            // Clock_Timer
+            // 
+            this.Clock_Timer.Interval = 1000;
+            this.Clock_Timer.Tick += new System.EventHandler(this.Clock_Timer_Tick);
             // 
             // jDropDownMenu1
             // 
@@ -350,5 +353,6 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.Timer Clock_Timer;
     }
 }

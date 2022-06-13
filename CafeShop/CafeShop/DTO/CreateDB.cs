@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 namespace CafeShop.DTO
 {
     public class CreateDB :
-            CreateDatabaseIfNotExists<DBModel>
-            //DropCreateDatabaseIfModelChanges<DBModel>
+            //CreateDatabaseIfNotExists<DBModel>
+            DropCreateDatabaseIfModelChanges<DBModel>
             //DropCreateDatabaseAlways<DBModel>
     {
         private DateTime min = new DateTime(1990, 01, 01);

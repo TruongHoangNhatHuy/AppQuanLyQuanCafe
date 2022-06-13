@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Timers;
 using System.Windows.Forms;
 using CafeShop.BLL;
 
@@ -22,6 +23,11 @@ namespace CafeShop.View
             jDropDownMenu1.Items[0].Click += (Sender, E ) => new AdForm.EmpDetailForm(BLLLogin.Instance.currentID,true).ShowDialog();
             jDropDownMenu1.Items[1].Click += (Sender, E) => new ChangePasswordForm(BLLLogin.Instance.currentID).ShowDialog();
             jDropDownMenu1.Items[2].Click += (Sender, E) => logoutButton_Click(Sender,E);
+            ClockTimer.Start();
+        }
+        private void Clocktimer_Tick(object sender, EventArgs e)
+        {
+            logoutButton.Text = DateTime.Now.ToString();
         }
         private void logInfoTextbox_Click(object sender, EventArgs e)
         {
@@ -244,9 +250,10 @@ namespace CafeShop.View
             CustomControl.JButton button = sender as CustomControl.JButton;
             button.BorderSize = 0;
         }
-        #endregion
 
-        
+
+
+        #endregion
 
         
     }

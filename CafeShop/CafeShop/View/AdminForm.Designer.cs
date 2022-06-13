@@ -56,6 +56,7 @@
             this.minimizeButton = new CafeShop.View.CustomControl.JButton();
             this.funcNameLabel = new System.Windows.Forms.Label();
             this.childFormPanel = new System.Windows.Forms.Panel();
+            this.ClockTimer = new System.Windows.Forms.Timer(this.components);
             this.jDropDownMenu1 = new CafeShop.View.CustomControl.DropDownMenu.JDropDownMenu(this.components);
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,16 +95,14 @@
             // 
             this.logoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.Image = global::CafeShop.Properties.Resources.log_out;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutButton.Location = new System.Drawing.Point(0, 701);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(173, 50);
             this.logoutButton.TabIndex = 9;
-            this.logoutButton.Text = "Thoát";
             this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // subStatisticsPanel
             // 
@@ -406,7 +405,7 @@
             // logInfoTextbox
             // 
             this.logInfoTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logInfoTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
+            this.logInfoTextbox.BackColor = System.Drawing.Color.DodgerBlue;
             this.logInfoTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.logInfoTextbox.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
             this.logInfoTextbox.BorderSize = 2;
@@ -492,6 +491,10 @@
             this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
             this.childFormPanel.Size = new System.Drawing.Size(1138, 595);
             this.childFormPanel.TabIndex = 2;
+            // 
+            // ClockTimer
+            // 
+            this.ClockTimer.Tick += new System.EventHandler(this.Clocktimer_Tick);
             // 
             // jDropDownMenu1
             // 
@@ -584,6 +587,7 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.Timer ClockTimer;
     }
 }
 
