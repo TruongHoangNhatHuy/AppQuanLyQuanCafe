@@ -40,7 +40,7 @@ namespace CafeShop.BLL
         {
             List<long> data = new List<long>();
             int count = (to.Year - from.Year) * 12 + to.Month - from.Month + 1;
-            var tempdata = GetHoaDon().Where(p => p.ThoiGianThanhToan >= from && p.ThoiGianThanhToan <= to).OrderBy(p => p.ThoiGianThanhToan);
+            var tempdata = GetHoaDon().Where(p => p.ThoiGianThanhToan.Date >= from.Date && p.ThoiGianThanhToan.Date <= to.Date).OrderBy(p => p.ThoiGianThanhToan);
             for (int i = 0; i < count; i++)
             {
                 DateTime time = from.AddMonths(i);
@@ -48,9 +48,9 @@ namespace CafeShop.BLL
             }
             return data;
         }
-        public List<int> GetRevenueByDate(DateTime time)
+        public List<long> GetRevenueByDate(DateTime time)
         {
-            List<int> data = new List<int>();
+            List<long> data = new List<long>();
             var bill = GetHoaDon().OrderBy(p => p.ThoiGianThanhToan);
             DateTime temp = new DateTime(time.Year, time.Month, 1);
             for (int i = 0; i < DateTime.DaysInMonth(time.Year, time.Month); i++)
@@ -59,7 +59,9 @@ namespace CafeShop.BLL
             }
             return data;
         }
+        public long GetRevenue(List<long> list) => list.Sum();
         #endregion
+
         #region Bill
         public List<int> GetBillCountByYear(int from, int to)
         {
@@ -76,7 +78,7 @@ namespace CafeShop.BLL
         {
             List<int> data = new List<int>();
             int count = (to.Year - from.Year) * 12 + to.Month - from.Month + 1;
-            var tempdata = GetHoaDon().Where(p => p.ThoiGianThanhToan >= from && p.ThoiGianThanhToan <= to).OrderBy(p => p.ThoiGianThanhToan);
+            var tempdata = GetHoaDon().Where(p => p.ThoiGianThanhToan.Date >= from.Date && p.ThoiGianThanhToan.Date <= to.Date).OrderBy(p => p.ThoiGianThanhToan);
             for (int i = 0; i < count; i++)
             {
                 DateTime time = from.AddMonths(i);
@@ -97,45 +99,63 @@ namespace CafeShop.BLL
             }
             return data;
         }
+        public int GetBillCount(List<int> list) => list.Sum();
         #endregion
+
         #region Customer
-        public List<int> GetCustumerCountByYear(int from, int to)
+        public delegate bool CheckTime(DateTime p, DateTime from, DateTime to);
+        public bool CheckYear(DateTime p, DateTime from, DateTime to)
         {
-            List<int> data = new List<int>(2);
-            var temp = GetHoaDon().Where(p => p.ThoiGianThanhToan.Year >= from && p.ThoiGianThanhToan.Year <= to);
+            return p.Year >= from.Year && p.Year <= to.Year;
+        }
+        public bool CheckDate(DateTime p, DateTime from, DateTime to)
+        {
+            return p.Year == from.Year && p.Month == from.Month;
+        }
+        public bool CheckMonth(DateTime p, DateTime from, DateTime to)
+        {
+            return p.Date >= from.Date && p.Date <= to.Date;
+        }
+        public int GetCustomerCount(DateTime from, DateTime to, StatisticsType type)
+        {
+            CheckTime checktime = new CheckTime(CheckYear);
+            if (type == StatisticsType.ByYear)
+                checktime = new CheckTime(CheckYear);
+            else if (type == StatisticsType.ByDate)
+                checktime = new CheckTime(CheckDate);
+            else if (type == StatisticsType.ByMonth)
+                checktime = new CheckTime(CheckMonth);
+            var temp = GetHoaDon().Where(p => checktime(p.ThoiGianThanhToan, from, to));
             int nonMember = temp.Where(p => p.IDKhachHang == "KH00000000").Count();
             int member = temp.Select(p => new { p.IDKhachHang }).Distinct().Count();
             if (nonMember > 0)
                 member--;
+            return member;
+        }      
+        public List<long> GetCustomerRevenue(DateTime from, DateTime to, StatisticsType type)
+        {
+            List<long> data = new List<long>(2);
+            CheckTime checktime = new CheckTime(CheckYear);
+            if (type == StatisticsType.ByYear)
+                checktime += new CheckTime(CheckYear);
+            else if (type == StatisticsType.ByDate)
+                checktime += new CheckTime(CheckDate);
+            else if(type == StatisticsType.ByMonth)
+                checktime += new CheckTime(CheckMonth);  
+            var temp = GetHoaDon().Where(p => checktime.Invoke(p.ThoiGianThanhToan, from, to));
+            long totalRevenue = temp.Sum(p => p.ThanhTien);
+            long nonMember = temp.Where(p => p.IDKhachHang == "KH00000000").Sum(p => p.ThanhTien);
+            long member = totalRevenue - nonMember;
             data.Add(nonMember);
             data.Add(member);
             return data;
         }
 
-
-        public List<int> GetCustumerCountByDate(DateTime from, DateTime to)
+        public enum StatisticsType
         {
-            List<int> data = new List<int>(2);
-            var temp = GetHoaDon().Where(p => p.ThoiGianThanhToan >= from && p.ThoiGianThanhToan <= to);
-            int nonMember = temp.Where(p => p.IDKhachHang == "KH00000000").Count();
-            int member = temp.Select(p => new { p.IDKhachHang }).Distinct().Count();
-            if (nonMember > 0)
-                member--;
-            data.Add(nonMember);
-            data.Add(member);
-            return data;
-        }
-        public List<int> GetCustumerCountByMonth(DateTime from)
-        {
-            List<int> data = new List<int>(2);
-            var temp = GetHoaDon().Where(p => p.ThoiGianThanhToan.Year == from.Year && p.ThoiGianThanhToan.Month == from.Month);
-            int nonMember = temp.Where(p => p.IDKhachHang == "KH00000000").Count();
-            int member = temp.Select(p => new { p.IDKhachHang }).Distinct().Count();
-            if (nonMember > 0)
-                member--;
-            data.Add(nonMember);
-            data.Add(member);
-            return data;
+            ByYear,
+            ByDate,
+            ByMonth
         }
         #endregion
 

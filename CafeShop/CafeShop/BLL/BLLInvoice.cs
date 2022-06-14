@@ -18,6 +18,10 @@ namespace CafeShop.BLL
             private set { }
         }
         public List<HoaDon> GetAllHoaDon() => DBModel.Instance.HoaDons.Where(p => p.MaBan.Equals("B000000000")).ToList();
+        public HoaDon GetHoaDonByMaHoaDon(string MaHoaDon) => DBModel.Instance.HoaDons.Find(MaHoaDon);
+        public string GetBillCount(List<HoaDon> list) => list.Count.ToString();
+        public string GetCustomerCount(List<HoaDon> list) => list.Select(p => new { p.KhachHang }).Distinct().Count().ToString();
+        public string GetRevenue(List<HoaDon> list) => list.Sum(p => p.ThanhTien).ToString();
         public List<HoaDonView> ChangeView(List<HoaDon> list)
         {
             return list.Select(d => new HoaDonView()
@@ -32,14 +36,9 @@ namespace CafeShop.BLL
             }
             ).ToList();
         }
-        public List<HoaDonView> GetAllHoaDonView()
-        {
-            return ChangeView(GetAllHoaDon());
-        }
+        public List<HoaDonView> GetAllHoaDonView() => ChangeView(GetAllHoaDon());
         public List<HoaDon> GetHoaDonByTime(DateTime from, DateTime to)
-        {
-            return GetAllHoaDon().Where(p => p.ThoiGianThanhToan.Date >= from.Date && p.ThoiGianThanhToan.Date <= to.Date).ToList();
-        }
+            => GetAllHoaDon().Where(p => p.ThoiGianThanhToan.Date >= from.Date && p.ThoiGianThanhToan.Date <= to.Date).ToList();
         public List<HoaDon> Search(DateTime from, DateTime to, string MaHoaDon, string TenNhanVien, string TenKhachHang)
         {
             return GetHoaDonByTime(from, to).
@@ -70,19 +69,13 @@ namespace CafeShop.BLL
             if (SortDirection)
                 list.Reverse();
             return list;
-        }
-        public string GetBillCount(List<HoaDon> list) => list.Count.ToString();
-        public string GetCustomerCount(List<HoaDon> list) => list.Select(p => new { p.KhachHang }).Distinct().Count().ToString();
-        public string GetRevenue(List<HoaDon> list) => list.Sum(p => p.ThanhTien).ToString();
-
+        }       
         //Pagination
         public List<HoaDonView> GetCurrentReCord(int page, int pageSize, List<HoaDon> list)
         {
             if ((list.Count / pageSize + 1) == page)
                 return ChangeView(list.Skip((page - 1) * pageSize).ToList());
             return ChangeView(list.Skip((page - 1) * pageSize).Take(pageSize).ToList());
-        }
-
-        public HoaDon GetHoaDonByMaHoaDon(string MaHoaDon) => DBModel.Instance.HoaDons.Find(MaHoaDon);
+        }       
     }
 }

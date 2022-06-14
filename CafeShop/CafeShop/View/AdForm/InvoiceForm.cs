@@ -14,12 +14,14 @@ namespace CafeShop.View.AdForm
     public partial class InvoiceForm : Form
     {
         public delegate void Reload();
+        private List<HoaDon> billList;
         public Reload reload;
         public InvoiceForm()
         {
             InitializeComponent();
         }
-        private List<HoaDon> billList;
+        
+        #region EventHandler
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
             sortJCombobox.Items.AddRange(new string[] { "Theo mã hoá đơn", "Theo thời gian", "Theo giá trị" });
@@ -32,10 +34,25 @@ namespace CafeShop.View.AdForm
             this.Close();
             reload?.Invoke();
         }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                string MaHoaDon = dataGridView1.SelectedRows[0].Cells["MaHoaDon"].Value.ToString();
+                DetailOrderListForm form = new DetailOrderListForm(MaHoaDon);
+                form.ShowDialog();
+            }
+        }
+
+        private void Picker_ValueChanged(object sender, EventArgs e)
+        {
+            searchButton_Click(sender, e);
+        }
+
         private void SetHoaDon()
         {
             DateTime from = fromPicker.Value, to = toPicker.Value;
-            if(from > to)
+            if (from > to)
             {
                 from = to;
                 fromPicker.Value = toPicker.Value = from;
@@ -53,13 +70,13 @@ namespace CafeShop.View.AdForm
             CurrentIndex = 1;
             SetPage();
         }
-        public string lastOrder;
-        bool SortDirection = false;
+        private string lastOrder;
+        private bool SortDirection = false;
         private void sortButton_Click(object sender, EventArgs e)
         {
             if (sortJCombobox.SelectedItem != null)
             {
-                string orderBy = sortJCombobox.SelectedItem.ToString();                
+                string orderBy = sortJCombobox.SelectedItem.ToString();
                 if (orderBy.Equals(lastOrder))
                     SortDirection = !SortDirection;
                 else
@@ -81,6 +98,7 @@ namespace CafeShop.View.AdForm
             customerCountLabel.Text = BLLInvoice.Instance.GetCustomerCount(this.billList);
             revenueLabel.Text = BLLInvoice.Instance.GetRevenue(this.billList);
         }
+        #endregion
 
         #region Pagination
         private const int PageSize = 6;
@@ -123,21 +141,6 @@ namespace CafeShop.View.AdForm
                 SetPage();
             }
         }
-        #endregion
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                string MaHoaDon = dataGridView1.SelectedRows[0].Cells["MaHoaDon"].Value.ToString();
-                DetailOrderListForm form = new DetailOrderListForm(MaHoaDon);
-                form.ShowDialog();
-            }
-        }
-
-        private void Picker_ValueChanged(object sender, EventArgs e)
-        {
-            searchButton_Click(sender, e);
-        }
+        #endregion        
     }
 }
