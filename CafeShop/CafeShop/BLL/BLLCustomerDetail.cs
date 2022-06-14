@@ -22,6 +22,7 @@ namespace CafeShop.BLL
         }
         public KhachHang GetKH(string ID) => DBModel.Instance.KhachHangs.Where(x => x.IDKhachHang == ID).FirstOrDefault();
         public KhachHang GetKHBySDT(string sdt) => DBModel.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
+        
         public bool ExistedCustomer(string IDKhachHang)
         {
             if (DBModel.Instance.KhachHangs.Find(IDKhachHang) == null)
@@ -29,6 +30,7 @@ namespace CafeShop.BLL
             else
                 return true;
         }
+        
         public void ExecuteDB(KhachHang kh)
         {
             if (ExistedCustomer(kh.IDKhachHang))

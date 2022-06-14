@@ -13,7 +13,6 @@ C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeS
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderListForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmployeeForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.OrderForm.resources
-C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.EmpForm.TablesButton.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.LoginForm.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.Properties.Resources.resources
 C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.csproj.GenerateResource.cache
@@ -119,3 +118,7 @@ C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeSh
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.TopFoodControl.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.StatisticsFoodDetailForm.resources
 C:\Users\Admin\Desktop\PBL3\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.TablesButton.resources
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.AdminHomeForm.resources
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.AdForm.StatisticsFoodDetailForm.resources
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.TopFoodControl.resources
+C:\Users\PC\Documents\GitHub\AppQuanLyQuanCafe\CafeShop\CafeShop\obj\Debug\CafeShop.View.CustomControl.TablesButton.resources

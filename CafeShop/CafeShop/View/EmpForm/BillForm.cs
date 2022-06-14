@@ -24,9 +24,13 @@ namespace CafeShop.View.EmpForm
         {
             InitializeComponent();
             this.MaBan = MaBan;
-            BLLBill.Instance.GetBillCostOfTable(MaBan);
-            TongTienTextBox.Texts = BLLBill.Instance.tongTien.ToString();
-            ThanhTienTextBox.Texts = BLLBill.Instance.SurchargeAndDiscount().ToString();
+        }
+
+        private void BillForm_Load(object sender, EventArgs e)
+        {
+            int tongTien = BLLBill.Instance.GetBillCostOfTable(MaBan);
+            TongTienTextBox.Texts = tongTien.ToString();
+            ThanhTienTextBox.Texts = BLLBill.Instance.SurchargeAndDiscount(tongTien).ToString();
             surchargeTextbox.Texts = "0";
             discountTextbox.Texts = "0";
         }
@@ -36,6 +40,7 @@ namespace CafeShop.View.EmpForm
             try
             {
                 int surcharge, discount;
+                int tongTien = Convert.ToInt32(TongTienTextBox.Texts);
                 if (surchargeTextbox.Texts == "")
                     surcharge = 0;
                 else
@@ -46,13 +51,13 @@ namespace CafeShop.View.EmpForm
                     discount = Convert.ToInt32(discountTextbox.Texts);
                 bool isSurchargePercent = surchargePercent.Checked;
                 bool isDiscountPercent = discountPercent.Checked;
-                ThanhTienTextBox.Texts = BLLBill.Instance.SurchargeAndDiscount(surcharge, isSurchargePercent, discount, isDiscountPercent).ToString();
+                ThanhTienTextBox.Texts = BLLBill.Instance.SurchargeAndDiscount(tongTien, surcharge, isSurchargePercent, discount, isDiscountPercent).ToString();
                 tienThuaTextBox.Texts = (Convert.ToInt32(soTienKhachDuaTextBox.Texts) - Convert.ToInt32(ThanhTienTextBox.Texts)).ToString();
             }
             catch (Exception ex) { }
         }
 
-        private void jButton1_Click(object sender, EventArgs e)
+        private void checkCustomerButton_Click(object sender, EventArgs e)
         {
             KhachHang kh = BLLBill.Instance.GetKHBySDT(SDTKhachHangTextBox.Texts);
             if (kh != null)
@@ -68,12 +73,12 @@ namespace CafeShop.View.EmpForm
             }
         }
 
-        private void jButton2_Click(object sender, EventArgs e)
+        private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void jButton3_Click(object sender, EventArgs e)
+        private void confirmButton_Click(object sender, EventArgs e)
         {
             try
             {

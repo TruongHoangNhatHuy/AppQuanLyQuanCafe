@@ -42,13 +42,13 @@
             this.discountTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.surchargeTextbox = new CafeShop.View.CustomControl.JNewTextbox();
             this.tenKHTextBox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.jButton3 = new CafeShop.View.CustomControl.JButton();
-            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.confirmButton = new CafeShop.View.CustomControl.JButton();
+            this.cancelButton = new CafeShop.View.CustomControl.JButton();
             this.TongTienTextBox = new CafeShop.View.CustomControl.JNewTextbox();
             this.soTienKhachDuaTextBox = new CafeShop.View.CustomControl.JNewTextbox();
             this.tienThuaTextBox = new CafeShop.View.CustomControl.JNewTextbox();
             this.SDTKhachHangTextBox = new CafeShop.View.CustomControl.JNewTextbox();
-            this.jButton1 = new CafeShop.View.CustomControl.JButton();
+            this.checkCustomerButton = new CafeShop.View.CustomControl.JButton();
             this.SuspendLayout();
             // 
             // label1
@@ -185,6 +185,7 @@
             this.ThanhTienTextBox.PlaceholderText = "";
             this.ThanhTienTextBox.Size = new System.Drawing.Size(272, 48);
             this.ThanhTienTextBox.TabIndex = 20;
+            this.ThanhTienTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.ThanhTienTextBox.Texts = "";
             this.ThanhTienTextBox.UnderlinedStyle = false;
             // 
@@ -205,6 +206,7 @@
             this.discountTextbox.PlaceholderText = "";
             this.discountTextbox.Size = new System.Drawing.Size(134, 48);
             this.discountTextbox.TabIndex = 15;
+            this.discountTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.discountTextbox.Texts = "0";
             this.discountTextbox.UnderlinedStyle = false;
             this.discountTextbox._TextChanged += new System.EventHandler(this.CalculateCharge);
@@ -226,6 +228,7 @@
             this.surchargeTextbox.PlaceholderText = "";
             this.surchargeTextbox.Size = new System.Drawing.Size(134, 48);
             this.surchargeTextbox.TabIndex = 14;
+            this.surchargeTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.surchargeTextbox.Texts = "0";
             this.surchargeTextbox.UnderlinedStyle = false;
             this.surchargeTextbox._TextChanged += new System.EventHandler(this.CalculateCharge);
@@ -248,50 +251,51 @@
             this.tenKHTextBox.PlaceholderText = "";
             this.tenKHTextBox.Size = new System.Drawing.Size(272, 48);
             this.tenKHTextBox.TabIndex = 12;
+            this.tenKHTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.tenKHTextBox.Texts = "";
             this.tenKHTextBox.UnderlinedStyle = false;
             // 
-            // jButton3
+            // confirmButton
             // 
-            this.jButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.jButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton3.BorderRadius = 27;
-            this.jButton3.BorderSize = 0;
-            this.jButton3.FlatAppearance.BorderSize = 0;
-            this.jButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton3.ForeColor = System.Drawing.Color.Black;
-            this.jButton3.Location = new System.Drawing.Point(372, 674);
-            this.jButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jButton3.Name = "jButton3";
-            this.jButton3.Size = new System.Drawing.Size(200, 58);
-            this.jButton3.TabIndex = 11;
-            this.jButton3.Text = "Xác nhận";
-            this.jButton3.TextColor = System.Drawing.Color.Black;
-            this.jButton3.UseVisualStyleBackColor = false;
-            this.jButton3.Click += new System.EventHandler(this.jButton3_Click);
+            this.confirmButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.confirmButton.BorderRadius = 27;
+            this.confirmButton.BorderSize = 0;
+            this.confirmButton.FlatAppearance.BorderSize = 0;
+            this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.ForeColor = System.Drawing.Color.Black;
+            this.confirmButton.Location = new System.Drawing.Point(372, 674);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(200, 58);
+            this.confirmButton.TabIndex = 11;
+            this.confirmButton.Text = "Xác nhận";
+            this.confirmButton.TextColor = System.Drawing.Color.Black;
+            this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // jButton2
+            // cancelButton
             // 
-            this.jButton2.BackColor = System.Drawing.Color.Crimson;
-            this.jButton2.BackgroundColor = System.Drawing.Color.Crimson;
-            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton2.BorderRadius = 27;
-            this.jButton2.BorderSize = 0;
-            this.jButton2.FlatAppearance.BorderSize = 0;
-            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton2.ForeColor = System.Drawing.Color.Black;
-            this.jButton2.Location = new System.Drawing.Point(60, 674);
-            this.jButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jButton2.Name = "jButton2";
-            this.jButton2.Size = new System.Drawing.Size(200, 58);
-            this.jButton2.TabIndex = 10;
-            this.jButton2.Text = "Huỷ";
-            this.jButton2.TextColor = System.Drawing.Color.Black;
-            this.jButton2.UseVisualStyleBackColor = false;
-            this.jButton2.Click += new System.EventHandler(this.jButton2_Click);
+            this.cancelButton.BackColor = System.Drawing.Color.Crimson;
+            this.cancelButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.cancelButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cancelButton.BorderRadius = 27;
+            this.cancelButton.BorderSize = 0;
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelButton.Location = new System.Drawing.Point(60, 674);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(200, 58);
+            this.cancelButton.TabIndex = 10;
+            this.cancelButton.Text = "Huỷ";
+            this.cancelButton.TextColor = System.Drawing.Color.Black;
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // TongTienTextBox
             // 
@@ -311,6 +315,7 @@
             this.TongTienTextBox.PlaceholderText = "";
             this.TongTienTextBox.Size = new System.Drawing.Size(272, 48);
             this.TongTienTextBox.TabIndex = 9;
+            this.TongTienTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.TongTienTextBox.Texts = "";
             this.TongTienTextBox.UnderlinedStyle = false;
             // 
@@ -331,6 +336,7 @@
             this.soTienKhachDuaTextBox.PlaceholderText = "";
             this.soTienKhachDuaTextBox.Size = new System.Drawing.Size(272, 48);
             this.soTienKhachDuaTextBox.TabIndex = 8;
+            this.soTienKhachDuaTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.soTienKhachDuaTextBox.Texts = "";
             this.soTienKhachDuaTextBox.UnderlinedStyle = false;
             this.soTienKhachDuaTextBox._TextChanged += new System.EventHandler(this.CalculateCharge);
@@ -353,6 +359,7 @@
             this.tienThuaTextBox.PlaceholderText = "";
             this.tienThuaTextBox.Size = new System.Drawing.Size(272, 48);
             this.tienThuaTextBox.TabIndex = 7;
+            this.tienThuaTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.tienThuaTextBox.Texts = "";
             this.tienThuaTextBox.UnderlinedStyle = false;
             // 
@@ -373,29 +380,30 @@
             this.SDTKhachHangTextBox.PlaceholderText = "";
             this.SDTKhachHangTextBox.Size = new System.Drawing.Size(272, 48);
             this.SDTKhachHangTextBox.TabIndex = 6;
+            this.SDTKhachHangTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.SDTKhachHangTextBox.Texts = "";
             this.SDTKhachHangTextBox.UnderlinedStyle = false;
             // 
-            // jButton1
+            // checkCustomerButton
             // 
-            this.jButton1.BackColor = System.Drawing.Color.LightGreen;
-            this.jButton1.BackgroundColor = System.Drawing.Color.LightGreen;
-            this.jButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.jButton1.BorderRadius = 27;
-            this.jButton1.BorderSize = 0;
-            this.jButton1.FlatAppearance.BorderSize = 0;
-            this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jButton1.ForeColor = System.Drawing.Color.Black;
-            this.jButton1.Location = new System.Drawing.Point(60, 588);
-            this.jButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.jButton1.Name = "jButton1";
-            this.jButton1.Size = new System.Drawing.Size(162, 58);
-            this.jButton1.TabIndex = 5;
-            this.jButton1.Text = "Kiểm tra";
-            this.jButton1.TextColor = System.Drawing.Color.Black;
-            this.jButton1.UseVisualStyleBackColor = false;
-            this.jButton1.Click += new System.EventHandler(this.jButton1_Click);
+            this.checkCustomerButton.BackColor = System.Drawing.Color.LightGreen;
+            this.checkCustomerButton.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.checkCustomerButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.checkCustomerButton.BorderRadius = 27;
+            this.checkCustomerButton.BorderSize = 0;
+            this.checkCustomerButton.FlatAppearance.BorderSize = 0;
+            this.checkCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkCustomerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCustomerButton.ForeColor = System.Drawing.Color.Black;
+            this.checkCustomerButton.Location = new System.Drawing.Point(60, 588);
+            this.checkCustomerButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkCustomerButton.Name = "checkCustomerButton";
+            this.checkCustomerButton.Size = new System.Drawing.Size(162, 58);
+            this.checkCustomerButton.TabIndex = 5;
+            this.checkCustomerButton.Text = "Kiểm tra";
+            this.checkCustomerButton.TextColor = System.Drawing.Color.Black;
+            this.checkCustomerButton.UseVisualStyleBackColor = false;
+            this.checkCustomerButton.Click += new System.EventHandler(this.checkCustomerButton_Click);
             // 
             // BillForm
             // 
@@ -413,13 +421,13 @@
             this.Controls.Add(this.surchargeTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tenKHTextBox);
-            this.Controls.Add(this.jButton3);
-            this.Controls.Add(this.jButton2);
+            this.Controls.Add(this.confirmButton);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.TongTienTextBox);
             this.Controls.Add(this.soTienKhachDuaTextBox);
             this.Controls.Add(this.tienThuaTextBox);
             this.Controls.Add(this.SDTKhachHangTextBox);
-            this.Controls.Add(this.jButton1);
+            this.Controls.Add(this.checkCustomerButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -427,6 +435,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BillForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.BillForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,13 +447,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private CustomControl.JButton jButton1;
+        private CustomControl.JButton checkCustomerButton;
         private CustomControl.JNewTextbox SDTKhachHangTextBox;
         private CustomControl.JNewTextbox tienThuaTextBox;
         private CustomControl.JNewTextbox soTienKhachDuaTextBox;
         private CustomControl.JNewTextbox TongTienTextBox;
-        private CustomControl.JButton jButton2;
-        private CustomControl.JButton jButton3;
+        private CustomControl.JButton cancelButton;
+        private CustomControl.JButton confirmButton;
         private CustomControl.JNewTextbox tenKHTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label discountLabel;

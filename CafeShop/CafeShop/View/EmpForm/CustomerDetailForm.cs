@@ -19,6 +19,7 @@ namespace CafeShop.View.EmpForm
             InitializeComponent();
             GUI(sdt);
         }
+
         public void GUI(string sdt)
         {
             {

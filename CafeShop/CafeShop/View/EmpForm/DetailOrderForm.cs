@@ -6,19 +6,24 @@ namespace CafeShop.View.EmpForm
 {
     public partial class DetailOrderForm : Form
     {
-        //public delegate void ReloadTableInfoDelegate(string MaBan);
-        //public ReloadTableInfoDelegate ReloadInfo { get; set; }
         public delegate void ReloadOrderList();
         public ReloadOrderList ReloadInfo { get; set; }
+        string MaMon, MaHoaDon;
         public DetailOrderForm(string MaMon, string MaHoaDon)
         {
             InitializeComponent();
-            BLLDetailOrder.Instance.SetMaHoaDon(MaHoaDon);
-            BLLDetailOrder.Instance.SetDish(MaMon);
-            foodLabel.Text = BLLDetailOrder.Instance.ShowDetail();
+            this.MaMon = MaMon;
+            this.MaHoaDon = MaHoaDon;
+            GUI();
+        }
+
+        public void GUI()
+        {
+            foodLabel.Text = BLLDetailOrder.Instance.ShowDetail(MaMon);
             quantityTextbox.Texts = "0";
             totalTextbox.Texts = "0";
         }
+
         private void quantityTextbox__TextChanged(object sender, EventArgs e)
         {
             int SoLuong = 0;
@@ -26,7 +31,7 @@ namespace CafeShop.View.EmpForm
             {
                 SoLuong = Convert.ToInt32(quantityTextbox.Texts);
                 if (SoLuong >= 0)
-                    totalTextbox.Texts = BLLDetailOrder.Instance.CalculatePrice(SoLuong).ToString();
+                    totalTextbox.Texts = BLLDetailOrder.Instance.CalculatePrice(MaMon, SoLuong).ToString();
                 else
                     totalTextbox.Texts = "Số lượng phải lớn hơn 0";
             }
@@ -42,7 +47,7 @@ namespace CafeShop.View.EmpForm
                 if (SoLuong > 0)
                 {
                     string GhiChu = descriptionTextbox.Texts;
-                    BLLDetailOrder.Instance.ConfirmDetailOrder(SoLuong, GhiChu);
+                    BLLDetailOrder.Instance.ConfirmDetailOrder(MaHoaDon,MaMon, SoLuong, GhiChu);
                     ReloadInfo?.Invoke();
                     this.Close();
                 }

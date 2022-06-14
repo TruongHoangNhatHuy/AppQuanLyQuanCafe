@@ -22,27 +22,22 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        private Mon mon = null;
-        private string MaHoaDon;
-        public void SetMaHoaDon(string MaHoaDon)
+        
+        public Mon GetMonByMaMon(string MaMon) => DBModel.Instance.Mons.Find(MaMon);
+
+        public string ShowDetail(String MaMon)
         {
-            this.MaHoaDon = MaHoaDon;
-        }
-        public void SetDish(string MaMon)
-        {
-            mon = DBModel.Instance.Mons.Find(MaMon);
-        }
-        public string ShowDetail()
-        {
+            Mon mon = GetMonByMaMon(MaMon);
             return mon.TenMon.ToString() + ", " + mon.DonGia.ToString() + "/" + mon.DonVi.ToString();
         }
-        public int CalculatePrice(int SoLuong)
+        public int CalculatePrice(String MaMon, int SoLuong)
         {
+            Mon mon = GetMonByMaMon(MaMon);
             return mon.DonGia * SoLuong;
         }
-        // phương thức kiểm tra kho còn đủ hàng hóa không
-        public void CheckGoods(int SoLuong) 
+        public void CheckGoods(string MaMon, int SoLuong) 
         {
+            Mon mon = GetMonByMaMon(MaMon);
             HangHoa goods = mon.HangHoa.FirstOrDefault();
             if (goods != null)
             {
@@ -55,17 +50,18 @@ namespace CafeShop.BLL
                 }
             }
         }
-        public void ConfirmDetailOrder(int SoLuong, string GhiChu)
+        public void ConfirmDetailOrder(string MaHoaDon, string MaMon, int SoLuong, string GhiChu)
         {
-            CheckGoods(SoLuong);
+            CheckGoods(MaMon, SoLuong);
+            Mon mon = GetMonByMaMon(MaMon);
             DonGoiMon result = new DonGoiMon
             {
                 MaDonGoiMon = PrimaryKeyGenerator.OrderBillPrimaryKey(),
-                MaHoaDon = this.MaHoaDon,
+                MaHoaDon = MaHoaDon,
                 MaMon = mon.MaMon,
                 SoLuong = SoLuong,
                 GhiChu = GhiChu,
-                GiaTien = CalculatePrice(SoLuong),
+                GiaTien = CalculatePrice(MaMon, SoLuong),
                 ThoiGianGoiMon = DateTime.Now,
                 TinhTrang = OrderState.Waiting
             };

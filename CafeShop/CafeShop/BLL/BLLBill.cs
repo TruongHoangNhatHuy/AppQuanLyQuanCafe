@@ -23,22 +23,25 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        public int tongTien { get; private set; }
+
         private HoaDon GetHoaDonByMaBan(string MaBan)
         {
             return DBModel.Instance.HoaDons.Where(x => x.MaBan == MaBan).FirstOrDefault();
         }
-        public void GetBillCostOfTable(string MaBan)
+        public KhachHang GetKHBySDT(string sdt) => DBModel.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
+        
+        public int GetBillCostOfTable(string MaBan)
         {
-            this.tongTien = 0;
+            int tongTien = 0;
             string maHoaDon = GetHoaDonByMaBan(MaBan).MaHoaDon;
             var listDonGoiMon = DBModel.Instance.DonGoiMons.Where(x => x.TinhTrang == OrderState.Completed && x.MaHoaDon == maHoaDon).ToList();
             foreach (var i in listDonGoiMon)
             {
                 tongTien += i.GiaTien;
             }
+            return tongTien;
         }
-        public double SurchargeAndDiscount(double surcharge = 0, bool isSurchargePercent = false, double discount = 0, bool isDiscountPercent = false)
+        public double SurchargeAndDiscount(int tongTien, double surcharge = 0, bool isSurchargePercent = false, double discount = 0, bool isDiscountPercent = false)
         {
             double surchargePercent = 0, discountPercent = 0;
             if (isSurchargePercent)
@@ -54,7 +57,6 @@ namespace CafeShop.BLL
             double totalPercent = 1 + surchargePercent - discountPercent;
             return (tongTien * totalPercent) + surcharge - discount;
         }
-        public KhachHang GetKHBySDT(string sdt) => DBModel.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
         public void ConfirmBill(string MaBan, string sdt, string PhuThu, string GiamGia, int ThanhTien)
         {
             HoaDon bill = GetHoaDonByMaBan(MaBan);

@@ -9,8 +9,10 @@ namespace CafeShop.View.AdForm
         public WarehouseForm()
         {
             InitializeComponent();
+            label1.Text = "";
             GUI();
         }
+
         public void GUI()
         {
             dataGridView1.DataSource = BLLWarehouse.Instance.GetAllHangHoa();

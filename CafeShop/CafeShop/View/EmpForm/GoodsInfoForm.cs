@@ -26,11 +26,11 @@ namespace CafeShop.View.EmpForm
             quantityTextbox.Texts = goods.SoLuong.ToString();
             dataGridView1.DataSource = goods.LoHangs.ToList();
         }
+
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void minimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

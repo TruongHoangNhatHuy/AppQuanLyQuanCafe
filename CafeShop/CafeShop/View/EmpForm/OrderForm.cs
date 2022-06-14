@@ -17,6 +17,8 @@ namespace CafeShop.View.EmpForm
         {
             InitializeComponent();
         }
+
+        #region EventHandler
         private void OrderForm_Load(object sender, EventArgs e)
         {
             areaJCombobox.Items.Add(new KhuvucCBItem { ID = "0", Name = "Tất cả" });
@@ -26,102 +28,7 @@ namespace CafeShop.View.EmpForm
             LoadCategoryFood();
             HidePanel();
         }
-        #region CreateDynamicComponents
-        private void LoadCategoryFood()
-        {
-            foreach (var danhmuc in BLLOrder.Instance.GetDanhMucThucDon())
-            {
-                CustomControl.JButton button = new CustomControl.JButton()
-                {
-                    Text = danhmuc.TenDanhMuc,
-                    Name = danhmuc.MaDanhMuc,
-                    Width = 100,
-                    ForeColor = Color.Black,
-                    Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)))
-                };
-                button.Click += new EventHandler(ShowDetailFood);
-                categoryFoodPanel.Controls.Add(button);
-            }
-        }
-        public void ShowDetailFood(object sender, EventArgs e)
-        {
-            foodPanel.Controls.Clear();
-            foodPanel.Visible = true;
-            CustomControl.JButton button = sender as CustomControl.JButton;
-            string MaDanhMuc = button.Name;
-            foreach (var mon in BLLOrder.Instance.GetMonByMaDanhMuc(MaDanhMuc))
-            {
-                Label foodNameLabel = new Label();
-                Label foodPriceLabel = new Label();
-                Panel foodDetailPanel = new Panel();
-                //
-                //foodNameLabel
-                //
-                foodNameLabel.Text = mon.TenMon;
-                foodNameLabel.Name = mon.MaMon;
-                foodNameLabel.ForeColor = Color.Crimson;
-                foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                foodNameLabel.Dock = DockStyle.Fill;
-                foodNameLabel.Click += new EventHandler(openDetailOrderForm);
-                //
-                //fooodPriceLabel
-                //
-                foodPriceLabel.Text = mon.DonGia.ToString();
-                foodPriceLabel.ForeColor = Color.Black;
-                foodPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                foodPriceLabel.Dock = DockStyle.Right;
-                //
-                //foodPanel
-                //
-                foodDetailPanel.Name = mon.MaMon;
-                foodDetailPanel.Width = foodPanel.Width - 5;
-                foodDetailPanel.BackColor = SystemColors.ControlLight;
-                foodDetailPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-                foodDetailPanel.BorderStyle = BorderStyle.FixedSingle;
-                foodDetailPanel.Controls.Add(foodPriceLabel);
-                foodDetailPanel.Controls.Add(foodNameLabel);
-                foodDetailPanel.Height = 40;
-                foodDetailPanel.BringToFront();
-                foodDetailPanel.Click += new EventHandler(openDetailOrderForm);
-                foodPanel.Padding = new System.Windows.Forms.Padding(3);
-                foodPanel.Controls.Add(foodDetailPanel);
-            }
-        }
-        public void LoadTableFromDB()
-        {
-            foreach (KhuVuc khuvuc in BLLOrder.Instance.GetAllKhuvuc())
-            {
-                Label label = new Label();
-                FlowLayoutPanel tablePanel = new FlowLayoutPanel();
-                FlowLayoutPanel mainPanel = new FlowLayoutPanel();
 
-                label.Text = khuvuc.TenKhuVuc;
-                label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                label.ForeColor = Color.Crimson;
-
-                tablePanel.FlowDirection = FlowDirection.LeftToRight;
-                tablePanel.BackColor = SystemColors.ActiveBorder;
-                tablePanel.AutoSize = true;
-                foreach (var ban in khuvuc.Bans)
-                {
-                    TablesButton table = new TablesButton(ban.MaBan, ban.TinhTrang);
-                    table._Click += new EventHandler(ShowInfoTable);
-                    tablePanel.Controls.Add(table);
-                }
-
-                mainPanel.Name = khuvuc.MaKhuVuc;
-                mainPanel.FlowDirection = FlowDirection.TopDown;
-                mainPanel.AutoSize = true;
-                mainPanel.Controls.Add(label);
-                mainPanel.Controls.Add(tablePanel);
-
-                areaFlowPanel.Controls.Add(mainPanel);
-                panelList.Add(mainPanel);
-            }
-        }
-        #endregion
-
-        #region EventHandler
         private void openDetailOrderForm(object sender, EventArgs e)
         {
             string MaMon = "";
@@ -260,6 +167,102 @@ namespace CafeShop.View.EmpForm
         }
 
         #endregion
+
+        #region CreateDynamicComponents
+        private void LoadCategoryFood()
+        {
+            foreach (var danhmuc in BLLOrder.Instance.GetDanhMucThucDon())
+            {
+                CustomControl.JButton button = new CustomControl.JButton()
+                {
+                    Text = danhmuc.TenDanhMuc,
+                    Name = danhmuc.MaDanhMuc,
+                    Width = 100,
+                    ForeColor = Color.Black,
+                    Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)))
+                };
+                button.Click += new EventHandler(ShowDetailFood);
+                categoryFoodPanel.Controls.Add(button);
+            }
+        }
+        public void ShowDetailFood(object sender, EventArgs e)
+        {
+            foodPanel.Controls.Clear();
+            foodPanel.Visible = true;
+            CustomControl.JButton button = sender as CustomControl.JButton;
+            string MaDanhMuc = button.Name;
+            foreach (var mon in BLLOrder.Instance.GetMonByMaDanhMuc(MaDanhMuc))
+            {
+                Label foodNameLabel = new Label();
+                Label foodPriceLabel = new Label();
+                Panel foodDetailPanel = new Panel();
+                //
+                //foodNameLabel
+                //
+                foodNameLabel.Text = mon.TenMon;
+                foodNameLabel.Name = mon.MaMon;
+                foodNameLabel.ForeColor = Color.Crimson;
+                foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                foodNameLabel.Dock = DockStyle.Fill;
+                foodNameLabel.Click += new EventHandler(openDetailOrderForm);
+                //
+                //fooodPriceLabel
+                //
+                foodPriceLabel.Text = mon.DonGia.ToString();
+                foodPriceLabel.ForeColor = Color.Black;
+                foodPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                foodPriceLabel.Dock = DockStyle.Right;
+                //
+                //foodPanel
+                //
+                foodDetailPanel.Name = mon.MaMon;
+                foodDetailPanel.Width = foodPanel.Width - 5;
+                foodDetailPanel.BackColor = SystemColors.ControlLight;
+                foodDetailPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+                foodDetailPanel.BorderStyle = BorderStyle.FixedSingle;
+                foodDetailPanel.Controls.Add(foodPriceLabel);
+                foodDetailPanel.Controls.Add(foodNameLabel);
+                foodDetailPanel.Height = 40;
+                foodDetailPanel.BringToFront();
+                foodDetailPanel.Click += new EventHandler(openDetailOrderForm);
+                foodPanel.Padding = new System.Windows.Forms.Padding(3);
+                foodPanel.Controls.Add(foodDetailPanel);
+            }
+        }
+        public void LoadTableFromDB()
+        {
+            foreach (KhuVuc khuvuc in BLLOrder.Instance.GetAllKhuvuc())
+            {
+                Label label = new Label();
+                FlowLayoutPanel tablePanel = new FlowLayoutPanel();
+                FlowLayoutPanel mainPanel = new FlowLayoutPanel();
+
+                label.Text = khuvuc.TenKhuVuc;
+                label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                label.ForeColor = Color.Crimson;
+
+                tablePanel.FlowDirection = FlowDirection.LeftToRight;
+                tablePanel.BackColor = SystemColors.ActiveBorder;
+                tablePanel.AutoSize = true;
+                foreach (var ban in khuvuc.Bans)
+                {
+                    TablesButton table = new TablesButton(ban.MaBan, ban.TinhTrang);
+                    table._Click += new EventHandler(ShowInfoTable);
+                    tablePanel.Controls.Add(table);
+                }
+
+                mainPanel.Name = khuvuc.MaKhuVuc;
+                mainPanel.FlowDirection = FlowDirection.TopDown;
+                mainPanel.AutoSize = true;
+                mainPanel.Controls.Add(label);
+                mainPanel.Controls.Add(tablePanel);
+
+                areaFlowPanel.Controls.Add(mainPanel);
+                panelList.Add(mainPanel);
+            }
+        }
+        #endregion
+
 
 
 

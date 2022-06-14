@@ -19,10 +19,12 @@ namespace CafeShop.View.EmpForm
             Reload();
             reloadTimer.Start();
         }
+
         public void Reload()
         {
             dataGridView1.DataSource = BLLOrderList.Instance.GetOrderListSortByTime();
         }
+
         private void performButton_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
