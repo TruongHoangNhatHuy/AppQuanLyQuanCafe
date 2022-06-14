@@ -36,12 +36,7 @@ namespace CafeShop.BLL
         }
         public List<Ban> SearchTable(string MaKhuVuc, string searchText)
             => GetBanByMaKhuvuc(MaKhuVuc).Where(p => p.TenBan.ToLower().Contains(searchText)).ToList();
-        public void DeleteTable(List<string> delList)
-        {
-            foreach (string MaBan in delList)
-                DBModel.Instance.Bans.Remove(GetBanByMaBan(MaBan));
-            DBModel.Instance.SaveChanges();
-        }
+        #region Execute Table DB        
         public bool Check(string MaBan)
         {
             foreach(var ban in DBModel.Instance.Bans)
@@ -70,7 +65,16 @@ namespace CafeShop.BLL
             DBModel.Instance.KhuVucs.Add(khuvuc);
             DBModel.Instance.SaveChanges();
         }
+        public void DeleteTable(List<string> delList)
+        {
+            foreach (string MaBan in delList)
+                if (GetBanByMaBan(MaBan).TinhTrang)
+                    DBModel.Instance.Bans.Remove(GetBanByMaBan(MaBan));
+            DBModel.Instance.SaveChanges();
+        }
+        #endregion
 
+        #region GenerateKey
         public List<string> GetTableKeyList() => DBModel.Instance.Bans.Select(p => p.MaBan).ToList();
         public string NewTableKey()
         {
@@ -84,6 +88,7 @@ namespace CafeShop.BLL
             string CurrentKey = PrimaryKeyGenerator.GetCurrentKey(GetAreaKeyList());
             return PrimaryKeyGenerator.NextPrimaryKey(CurrentKey);
         }
+        #endregion
     }
 
 }

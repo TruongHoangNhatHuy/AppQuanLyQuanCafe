@@ -11,9 +11,9 @@ namespace CafeShop.View.AdForm
         public Reload reload;
         public TableForm()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
+        #region EventHandler
         private void TableForm_Load(object sender, EventArgs e)
         {
             LoadComboboxItem();            
@@ -34,7 +34,6 @@ namespace CafeShop.View.AdForm
             this.Close();
 
         }
-        #region DataGridView
         public void Show(string MaKhuVuc, string searchText = "")
         {
             dataGridView1.DataSource = BLLTable.Instance.SearchTable(MaKhuVuc, searchText);
@@ -54,7 +53,7 @@ namespace CafeShop.View.AdForm
         }
         #endregion
 
-        #region DetailInfo
+        #region EventHandler-DetailInfo
         ExecuteState state;
         private void ClearInfoTable()
         {
@@ -78,7 +77,6 @@ namespace CafeShop.View.AdForm
                 Show("0");
             }
         }
-
         private void addTableButton_Click(object sender, EventArgs e)
         {
             ClearInfoTable();
@@ -99,7 +97,6 @@ namespace CafeShop.View.AdForm
             if (areaNameCombobox.SelectedItem != null)
                 areaIDTextbox.Texts = (areaNameCombobox.SelectedItem as KhuvucCBItem).Name;
         }
-
         private void confirmButton_Click(object sender, EventArgs e)
         {
             if ((state == ExecuteState.AddTable || state == ExecuteState.Update) && areaNameCombobox.SelectedItem != null)
@@ -127,8 +124,6 @@ namespace CafeShop.View.AdForm
             }
             ClearInfoTable();
         }
-        #endregion
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
@@ -148,13 +143,14 @@ namespace CafeShop.View.AdForm
                     }
             }
         }
-       
+        enum ExecuteState
+        {
+            None,
+            AddTable,
+            Update,
+            AddArea
+        }
+        #endregion
     }
-    enum ExecuteState
-    {
-        None,
-        AddTable,
-        Update,
-        AddArea
-    }
+    
 }

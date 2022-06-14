@@ -56,15 +56,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.menuBarPanel = new System.Windows.Forms.Panel();
             this.toGroupbox = new System.Windows.Forms.GroupBox();
-            this.toDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.fromGroupbox = new System.Windows.Forms.GroupBox();
-            this.fromDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.confirmButton = new CafeShop.View.CustomControl.JButton();
-            this.statisticsTypeCombobox = new CafeShop.View.CustomControl.JComboBox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.bottomPanel = new System.Windows.Forms.Panel();
@@ -74,6 +69,11 @@
             this.billChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.customerChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.splitPanel = new System.Windows.Forms.Panel();
+            this.toDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
+            this.fromDatetimepicker = new CafeShop.View.CustomControl.JDatetimepicker();
+            this.confirmButton = new CafeShop.View.CustomControl.JButton();
+            this.statisticsTypeCombobox = new CafeShop.View.CustomControl.JComboBox();
+            this.exitButton = new CafeShop.View.CustomControl.JButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -270,25 +270,6 @@
             this.panel2.Size = new System.Drawing.Size(207, 100);
             this.panel2.TabIndex = 0;
             // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.Crimson;
-            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitButton.BorderRadius = 30;
-            this.exitButton.BorderSize = 0;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.exitButton.Location = new System.Drawing.Point(23, 30);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(55, 40);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.TextColor = System.Drawing.Color.White;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
             // menuBarPanel
             // 
             this.menuBarPanel.Controls.Add(this.toGroupbox);
@@ -313,20 +294,6 @@
             this.toGroupbox.TabStop = false;
             this.toGroupbox.Text = "Đến";
             // 
-            // toDatetimepicker
-            // 
-            this.toDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.toDatetimepicker.BorderSize = 0;
-            this.toDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.toDatetimepicker.Location = new System.Drawing.Point(3, 18);
-            this.toDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.toDatetimepicker.Name = "toDatetimepicker";
-            this.toDatetimepicker.Size = new System.Drawing.Size(246, 35);
-            this.toDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.toDatetimepicker.TabIndex = 12;
-            this.toDatetimepicker.TextColor = System.Drawing.Color.White;
-            // 
             // fromGroupbox
             // 
             this.fromGroupbox.Controls.Add(this.fromDatetimepicker);
@@ -338,20 +305,6 @@
             this.fromGroupbox.TabStop = false;
             this.fromGroupbox.Text = "Từ";
             // 
-            // fromDatetimepicker
-            // 
-            this.fromDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.fromDatetimepicker.BorderSize = 0;
-            this.fromDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fromDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.fromDatetimepicker.Location = new System.Drawing.Point(3, 18);
-            this.fromDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.fromDatetimepicker.Name = "fromDatetimepicker";
-            this.fromDatetimepicker.Size = new System.Drawing.Size(246, 35);
-            this.fromDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.fromDatetimepicker.TabIndex = 11;
-            this.fromDatetimepicker.TextColor = System.Drawing.Color.White;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -361,46 +314,6 @@
             this.label1.Size = new System.Drawing.Size(99, 24);
             this.label1.TabIndex = 8;
             this.label1.Text = "Thống kê";
-            // 
-            // confirmButton
-            // 
-            this.confirmButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.confirmButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.confirmButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.confirmButton.BorderRadius = 30;
-            this.confirmButton.BorderSize = 0;
-            this.confirmButton.FlatAppearance.BorderSize = 0;
-            this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.ForeColor = System.Drawing.Color.Black;
-            this.confirmButton.Location = new System.Drawing.Point(1008, 27);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(103, 40);
-            this.confirmButton.TabIndex = 7;
-            this.confirmButton.Text = "Xác nhận";
-            this.confirmButton.TextColor = System.Drawing.Color.Black;
-            this.confirmButton.UseVisualStyleBackColor = false;
-            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
-            // 
-            // statisticsTypeCombobox
-            // 
-            this.statisticsTypeCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.statisticsTypeCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.statisticsTypeCombobox.BorderSize = 1;
-            this.statisticsTypeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.statisticsTypeCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.statisticsTypeCombobox.ForeColor = System.Drawing.Color.DimGray;
-            this.statisticsTypeCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.statisticsTypeCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.statisticsTypeCombobox.ListTextColor = System.Drawing.Color.DimGray;
-            this.statisticsTypeCombobox.Location = new System.Drawing.Point(141, 26);
-            this.statisticsTypeCombobox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.statisticsTypeCombobox.Name = "statisticsTypeCombobox";
-            this.statisticsTypeCombobox.Padding = new System.Windows.Forms.Padding(1);
-            this.statisticsTypeCombobox.Size = new System.Drawing.Size(200, 30);
-            this.statisticsTypeCombobox.TabIndex = 0;
-            this.statisticsTypeCombobox.Texts = "";
-            this.statisticsTypeCombobox.OnSelectedIndexChanged += new System.EventHandler(this.statisticsTypeCombobox_OnSelectedIndexChanged);
             // 
             // leftPanel
             // 
@@ -515,7 +428,7 @@
             this.customerChart.Text = "chart3";
             title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title3.Name = "Title1";
-            title3.Text = "Tỉ lệ thành viên";
+            title3.Text = "Tỉ lệ doanh thu theo nhóm khách hàng";
             this.customerChart.Titles.Add(title3);
             // 
             // splitPanel
@@ -525,6 +438,93 @@
             this.splitPanel.Name = "splitPanel";
             this.splitPanel.Size = new System.Drawing.Size(25, 409);
             this.splitPanel.TabIndex = 14;
+            // 
+            // toDatetimepicker
+            // 
+            this.toDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.toDatetimepicker.BorderSize = 0;
+            this.toDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.toDatetimepicker.Location = new System.Drawing.Point(3, 18);
+            this.toDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.toDatetimepicker.Name = "toDatetimepicker";
+            this.toDatetimepicker.Size = new System.Drawing.Size(246, 35);
+            this.toDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.toDatetimepicker.TabIndex = 12;
+            this.toDatetimepicker.TextColor = System.Drawing.Color.White;
+            // 
+            // fromDatetimepicker
+            // 
+            this.fromDatetimepicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.fromDatetimepicker.BorderSize = 0;
+            this.fromDatetimepicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fromDatetimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.fromDatetimepicker.Location = new System.Drawing.Point(3, 18);
+            this.fromDatetimepicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.fromDatetimepicker.Name = "fromDatetimepicker";
+            this.fromDatetimepicker.Size = new System.Drawing.Size(246, 35);
+            this.fromDatetimepicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.fromDatetimepicker.TabIndex = 11;
+            this.fromDatetimepicker.TextColor = System.Drawing.Color.White;
+            // 
+            // confirmButton
+            // 
+            this.confirmButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.confirmButton.BorderRadius = 30;
+            this.confirmButton.BorderSize = 0;
+            this.confirmButton.FlatAppearance.BorderSize = 0;
+            this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.ForeColor = System.Drawing.Color.Black;
+            this.confirmButton.Location = new System.Drawing.Point(1008, 27);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(103, 40);
+            this.confirmButton.TabIndex = 7;
+            this.confirmButton.Text = "Xác nhận";
+            this.confirmButton.TextColor = System.Drawing.Color.Black;
+            this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
+            // 
+            // statisticsTypeCombobox
+            // 
+            this.statisticsTypeCombobox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.statisticsTypeCombobox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.statisticsTypeCombobox.BorderSize = 1;
+            this.statisticsTypeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.statisticsTypeCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.statisticsTypeCombobox.ForeColor = System.Drawing.Color.DimGray;
+            this.statisticsTypeCombobox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.statisticsTypeCombobox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.statisticsTypeCombobox.ListTextColor = System.Drawing.Color.DimGray;
+            this.statisticsTypeCombobox.Location = new System.Drawing.Point(141, 26);
+            this.statisticsTypeCombobox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.statisticsTypeCombobox.Name = "statisticsTypeCombobox";
+            this.statisticsTypeCombobox.Padding = new System.Windows.Forms.Padding(1);
+            this.statisticsTypeCombobox.Size = new System.Drawing.Size(200, 30);
+            this.statisticsTypeCombobox.TabIndex = 0;
+            this.statisticsTypeCombobox.Texts = "";
+            this.statisticsTypeCombobox.OnSelectedIndexChanged += new System.EventHandler(this.statisticsTypeCombobox_OnSelectedIndexChanged);
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Crimson;
+            this.exitButton.BackgroundColor = System.Drawing.Color.Crimson;
+            this.exitButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitButton.BorderRadius = 30;
+            this.exitButton.BorderSize = 0;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::CafeShop.Properties.Resources.exit;
+            this.exitButton.Location = new System.Drawing.Point(23, 30);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(55, 40);
+            this.exitButton.TabIndex = 1;
+            this.exitButton.TextColor = System.Drawing.Color.White;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // RevenueForm
             // 

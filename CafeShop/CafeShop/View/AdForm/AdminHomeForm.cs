@@ -21,9 +21,9 @@ namespace CafeShop.View.AdForm
         {
             InitializeComponent();
         }
-
+        #region EventHandler
         private void AdminHomeForm_Load(object sender, EventArgs e)
-        {          
+        {
             tableInfoTable.Visible = false;
             Reload();
             areaJCombobox.SelectedIndex = 0;
@@ -35,9 +35,40 @@ namespace CafeShop.View.AdForm
             areaJCombobox.Items.AddRange(BLLAdminHome.Instance.GetKhuvucCBItem().ToArray());
             LoadTopFood();
             LoadTableFromDB();
-            StatisticsInDay();
+            LoadStatisticsInDay();
         }
-        public void StatisticsInDay()
+        public void LoadTableByLocation(string MaKhuVuc)
+        {
+            if (MaKhuVuc.Equals("0"))
+                panelList.ForEach(panel => panel.Visible = true);
+            else if (MaKhuVuc != null)
+                panelList.ForEach(panel => panel.Visible = panel.Name.Equals(MaKhuVuc));
+        }
+        private void areaJCombobox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string MaKhuVuc = (areaJCombobox.SelectedItem as KhuvucCBItem).ID;
+            LoadTableByLocation(MaKhuVuc);
+            tableInfoTable.Visible = false;
+        }
+
+        private void foodetailsButton_Click(object sender, EventArgs e)
+        {
+            new StatisticsFoodDetailForm().ShowDialog();
+        }
+
+        private void reloadTimer_Tick(object sender, EventArgs e)
+        {
+            Reload();
+        }
+
+        private void reloadButton_Click(object sender, EventArgs e)
+        {
+            Reload();
+        }
+        #endregion
+
+        #region LoadInfo
+        public void LoadStatisticsInDay()
         {
             billCountLabel.Text = BLLAdminHome.Instance.GetBillCount(DateTime.Now);
             customerCountLabel.Text = BLLAdminHome.Instance.GetCustomerCount(DateTime.Now);
@@ -92,6 +123,9 @@ namespace CafeShop.View.AdForm
                 panelList.Add(mainPanel);
             }
         }
+        #endregion
+
+        #region InfoTable
         private void HidePanel()
         {
             tableInfoTable.Visible = false;
@@ -120,33 +154,6 @@ namespace CafeShop.View.AdForm
             else
                 timeInfoLabel.Text = BLLAdminHome.Instance.GetHoaDonByMaBan(MaBan).ThoiGianThanhToan.ToString();
         }
-        public void LoadTableByLocation(string MaKhuVuc)
-        {
-            if (MaKhuVuc.Equals("0"))
-                panelList.ForEach(panel => panel.Visible = true);
-            else if (MaKhuVuc != null)
-                panelList.ForEach(panel => panel.Visible = panel.Name.Equals(MaKhuVuc));
-        }
-        private void areaJCombobox_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-            string MaKhuVuc = (areaJCombobox.SelectedItem as KhuvucCBItem).ID;
-            LoadTableByLocation(MaKhuVuc);
-            tableInfoTable.Visible = false;
-        }
-
-        private void foodetailsButton_Click(object sender, EventArgs e)
-        {
-            new StatisticsFoodDetailForm().ShowDialog();
-        }
-
-        private void reloadTimer_Tick(object sender, EventArgs e)
-        {
-            Reload();
-        }
-
-        private void reloadButton_Click(object sender, EventArgs e)
-        {
-            Reload();
-        }
+        #endregion       
     }
 }
