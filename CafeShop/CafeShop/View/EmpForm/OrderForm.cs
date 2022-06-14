@@ -157,12 +157,14 @@ namespace CafeShop.View.EmpForm
                 form.ReloadTable += new BillForm.ReloadTableDelegate(LoadOrderList);
                 form.ReloadInfo += new BillForm.ReloadTableInfoDelegate(SetInfoTable);
                 form.ShowDialog();
+                HidePanel();
             }            
         }
         private void CloseTable()
         {
             BLLOrder.Instance.DeleteEmptyBill(currentTable.MaBan);
             ChangeStateTable();
+            HidePanel();
             SetInfoTable(currentTable.MaBan);
         }
 
