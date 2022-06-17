@@ -15,6 +15,7 @@ namespace CafeShop.DTO
         {
             this.HoaDons = new HashSet<HoaDon>();
         }
+
         [Key]
         [StringLength(10)]
         public string IDKhachHang { get; set; }
@@ -29,6 +30,7 @@ namespace CafeShop.DTO
         [Index(IsUnique = true)]
         public string SoDienThoaiKH { get; set; }
         public DateTime NgayDangKi { get; set; }
+
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

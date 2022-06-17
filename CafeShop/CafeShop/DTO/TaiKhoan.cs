@@ -16,6 +16,7 @@ namespace CafeShop.DTO
             this.LoHangs = new HashSet<LoHang>();
             this.HoaDons = new HashSet<HoaDon>();
         }
+
         [Key]
         public string ID { get; set; }
         [Required]
@@ -34,12 +35,16 @@ namespace CafeShop.DTO
         [StringLength(11)]
         public string SoDienThoai { get; set; }
         public DateTime NgayBatDauLamViec { get; set; }
+
         [StringLength(10)]
         public string MaVaiTro { get; set; }
         [ForeignKey("MaVaiTro")]
         public virtual VaiTro VaiTro { get; set; }
+
         public virtual ICollection<LoHang> LoHangs { get; set; }
+
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+
         public override string ToString()
         {
             return HoTen;

@@ -15,6 +15,7 @@ namespace CafeShop.DTO
         {
             this.LoHangs = new HashSet<LoHang>();
         }
+
         [Key]
         [StringLength(10)]
         public string MaHangHoa { get; set; }
@@ -23,6 +24,7 @@ namespace CafeShop.DTO
         public int SoLuong { get; set; }
         [StringLength(10)]
         public string DonVi { get; set; }
+
         [StringLength(10)]
         public string MaMon { get; set; }
         [ForeignKey("MaMon")]

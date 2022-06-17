@@ -15,12 +15,15 @@ namespace CafeShop.DTO
         {
             this.TaiKhoans = new HashSet<TaiKhoan>();
         }
+
         [Key]
         [StringLength(10)]
         public string MaVaiTro { get; set; }
         [StringLength(20)]
         public string TenVaiTro { get; set; }
+
         public virtual ICollection<TaiKhoan> TaiKhoans { get; set; }
+
         public override string ToString()
         {
             return TenVaiTro;

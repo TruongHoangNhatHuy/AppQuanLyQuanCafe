@@ -15,13 +15,16 @@ namespace CafeShop.DTO
         {
             this.Mons = new HashSet<Mon>();
         }
+
         [Key]
         [StringLength(10)]
         public string MaDanhMuc { get; set; }
-        public bool Visible { get; set; }
         [StringLength(50)]
         public string TenDanhMuc { get; set; }
+        public bool Visible { get; set; }
+
         public virtual ICollection<Mon> Mons { get; set; }
+
         public override string ToString()
         {
             return TenDanhMuc;
