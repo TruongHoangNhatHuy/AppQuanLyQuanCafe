@@ -443,6 +443,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpInfoForm";
             this.Text = "EmployeeForm";
+            this.Load += new System.EventHandler(this.EmpInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanViewBindingSource)).EndInit();
             this.topPanel.ResumeLayout(false);

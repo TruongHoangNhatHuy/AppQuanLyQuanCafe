@@ -14,6 +14,8 @@ namespace CafeShop.View.AdForm
 {
     public partial class CustomerDetailForm : Form
     {
+        public delegate void Reload();
+        public Reload reload { get; set; }
         public CustomerDetailForm(string ID = "")
         {
             InitializeComponent();
@@ -64,6 +66,7 @@ namespace CafeShop.View.AdForm
                     NgayDangKi = Convert.ToDateTime(subTimeTextbox.Texts),
                 };
                 BLLCustomerDetail.Instance.ExecuteDB(kh);
+                reload?.Invoke();
                 this.Close();
             }
             catch (Exception ex)

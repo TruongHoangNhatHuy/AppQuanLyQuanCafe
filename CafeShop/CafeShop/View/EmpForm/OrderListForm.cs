@@ -15,14 +15,16 @@ namespace CafeShop.View.EmpForm
     {
         public OrderListForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+        private void OrderListForm_Load(object sender, EventArgs e)
+        {
             Reload();
             reloadTimer.Start();
         }
-
-        public void Reload()
+        public void Reload(string searchText = "")
         {
-            dataGridView1.DataSource = BLLOrderList.Instance.GetOrderListSortByTime();
+            dataGridView1.DataSource = BLLOrderList.Instance.GetOrderListSortByTime(searchText);
         }
 
         private void performButton_Click(object sender, EventArgs e)
@@ -63,7 +65,15 @@ namespace CafeShop.View.EmpForm
 
         private void reloadButton_Click(object sender, EventArgs e)
         {
+            reloadTimer.Stop();
             Reload();
+            reloadTimer.Start();
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string searchText = searchTextbox.Texts.ToLower();
+            Reload(searchText);
         }
     }
 }

@@ -40,8 +40,14 @@ namespace CafeShop.BLL
         }
         public void DeleteAccount(string ID)
         {
-            DBModel.Instance.TaiKhoans.Remove(DBModel.Instance.TaiKhoans.Find(ID));
-            DBModel.Instance.SaveChanges();
+            TaiKhoan tk = DBModel.Instance.TaiKhoans.Find(ID);
+            if (tk != null)
+            {
+                tk.HoaDons.ToList().ForEach(p => p.IDNhanVien = "TK00000000");
+                tk.LoHangs.ToList().ForEach(p => p.IDNhanVien = "TK00000000");
+                DBModel.Instance.TaiKhoans.Remove(DBModel.Instance.TaiKhoans.Find(ID));
+                DBModel.Instance.SaveChanges();
+            }            
         }
         public List<TaiKhoanView> SearchAccountList(string searchString, string searchBy)
         {

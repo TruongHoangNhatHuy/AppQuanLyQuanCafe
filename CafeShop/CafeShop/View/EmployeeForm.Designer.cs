@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
             this.warehouseButton = new System.Windows.Forms.Button();
-            this.logoutButton = new System.Windows.Forms.Button();
+            this.timeButton = new System.Windows.Forms.Button();
             this.orderListButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.EmpNameLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.titleBarPanel = new System.Windows.Forms.Panel();
+            this.jButton2 = new CafeShop.View.CustomControl.JButton();
+            this.jButton1 = new CafeShop.View.CustomControl.JButton();
             this.logInfoTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.minimizeButton = new CafeShop.View.CustomControl.JButton();
             this.zoomButton = new CafeShop.View.CustomControl.JButton();
@@ -49,7 +49,6 @@
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sideMenuPanel.SuspendLayout();
-            this.mainPanel.SuspendLayout();
             this.titleBarPanel.SuspendLayout();
             this.jDropDownMenu1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +57,7 @@
             // 
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
             this.sideMenuPanel.Controls.Add(this.warehouseButton);
-            this.sideMenuPanel.Controls.Add(this.logoutButton);
+            this.sideMenuPanel.Controls.Add(this.timeButton);
             this.sideMenuPanel.Controls.Add(this.orderListButton);
             this.sideMenuPanel.Controls.Add(this.orderButton);
             this.sideMenuPanel.Controls.Add(this.mainPanel);
@@ -86,18 +85,18 @@
             this.warehouseButton.UseVisualStyleBackColor = true;
             this.warehouseButton.Click += new System.EventHandler(this.warehouseButton_Click);
             // 
-            // logoutButton
+            // timeButton
             // 
-            this.logoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 625);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(4);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(190, 50);
-            this.logoutButton.TabIndex = 10;
-            this.logoutButton.UseVisualStyleBackColor = true;
+            this.timeButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.timeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.timeButton.Location = new System.Drawing.Point(0, 625);
+            this.timeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.timeButton.Name = "timeButton";
+            this.timeButton.Size = new System.Drawing.Size(190, 50);
+            this.timeButton.TabIndex = 10;
+            this.timeButton.UseVisualStyleBackColor = true;
             // 
             // orderListButton
             // 
@@ -135,8 +134,6 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.EmpNameLabel);
-            this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(4);
@@ -144,31 +141,11 @@
             this.mainPanel.Size = new System.Drawing.Size(190, 80);
             this.mainPanel.TabIndex = 1;
             // 
-            // EmpNameLabel
-            // 
-            this.EmpNameLabel.AutoSize = true;
-            this.EmpNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.EmpNameLabel.Location = new System.Drawing.Point(3, 23);
-            this.EmpNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.EmpNameLabel.Name = "EmpNameLabel";
-            this.EmpNameLabel.Size = new System.Drawing.Size(110, 20);
-            this.EmpNameLabel.TabIndex = 0;
-            this.EmpNameLabel.Text = "Tên Nhân viên";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(3, 4);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nhân viên";
-            // 
             // titleBarPanel
             // 
             this.titleBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
+            this.titleBarPanel.Controls.Add(this.jButton2);
+            this.titleBarPanel.Controls.Add(this.jButton1);
             this.titleBarPanel.Controls.Add(this.logInfoTextbox);
             this.titleBarPanel.Controls.Add(this.minimizeButton);
             this.titleBarPanel.Controls.Add(this.zoomButton);
@@ -179,6 +156,46 @@
             this.titleBarPanel.Name = "titleBarPanel";
             this.titleBarPanel.Size = new System.Drawing.Size(1138, 80);
             this.titleBarPanel.TabIndex = 2;
+            // 
+            // jButton2
+            // 
+            this.jButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.jButton2.BackColor = System.Drawing.Color.Transparent;
+            this.jButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.jButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton2.BorderRadius = 0;
+            this.jButton2.BorderSize = 0;
+            this.jButton2.FlatAppearance.BorderSize = 0;
+            this.jButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton2.ForeColor = System.Drawing.Color.Black;
+            this.jButton2.Image = global::CafeShop.Properties.Resources.minimize_sign;
+            this.jButton2.Location = new System.Drawing.Point(1041, 4);
+            this.jButton2.Name = "jButton2";
+            this.jButton2.Size = new System.Drawing.Size(44, 29);
+            this.jButton2.TabIndex = 7;
+            this.jButton2.TextColor = System.Drawing.Color.Black;
+            this.jButton2.UseVisualStyleBackColor = false;
+            // 
+            // jButton1
+            // 
+            this.jButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.jButton1.BackColor = System.Drawing.Color.Transparent;
+            this.jButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.jButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.jButton1.BorderRadius = 0;
+            this.jButton1.BorderSize = 0;
+            this.jButton1.FlatAppearance.BorderSize = 0;
+            this.jButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jButton1.ForeColor = System.Drawing.Color.Black;
+            this.jButton1.Image = global::CafeShop.Properties.Resources.full_screen;
+            this.jButton1.Location = new System.Drawing.Point(1091, 4);
+            this.jButton1.Name = "jButton1";
+            this.jButton1.Size = new System.Drawing.Size(44, 29);
+            this.jButton1.TabIndex = 6;
+            this.jButton1.TextColor = System.Drawing.Color.Black;
+            this.jButton1.UseVisualStyleBackColor = false;
             // 
             // logInfoTextbox
             // 
@@ -324,8 +341,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.sideMenuPanel.ResumeLayout(false);
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
             this.titleBarPanel.ResumeLayout(false);
             this.titleBarPanel.PerformLayout();
             this.jDropDownMenu1.ResumeLayout(false);
@@ -342,17 +357,17 @@
         private System.Windows.Forms.Label funcNameLabel;
         private System.Windows.Forms.Panel childFormPanel;
         private System.Windows.Forms.Button orderListButton;
-        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button timeButton;
         private CustomControl.JButton zoomButton;
         private CustomControl.JButton minimizeButton;
         private System.Windows.Forms.Button warehouseButton;
-        private System.Windows.Forms.Label EmpNameLabel;
-        private System.Windows.Forms.Label label2;
         private CustomControl.JTextbox logInfoTextbox;
         private CustomControl.DropDownMenu.JDropDownMenu jDropDownMenu1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.Timer Clock_Timer;
+        private CustomControl.JButton jButton1;
+        private CustomControl.JButton jButton2;
     }
 }

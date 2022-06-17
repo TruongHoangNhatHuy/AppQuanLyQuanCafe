@@ -29,8 +29,7 @@ namespace CafeShop.BLL
                 return false;
             else
                 return true;
-        }
-        
+        }        
         public void ExecuteDB(KhachHang kh)
         {
             if (ExistedCustomer(kh.IDKhachHang))

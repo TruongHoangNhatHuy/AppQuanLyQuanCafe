@@ -21,14 +21,12 @@ namespace CafeShop.BLL
                 return _Instance;
             }
         }
-        public List<DonGoiMonView> GetOrderListSortByTime()
+        public List<DonGoiMonView> GetOrderListSortByTime(string searchText = "")
         {
             List<DonGoiMonView> result = new List<DonGoiMonView>();
             foreach (DonGoiMon i in DBModel.Instance.DonGoiMons)
-                if (i.TinhTrang != OrderState.Completed)
-                {
+                if (i.TinhTrang != OrderState.Completed && (i.Mon.TenMon.ToLower().Contains(searchText) || i.HoaDon.Ban.TenBan.ToLower().Contains(searchText)))
                     result.Add(new DonGoiMonView(i));
-                }
             return result.OrderByDescending(p => p.ThoiGianTuKhiGoi).ToList();
         }
         public void StateChange(string MaDonGoiMon)

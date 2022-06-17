@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
-            this.logoutButton = new System.Windows.Forms.Button();
+            this.timeButton = new System.Windows.Forms.Button();
             this.subStatisticsPanel = new System.Windows.Forms.Panel();
             this.changeButton = new System.Windows.Forms.Button();
             this.revenueButton = new System.Windows.Forms.Button();
@@ -48,15 +48,13 @@
             this.personalButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.AdNameLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.titleBarPanel = new System.Windows.Forms.Panel();
-            this.logInfoTextbox = new CafeShop.View.CustomControl.JTextbox();
-            this.zoomButton = new CafeShop.View.CustomControl.JButton();
-            this.minimizeButton = new CafeShop.View.CustomControl.JButton();
             this.funcNameLabel = new System.Windows.Forms.Label();
             this.childFormPanel = new System.Windows.Forms.Panel();
             this.ClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.logInfoTextbox = new CafeShop.View.CustomControl.JTextbox();
+            this.zoomButton = new CafeShop.View.CustomControl.JButton();
+            this.minimizeButton = new CafeShop.View.CustomControl.JButton();
             this.jDropDownMenu1 = new CafeShop.View.CustomControl.DropDownMenu.JDropDownMenu(this.components);
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +63,6 @@
             this.subStatisticsPanel.SuspendLayout();
             this.subFacilityPanel.SuspendLayout();
             this.subPersonPanel.SuspendLayout();
-            this.mainPanel.SuspendLayout();
             this.titleBarPanel.SuspendLayout();
             this.jDropDownMenu1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +71,7 @@
             // 
             this.sideMenuPanel.AutoScroll = true;
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
-            this.sideMenuPanel.Controls.Add(this.logoutButton);
+            this.sideMenuPanel.Controls.Add(this.timeButton);
             this.sideMenuPanel.Controls.Add(this.subStatisticsPanel);
             this.sideMenuPanel.Controls.Add(this.statisticsButton);
             this.sideMenuPanel.Controls.Add(this.scheduleButton);
@@ -91,18 +88,18 @@
             this.sideMenuPanel.Size = new System.Drawing.Size(190, 675);
             this.sideMenuPanel.TabIndex = 0;
             // 
-            // logoutButton
+            // timeButton
             // 
-            this.logoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 701);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(173, 50);
-            this.logoutButton.TabIndex = 9;
-            this.logoutButton.UseVisualStyleBackColor = true;
+            this.timeButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.timeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.timeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.timeButton.Location = new System.Drawing.Point(0, 701);
+            this.timeButton.Name = "timeButton";
+            this.timeButton.Size = new System.Drawing.Size(173, 50);
+            this.timeButton.TabIndex = 9;
+            this.timeButton.UseVisualStyleBackColor = true;
             // 
             // subStatisticsPanel
             // 
@@ -359,35 +356,11 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.AdNameLabel);
-            this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(173, 80);
             this.mainPanel.TabIndex = 0;
-            // 
-            // AdNameLabel
-            // 
-            this.AdNameLabel.AutoSize = true;
-            this.AdNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.AdNameLabel.Location = new System.Drawing.Point(3, 27);
-            this.AdNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AdNameLabel.Name = "AdNameLabel";
-            this.AdNameLabel.Size = new System.Drawing.Size(136, 20);
-            this.AdNameLabel.TabIndex = 0;
-            this.AdNameLabel.Text = "Tên chủ cửa hàng";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Chủ cửa hàng";
             // 
             // titleBarPanel
             // 
@@ -401,6 +374,32 @@
             this.titleBarPanel.Name = "titleBarPanel";
             this.titleBarPanel.Size = new System.Drawing.Size(1138, 80);
             this.titleBarPanel.TabIndex = 1;
+            // 
+            // funcNameLabel
+            // 
+            this.funcNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.funcNameLabel.AutoSize = true;
+            this.funcNameLabel.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.funcNameLabel.Location = new System.Drawing.Point(36, 16);
+            this.funcNameLabel.Name = "funcNameLabel";
+            this.funcNameLabel.Size = new System.Drawing.Size(188, 47);
+            this.funcNameLabel.TabIndex = 0;
+            this.funcNameLabel.Text = "Trang Chủ";
+            this.funcNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // childFormPanel
+            // 
+            this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childFormPanel.Location = new System.Drawing.Point(190, 80);
+            this.childFormPanel.Name = "childFormPanel";
+            this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.childFormPanel.Size = new System.Drawing.Size(1138, 595);
+            this.childFormPanel.TabIndex = 2;
+            // 
+            // ClockTimer
+            // 
+            this.ClockTimer.Tick += new System.EventHandler(this.Clocktimer_Tick);
             // 
             // logInfoTextbox
             // 
@@ -470,32 +469,6 @@
             this.minimizeButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
             this.minimizeButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
-            // funcNameLabel
-            // 
-            this.funcNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.funcNameLabel.AutoSize = true;
-            this.funcNameLabel.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.funcNameLabel.Location = new System.Drawing.Point(36, 16);
-            this.funcNameLabel.Name = "funcNameLabel";
-            this.funcNameLabel.Size = new System.Drawing.Size(188, 47);
-            this.funcNameLabel.TabIndex = 0;
-            this.funcNameLabel.Text = "Trang Chủ";
-            this.funcNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // childFormPanel
-            // 
-            this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childFormPanel.Location = new System.Drawing.Point(190, 80);
-            this.childFormPanel.Name = "childFormPanel";
-            this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.childFormPanel.Size = new System.Drawing.Size(1138, 595);
-            this.childFormPanel.TabIndex = 2;
-            // 
-            // ClockTimer
-            // 
-            this.ClockTimer.Tick += new System.EventHandler(this.Clocktimer_Tick);
-            // 
             // jDropDownMenu1
             // 
             this.jDropDownMenu1.IsMainMenu = false;
@@ -545,8 +518,6 @@
             this.subStatisticsPanel.ResumeLayout(false);
             this.subFacilityPanel.ResumeLayout(false);
             this.subPersonPanel.ResumeLayout(false);
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
             this.titleBarPanel.ResumeLayout(false);
             this.titleBarPanel.PerformLayout();
             this.jDropDownMenu1.ResumeLayout(false);
@@ -575,13 +546,11 @@
         private System.Windows.Forms.Button revenueButton;
         private System.Windows.Forms.Button invoiceButton;
         private System.Windows.Forms.Panel titleBarPanel;
-        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button timeButton;
         private System.Windows.Forms.Label funcNameLabel;
         private System.Windows.Forms.Panel childFormPanel;
         private CustomControl.JButton zoomButton;
         private CustomControl.JButton minimizeButton;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label AdNameLabel;
         private CustomControl.JTextbox logInfoTextbox;
         private CustomControl.DropDownMenu.JDropDownMenu jDropDownMenu1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;

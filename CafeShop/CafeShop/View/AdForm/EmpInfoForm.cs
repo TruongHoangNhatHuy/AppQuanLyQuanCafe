@@ -18,19 +18,26 @@ namespace CafeShop.View.AdForm
         public Reload reload;
         public EmpInfoForm()
         {
-            InitializeComponent();
+            InitializeComponent();                       
+        }
+        private void EmpInfoForm_Load(object sender, EventArgs e)
+        {
+            ReloadData();
+            searchByComboBox.Items.AddRange(new string[] { "Tìm kiếm theo", "Theo ID", "Theo tên đăng nhập", "Theo họ tên", "Theo ngày sinh", "Theo địa chỉ", "Theo số điện thoại", "Theo ngày bắt đầu", "Theo vai trò" });
+            searchByComboBox.SelectedIndex = 0;
+        }
+        public void ReloadData()
+        {
             dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
-            searchByComboBox.Items.AddRange(new string[] { "Theo ID", "Theo tên đăng nhập", "Theo họ tên", "Theo ngày sinh", "Theo địa chỉ", "Theo số điện thoại", "Theo ngày bắt đầu", "Theo vai trò" });
         }
         private void adButton_Click(object sender, EventArgs e)
         {
             EmpDetailForm form = new EmpDetailForm();
+            form.reload += ReloadData;
             form.ShowDialog();
-            dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
         }
         private void exitButton_Click(object sender, EventArgs e)
         {
-
             this.Close();
             reload?.Invoke();
         }
@@ -38,23 +45,25 @@ namespace CafeShop.View.AdForm
         private void deleteButton_Click(object sender, EventArgs e)
         {
             string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            BLLEmpInfo.Instance.DeleteAccount(ID);
-            dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xoá tài khoản có mã {ID} không?", "Cảnh báo", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                BLLEmpInfo.Instance.DeleteAccount(ID);
+                ReloadData();
+            }                
         }
-
         private void resetPasswordButton_Click(object sender, EventArgs e)
         {
             string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             BLLEmpInfo.Instance.ResetPassword(ID);
-            dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
             string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             EmpDetailForm form = new EmpDetailForm(ID);
+            form.reload += ReloadData;
             form.ShowDialog();
-            dataGridView1.DataSource = BLLEmpInfo.Instance.GetAccountList();
         }
 
         private void search(object sender, EventArgs e)
@@ -68,10 +77,8 @@ namespace CafeShop.View.AdForm
         {
             List<TaiKhoanView> list = new List<TaiKhoanView>();
             foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
                 list.Add(BLLEmpInfo.Instance.GetAccountByID(row.Cells[0].Value.ToString()));
-            }
             dataGridView1.DataSource = BLLEmpInfo.Instance.SortAccountList(list);
-        }
+        }        
     }
 }
