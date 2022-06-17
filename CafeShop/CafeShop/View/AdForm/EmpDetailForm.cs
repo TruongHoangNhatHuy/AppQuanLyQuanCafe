@@ -15,6 +15,8 @@ namespace CafeShop.View.AdForm
 {
     public partial class EmpDetailForm : Form
     {
+        public delegate void Reload();
+        public Reload reload { get; set; }
         public EmpDetailForm(string ID = "", bool mode = false)
         {
             InitializeComponent();
@@ -51,7 +53,6 @@ namespace CafeShop.View.AdForm
         {
             this.Close();
         }
-
         private void confirmButton_Click(object sender, EventArgs e)
         {
             try
@@ -70,6 +71,7 @@ namespace CafeShop.View.AdForm
                     GioiTinh = maleRadioButton.Checked
                 };
                 BLLEmpDetail.Instance.ExecuteDB(tk);
+                reload?.Invoke();
                 this.Close();
             }
             catch (Exception ex)

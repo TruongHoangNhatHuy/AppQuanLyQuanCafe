@@ -34,18 +34,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.revenueLabel = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.customerCountLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.billCountLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.reloadButton = new CafeShop.View.CustomControl.JButton();
             this.transitionPanel = new System.Windows.Forms.Panel();
             this.areaPanel = new System.Windows.Forms.Panel();
             this.areaFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,15 +64,16 @@
             this.titleFoodPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.reloadTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.reloadButton = new CafeShop.View.CustomControl.JButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.areaPanel.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -85,6 +82,9 @@
             this.foodOverviewPanel.SuspendLayout();
             this.bottomPanel.SuspendLayout();
             this.titleFoodPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,15 +146,6 @@
             this.revenueLabel.Text = "0";
             this.revenueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::CafeShop.Properties.Resources.cash_multiple;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 55);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 33);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -189,15 +180,6 @@
             this.customerCountLabel.TabIndex = 2;
             this.customerCountLabel.Text = "0";
             this.customerCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CafeShop.Properties.Resources.customer;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 55);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 33);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // label6
             // 
@@ -234,15 +216,6 @@
             this.billCountLabel.Text = "0";
             this.billCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CafeShop.Properties.Resources.receipt_outline;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 33);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -262,25 +235,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(207, 100);
             this.panel2.TabIndex = 0;
-            // 
-            // reloadButton
-            // 
-            this.reloadButton.BackColor = System.Drawing.Color.Crimson;
-            this.reloadButton.BackgroundColor = System.Drawing.Color.Crimson;
-            this.reloadButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.reloadButton.BorderRadius = 30;
-            this.reloadButton.BorderSize = 0;
-            this.reloadButton.FlatAppearance.BorderSize = 0;
-            this.reloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reloadButton.ForeColor = System.Drawing.Color.White;
-            this.reloadButton.Image = global::CafeShop.Properties.Resources.exit;
-            this.reloadButton.Location = new System.Drawing.Point(23, 30);
-            this.reloadButton.Name = "reloadButton";
-            this.reloadButton.Size = new System.Drawing.Size(55, 40);
-            this.reloadButton.TabIndex = 1;
-            this.reloadButton.TextColor = System.Drawing.Color.White;
-            this.reloadButton.UseVisualStyleBackColor = false;
-            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
             // 
             // transitionPanel
             // 
@@ -526,6 +480,52 @@
             this.reloadTimer.Interval = 30000;
             this.reloadTimer.Tick += new System.EventHandler(this.reloadTimer_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CafeShop.Properties.Resources.cash_multiple;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 33);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CafeShop.Properties.Resources.customer;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 55);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 33);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeShop.Properties.Resources.receipt_outline;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 33);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.BackColor = System.Drawing.Color.LimeGreen;
+            this.reloadButton.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.reloadButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.reloadButton.BorderRadius = 30;
+            this.reloadButton.BorderSize = 0;
+            this.reloadButton.FlatAppearance.BorderSize = 0;
+            this.reloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reloadButton.ForeColor = System.Drawing.Color.White;
+            this.reloadButton.Image = global::CafeShop.Properties.Resources.Bigreload;
+            this.reloadButton.Location = new System.Drawing.Point(23, 30);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(55, 40);
+            this.reloadButton.TabIndex = 1;
+            this.reloadButton.TextColor = System.Drawing.Color.White;
+            this.reloadButton.UseVisualStyleBackColor = false;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
             // AdminHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,13 +547,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.areaPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -565,6 +562,9 @@
             this.bottomPanel.ResumeLayout(false);
             this.titleFoodPanel.ResumeLayout(false);
             this.titleFoodPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

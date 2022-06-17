@@ -73,6 +73,16 @@ namespace CafeShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bigreload {
+            get {
+                object obj = ResourceManager.GetObject("Bigreload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_multiple {
             get {
                 object obj = ResourceManager.GetObject("book_multiple", resourceCulture);
@@ -386,6 +396,16 @@ namespace CafeShop.Properties {
         internal static System.Drawing.Bitmap receipt_outline {
             get {
                 object obj = ResourceManager.GetObject("receipt_outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reload {
+            get {
+                object obj = ResourceManager.GetObject("reload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

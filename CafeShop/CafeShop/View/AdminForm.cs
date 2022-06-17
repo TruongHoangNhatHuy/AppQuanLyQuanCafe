@@ -13,7 +13,6 @@ namespace CafeShop.View
             InitializeComponent();
             customizeDesigning();
             homeButton_Click(this.homeButton, null);
-            //AdNameLabel.Text = BLLLogin.Instance.GetCurrentIDName();
         }
         private void AdminForm_Load(object sender, EventArgs e)
         {
@@ -27,7 +26,7 @@ namespace CafeShop.View
         }
         private void Clocktimer_Tick(object sender, EventArgs e)
         {
-            logoutButton.Text = DateTime.Now.ToString();
+            timeButton.Text = DateTime.Now.ToString();
         }
         private void logInfoTextbox_Click(object sender, EventArgs e)
         {
@@ -90,7 +89,6 @@ namespace CafeShop.View
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
-
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
@@ -232,7 +230,6 @@ namespace CafeShop.View
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void zoomButton_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
@@ -250,11 +247,6 @@ namespace CafeShop.View
             CustomControl.JButton button = sender as CustomControl.JButton;
             button.BorderSize = 0;
         }
-
-
-
         #endregion
-
-        
     }
 }

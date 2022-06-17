@@ -31,10 +31,13 @@ namespace CafeShop.BLL
             else
                 return true;
         }
+        public bool ExistedUsername(string username) => DBModel.Instance.TaiKhoans.ToList().Exists(p => p.TenTaiKhoan.Equals(username));
         public void ExecuteDB(TaiKhoan tk)
-        {
+        {            
             if (ExistedAccount(tk.ID))
             {
+                if (ExistedUsername(tk.TenTaiKhoan))
+                    throw new Exception("Tên đăng nhập này đã tồn tại, vui lòng nhập tên khác");
                 TaiKhoan existed = GetInfo(tk.ID);
                 existed.TenTaiKhoan = tk.TenTaiKhoan;
                 existed.HoTen = tk.HoTen;
@@ -46,7 +49,7 @@ namespace CafeShop.BLL
                 DBModel.Instance.SaveChanges();
             }
             else
-            {
+            {                
                 tk.MatKhau = tk.NgaySinh.ToString("ddMMyyyy");
                 tk.NgayBatDauLamViec = DateTime.Now;
                 DBModel.Instance.TaiKhoans.Add(tk);
