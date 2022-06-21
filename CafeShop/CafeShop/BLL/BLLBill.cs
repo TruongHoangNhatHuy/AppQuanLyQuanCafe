@@ -23,18 +23,18 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-
+        private BLLBill() { }
         private HoaDon GetHoaDonByMaBan(string MaBan)
         {
-            return DBModel.Instance.HoaDons.Where(x => x.MaBan == MaBan).FirstOrDefault();
+            return DBContext.Instance.HoaDons.Where(x => x.MaBan == MaBan).FirstOrDefault();
         }
-        public KhachHang GetKHBySDT(string sdt) => DBModel.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
+        public KhachHang GetKHBySDT(string sdt) => DBContext.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
         
         public int GetBillCostOfTable(string MaBan)
         {
             int tongTien = 0;
             string maHoaDon = GetHoaDonByMaBan(MaBan).MaHoaDon;
-            var listDonGoiMon = DBModel.Instance.DonGoiMons.Where(x => x.TinhTrang == OrderState.Completed && x.MaHoaDon == maHoaDon).ToList();
+            var listDonGoiMon = DBContext.Instance.DonGoiMons.Where(x => x.TinhTrang == OrderState.Completed && x.MaHoaDon == maHoaDon).ToList();
             foreach (var i in listDonGoiMon)
             {
                 tongTien += i.GiaTien;
@@ -67,7 +67,7 @@ namespace CafeShop.BLL
             bill.GiamGia = GiamGia;
             bill.ThanhTien = ThanhTien;
             bill.ThoiGianThanhToan = DateTime.Now;
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
     }
 }

@@ -21,23 +21,37 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        public List<VaiTro> GetVaiTro() => DBModel.Instance.VaiTroes.Where(p => p.MaVaiTro != "VT00000000").ToList();
-        public VaiTro GetVaiTroByMaVaiTro(string MaVaiTro) => DBModel.Instance.VaiTroes.Find(MaVaiTro);
-        public TaiKhoan GetInfo(string ID) => DBModel.Instance.TaiKhoans.Where(x => x.ID == ID).FirstOrDefault();
+        private BLLEmpDetail() { }
+        public List<VaiTro> GetVaiTro() => DBContext.Instance.VaiTroes.Where(p => p.MaVaiTro != "VT00000000").ToList();
+        public VaiTro GetVaiTroByMaVaiTro(string MaVaiTro) => DBContext.Instance.VaiTroes.Find(MaVaiTro);
+        public TaiKhoan GetInfo(string ID) => DBContext.Instance.TaiKhoans.Where(x => x.ID == ID).FirstOrDefault();
         public bool ExistedAccount(string ID)
         {
-            if (DBModel.Instance.TaiKhoans.Find(ID) == null)
+            if (DBContext.Instance.TaiKhoans.Find(ID) == null)
                 return false;
             else
                 return true;
         }
-        public bool ExistedUsername(string username) => DBModel.Instance.TaiKhoans.ToList().Exists(p => p.TenTaiKhoan.Equals(username));
+        public TaiKhoan GetAccountByUserName(string username) => DBContext.Instance.TaiKhoans.Where(p => p.TenTaiKhoan == username).FirstOrDefault();
+        public bool ExistedUsername(string username, string ID)
+        {
+            var tk = GetAccountByUserName(username);
+            if (tk == null)
+                return false;
+            else
+            {
+                if (tk.ID == ID)
+                    return false;
+                return true;
+            }    
+        }
         public void ExecuteDB(TaiKhoan tk)
-        {            
+        {
+            if (ExistedUsername(tk.TenTaiKhoan, tk.ID))
+                throw new Exception("Tên đăng nhập này đã tồn tại, vui lòng nhập tên khác");
             if (ExistedAccount(tk.ID))
             {
-                if (ExistedUsername(tk.TenTaiKhoan))
-                    throw new Exception("Tên đăng nhập này đã tồn tại, vui lòng nhập tên khác");
+                
                 TaiKhoan existed = GetInfo(tk.ID);
                 existed.TenTaiKhoan = tk.TenTaiKhoan;
                 existed.HoTen = tk.HoTen;
@@ -46,14 +60,14 @@ namespace CafeShop.BLL
                 existed.SoDienThoai = tk.SoDienThoai;
                 existed.GioiTinh = tk.GioiTinh;
                 existed.MaVaiTro = tk.MaVaiTro;
-                DBModel.Instance.SaveChanges();
+                DBContext.Instance.SaveChanges();
             }
             else
             {                
                 tk.MatKhau = tk.NgaySinh.ToString("ddMMyyyy");
                 tk.NgayBatDauLamViec = DateTime.Now;
-                DBModel.Instance.TaiKhoans.Add(tk);
-                DBModel.Instance.SaveChanges();
+                DBContext.Instance.TaiKhoans.Add(tk);
+                DBContext.Instance.SaveChanges();
                 MessageBox.Show("Mật khẩu là: " + tk.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
             }
         }

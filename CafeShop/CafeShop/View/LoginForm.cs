@@ -18,7 +18,8 @@ namespace CafeShop.View
         {
             InitializeComponent();
             DataGridView dataGridView = new DataGridView();
-            dataGridView.DataSource = DBModel.Instance.KhuVucs.ToList();
+            dataGridView.DataSource = DBContext.Instance.KhuVucs.ToList();
+            SetTextDefault();
         }
         #region EventHandler
         private void button_MouseEnter(object sender, EventArgs e)
@@ -69,26 +70,7 @@ namespace CafeShop.View
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //if (userTextbox.Texts.Equals("admin") && passwordTextbox.Texts.Equals("admin"))
-            //{
-            //    AdminForm form = new AdminForm();
-            //    form.FormClosed += (s, args) =>this.Show();
-            //    SetTextDefault();
-            //    form.Show();
-            //    this.Hide();
-            //}
-            //else if(userTextbox.Texts.Equals("user") && passwordTextbox.Texts.Equals("user"))
-            //{
-            //    EmployeeForm form = new EmployeeForm();
-            //    form.FormClosed += (s, args) => this.Show();
-            //    SetTextDefault();
-            //    form.Show();
-            //    this.Hide(); 
-            //}
-            //else
-            //{
-            //    warningLabel.Text = "*Tên đăng nhập hoặc mật khẩu không đúng*";
-            //}
+
             try
             {
                 string account = userTextbox.Texts;
@@ -118,7 +100,8 @@ namespace CafeShop.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                warningLabel.Text = ex.Message;
             }
         }
         public void SetTextDefault()

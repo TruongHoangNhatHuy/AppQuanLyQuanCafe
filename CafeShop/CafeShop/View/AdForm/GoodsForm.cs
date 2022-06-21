@@ -13,6 +13,8 @@ namespace CafeShop.View.AdForm
 {
     public partial class GoodsForm : Form
     {
+        public delegate void Reload();
+        public Reload reload { get; set; }
         public GoodsForm(string MaHangHoa = "")
         {
             InitializeComponent();
@@ -57,6 +59,11 @@ namespace CafeShop.View.AdForm
 
         private void acceptButton_Click(object sender, EventArgs e)
         {
+            if(goodsNameTextbox.Texts == "" || unitTextbox.Texts  == "")
+            {
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu");
+                return;
+            }    
             string maMon = (categoryCombobox.SelectedIndex == 0) ? "M000000000" : (foodNameCombobox.SelectedItem as Mon).MaMon;
             HangHoa goods = new HangHoa()
             {
@@ -67,6 +74,7 @@ namespace CafeShop.View.AdForm
                 MaMon = maMon
             };
             BLLWarehouse.Instance.ExecuteDB(goods);
+            reload?.Invoke();
             this.Close();
         }
 

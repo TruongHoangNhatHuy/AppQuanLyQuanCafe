@@ -17,8 +17,9 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        public List<HoaDon> GetAllHoaDon() => DBModel.Instance.HoaDons.Where(p => p.MaBan.Equals("B000000000")).ToList();
-        public HoaDon GetHoaDonByMaHoaDon(string MaHoaDon) => DBModel.Instance.HoaDons.Find(MaHoaDon);
+        private BLLInvoice() { }
+        public List<HoaDon> GetAllHoaDon() => DBContext.Instance.HoaDons.Where(p => p.MaBan.Equals("B000000000")).ToList();
+        public HoaDon GetHoaDonByMaHoaDon(string MaHoaDon) => DBContext.Instance.HoaDons.Find(MaHoaDon);
         public string GetBillCount(List<HoaDon> list) => list.Count.ToString();
         public string GetCustomerCount(List<HoaDon> list) => list.Select(p => new { p.KhachHang }).Distinct().Count().ToString();
         public string GetRevenue(List<HoaDon> list) => list.Sum(p => p.ThanhTien).ToString();
@@ -27,8 +28,8 @@ namespace CafeShop.BLL
             return list.Select(d => new HoaDonView()
             {
                 MaHoaDon = d.MaHoaDon,
-                TenNhanVien = DBModel.Instance.TaiKhoans.Find(d.IDNhanVien).HoTen,
-                TenKhachHang = DBModel.Instance.KhachHangs.Find(d.IDKhachHang).HoTenKH,
+                TenNhanVien = DBContext.Instance.TaiKhoans.Find(d.IDNhanVien).HoTen,
+                TenKhachHang = DBContext.Instance.KhachHangs.Find(d.IDKhachHang).HoTenKH,
                 ThoiGianThanhToan = d.ThoiGianThanhToan,
                 GiamGia = d.GiamGia,
                 PhuThu = d.PhuThu,

@@ -35,7 +35,7 @@ namespace CafeShop.View.AdForm
             CustomerDetailForm form = new CustomerDetailForm();
             form.reload += ReloadData;
             form.ShowDialog();
-            dataGridView1.DataSource = BLLCustomerInfo.Instance.GetCustomerList();
+            //dataGridView1.DataSource = BLLCustomerInfo.Instance.GetCustomerList();
         }
         private void exitButton_Click(object sender, EventArgs e)
         {

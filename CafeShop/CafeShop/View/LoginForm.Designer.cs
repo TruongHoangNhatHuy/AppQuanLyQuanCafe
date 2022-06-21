@@ -44,24 +44,22 @@ namespace CafeShop.View
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CafeShop.Properties.Resources.cafe;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 62);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(133, 40);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(131, 130);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // warningLabel
             // 
             this.warningLabel.AutoSize = true;
-            this.warningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.warningLabel.Location = new System.Drawing.Point(81, 582);
-            this.warningLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningLabel.Location = new System.Drawing.Point(100, 376);
             this.warningLabel.Name = "warningLabel";
-            this.warningLabel.Size = new System.Drawing.Size(52, 22);
+            this.warningLabel.Size = new System.Drawing.Size(97, 24);
             this.warningLabel.TabIndex = 8;
-            this.warningLabel.Text = "       ";
+            this.warningLabel.Text = "     label  ";
             // 
             // minimizeButton
             // 
@@ -75,10 +73,9 @@ namespace CafeShop.View
             this.minimizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeButton.ForeColor = System.Drawing.Color.Black;
             this.minimizeButton.Image = global::CafeShop.Properties.Resources.minimize_sign;
-            this.minimizeButton.Location = new System.Drawing.Point(434, 5);
-            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.minimizeButton.Location = new System.Drawing.Point(289, 3);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(66, 45);
+            this.minimizeButton.Size = new System.Drawing.Size(44, 29);
             this.minimizeButton.TabIndex = 0;
             this.minimizeButton.TextColor = System.Drawing.Color.Black;
             this.minimizeButton.UseVisualStyleBackColor = false;
@@ -98,10 +95,9 @@ namespace CafeShop.View
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.Black;
             this.closeButton.Image = global::CafeShop.Properties.Resources.closelogin;
-            this.closeButton.Location = new System.Drawing.Point(510, 5);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.closeButton.Location = new System.Drawing.Point(340, 3);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(66, 45);
+            this.closeButton.Size = new System.Drawing.Size(44, 29);
             this.closeButton.TabIndex = 1;
             this.closeButton.TextColor = System.Drawing.Color.Black;
             this.closeButton.UseVisualStyleBackColor = false;
@@ -120,10 +116,9 @@ namespace CafeShop.View
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.Black;
-            this.loginButton.Location = new System.Drawing.Point(86, 642);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.loginButton.Location = new System.Drawing.Point(57, 417);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(414, 62);
+            this.loginButton.Size = new System.Drawing.Size(276, 40);
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Đăng nhập";
             this.loginButton.TextColor = System.Drawing.Color.Black;
@@ -141,10 +136,9 @@ namespace CafeShop.View
             this.passwordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.passwordButton.ForeColor = System.Drawing.Color.White;
             this.passwordButton.Image = global::CafeShop.Properties.Resources.padlock;
-            this.passwordButton.Location = new System.Drawing.Point(86, 469);
-            this.passwordButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.passwordButton.Location = new System.Drawing.Point(57, 305);
             this.passwordButton.Name = "passwordButton";
-            this.passwordButton.Size = new System.Drawing.Size(64, 62);
+            this.passwordButton.Size = new System.Drawing.Size(43, 40);
             this.passwordButton.TabIndex = 6;
             this.passwordButton.TextColor = System.Drawing.Color.White;
             this.passwordButton.UseVisualStyleBackColor = false;
@@ -157,16 +151,16 @@ namespace CafeShop.View
             this.passwordTextbox.BorderRadius = 5;
             this.passwordTextbox.BorderSize = 2;
             this.passwordTextbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextbox.Location = new System.Drawing.Point(170, 458);
-            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.passwordTextbox.Location = new System.Drawing.Point(113, 298);
             this.passwordTextbox.Multiline = false;
             this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.passwordTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.passwordTextbox.PasswordChar = false;
             this.passwordTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.passwordTextbox.PlaceholderText = "Mật khẩu";
-            this.passwordTextbox.Size = new System.Drawing.Size(352, 71);
+            this.passwordTextbox.Size = new System.Drawing.Size(235, 47);
             this.passwordTextbox.TabIndex = 3;
+            this.passwordTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.passwordTextbox.Texts = "";
             this.passwordTextbox.UnderlinedStyle = true;
             this.passwordTextbox.Click += new System.EventHandler(this.passwordTextbox_Click);
@@ -182,10 +176,9 @@ namespace CafeShop.View
             this.userButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userButton.ForeColor = System.Drawing.Color.White;
             this.userButton.Image = global::CafeShop.Properties.Resources.EmployeeIcon;
-            this.userButton.Location = new System.Drawing.Point(86, 331);
-            this.userButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userButton.Location = new System.Drawing.Point(57, 215);
             this.userButton.Name = "userButton";
-            this.userButton.Size = new System.Drawing.Size(64, 62);
+            this.userButton.Size = new System.Drawing.Size(43, 40);
             this.userButton.TabIndex = 5;
             this.userButton.TextColor = System.Drawing.Color.White;
             this.userButton.UseVisualStyleBackColor = false;
@@ -198,25 +191,25 @@ namespace CafeShop.View
             this.userTextbox.BorderRadius = 5;
             this.userTextbox.BorderSize = 2;
             this.userTextbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTextbox.Location = new System.Drawing.Point(170, 320);
-            this.userTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userTextbox.Location = new System.Drawing.Point(113, 208);
             this.userTextbox.Multiline = false;
             this.userTextbox.Name = "userTextbox";
-            this.userTextbox.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.userTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.userTextbox.PasswordChar = false;
             this.userTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.userTextbox.PlaceholderText = "Tài khoản";
-            this.userTextbox.Size = new System.Drawing.Size(352, 71);
+            this.userTextbox.Size = new System.Drawing.Size(235, 47);
             this.userTextbox.TabIndex = 2;
+            this.userTextbox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.userTextbox.Texts = "";
             this.userTextbox.UnderlinedStyle = true;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(580, 735);
+            this.ClientSize = new System.Drawing.Size(387, 478);
             this.Controls.Add(this.warningLabel);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.closeButton);
@@ -228,7 +221,6 @@ namespace CafeShop.View
             this.Controls.Add(this.userTextbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";

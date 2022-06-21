@@ -27,7 +27,7 @@ namespace CafeShop.View.AdForm
             {
                 nameTextbox.PlaceholderText = "Bắt buộc";
                 phoneNumberTextbox.PlaceholderText = "Bắt buộc";
-                string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBModel.Instance.KhachHangs.Select(x => x.IDKhachHang).ToList());
+                string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBContext.Instance.KhachHangs.Select(x => x.IDKhachHang).ToList());
                 IDTextbox.Texts = PrimaryKeyGenerator.NextPrimaryKey(currentKey);
                 subTimeTextbox.Texts = DateTime.Now.ToString();
             }
@@ -38,7 +38,11 @@ namespace CafeShop.View.AdForm
                 phoneNumberTextbox.Texts = kh.SoDienThoaiKH;
                 birthdayPicker.Value = kh.NgaySinhKH;
                 addressTextbox.Texts = kh.DiaChiKH;
-                maleRadioButton.Checked = kh.GioiTinhKH;
+                //maleRadioButton.Checked = kh.GioiTinhKH;
+                if (kh.GioiTinhKH)
+                    maleRadioButton.Checked = true;
+                else
+                    femaleRadioButton.Checked = true;
                 IDTextbox.Texts = kh.IDKhachHang;
                 subTimeTextbox.Texts = kh.NgayDangKi.ToString();
             }

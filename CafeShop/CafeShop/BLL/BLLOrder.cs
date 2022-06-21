@@ -19,20 +19,21 @@ namespace CafeShop.BLL
                 return _Instance;
             }
         }
-        private List<HoaDon> currentBill = DBModel.Instance.HoaDons.Where(p => p.MaBan != "B000000000").ToList();
-        private BLLOrder() 
+        private BLLOrder()
         { }
+        private List<HoaDon> currentBill = DBContext.Instance.HoaDons.Where(p => p.MaBan != "B000000000").ToList();
+        
         public List<KhuvucCBItem> GetKhuvucCBItem() 
-            => DBModel.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
-        public KhuVuc GetKhuVucByMaKhuVuc(string ID) => DBModel.Instance.KhuVucs.Find(ID);
+            => DBContext.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
+        public KhuVuc GetKhuVucByMaKhuVuc(string ID) => DBContext.Instance.KhuVucs.Find(ID);
 
-        public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList();
-        public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList().Skip(1).ToList();
-        public List<DanhMucThucDon> GetDanhMucThucDon() => DBModel.Instance.DanhMucThucDons.Where(p => p.Visible == true).ToList();
+        public List<Ban> GetAllBan() => DBContext.Instance.Bans.ToList();
+        public List<KhuVuc> GetAllKhuvuc() => DBContext.Instance.KhuVucs.ToList().Skip(1).ToList();
+        public List<DanhMucThucDon> GetDanhMucThucDon() => DBContext.Instance.DanhMucThucDons.Where(p => p.Visible == true).ToList();
 
-        public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc) => DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc && p.Visible == true).ToList();
+        public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc) => DBContext.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc && p.Visible == true).ToList();
 
-        public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
+        public Ban GetBanByMaBan(string MaBan) => DBContext.Instance.Bans.Find(MaBan);
 
         public HoaDon CreateNewBill(string MaBan)
         {
@@ -45,8 +46,8 @@ namespace CafeShop.BLL
                 Ban = GetBanByMaBan(MaBan),
                 ThoiGianThanhToan = DateTime.Now
             };
-            DBModel.Instance.HoaDons.Add(bill);
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.HoaDons.Add(bill);
+            DBContext.Instance.SaveChanges();
             currentBill.Add(bill);
             return bill;
         }
@@ -54,15 +55,15 @@ namespace CafeShop.BLL
         {
             Ban ban = GetBanByMaBan(MaBan);
             ban.TinhTrang = !ban.TinhTrang;
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
         public void DeleteEmptyBill(string MaBan)
         {
             var bill = GetHoaDonByMaBan(MaBan);
             if(bill.DonGoiMons.Count == 0)
             {
-                DBModel.Instance.HoaDons.Remove(bill);
-                DBModel.Instance.SaveChanges();
+                DBContext.Instance.HoaDons.Remove(bill);
+                DBContext.Instance.SaveChanges();
             }    
             
         }

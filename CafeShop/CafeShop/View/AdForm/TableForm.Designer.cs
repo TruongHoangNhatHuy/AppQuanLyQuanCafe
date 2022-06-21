@@ -119,7 +119,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,6 +140,7 @@
             this.dataGridView1.DataSource = this.banBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(44, 73);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -161,7 +165,6 @@
             this.MaBan.HeaderText = "Mã bàn";
             this.MaBan.Name = "MaBan";
             this.MaBan.ReadOnly = true;
-            this.MaBan.Width = 150;
             // 
             // TenBan
             // 
@@ -170,7 +173,6 @@
             this.TenBan.HeaderText = "Tên bàn";
             this.TenBan.Name = "TenBan";
             this.TenBan.ReadOnly = true;
-            this.TenBan.Width = 150;
             // 
             // MaKhuVuc
             // 
@@ -179,7 +181,6 @@
             this.MaKhuVuc.HeaderText = "Mã khu vực";
             this.MaKhuVuc.Name = "MaKhuVuc";
             this.MaKhuVuc.ReadOnly = true;
-            this.MaKhuVuc.Width = 150;
             // 
             // TenKhuVuc
             // 
@@ -187,7 +188,6 @@
             this.TenKhuVuc.HeaderText = "Tên khu vực";
             this.TenKhuVuc.Name = "TenKhuVuc";
             this.TenKhuVuc.ReadOnly = true;
-            this.TenKhuVuc.Width = 150;
             // 
             // banBindingSource
             // 

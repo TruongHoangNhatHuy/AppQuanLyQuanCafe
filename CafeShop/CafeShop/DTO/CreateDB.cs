@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 namespace CafeShop.DTO
 {
     public class CreateDB :
-            //CreateDatabaseIfNotExists<DBModel>
-            DropCreateDatabaseIfModelChanges<DBModel>
-            //DropCreateDatabaseAlways<DBModel>
+            //CreateDatabaseIfNotExists<DBContext>
+            DropCreateDatabaseIfModelChanges<DBContext>
+            //DropCreateDatabaseAlways<DBContext>
     {
         private DateTime min = new DateTime(1990, 01, 01);
-        protected override void Seed(DBModel context)
+        protected override void Seed(DBContext context)
         {
             context.VaiTroes.AddRange(new VaiTro[]
             {
@@ -38,9 +38,9 @@ namespace CafeShop.DTO
             });
             context.KhuVucs.AddRange(new KhuVuc[]
             {
-                new KhuVuc { MaKhuVuc = "KV00000000", TenKhuVuc = "", SoLuongBan = 0},
-                new KhuVuc { MaKhuVuc = "KV00000001", TenKhuVuc = "Trong nhà", SoLuongBan = 0},
-                new KhuVuc { MaKhuVuc = "KV00000002", TenKhuVuc = "Ngoài trời", SoLuongBan = 0}
+                new KhuVuc { MaKhuVuc = "KV00000000", TenKhuVuc = ""},
+                new KhuVuc { MaKhuVuc = "KV00000001", TenKhuVuc = "Trong nhà"},
+                new KhuVuc { MaKhuVuc = "KV00000002", TenKhuVuc = "Ngoài trời"}
             });
             context.Bans.AddRange(new Ban[]
             {

@@ -48,9 +48,12 @@
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideMenuPanel.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.titleBarPanel.SuspendLayout();
             this.jDropDownMenu1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sideMenuPanel
@@ -134,6 +137,7 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.pictureBox1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(4);
@@ -326,6 +330,16 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeShop.Properties.Resources.cafe;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,9 +355,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.sideMenuPanel.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
             this.titleBarPanel.ResumeLayout(false);
             this.titleBarPanel.PerformLayout();
             this.jDropDownMenu1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +385,6 @@
         private System.Windows.Forms.Timer Clock_Timer;
         private CustomControl.JButton jButton1;
         private CustomControl.JButton jButton2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

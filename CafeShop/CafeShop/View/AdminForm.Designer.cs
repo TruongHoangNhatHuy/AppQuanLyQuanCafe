@@ -32,11 +32,9 @@
             this.sideMenuPanel = new System.Windows.Forms.Panel();
             this.timeButton = new System.Windows.Forms.Button();
             this.subStatisticsPanel = new System.Windows.Forms.Panel();
-            this.changeButton = new System.Windows.Forms.Button();
             this.revenueButton = new System.Windows.Forms.Button();
             this.invoiceButton = new System.Windows.Forms.Button();
             this.statisticsButton = new System.Windows.Forms.Button();
-            this.scheduleButton = new System.Windows.Forms.Button();
             this.subFacilityPanel = new System.Windows.Forms.Panel();
             this.warehouseButton = new System.Windows.Forms.Button();
             this.tableButton = new System.Windows.Forms.Button();
@@ -49,22 +47,25 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.titleBarPanel = new System.Windows.Forms.Panel();
-            this.funcNameLabel = new System.Windows.Forms.Label();
-            this.childFormPanel = new System.Windows.Forms.Panel();
-            this.ClockTimer = new System.Windows.Forms.Timer(this.components);
             this.logInfoTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.zoomButton = new CafeShop.View.CustomControl.JButton();
             this.minimizeButton = new CafeShop.View.CustomControl.JButton();
+            this.funcNameLabel = new System.Windows.Forms.Label();
+            this.childFormPanel = new System.Windows.Forms.Panel();
+            this.ClockTimer = new System.Windows.Forms.Timer(this.components);
             this.jDropDownMenu1 = new CafeShop.View.CustomControl.DropDownMenu.JDropDownMenu(this.components);
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideMenuPanel.SuspendLayout();
             this.subStatisticsPanel.SuspendLayout();
             this.subFacilityPanel.SuspendLayout();
             this.subPersonPanel.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.titleBarPanel.SuspendLayout();
             this.jDropDownMenu1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sideMenuPanel
@@ -74,7 +75,6 @@
             this.sideMenuPanel.Controls.Add(this.timeButton);
             this.sideMenuPanel.Controls.Add(this.subStatisticsPanel);
             this.sideMenuPanel.Controls.Add(this.statisticsButton);
-            this.sideMenuPanel.Controls.Add(this.scheduleButton);
             this.sideMenuPanel.Controls.Add(this.subFacilityPanel);
             this.sideMenuPanel.Controls.Add(this.facilityButton);
             this.sideMenuPanel.Controls.Add(this.menuButton);
@@ -95,7 +95,7 @@
             this.timeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.timeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.timeButton.Location = new System.Drawing.Point(0, 701);
+            this.timeButton.Location = new System.Drawing.Point(0, 651);
             this.timeButton.Name = "timeButton";
             this.timeButton.Size = new System.Drawing.Size(173, 50);
             this.timeButton.TabIndex = 9;
@@ -103,32 +103,13 @@
             // 
             // subStatisticsPanel
             // 
-            this.subStatisticsPanel.Controls.Add(this.changeButton);
             this.subStatisticsPanel.Controls.Add(this.revenueButton);
             this.subStatisticsPanel.Controls.Add(this.invoiceButton);
             this.subStatisticsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subStatisticsPanel.Location = new System.Drawing.Point(0, 568);
+            this.subStatisticsPanel.Location = new System.Drawing.Point(0, 518);
             this.subStatisticsPanel.Name = "subStatisticsPanel";
             this.subStatisticsPanel.Size = new System.Drawing.Size(173, 133);
             this.subStatisticsPanel.TabIndex = 8;
-            // 
-            // changeButton
-            // 
-            this.changeButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.changeButton.FlatAppearance.BorderSize = 0;
-            this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeButton.Image = global::CafeShop.Properties.Resources.book_multiple;
-            this.changeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.changeButton.Location = new System.Drawing.Point(0, 90);
-            this.changeButton.Name = "changeButton";
-            this.changeButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.changeButton.Size = new System.Drawing.Size(173, 45);
-            this.changeButton.TabIndex = 2;
-            this.changeButton.Text = "Sổ thu chi";
-            this.changeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.changeButton.UseVisualStyleBackColor = true;
-            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // revenueButton
             // 
@@ -174,29 +155,13 @@
             this.statisticsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statisticsButton.Image = global::CafeShop.Properties.Resources.statistics;
             this.statisticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.statisticsButton.Location = new System.Drawing.Point(0, 518);
+            this.statisticsButton.Location = new System.Drawing.Point(0, 468);
             this.statisticsButton.Name = "statisticsButton";
             this.statisticsButton.Size = new System.Drawing.Size(173, 50);
             this.statisticsButton.TabIndex = 7;
             this.statisticsButton.Text = "Thống kê";
             this.statisticsButton.UseVisualStyleBackColor = true;
             this.statisticsButton.Click += new System.EventHandler(this.statisticsButton_Click);
-            // 
-            // scheduleButton
-            // 
-            this.scheduleButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scheduleButton.FlatAppearance.BorderSize = 0;
-            this.scheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scheduleButton.Image = global::CafeShop.Properties.Resources.calendar_blank_multiple;
-            this.scheduleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scheduleButton.Location = new System.Drawing.Point(0, 468);
-            this.scheduleButton.Name = "scheduleButton";
-            this.scheduleButton.Size = new System.Drawing.Size(173, 50);
-            this.scheduleButton.TabIndex = 6;
-            this.scheduleButton.Text = "Lịch làm việc";
-            this.scheduleButton.UseVisualStyleBackColor = true;
-            this.scheduleButton.Click += new System.EventHandler(this.scheduleButton_Click);
             // 
             // subFacilityPanel
             // 
@@ -356,6 +321,7 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.pictureBox1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
@@ -374,32 +340,6 @@
             this.titleBarPanel.Name = "titleBarPanel";
             this.titleBarPanel.Size = new System.Drawing.Size(1138, 80);
             this.titleBarPanel.TabIndex = 1;
-            // 
-            // funcNameLabel
-            // 
-            this.funcNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.funcNameLabel.AutoSize = true;
-            this.funcNameLabel.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.funcNameLabel.Location = new System.Drawing.Point(36, 16);
-            this.funcNameLabel.Name = "funcNameLabel";
-            this.funcNameLabel.Size = new System.Drawing.Size(188, 47);
-            this.funcNameLabel.TabIndex = 0;
-            this.funcNameLabel.Text = "Trang Chủ";
-            this.funcNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // childFormPanel
-            // 
-            this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childFormPanel.Location = new System.Drawing.Point(190, 80);
-            this.childFormPanel.Name = "childFormPanel";
-            this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.childFormPanel.Size = new System.Drawing.Size(1138, 595);
-            this.childFormPanel.TabIndex = 2;
-            // 
-            // ClockTimer
-            // 
-            this.ClockTimer.Tick += new System.EventHandler(this.Clocktimer_Tick);
             // 
             // logInfoTextbox
             // 
@@ -469,6 +409,32 @@
             this.minimizeButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
             this.minimizeButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
+            // funcNameLabel
+            // 
+            this.funcNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.funcNameLabel.AutoSize = true;
+            this.funcNameLabel.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.funcNameLabel.Location = new System.Drawing.Point(36, 16);
+            this.funcNameLabel.Name = "funcNameLabel";
+            this.funcNameLabel.Size = new System.Drawing.Size(188, 47);
+            this.funcNameLabel.TabIndex = 0;
+            this.funcNameLabel.Text = "Trang Chủ";
+            this.funcNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // childFormPanel
+            // 
+            this.childFormPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childFormPanel.Location = new System.Drawing.Point(190, 80);
+            this.childFormPanel.Name = "childFormPanel";
+            this.childFormPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.childFormPanel.Size = new System.Drawing.Size(1138, 595);
+            this.childFormPanel.TabIndex = 2;
+            // 
+            // ClockTimer
+            // 
+            this.ClockTimer.Tick += new System.EventHandler(this.Clocktimer_Tick);
+            // 
             // jDropDownMenu1
             // 
             this.jDropDownMenu1.IsMainMenu = false;
@@ -500,6 +466,16 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeShop.Properties.Resources.cafe;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,9 +494,11 @@
             this.subStatisticsPanel.ResumeLayout(false);
             this.subFacilityPanel.ResumeLayout(false);
             this.subPersonPanel.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
             this.titleBarPanel.ResumeLayout(false);
             this.titleBarPanel.PerformLayout();
             this.jDropDownMenu1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,7 +509,6 @@
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button statisticsButton;
-        private System.Windows.Forms.Button scheduleButton;
         private System.Windows.Forms.Panel subFacilityPanel;
         private System.Windows.Forms.Button warehouseButton;
         private System.Windows.Forms.Button tableButton;
@@ -542,7 +519,6 @@
         private System.Windows.Forms.Button empButton;
         private System.Windows.Forms.Button personalButton;
         private System.Windows.Forms.Panel subStatisticsPanel;
-        private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.Button revenueButton;
         private System.Windows.Forms.Button invoiceButton;
         private System.Windows.Forms.Panel titleBarPanel;
@@ -557,6 +533,7 @@
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.Timer ClockTimer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

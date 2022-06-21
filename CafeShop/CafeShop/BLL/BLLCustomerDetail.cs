@@ -20,12 +20,13 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        public KhachHang GetKH(string ID) => DBModel.Instance.KhachHangs.Where(x => x.IDKhachHang == ID).FirstOrDefault();
-        public KhachHang GetKHBySDT(string sdt) => DBModel.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
+        private BLLCustomerDetail() { }
+        public KhachHang GetKH(string ID) => DBContext.Instance.KhachHangs.Where(x => x.IDKhachHang == ID).FirstOrDefault();
+        public KhachHang GetKHBySDT(string sdt) => DBContext.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
         
         public bool ExistedCustomer(string IDKhachHang)
         {
-            if (DBModel.Instance.KhachHangs.Find(IDKhachHang) == null)
+            if (DBContext.Instance.KhachHangs.Find(IDKhachHang) == null)
                 return false;
             else
                 return true;
@@ -40,14 +41,14 @@ namespace CafeShop.BLL
                 existed.DiaChiKH = kh.DiaChiKH;
                 existed.SoDienThoaiKH = kh.SoDienThoaiKH;
                 existed.GioiTinhKH = kh.GioiTinhKH;
-                DBModel.Instance.SaveChanges();
+                DBContext.Instance.SaveChanges();
             }
             else
             {
                 if (GetKHBySDT(kh.SoDienThoaiKH) != null)
                     throw new Exception("Số điện thoại này đã được đăng kí.");
-                DBModel.Instance.KhachHangs.Add(kh);
-                DBModel.Instance.SaveChanges();
+                DBContext.Instance.KhachHangs.Add(kh);
+                DBContext.Instance.SaveChanges();
             }
         }
     }

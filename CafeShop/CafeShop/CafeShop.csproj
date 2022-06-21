@@ -94,7 +94,7 @@
     <Compile Include="DTO\Ban.cs" />
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DanhMucThucDon.cs" />
-    <Compile Include="DTO\DBModel.cs" />
+    <Compile Include="DTO\DBContext.cs" />
     <Compile Include="DTO\DonGoiMon.cs" />
     <Compile Include="DTO\DonGoiMonView.cs" />
     <Compile Include="DTO\FoodStatistics.cs" />
@@ -139,11 +139,11 @@
     <Compile Include="View\AdForm\EmpDetailForm.Designer.cs">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\AdForm\CustumerInfoForm.cs">
+    <Compile Include="View\AdForm\CustomerInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AdForm\CustumerInfoForm.Designer.cs">
-      <DependentUpon>CustumerInfoForm.cs</DependentUpon>
+    <Compile Include="View\AdForm\CustomerInfoForm.Designer.cs">
+      <DependentUpon>CustomerInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AdForm\EmpInfoForm.cs">
       <SubType>Form</SubType>
@@ -317,8 +317,8 @@
     <EmbeddedResource Include="View\AdForm\EmpDetailForm.resx">
       <DependentUpon>EmpDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\AdForm\CustumerInfoForm.resx">
-      <DependentUpon>CustumerInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\AdForm\CustomerInfoForm.resx">
+      <DependentUpon>CustomerInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdForm\EmpInfoForm.resx">
       <DependentUpon>EmpInfoForm.cs</DependentUpon>

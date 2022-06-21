@@ -25,7 +25,7 @@ namespace CafeShop.View.EmpForm
             {
                 nameTextbox.PlaceholderText = "Bắt buộc";
                 phoneNumberTextbox.Texts = sdt;
-                string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBModel.Instance.KhachHangs.Select(x => x.IDKhachHang).ToList());
+                string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBContext.Instance.KhachHangs.Select(x => x.IDKhachHang).ToList());
                 IDTextbox.Texts = PrimaryKeyGenerator.NextPrimaryKey(currentKey);
                 subTimeTextbox.Texts = DateTime.Now.ToString();
             }

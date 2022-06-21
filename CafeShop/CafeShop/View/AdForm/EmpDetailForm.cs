@@ -33,7 +33,7 @@ namespace CafeShop.View.AdForm
                 accountTextbox.PlaceholderText = "Bắt buộc";
                 phoneNumberTextbox.PlaceholderText = "Bắt buộc";
                 roleCombobox.Texts = "Bắt buộc";
-                string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBModel.Instance.TaiKhoans.Select(x => x.ID).ToList());
+                string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBContext.Instance.TaiKhoans.Select(x => x.ID).ToList());
                 IDTextbox.Texts = PrimaryKeyGenerator.NextPrimaryKey(currentKey);
             }
             else
@@ -46,7 +46,11 @@ namespace CafeShop.View.AdForm
                 addressTextbox.Texts = tk.DiaChi;
                 phoneNumberTextbox.Texts = tk.SoDienThoai;
                 roleCombobox.SelectedItem = BLLEmpDetail.Instance.GetVaiTroByMaVaiTro(tk.MaVaiTro);
-                maleRadioButton.Checked = tk.GioiTinh;
+                //maleRadioButton.Checked = tk.GioiTinh;
+                if (tk.GioiTinh)
+                    maleRadioButton.Checked = true;
+                else
+                    femaleRadioButton.Checked = true;
             }
         }
         private void cancelButton_Click(object sender, EventArgs e)

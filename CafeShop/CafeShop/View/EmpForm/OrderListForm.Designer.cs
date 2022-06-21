@@ -41,6 +41,7 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.controlPanel = new System.Windows.Forms.Panel();
+            this.reloadButton = new CafeShop.View.CustomControl.JButton();
             this.operationPanel = new System.Windows.Forms.Panel();
             this.dataPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -51,7 +52,6 @@
             this.ghiChuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoiGianTuKhiGoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reloadButton = new CafeShop.View.CustomControl.JButton();
             ((System.ComponentModel.ISupportInitialize)(this.donGoiMonViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGoiMonBindingSource)).BeginInit();
             this.controlPanel.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             // reloadTimer
             // 
-            this.reloadTimer.Interval = 10000;
+            this.reloadTimer.Interval = 30000;
             this.reloadTimer.Tick += new System.EventHandler(this.reloadTimer_Tick);
             // 
             // cancelFoodButton
@@ -203,6 +203,25 @@
             this.controlPanel.Size = new System.Drawing.Size(1040, 82);
             this.controlPanel.TabIndex = 20;
             // 
+            // reloadButton
+            // 
+            this.reloadButton.BackColor = System.Drawing.Color.LimeGreen;
+            this.reloadButton.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.reloadButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.reloadButton.BorderRadius = 30;
+            this.reloadButton.BorderSize = 0;
+            this.reloadButton.FlatAppearance.BorderSize = 0;
+            this.reloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reloadButton.ForeColor = System.Drawing.Color.White;
+            this.reloadButton.Image = global::CafeShop.Properties.Resources.Bigreload;
+            this.reloadButton.Location = new System.Drawing.Point(6, 21);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(55, 40);
+            this.reloadButton.TabIndex = 14;
+            this.reloadButton.TextColor = System.Drawing.Color.White;
+            this.reloadButton.UseVisualStyleBackColor = false;
+            this.reloadButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // operationPanel
             // 
             this.operationPanel.Controls.Add(this.performButton);
@@ -248,7 +267,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(917, 434);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // maDonGoiMonDataGridViewTextBoxColumn
             // 
@@ -306,25 +325,6 @@
             this.TinhTrang.MinimumWidth = 8;
             this.TinhTrang.Name = "TinhTrang";
             this.TinhTrang.ReadOnly = true;
-            // 
-            // reloadButton
-            // 
-            this.reloadButton.BackColor = System.Drawing.Color.LimeGreen;
-            this.reloadButton.BackgroundColor = System.Drawing.Color.LimeGreen;
-            this.reloadButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.reloadButton.BorderRadius = 30;
-            this.reloadButton.BorderSize = 0;
-            this.reloadButton.FlatAppearance.BorderSize = 0;
-            this.reloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reloadButton.ForeColor = System.Drawing.Color.White;
-            this.reloadButton.Image = global::CafeShop.Properties.Resources.Bigreload;
-            this.reloadButton.Location = new System.Drawing.Point(6, 21);
-            this.reloadButton.Name = "reloadButton";
-            this.reloadButton.Size = new System.Drawing.Size(55, 40);
-            this.reloadButton.TabIndex = 14;
-            this.reloadButton.TextColor = System.Drawing.Color.White;
-            this.reloadButton.UseVisualStyleBackColor = false;
-            this.reloadButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // OrderListForm
             // 

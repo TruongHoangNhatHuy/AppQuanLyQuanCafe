@@ -20,25 +20,25 @@ namespace CafeShop.BLL
             private set { }
         }
         private BLLMenu() { }
-        public List<DanhMucThucDon> GetDanhMucThucDon() => DBModel.Instance.DanhMucThucDons.OrderBy(p => p.MaDanhMuc).Skip(1).ToList();
-        public DanhMucThucDon GetDanhMucByMa(string MaDanhMuc) => DBModel.Instance.DanhMucThucDons.Find(MaDanhMuc);
+        public List<DanhMucThucDon> GetDanhMucThucDon() => DBContext.Instance.DanhMucThucDons.OrderBy(p => p.MaDanhMuc).Skip(1).ToList();
+        public DanhMucThucDon GetDanhMucByMa(string MaDanhMuc) => DBContext.Instance.DanhMucThucDons.Find(MaDanhMuc);
         public List<Mon> GetMonByMaDanhMuc(string MaDanhMuc, string searchText = "")
         {
             searchText = searchText.ToLower();
             if (MaDanhMuc == null)
                 return GetAllMon().Where(p => p.TenMon.ToLower().Contains(searchText)).ToList();
             else
-                return DBModel.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc && p.TenMon.ToLower().Contains(searchText)).ToList();
+                return DBContext.Instance.Mons.Where(p => p.MaDanhMuc == MaDanhMuc && p.TenMon.ToLower().Contains(searchText)).ToList();
         }
-        public List<Mon> GetAllMon() => DBModel.Instance.Mons.OrderBy(p => p.MaMon).Skip(1).ToList();
+        public List<Mon> GetAllMon() => DBContext.Instance.Mons.OrderBy(p => p.MaMon).Skip(1).ToList();
         //--------------
         public List<Mon> GetVisibleMon(List<Mon> list) => list.Where(p => p.Visible == true).ToList();
 
         public List<Mon> GetHiddenMon(List<Mon> list) => list.Where(p => p.Visible == false).ToList();
-        public Mon GetMonByMaMon(string MaMon) => DBModel.Instance.Mons.Find(MaMon);
+        public Mon GetMonByMaMon(string MaMon) => DBContext.Instance.Mons.Find(MaMon);
         public bool CheckCategory(string MaDanhMuc)
         {
-            if (DBModel.Instance.DanhMucThucDons.Find(MaDanhMuc) != null)
+            if (DBContext.Instance.DanhMucThucDons.Find(MaDanhMuc) != null)
                 return true;
             return false;
         }
@@ -52,13 +52,13 @@ namespace CafeShop.BLL
             }
             else
             {
-                DBModel.Instance.DanhMucThucDons.Add(category);
+                DBContext.Instance.DanhMucThucDons.Add(category);
             }              
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
         public bool CheckFood(string MaMon)
         {
-            if (DBModel.Instance.Mons.Find(MaMon) != null)
+            if (DBContext.Instance.Mons.Find(MaMon) != null)
                 return true;
             return false;
         }
@@ -74,19 +74,19 @@ namespace CafeShop.BLL
             }
             else
             {
-                DBModel.Instance.Mons.Add(food);
+                DBContext.Instance.Mons.Add(food);
             }    
 
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
-        public List<string> GetCategoryKeyList() => DBModel.Instance.DanhMucThucDons.Select(p => p.MaDanhMuc).ToList();
+        public List<string> GetCategoryKeyList() => DBContext.Instance.DanhMucThucDons.Select(p => p.MaDanhMuc).ToList();
         public string NewCategoryKey()
         {
             string CurrentKey = PrimaryKeyGenerator.GetCurrentKey(GetCategoryKeyList());
             return PrimaryKeyGenerator.NextPrimaryKey(CurrentKey);
         }
 
-        public List<string> GetFoodKeyList() => DBModel.Instance.Mons.Select(p => p.MaMon).ToList();
+        public List<string> GetFoodKeyList() => DBContext.Instance.Mons.Select(p => p.MaMon).ToList();
         public string NewFoodKey()
         {
             string CurrentKey = PrimaryKeyGenerator.GetCurrentKey(GetFoodKeyList());
@@ -105,14 +105,14 @@ namespace CafeShop.BLL
         {
             Mon food = GetMonByMaMon(MaMon);
             food.Visible = !food.Visible;
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
 
         public void ChangeCategoryState(string MaDanhMuc)
         {
             DanhMucThucDon category = GetDanhMucByMa(MaDanhMuc);
             category.Visible = !category.Visible;
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
     }
 }

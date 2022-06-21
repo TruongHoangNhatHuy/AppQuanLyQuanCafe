@@ -22,8 +22,8 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        
-        public Mon GetMonByMaMon(string MaMon) => DBModel.Instance.Mons.Find(MaMon);
+        private BLLDetailOrder() { }
+        public Mon GetMonByMaMon(string MaMon) => DBContext.Instance.Mons.Find(MaMon);
 
         public string ShowDetail(String MaMon)
         {
@@ -46,7 +46,7 @@ namespace CafeShop.BLL
                 else
                 {
                     goods.SoLuong -= SoLuong;
-                    DBModel.Instance.SaveChanges();
+                    DBContext.Instance.SaveChanges();
                 }
             }
         }
@@ -65,8 +65,8 @@ namespace CafeShop.BLL
                 ThoiGianGoiMon = DateTime.Now,
                 TinhTrang = OrderState.Waiting
             };
-            DBModel.Instance.DonGoiMons.Add(result);
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.DonGoiMons.Add(result);
+            DBContext.Instance.SaveChanges();
         }
     }
 }

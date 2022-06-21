@@ -20,16 +20,17 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-        public List<KhachHang> GetCustomerList() => DBModel.Instance.KhachHangs.Where(p => p.IDKhachHang != "KH00000000").OrderBy(p => p.IDKhachHang).ToList();
-        public KhachHang GetCustomerByID(string ID) => DBModel.Instance.KhachHangs.Find(ID);
+        private BLLCustomerInfo() { }
+        public List<KhachHang> GetCustomerList() => DBContext.Instance.KhachHangs.Where(p => p.IDKhachHang != "KH00000000").OrderBy(p => p.IDKhachHang).ToList();
+        public KhachHang GetCustomerByID(string ID) => DBContext.Instance.KhachHangs.Find(ID);
         public void DeleteCustomer(string IDKhachHang)
         {
-            var customer = DBModel.Instance.KhachHangs.Find(IDKhachHang);
+            var customer = DBContext.Instance.KhachHangs.Find(IDKhachHang);
             if (customer != null)
             {
                 customer.HoaDons.ToList().ForEach(p => p.IDKhachHang = "KH00000000");
-                DBModel.Instance.KhachHangs.Remove(DBModel.Instance.KhachHangs.Find(IDKhachHang));
-                DBModel.Instance.SaveChanges();
+                DBContext.Instance.KhachHangs.Remove(DBContext.Instance.KhachHangs.Find(IDKhachHang));
+                DBContext.Instance.SaveChanges();
             }            
         }
         public List<KhachHang> SearchCustomerList(string searchString, string searchBy)

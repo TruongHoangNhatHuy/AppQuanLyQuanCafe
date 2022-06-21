@@ -21,10 +21,12 @@ namespace CafeShop.BLL
             }
             private set { }
         }
+
+        private BLLEmpInfo() { }
         public List<TaiKhoanView> GetAccountList()
         {
             List<TaiKhoanView> result = new List<TaiKhoanView>();
-            foreach(TaiKhoan i in DBModel.Instance.TaiKhoans.Where(p => p.ID != "TK00000000"))
+            foreach(TaiKhoan i in DBContext.Instance.TaiKhoans.Where(p => p.ID != "TK00000000"))
             {
                 result.Add(new TaiKhoanView(i));
             }
@@ -33,20 +35,20 @@ namespace CafeShop.BLL
         public TaiKhoanView GetAccountByID(string ID) => GetAccountList().Where(p => p.ID == ID).FirstOrDefault();
         public void ResetPassword(string ID)
         {
-            var i = DBModel.Instance.TaiKhoans.Find(ID);
+            var i = DBContext.Instance.TaiKhoans.Find(ID);
             i.MatKhau = i.NgaySinh.ToString("ddMMyyyy");
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
             MessageBox.Show("Đã reset mật khẩu thành: " + i.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
         }
         public void DeleteAccount(string ID)
         {
-            TaiKhoan tk = DBModel.Instance.TaiKhoans.Find(ID);
+            TaiKhoan tk = DBContext.Instance.TaiKhoans.Find(ID);
             if (tk != null)
             {
                 tk.HoaDons.ToList().ForEach(p => p.IDNhanVien = "TK00000000");
                 tk.LoHangs.ToList().ForEach(p => p.IDNhanVien = "TK00000000");
-                DBModel.Instance.TaiKhoans.Remove(DBModel.Instance.TaiKhoans.Find(ID));
-                DBModel.Instance.SaveChanges();
+                DBContext.Instance.TaiKhoans.Remove(DBContext.Instance.TaiKhoans.Find(ID));
+                DBContext.Instance.SaveChanges();
             }            
         }
         public List<TaiKhoanView> SearchAccountList(string searchString, string searchBy)

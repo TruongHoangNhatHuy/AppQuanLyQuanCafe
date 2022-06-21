@@ -23,7 +23,7 @@ namespace CafeShop.BLL
         {
 
         }
-        public List<HoaDon> GetHoaDon() => DBModel.Instance.HoaDons.ToList();
+        public List<HoaDon> GetHoaDon() => DBContext.Instance.HoaDons.ToList();
         #region Revenue
         public List<long> GetRevenueByYear(int from, int to)
         {

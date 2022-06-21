@@ -20,16 +20,16 @@ namespace CafeShop.BLL
             private set {}
         }
         private BLLAdminHome() { }        
-        public List<string> GetAllMaMon() => DBModel.Instance.Mons.Where(p => p.Visible).Select(p => p.MaMon).ToList();        
-        public string GetTenMonByMaMon(string MaMon) => DBModel.Instance.Mons.Find(MaMon)?.TenMon;
+        public List<string> GetAllMaMon() => DBContext.Instance.Mons.Where(p => p.Visible).Select(p => p.MaMon).ToList();        
+        public string GetTenMonByMaMon(string MaMon) => DBContext.Instance.Mons.Find(MaMon)?.TenMon;
         public List<HoaDon> GetHoaDonInDay(DateTime time)
-            => DBModel.Instance.HoaDons.Where(p => p.ThoiGianThanhToan.Day == time.Day && p.ThoiGianThanhToan.Month == time.Month && p.ThoiGianThanhToan.Year == time.Year).ToList();
+            => DBContext.Instance.HoaDons.Where(p => p.ThoiGianThanhToan.Day == time.Day && p.ThoiGianThanhToan.Month == time.Month && p.ThoiGianThanhToan.Year == time.Year).ToList();
         public string GetBillCount(DateTime time) => GetHoaDonInDay(time).Count().ToString();
         public string GetCustomerCount(DateTime time) => GetHoaDonInDay(time).Select(p => new { p.KhachHang }).Distinct().Count().ToString();
         public string GetRevenue(DateTime time) => GetHoaDonInDay(time).Sum(p => p.ThanhTien).ToString();
         public List<FoodStatistics> GetFoodStatistics(DateTime time, int countFood = 0)
         {
-            var list = DBModel.Instance.DonGoiMons.Where(p => p.ThoiGianGoiMon.Year == time.Year && p.ThoiGianGoiMon.Month == time.Month).
+            var list = DBContext.Instance.DonGoiMons.Where(p => p.ThoiGianGoiMon.Year == time.Year && p.ThoiGianGoiMon.Month == time.Month).
                 GroupBy(p => p.Mon).Select(p => new FoodStatistics
                 {
                     FoodID = p.Select(x => x.Mon.MaMon).FirstOrDefault(),
@@ -51,13 +51,13 @@ namespace CafeShop.BLL
         }
         #region AreaAndTable
         public List<KhuvucCBItem> GetKhuvucCBItem()
-            => DBModel.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
-        public KhuVuc GetKhuVucByMaKhuVuc(string ID) => DBModel.Instance.KhuVucs.Find(ID);
+            => DBContext.Instance.KhuVucs.ToList().Skip(1).Select(p => new KhuvucCBItem() { ID = p.MaKhuVuc, Name = p.TenKhuVuc }).ToList();
+        public KhuVuc GetKhuVucByMaKhuVuc(string ID) => DBContext.Instance.KhuVucs.Find(ID);
 
-        public List<Ban> GetAllBan() => DBModel.Instance.Bans.ToList();
-        public List<KhuVuc> GetAllKhuvuc() => DBModel.Instance.KhuVucs.ToList().Skip(1).ToList();
-        public Ban GetBanByMaBan(string MaBan) => DBModel.Instance.Bans.Find(MaBan);
-        public List<HoaDon> GetCurrentBill() => DBModel.Instance.HoaDons.Where(p => p.MaBan != "B000000000").ToList();
+        public List<Ban> GetAllBan() => DBContext.Instance.Bans.ToList();
+        public List<KhuVuc> GetAllKhuvuc() => DBContext.Instance.KhuVucs.ToList().Skip(1).ToList();
+        public Ban GetBanByMaBan(string MaBan) => DBContext.Instance.Bans.Find(MaBan);
+        public List<HoaDon> GetCurrentBill() => DBContext.Instance.HoaDons.Where(p => p.MaBan != "B000000000").ToList();
         public HoaDon GetHoaDonByMaBan(string MaBan) => GetCurrentBill().Where(p => p.MaBan == MaBan).FirstOrDefault();
         #endregion
     }

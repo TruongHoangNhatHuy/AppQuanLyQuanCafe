@@ -68,13 +68,13 @@ namespace CafeShop.View.AdForm
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count == 1)
             {
-                List<string> delList = new List<string>();
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                    delList.Add(row.Cells["MaBan"].Value.ToString());
-                BLLTable.Instance.DeleteTable(delList);
-                Show("0");
+                var MaBan = dataGridView1.SelectedRows[0].Cells["MaBan"].Value.ToString();
+                if (BLLTable.Instance.DeleteTable(MaBan))
+                    Show("0");
+                else
+                    MessageBox.Show("Không thể xoá bàn do bàn đang được mở");
             }
         }
         private void addTableButton_Click(object sender, EventArgs e)
@@ -99,8 +99,13 @@ namespace CafeShop.View.AdForm
         }
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            if ((state == ExecuteState.AddTable || state == ExecuteState.Update) && areaNameCombobox.SelectedItem != null)
+            if ((state == ExecuteState.AddTable || state == ExecuteState.Update))
             {
+                if (areaNameCombobox.SelectedItem == null && tableNameTextbox.Texts == "")
+                {
+                    notifycationLabel.Text = "*Thiếu thông tin";
+                    return;
+                };
                 Ban ban = new Ban()
                 {
                     MaKhuVuc = (areaNameCombobox.SelectedItem as KhuvucCBItem).ID,
@@ -113,11 +118,15 @@ namespace CafeShop.View.AdForm
             }
             else if (state == ExecuteState.AddArea)
             {
+                if(areaIDTextbox.Texts == "")
+                {
+                    notifycationLabel.Text = "*Thiếu thông tin";
+                    return;
+                }    
                 KhuVuc khuVuc = new KhuVuc()
                 {
                     MaKhuVuc = BLLTable.Instance.NewAreaKey(),
-                    TenKhuVuc = areaIDTextbox.Texts,
-                    SoLuongBan = 0
+                    TenKhuVuc = areaIDTextbox.Texts
                 };
                 BLLTable.Instance.AddArea(khuVuc);
                 LoadComboboxItem();

@@ -22,7 +22,7 @@ namespace CafeShop.BLL
         private BLLChangePassword() { }
         public bool CheckPassword(string ID, string password)
         {
-            var account = DBModel.Instance.TaiKhoans.Find(ID);
+            var account = DBContext.Instance.TaiKhoans.Find(ID);
             if (account.MatKhau.Equals(password))
                 return true;
             return false;
@@ -31,7 +31,7 @@ namespace CafeShop.BLL
         {
             try
             {
-                var account = DBModel.Instance.TaiKhoans.Find(ID);
+                var account = DBContext.Instance.TaiKhoans.Find(ID);
                 account.MatKhau = password;
                 return true;
             }

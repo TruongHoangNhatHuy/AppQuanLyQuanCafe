@@ -11,8 +11,8 @@ namespace CafeShop.DTO
         public DonGoiMonView(DonGoiMon dgm)
         {
             this.MaDonGoiMon = dgm.MaDonGoiMon;
-            this.TenBan = DBModel.Instance.Bans.Find(DBModel.Instance.HoaDons.Find(dgm.MaHoaDon).MaBan).TenBan;
-            this.TenMon = DBModel.Instance.Mons.Find(dgm.MaMon).TenMon;
+            this.TenBan = DBContext.Instance.Bans.Find(DBContext.Instance.HoaDons.Find(dgm.MaHoaDon).MaBan).TenBan;
+            this.TenMon = DBContext.Instance.Mons.Find(dgm.MaMon).TenMon;
             this.SoLuong = dgm.SoLuong;
             this.GhiChu = dgm.GhiChu;
             TimeSpan ts = DateTime.Now - dgm.ThoiGianGoiMon;

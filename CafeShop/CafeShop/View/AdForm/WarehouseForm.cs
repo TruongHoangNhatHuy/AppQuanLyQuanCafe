@@ -87,6 +87,7 @@ namespace CafeShop.View.AdForm
         private void addButton_Click(object sender, EventArgs e)
         {
             GoodsForm form = new GoodsForm();
+            form.reload += new GoodsForm.Reload(GUI);
             form.ShowDialog();
             GUI();
         }
@@ -97,6 +98,7 @@ namespace CafeShop.View.AdForm
             {
                 GoodsForm form = new GoodsForm(dataGridView1.SelectedRows[0].Cells["MaHangHoa"].Value.ToString());
                 form.ShowDialog();
+                form.reload += new GoodsForm.Reload(GUI);
                 GUI();
             }
         }

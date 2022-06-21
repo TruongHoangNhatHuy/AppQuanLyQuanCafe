@@ -19,25 +19,25 @@ namespace CafeShop.BLL
             }
             private set { }
         }
-
+        private BLLWarehouse() { }
         #region Warehouse
-        public List<HangHoa> GetAllHangHoa() => DBModel.Instance.HangHoas.OrderBy(p => p.MaHangHoa).Skip(1).ToList();
-        public HangHoa GetHangHoaByMa(string MaHangHoa) => DBModel.Instance.HangHoas.Find(MaHangHoa);
+        public List<HangHoa> GetAllHangHoa() => DBContext.Instance.HangHoas.OrderBy(p => p.MaHangHoa).Skip(1).ToList();
+        public HangHoa GetHangHoaByMa(string MaHangHoa) => DBContext.Instance.HangHoas.Find(MaHangHoa);
 
         public void DeleteGoods(HangHoa hangHoa)
         {
-            DBModel.Instance.HangHoas.Remove(hangHoa);
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.HangHoas.Remove(hangHoa);
+            DBContext.Instance.SaveChanges();
         }
         public void ImportGoods(string MaHangHoa, LoHang loHang = null)
         {
             if (loHang != null)
             {
-                DBModel.Instance.LoHangs.Add(loHang);
+                DBContext.Instance.LoHangs.Add(loHang);
                 HangHoa hangHoa = GetHangHoaByMa(MaHangHoa);
                 hangHoa.SoLuong += loHang.SoLuongNhap;
             }
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
         public void ExportGoods(string MaHangHoa, int SoLuong)
         {
@@ -46,14 +46,14 @@ namespace CafeShop.BLL
                 hangHoa.SoLuong = SoLuong;
             else
                 throw new Exception("Số lượng còn lại phải nhỏ hơn số lượng hiện tại.");
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
         #endregion
 
         #region Goods
         public string NewGoodsID()
         {
-            string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBModel.Instance.HangHoas.Select(p => p.MaHangHoa).ToList());
+            string currentKey = PrimaryKeyGenerator.GetCurrentKey(DBContext.Instance.HangHoas.Select(p => p.MaHangHoa).ToList());
             return PrimaryKeyGenerator.NextPrimaryKey(currentKey);
         }
         public void ExecuteDB(HangHoa goods)
@@ -61,7 +61,7 @@ namespace CafeShop.BLL
             HangHoa existed = GetHangHoaByMa(goods.MaHangHoa);
             if (existed == null)
             {
-                DBModel.Instance.HangHoas.Add(goods);
+                DBContext.Instance.HangHoas.Add(goods);
             }
             else
             {
@@ -69,14 +69,14 @@ namespace CafeShop.BLL
                 existed.DonVi = goods.DonVi;
                 existed.MaMon = goods.MaMon;
             }
-            DBModel.Instance.SaveChanges();
+            DBContext.Instance.SaveChanges();
         }
 
         public List<DanhMucThucDon> GetDanhMucThucDon()
         {
             List<DanhMucThucDon> list = new List<DanhMucThucDon>();
-            list.Add(DBModel.Instance.DanhMucThucDons.First());
-            list.AddRange(DBModel.Instance.DanhMucThucDons.Where(p => p.Visible == true));
+            list.Add(DBContext.Instance.DanhMucThucDons.First());
+            list.AddRange(DBContext.Instance.DanhMucThucDons.Where(p => p.Visible == true));
             return list;
         }
         #endregion

@@ -19,18 +19,19 @@ namespace CafeShop.BLL
             }
             private set { }
         }
+        private BLLLogin() { }
         public string currentID { get;private set; }
         public bool ValidateAccount(string account, string password)
         {
             bool isEmployee = false;
-            TaiKhoan tk = DBModel.Instance.TaiKhoans.Where(p => p.TenTaiKhoan == account).FirstOrDefault();
-            if (tk != null && tk != DBModel.Instance.TaiKhoans.Where(p => p.ID == "TK00000000").FirstOrDefault())
+            TaiKhoan tk = DBContext.Instance.TaiKhoans.Where(p => p.TenTaiKhoan == account).FirstOrDefault();
+            if (tk != null && tk != DBContext.Instance.TaiKhoans.Where(p => p.ID == "TK00000000").FirstOrDefault())
             {
                 if (tk.MatKhau == password)
                 {
                     currentID = tk.ID;
                     // Mã vai trò khác chủ cửa hàng thì là nhân viên
-                    if (tk.MaVaiTro != DBModel.Instance.VaiTroes.Where(p => p.TenVaiTro == "Chủ cửa hàng").FirstOrDefault().MaVaiTro)
+                    if (tk.MaVaiTro != DBContext.Instance.VaiTroes.Where(p => p.TenVaiTro == "Chủ cửa hàng").FirstOrDefault().MaVaiTro)
                         isEmployee = true;
                 }
                 else
@@ -42,7 +43,7 @@ namespace CafeShop.BLL
         }
         public string GetCurrentIDName()
         {
-            return DBModel.Instance.TaiKhoans.Where(p => p.ID == BLLLogin.Instance.currentID).FirstOrDefault().HoTen;
+            return DBContext.Instance.TaiKhoans.Where(p => p.ID == BLLLogin.Instance.currentID).FirstOrDefault().HoTen;
         }
         public void ResetCurrentID()
         {

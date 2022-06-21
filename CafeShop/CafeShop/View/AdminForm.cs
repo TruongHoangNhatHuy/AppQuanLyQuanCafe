@@ -207,13 +207,13 @@ namespace CafeShop.View
             openChildForm(form);
         }
 
-        private void scheduleButton_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            this.funcNameLabel.Text = "Lịch làm việc";
-            hideSubMenu();
-            //code
-        }
+        //private void scheduleButton_Click(object sender, EventArgs e)
+        //{
+        //    ActivateButton(sender);
+        //    this.funcNameLabel.Text = "Lịch làm việc";
+        //    hideSubMenu();
+        //    //code
+        //}
 
         public void Reload()
         {

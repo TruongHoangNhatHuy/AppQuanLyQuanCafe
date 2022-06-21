@@ -18,7 +18,7 @@ namespace CafeShop.DTO
             DiaChi = tk.DiaChi;
             SoDienThoai = tk.SoDienThoai;
             NgayBatDauLamViec = tk.NgayBatDauLamViec.ToString("dd/MM/yyyy");
-            TenVaiTro = DBModel.Instance.VaiTroes.Where(x => x.MaVaiTro == tk.MaVaiTro).FirstOrDefault().TenVaiTro;
+            TenVaiTro = DBContext.Instance.VaiTroes.Where(x => x.MaVaiTro == tk.MaVaiTro).FirstOrDefault().TenVaiTro;
         }
         public string ID { get; set; }
         public string TenTaiKhoan { get; set; }
