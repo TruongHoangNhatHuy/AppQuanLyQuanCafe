@@ -25,7 +25,15 @@ namespace CafeShop.BLL
         public List<HoaDon> GetHoaDonInDay(DateTime time)
             => DBContext.Instance.HoaDons.Where(p => p.ThoiGianThanhToan.Day == time.Day && p.ThoiGianThanhToan.Month == time.Month && p.ThoiGianThanhToan.Year == time.Year).ToList();
         public string GetBillCount(DateTime time) => GetHoaDonInDay(time).Count().ToString();
-        public string GetCustomerCount(DateTime time) => GetHoaDonInDay(time).Select(p => new { p.KhachHang }).Distinct().Count().ToString();
+        public string GetCustomerCount(DateTime time)
+        {
+            var list = GetHoaDonInDay(time);
+            int nonMember = list.Where(p => p.IDKhachHang == "KH00000000").Count();
+            int member = list.Select(p => new { p.IDKhachHang }).Distinct().Count();
+            if (nonMember > 0)
+                member--;
+            return member.ToString();
+        }
         public string GetRevenue(DateTime time) => GetHoaDonInDay(time).Sum(p => p.ThanhTien).ToString();
         public List<FoodStatistics> GetFoodStatistics(DateTime time, int countFood = 0)
         {

@@ -21,7 +21,14 @@ namespace CafeShop.BLL
         public List<HoaDon> GetAllHoaDon() => DBContext.Instance.HoaDons.Where(p => p.MaBan.Equals("B000000000")).ToList();
         public HoaDon GetHoaDonByMaHoaDon(string MaHoaDon) => DBContext.Instance.HoaDons.Find(MaHoaDon);
         public string GetBillCount(List<HoaDon> list) => list.Count.ToString();
-        public string GetCustomerCount(List<HoaDon> list) => list.Select(p => new { p.KhachHang }).Distinct().Count().ToString();
+        public string GetCustomerCount(List<HoaDon> list)
+        {
+            int nonMember = list.Where(p => p.IDKhachHang == "KH00000000").Count();
+            int member = list.Select(p => new { p.IDKhachHang}).Distinct().Count();
+            if (nonMember > 0)
+                member--;
+            return member.ToString();
+        }
         public string GetRevenue(List<HoaDon> list) => list.Sum(p => p.ThanhTien).ToString();
         public List<HoaDonView> ChangeView(List<HoaDon> list)
         {
