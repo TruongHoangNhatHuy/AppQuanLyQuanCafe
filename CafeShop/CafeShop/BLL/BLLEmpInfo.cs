@@ -1,10 +1,7 @@
-﻿using System;
+﻿using CafeShop.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CafeShop.DTO;
 
 namespace CafeShop.BLL
 {
@@ -26,7 +23,7 @@ namespace CafeShop.BLL
         public List<TaiKhoanView> GetAccountList()
         {
             List<TaiKhoanView> result = new List<TaiKhoanView>();
-            foreach(TaiKhoan i in DBContext.Instance.TaiKhoans.Where(p => p.ID != "TK00000000"))
+            foreach (TaiKhoan i in DBContext.Instance.TaiKhoans.Where(p => p.ID != "TK00000000"))
             {
                 result.Add(new TaiKhoanView(i));
             }
@@ -35,18 +32,10 @@ namespace CafeShop.BLL
         public TaiKhoanView GetAccountByID(string ID) => GetAccountList().Where(p => p.ID == ID).FirstOrDefault();
         public void ResetPassword(string ID)
         {
-            //try
-            //{
-                var i = DBContext.Instance.TaiKhoans.Find(ID);
-                i.MatKhau = i.NgaySinh.ToString("ddMMyyyy");
-                DBContext.Instance.SaveChanges();
-                throw new Exception("Đã reset mật khẩu thành: " + i.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
-                //MessageBox.Show("Đã reset mật khẩu thành: " + i.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new Exception("Có lỗi xảy ra khi đổi mật khẩu");
-            //}
+            var i = DBContext.Instance.TaiKhoans.Find(ID);
+            i.MatKhau = i.NgaySinh.ToString("ddMMyyyy");
+            DBContext.Instance.SaveChanges();
+            throw new Exception("Đã reset mật khẩu thành: " + i.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
         }
         public void DeleteAccount(string ID)
         {
@@ -57,7 +46,7 @@ namespace CafeShop.BLL
                 tk.LoHangs.ToList().ForEach(p => p.IDNhanVien = "TK00000000");
                 DBContext.Instance.TaiKhoans.Remove(DBContext.Instance.TaiKhoans.Find(ID));
                 DBContext.Instance.SaveChanges();
-            }            
+            }
         }
         public List<TaiKhoanView> SearchAccountList(string searchString, string searchBy)
         {
