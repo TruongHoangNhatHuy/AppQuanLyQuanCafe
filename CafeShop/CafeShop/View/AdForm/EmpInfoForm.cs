@@ -55,7 +55,15 @@ namespace CafeShop.View.AdForm
         private void resetPasswordButton_Click(object sender, EventArgs e)
         {
             string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            BLLEmpInfo.Instance.ResetPassword(ID);
+            try
+            {
+                BLLEmpInfo.Instance.ResetPassword(ID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void updateButton_Click(object sender, EventArgs e)

@@ -35,10 +35,18 @@ namespace CafeShop.BLL
         public TaiKhoanView GetAccountByID(string ID) => GetAccountList().Where(p => p.ID == ID).FirstOrDefault();
         public void ResetPassword(string ID)
         {
-            var i = DBContext.Instance.TaiKhoans.Find(ID);
-            i.MatKhau = i.NgaySinh.ToString("ddMMyyyy");
-            DBContext.Instance.SaveChanges();
-            MessageBox.Show("Đã reset mật khẩu thành: " + i.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
+            //try
+            //{
+                var i = DBContext.Instance.TaiKhoans.Find(ID);
+                i.MatKhau = i.NgaySinh.ToString("ddMMyyyy");
+                DBContext.Instance.SaveChanges();
+                throw new Exception("Đã reset mật khẩu thành: " + i.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
+                //MessageBox.Show("Đã reset mật khẩu thành: " + i.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new Exception("Có lỗi xảy ra khi đổi mật khẩu");
+            //}
         }
         public void DeleteAccount(string ID)
         {
