@@ -53,7 +53,10 @@ namespace CafeShop.View
             else if(BLLChangePassword.Instance.CheckPassword(CurrentID, oldPass))
             {
                 if(BLLChangePassword.Instance.ChangePassword(CurrentID,newPass))
+                {
+                    MessageBox.Show("Đã đổi mật khẩu thành công");
                     this.Close();
+                }
                 else
                 {
                     warningLabel.Text = "Có lỗi khi đổi mật khẩu";

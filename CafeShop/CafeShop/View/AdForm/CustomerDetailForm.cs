@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeShop.DTO;
 using CafeShop.BLL;
-
+using System.Text.RegularExpressions;
+using System.Data.Entity.Infrastructure;
 namespace CafeShop.View.AdForm
 {
     public partial class CustomerDetailForm : Form
@@ -59,6 +60,8 @@ namespace CafeShop.View.AdForm
             {
                 if (nameTextbox.Texts == "" || phoneNumberTextbox.Texts == "")
                     throw new Exception("Thiếu thông tin.");
+                else if (!Regex.IsMatch(phoneNumberTextbox.Texts, "^[0-9]{10}$"))
+                    throw new Exception("Số điện thoại nhập vào không đúng định dạng.");
                 KhachHang kh = new KhachHang
                 {
                     IDKhachHang = IDTextbox.Texts,
@@ -72,6 +75,10 @@ namespace CafeShop.View.AdForm
                 BLLCustomerDetail.Instance.ExecuteDB(kh);
                 reload?.Invoke();
                 this.Close();
+            }
+            catch (DbUpdateException ex)
+            {
+                MessageBox.Show("Số điện thoại đã được đăng ký");
             }
             catch (Exception ex)
             {

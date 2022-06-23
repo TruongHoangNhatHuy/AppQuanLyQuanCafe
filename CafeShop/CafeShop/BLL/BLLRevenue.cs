@@ -1,9 +1,7 @@
-﻿using System;
+﻿using CafeShop.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CafeShop.DTO;
 namespace CafeShop.BLL
 {
     public class BLLRevenue
@@ -13,7 +11,7 @@ namespace CafeShop.BLL
         {
             get
             {
-                if( _Instance == null )
+                if (_Instance == null)
                     _Instance = new BLLRevenue();
                 return _Instance;
             }
@@ -105,23 +103,15 @@ namespace CafeShop.BLL
         #region Customer
         public delegate bool CheckTime(DateTime p, DateTime from, DateTime to);
         public bool CheckYear(DateTime p, DateTime from, DateTime to)
-        {
-            return p.Year >= from.Year && p.Year <= to.Year;
-        }
+            => p.Year >= from.Year && p.Year <= to.Year;
         public bool CheckDate(DateTime p, DateTime from, DateTime to)
-        {
-            return p.Year == from.Year && p.Month == from.Month;
-        }
+           => p.Year == from.Year && p.Month == from.Month;
         public bool CheckMonth(DateTime p, DateTime from, DateTime to)
-        {
-            return p.Date >= from.Date && p.Date <= to.Date;
-        }
+            => p.Date >= from.Date && p.Date <= to.Date;
         public int GetCustomerCount(DateTime from, DateTime to, StatisticsType type)
         {
             CheckTime checktime = new CheckTime(CheckYear);
-            if (type == StatisticsType.ByYear)
-                checktime = new CheckTime(CheckYear);
-            else if (type == StatisticsType.ByDate)
+            if (type == StatisticsType.ByDate)
                 checktime = new CheckTime(CheckDate);
             else if (type == StatisticsType.ByMonth)
                 checktime = new CheckTime(CheckMonth);
@@ -131,17 +121,15 @@ namespace CafeShop.BLL
             if (nonMember > 0)
                 member--;
             return member;
-        }      
+        }
         public List<long> GetCustomerRevenue(DateTime from, DateTime to, StatisticsType type)
         {
             List<long> data = new List<long>(2);
             CheckTime checktime = new CheckTime(CheckYear);
-            if (type == StatisticsType.ByYear)
-                checktime += new CheckTime(CheckYear);
-            else if (type == StatisticsType.ByDate)
+            if (type == StatisticsType.ByDate)
                 checktime += new CheckTime(CheckDate);
-            else if(type == StatisticsType.ByMonth)
-                checktime += new CheckTime(CheckMonth);  
+            else if (type == StatisticsType.ByMonth)
+                checktime += new CheckTime(CheckMonth);
             var temp = GetHoaDon().Where(p => checktime.Invoke(p.ThoiGianThanhToan, from, to));
             long totalRevenue = temp.Sum(p => p.ThanhTien);
             long nonMember = temp.Where(p => p.IDKhachHang == "KH00000000").Sum(p => p.ThanhTien);

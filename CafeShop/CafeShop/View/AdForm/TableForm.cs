@@ -7,6 +7,7 @@ namespace CafeShop.View.AdForm
 {
     public partial class TableForm : Form
     {
+        private List<Ban> TableList;
         public delegate void Reload();
         public Reload reload;
         public TableForm()
@@ -36,7 +37,13 @@ namespace CafeShop.View.AdForm
         }
         public void Show(string MaKhuVuc, string searchText = "")
         {
-            dataGridView1.DataSource = BLLTable.Instance.SearchTable(MaKhuVuc, searchText);
+            //dataGridView1.DataSource = BLLTable.Instance.SearchTable(MaKhuVuc, searchText);
+            TableList = BLLTable.Instance.SearchTable(MaKhuVuc, searchText);
+            TotalPage = (TableList.Count / PageSize);
+            if (TableList.Count % PageSize > 0)
+                TotalPage++;
+            CurrentIndex = 1;
+            SetPage();
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -160,6 +167,50 @@ namespace CafeShop.View.AdForm
             AddArea
         }
         #endregion
+        #region Pagination
+        private const int PageSize = 10;
+        private int CurrentIndex = 1;
+        private int TotalPage = 0;
+
+        private void SetPage()
+        {
+            if (TableList != null)
+            {
+                dataGridView1.DataSource = BLLTable.Instance.GetCurrentRecord(CurrentIndex, PageSize, TableList);
+                pageLabel.Text = $" {CurrentIndex}  /  {TotalPage} ";
+            }
+        }
+        #endregion
+
+        private void firstPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentIndex = 1;
+            SetPage();
+        }
+
+        private void previousPageButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentIndex > 1)
+            {
+                CurrentIndex--;
+                SetPage();
+            }               
+        }
+
+        private void nextPageButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentIndex < TotalPage)
+            {
+                CurrentIndex++;
+                SetPage();
+            }                
+        }
+
+        private void lastPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentIndex = TotalPage;
+            SetPage();
+        }
     }
-    
+
 }

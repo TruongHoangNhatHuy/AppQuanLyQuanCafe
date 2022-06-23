@@ -45,7 +45,7 @@ namespace CafeShop.BLL
                 return true;
             }    
         }
-        public void ExecuteDB(TaiKhoan tk)
+        public bool ExecuteDB(TaiKhoan tk)
         {
             if (ExistedUsername(tk.TenTaiKhoan, tk.ID))
                 throw new Exception("Tên đăng nhập này đã tồn tại, vui lòng nhập tên khác");
@@ -61,6 +61,7 @@ namespace CafeShop.BLL
                 existed.GioiTinh = tk.GioiTinh;
                 existed.MaVaiTro = tk.MaVaiTro;
                 DBContext.Instance.SaveChanges();
+                return false;
             }
             else
             {                
@@ -68,7 +69,8 @@ namespace CafeShop.BLL
                 tk.NgayBatDauLamViec = DateTime.Now;
                 DBContext.Instance.TaiKhoans.Add(tk);
                 DBContext.Instance.SaveChanges();
-                MessageBox.Show("Mật khẩu là: " + tk.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
+                return true;
+                //MessageBox.Show("Mật khẩu là: " + tk.MatKhau + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
             }
         }
     }

@@ -265,8 +265,5 @@ namespace CafeShop.View.EmpForm
         }
         #endregion
 
-
-
-
     }
 }

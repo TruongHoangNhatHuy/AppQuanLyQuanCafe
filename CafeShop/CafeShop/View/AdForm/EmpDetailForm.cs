@@ -6,6 +6,7 @@ using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeShop.BLL;
@@ -63,6 +64,8 @@ namespace CafeShop.View.AdForm
             {
                 if (nameTextbox.Texts == "" || phoneNumberTextbox.Texts == "" || accountTextbox.Texts == "" || roleCombobox.SelectedItem == null)
                     throw new Exception("Thiếu thông tin.");
+                else if (!Regex.IsMatch(phoneNumberTextbox.Texts, "^[0-9]{10}$"))
+                    throw new Exception("Số điện thoại nhập vào không đúng định dạng");
                 TaiKhoan tk = new TaiKhoan
                 {
                     ID = IDTextbox.Texts,
@@ -74,7 +77,8 @@ namespace CafeShop.View.AdForm
                     MaVaiTro = (roleCombobox.SelectedItem as VaiTro).MaVaiTro,
                     GioiTinh = maleRadioButton.Checked
                 };
-                BLLEmpDetail.Instance.ExecuteDB(tk);
+                if (BLLEmpDetail.Instance.ExecuteDB(tk))
+                    MessageBox.Show("Mật khẩu là: " + tk.NgaySinh.ToString("ddMMyyyy") + "\nVui lòng đổi mật khẩu mới khi đăng nhập.");
                 reload?.Invoke();
                 this.Close();
             }

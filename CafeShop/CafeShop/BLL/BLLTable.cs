@@ -93,6 +93,14 @@ namespace CafeShop.BLL
             return PrimaryKeyGenerator.NextPrimaryKey(CurrentKey);
         }
         #endregion
+
+        //Pagination
+        public List<Ban> GetCurrentRecord(int page, int pageSize, List<Ban> list)
+        {
+            if ((list.Count / pageSize + 1) == page)
+                return list.Skip((page - 1) * pageSize).ToList();
+            return list.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        }
     }
 
 }

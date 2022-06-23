@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeShop.BLL;
@@ -59,17 +60,24 @@ namespace CafeShop.View.EmpForm
 
         private void checkCustomerButton_Click(object sender, EventArgs e)
         {
-            KhachHang kh = BLLBill.Instance.GetKHBySDT(SDTKhachHangTextBox.Texts);
-            if (kh != null)
-                tenKHTextBox.Texts = kh.HoTenKH;
+            if (Regex.IsMatch(SDTKhachHangTextBox.Texts, "^[0-9]{10}$"))
+            {
+                KhachHang kh = BLLBill.Instance.GetKHBySDT(SDTKhachHangTextBox.Texts);
+                if (kh != null)
+                    tenKHTextBox.Texts = kh.HoTenKH;
+                else
+                {
+                    DialogResult result = MessageBox.Show("Khách hàng chưa phải là thành viên.\nĐăng kí thành viên mới?", "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        CustomerDetailForm form = new CustomerDetailForm(SDTKhachHangTextBox.Texts);
+                        form.ShowDialog();
+                    }
+                }
+            }
             else
             {
-                DialogResult result = MessageBox.Show("Khách hàng chưa phải là thành viên.\nĐăng kí thành viên mới?", "", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    CustomerDetailForm form = new CustomerDetailForm(SDTKhachHangTextBox.Texts);
-                    form.ShowDialog();
-                }
+                MessageBox.Show("Số điện thoại nhập vào không đúng định dạng");
             }
         }
 
@@ -110,10 +118,15 @@ namespace CafeShop.View.EmpForm
                 else if (TienThua < 0)
                     throw new Exception("Tiền thừa phải lớn hơn 0");
             }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Giá tiền nhập vào không đúng định dạng");
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }
