@@ -53,8 +53,6 @@
             this.tableInfoTable = new System.Windows.Forms.Panel();
             this.timeInfoLabel = new System.Windows.Forms.Label();
             this.statusTable = new System.Windows.Forms.Label();
-            this.timeOutLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableNameLabel = new System.Windows.Forms.Label();
             this.statusTableLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -304,8 +302,6 @@
             this.tableInfoTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableInfoTable.Controls.Add(this.timeInfoLabel);
             this.tableInfoTable.Controls.Add(this.statusTable);
-            this.tableInfoTable.Controls.Add(this.timeOutLabel);
-            this.tableInfoTable.Controls.Add(this.label1);
             this.tableInfoTable.Controls.Add(this.tableNameLabel);
             this.tableInfoTable.Controls.Add(this.statusTableLabel);
             this.tableInfoTable.Controls.Add(this.statusLabel);
@@ -337,27 +333,6 @@
             this.statusTable.Size = new System.Drawing.Size(93, 18);
             this.statusTable.TabIndex = 6;
             this.statusTable.Text = "Tình trạng: ";
-            // 
-            // timeOutLabel
-            // 
-            this.timeOutLabel.AutoSize = true;
-            this.timeOutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeOutLabel.ForeColor = System.Drawing.Color.OrangeRed;
-            this.timeOutLabel.Location = new System.Drawing.Point(66, 202);
-            this.timeOutLabel.Name = "timeOutLabel";
-            this.timeOutLabel.Size = new System.Drawing.Size(179, 20);
-            this.timeOutLabel.TabIndex = 5;
-            this.timeOutLabel.Text = "25/04/2022 07:34 PM";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(77, 172);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Thời điểm phục vụ gần nhất";
             // 
             // tableNameLabel
             // 
@@ -474,8 +449,6 @@
         private CustomControl.JButton stateButton;
         private CustomControl.JButton orderButton;
         private System.Windows.Forms.Panel tableInfoTable;
-        private System.Windows.Forms.Label timeOutLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label tableNameLabel;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label timeArriveLabel;
