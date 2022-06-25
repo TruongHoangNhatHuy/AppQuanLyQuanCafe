@@ -102,6 +102,7 @@
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\HoaDonView.cs" />
     <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\KhachHangView.cs" />
     <Compile Include="DTO\KhuVuc.cs" />
     <Compile Include="DTO\KhuvucCBItem.cs" />
     <Compile Include="DTO\LoHang.cs" />

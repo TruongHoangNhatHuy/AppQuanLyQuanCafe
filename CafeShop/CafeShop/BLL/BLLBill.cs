@@ -16,18 +16,13 @@ namespace CafeShop.BLL
             get
             {
                 if (_Instance == null)
-                {
                     _Instance = new BLLBill();
-                }
                 return _Instance;
             }
             private set { }
         }
         private BLLBill() { }
-        private HoaDon GetHoaDonByMaBan(string MaBan)
-        {
-            return DBContext.Instance.HoaDons.Where(x => x.MaBan == MaBan).FirstOrDefault();
-        }
+        private HoaDon GetHoaDonByMaBan(string MaBan) => DBContext.Instance.HoaDons.Where(x => x.MaBan == MaBan).FirstOrDefault();
         public KhachHang GetKHBySDT(string sdt) => DBContext.Instance.KhachHangs.Where(x => x.SoDienThoaiKH == sdt).FirstOrDefault();
         
         public int GetBillCostOfTable(string MaBan)
@@ -36,9 +31,7 @@ namespace CafeShop.BLL
             string maHoaDon = GetHoaDonByMaBan(MaBan).MaHoaDon;
             var listDonGoiMon = DBContext.Instance.DonGoiMons.Where(x => x.TinhTrang == OrderState.Completed && x.MaHoaDon == maHoaDon).ToList();
             foreach (var i in listDonGoiMon)
-            {
                 tongTien += i.GiaTien;
-            }
             return tongTien;
         }
         public double SurchargeAndDiscount(int tongTien, double surcharge = 0, bool isSurchargePercent = false, double discount = 0, bool isDiscountPercent = false)

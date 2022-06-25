@@ -64,6 +64,8 @@ namespace CafeShop.View.AdForm
             {
                 if (nameTextbox.Texts == "" || phoneNumberTextbox.Texts == "" || accountTextbox.Texts == "" || roleCombobox.SelectedItem == null)
                     throw new Exception("Thiếu thông tin.");
+                else if (birthdayPicker.Value >= DateTime.Now)
+                    throw new Exception("Ngày sinh không hợp lệ");
                 else if (!Regex.IsMatch(phoneNumberTextbox.Texts, "^[0-9]{10}$"))
                     throw new Exception("Số điện thoại nhập vào không đúng định dạng");
                 TaiKhoan tk = new TaiKhoan

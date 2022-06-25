@@ -14,12 +14,14 @@ namespace CafeShop.View.AdForm
 {
     public partial class CustomerInfoForm : Form
     {
+        private List<KhachHangView> CustomerList;
         public delegate void Reload();
         public Reload reload;
         public CustomerInfoForm()
         {
             InitializeComponent();            
         }
+        #region EventHandler
         private void CustomerInfoForm_Load(object sender, EventArgs e)
         {
             ReloadData();
@@ -28,7 +30,16 @@ namespace CafeShop.View.AdForm
         }
         public void ReloadData()
         {
-            dataGridView1.DataSource = BLLCustomerInfo.Instance.GetCustomerList();
+            Show();
+        }
+        public void Show(string searchString = "", string searchBy = "Theo ID khách hàng")
+        {
+            CustomerList = BLLCustomerInfo.Instance.SearchCustomerList(searchString, searchBy);
+            TotalPage = (CustomerList.Count / PageSize);
+            if (CustomerList.Count % PageSize > 0)
+                TotalPage++;
+            CurrentIndex = 1;
+            SetPage();
         }
         private void adButton_Click(object sender, EventArgs e)
         {
@@ -66,17 +77,73 @@ namespace CafeShop.View.AdForm
         {
             string searchBy = searchByComboBox.Texts;
             string searchString = searchTextbox.Texts;
-            dataGridView1.DataSource = BLLCustomerInfo.Instance.SearchCustomerList(searchString, searchBy);
+            Show(searchString, searchBy);
         }
-
+        
+        private string lastOrder;
+        private bool SortDirection = false;
         private void sortButton_Click(object sender, EventArgs e)
         {
-            List<KhachHang> list = new List<KhachHang>();
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-                list.Add(BLLCustomerInfo.Instance.GetCustomerByID(row.Cells[0].Value.ToString()));
-            dataGridView1.DataSource = BLLCustomerInfo.Instance.SortCustomerList(list);
+            if (searchByComboBox.SelectedItem != null)
+            {
+                string orderBy = searchByComboBox.SelectedItem.ToString();
+                if (orderBy.Equals(lastOrder))
+                    SortDirection = !SortDirection;
+                else
+                {
+                    lastOrder = orderBy;
+                    SortDirection = false;
+                }
+                CustomerList = BLLCustomerInfo.Instance.Sort(orderBy, SortDirection);
+                CurrentIndex = 1;
+                SetPage();
+            }
+        }
+        #endregion
+
+        #region Pagination
+        private const int PageSize = 3;
+        private int CurrentIndex = 1;
+        private int TotalPage = 0;
+
+        private void SetPage()
+        {
+            if (CustomerList != null)
+            {
+                dataGridView1.DataSource = BLLCustomerInfo.Instance.GetCurrentRecord(CurrentIndex, PageSize, CustomerList);
+                pageLabel.Text = $" {CurrentIndex}  /  {TotalPage} ";
+            }
         }
 
-        
+        private void firstPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentIndex = 1;
+            SetPage();
+        }
+
+        private void previousPageButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentIndex > 1)
+            {
+                CurrentIndex--;
+                SetPage();
+            }
+        }
+
+        private void nextPageButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentIndex < TotalPage)
+            {
+                CurrentIndex++;
+                SetPage();
+            }
+        }
+
+        private void lastPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentIndex = TotalPage;
+            SetPage();
+        }
+        #endregion
     }
 }

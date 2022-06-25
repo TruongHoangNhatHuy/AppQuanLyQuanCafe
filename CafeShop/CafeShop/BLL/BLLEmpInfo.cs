@@ -24,9 +24,7 @@ namespace CafeShop.BLL
         {
             List<TaiKhoanView> result = new List<TaiKhoanView>();
             foreach (TaiKhoan i in DBContext.Instance.TaiKhoans.Where(p => p.ID != "TK00000000"))
-            {
                 result.Add(new TaiKhoanView(i));
-            }
             return result.OrderBy(p => p.ID).ToList();
         }
         public TaiKhoanView GetAccountByID(string ID) => GetAccountList().Where(p => p.ID == ID).FirstOrDefault();

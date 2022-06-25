@@ -21,7 +21,14 @@ namespace CafeShop.BLL
             private set { }
         }
         private BLLCustomerInfo() { }
-        public List<KhachHang> GetCustomerList() => DBContext.Instance.KhachHangs.Where(p => p.IDKhachHang != "KH00000000").OrderBy(p => p.IDKhachHang).ToList();
+        public List<KhachHangView> GetCustomerList()
+        {
+            List<KhachHangView> list = new List<KhachHangView>();
+            foreach (KhachHang kh in DBContext.Instance.KhachHangs.Where(p => p.IDKhachHang != "KH00000000"))
+                list.Add(new KhachHangView(kh));
+            list.OrderBy(p => p.IDKhachHang).ToList();
+            return list;
+        }
         public KhachHang GetCustomerByID(string ID) => DBContext.Instance.KhachHangs.Find(ID);
         public void DeleteCustomer(string IDKhachHang)
         {
@@ -33,9 +40,9 @@ namespace CafeShop.BLL
                 DBContext.Instance.SaveChanges();
             }            
         }
-        public List<KhachHang> SearchCustomerList(string searchString, string searchBy)
+        public List<KhachHangView> SearchCustomerList(string searchString, string searchBy)
         {
-            List<KhachHang> result = GetCustomerList();
+            List<KhachHangView> result = GetCustomerList();
             if (searchString != null)
             {
                 switch (searchBy)
@@ -74,10 +81,40 @@ namespace CafeShop.BLL
             }
             return result.OrderBy(p => p.IDKhachHang).ToList();
         }
-        public List<KhachHang> SortCustomerList(List<KhachHang> list)
+        public List<KhachHangView> Sort(string orderBy, bool SortDirection)
         {
-            list.Reverse();
+            var list = GetCustomerList();
+            switch (orderBy)
+            {
+                case "Theo ID khách hàng":
+                    list = list.OrderBy(p => p.IDKhachHang).ToList();
+                    break;
+                case "Theo họ tên":
+                    list = list.OrderBy(p => p.HoTenKH).ToList();
+                    break;
+                case "Theo số điện thoại":
+                    list = list.OrderBy(p => p.SoDienThoaiKH).ToList();
+                    break;
+                case "Theo ngày sinh":
+                    list = list.OrderBy(p => p.NgaySinhKH).ToList();
+                    break;
+                case "Theo địa chỉ":
+                    list = list.OrderBy(p => p.DiaChiKH).ToList();
+                    break;
+                case "Theo ngày đăng kí":
+                    list = list.OrderBy(p => p.NgayDangKi).ToList();
+                    break;
+            }
+            if (SortDirection)
+                list.Reverse();
             return list;
+        }
+        //Pagination
+        public List<KhachHangView> GetCurrentRecord(int page, int pageSize, List<KhachHangView> list)
+        {
+            if ((list.Count / pageSize + 1) == page)
+                return list.Skip((page - 1) * pageSize).ToList();
+            return list.Skip((page - 1) * pageSize).Take(pageSize).ToList();
         }
     }
 }

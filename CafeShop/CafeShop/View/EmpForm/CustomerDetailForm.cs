@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeShop.DTO;
 using CafeShop.BLL;
+using System.Text.RegularExpressions;
 
 namespace CafeShop.View.EmpForm
 {
@@ -42,6 +43,10 @@ namespace CafeShop.View.EmpForm
             {
                 if (nameTextbox.Texts == "" || phoneNumberTextbox.Texts == "")
                     throw new Exception("Thiếu thông tin.");
+                if (birthdayPicker.Value >= DateTime.Now)
+                    throw new Exception("Ngày sinh không hợp lệ");
+                if (!Regex.IsMatch(phoneNumberTextbox.Texts, "^[0-9]{10}$"))
+                    throw new Exception("Số điện thoại nhập vào không đúng định dạng.");
                 KhachHang kh = new KhachHang
                 {
                     IDKhachHang = IDTextbox.Texts,

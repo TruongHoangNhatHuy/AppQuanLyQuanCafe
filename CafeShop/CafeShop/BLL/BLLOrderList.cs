@@ -34,10 +34,6 @@ namespace CafeShop.BLL
         {
             DonGoiMon dgm = DBContext.Instance.DonGoiMons.Find(MaDonGoiMon);
             var state = dgm.TinhTrang;
-            //if (state == OrderState.Waiting)
-            //    state = OrderState.Processing;
-            //else if (state == OrderState.Processing)
-            //    state = OrderState.Completed;
             if (state != OrderState.Completed)
                 state++;
             dgm.TinhTrang = state;

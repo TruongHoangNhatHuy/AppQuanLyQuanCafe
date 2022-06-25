@@ -19,8 +19,7 @@ namespace CafeShop.View.AdForm
         public InvoiceForm()
         {
             InitializeComponent();
-        }
-        
+        }        
         #region EventHandler
         private void InvoiceForm_Load(object sender, EventArgs e)
         {

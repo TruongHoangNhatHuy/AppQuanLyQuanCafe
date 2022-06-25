@@ -167,6 +167,7 @@ namespace CafeShop.View.AdForm
             AddArea
         }
         #endregion
+
         #region Pagination
         private const int PageSize = 10;
         private int CurrentIndex = 1;
@@ -180,8 +181,7 @@ namespace CafeShop.View.AdForm
                 pageLabel.Text = $" {CurrentIndex}  /  {TotalPage} ";
             }
         }
-        #endregion
-
+        
         private void firstPageButton_Click(object sender, EventArgs e)
         {
             CurrentIndex = 1;
@@ -211,6 +211,7 @@ namespace CafeShop.View.AdForm
             CurrentIndex = TotalPage;
             SetPage();
         }
+        #endregion
     }
 
 }

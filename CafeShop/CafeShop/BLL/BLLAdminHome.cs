@@ -37,7 +37,8 @@ namespace CafeShop.BLL
         public string GetRevenue(DateTime time) => GetHoaDonInDay(time).Sum(p => p.ThanhTien).ToString();
         public List<FoodStatistics> GetFoodStatistics(DateTime time, int countFood = 0)
         {
-            var list = DBContext.Instance.DonGoiMons.Where(p => p.ThoiGianGoiMon.Year == time.Year && p.ThoiGianGoiMon.Month == time.Month).
+            DateTime last30Day = time.AddDays(-30);
+            var list = DBContext.Instance.DonGoiMons.Where(p => p.ThoiGianGoiMon >= last30Day).
                 GroupBy(p => p.Mon).Select(p => new FoodStatistics
                 {
                     FoodID = p.Select(x => x.Mon.MaMon).FirstOrDefault(),
