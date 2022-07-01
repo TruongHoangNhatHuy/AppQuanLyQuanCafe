@@ -46,6 +46,7 @@
             this.personalButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titleBarPanel = new System.Windows.Forms.Panel();
             this.logInfoTextbox = new CafeShop.View.CustomControl.JTextbox();
             this.zoomButton = new CafeShop.View.CustomControl.JButton();
@@ -57,15 +58,14 @@
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideMenuPanel.SuspendLayout();
             this.subStatisticsPanel.SuspendLayout();
             this.subFacilityPanel.SuspendLayout();
             this.subPersonPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.titleBarPanel.SuspendLayout();
             this.jDropDownMenu1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sideMenuPanel
@@ -328,6 +328,16 @@
             this.mainPanel.Size = new System.Drawing.Size(173, 80);
             this.mainPanel.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeShop.Properties.Resources.cafe;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // titleBarPanel
             // 
             this.titleBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(178)))), ((int)(((byte)(212)))));
@@ -383,8 +393,8 @@
             this.zoomButton.TextColor = System.Drawing.Color.Black;
             this.zoomButton.UseVisualStyleBackColor = false;
             this.zoomButton.Click += new System.EventHandler(this.zoomButton_Click);
+            this.zoomButton.MouseEnter += new System.EventHandler(this.button_MouseEnter);
             this.zoomButton.MouseLeave += new System.EventHandler(this.button_MouseLeave);
-            this.zoomButton.MouseHover += new System.EventHandler(this.button_MouseEnter);
             // 
             // minimizeButton
             // 
@@ -466,16 +476,6 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CafeShop.Properties.Resources.cafe;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,10 +495,10 @@
             this.subFacilityPanel.ResumeLayout(false);
             this.subPersonPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.titleBarPanel.ResumeLayout(false);
             this.titleBarPanel.PerformLayout();
             this.jDropDownMenu1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

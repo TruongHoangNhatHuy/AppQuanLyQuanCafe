@@ -175,7 +175,9 @@
             this.orderListDataGridView.DataSource = this.donGoiMonViewBindingSource;
             this.orderListDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderListDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.orderListDataGridView.MultiSelect = false;
             this.orderListDataGridView.Name = "orderListDataGridView";
+            this.orderListDataGridView.ReadOnly = true;
             this.orderListDataGridView.Size = new System.Drawing.Size(311, 258);
             this.orderListDataGridView.TabIndex = 0;
             // 
@@ -186,6 +188,7 @@
             this.TenMon.DefaultCellStyle = dataGridViewCellStyle1;
             this.TenMon.HeaderText = "Tên món";
             this.TenMon.Name = "TenMon";
+            this.TenMon.ReadOnly = true;
             // 
             // SoLuong
             // 
@@ -194,6 +197,7 @@
             this.SoLuong.DefaultCellStyle = dataGridViewCellStyle2;
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
             // 
             // thoiGianTuKhiGoiDataGridViewTextBoxColumn
             // 
@@ -202,6 +206,7 @@
             this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.HeaderText = "Thời gian từ khi gọi";
             this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.Name = "thoiGianTuKhiGoiDataGridViewTextBoxColumn";
+            this.thoiGianTuKhiGoiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // donGoiMonViewBindingSource
             // 
