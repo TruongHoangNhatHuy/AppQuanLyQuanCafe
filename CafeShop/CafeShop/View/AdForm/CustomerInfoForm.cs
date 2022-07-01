@@ -102,7 +102,7 @@ namespace CafeShop.View.AdForm
         #endregion
 
         #region Pagination
-        private const int PageSize = 3;
+        private const int PageSize = 10;
         private int CurrentIndex = 1;
         private int TotalPage = 0;
 

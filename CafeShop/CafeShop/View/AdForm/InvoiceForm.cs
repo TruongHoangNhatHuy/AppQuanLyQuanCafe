@@ -23,7 +23,8 @@ namespace CafeShop.View.AdForm
         #region EventHandler
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
-            sortJCombobox.Items.AddRange(new string[] { "Theo mã hoá đơn", "Theo thời gian", "Theo giá trị" });
+            sortJCombobox.Items.AddRange(new string[] { "Sắp xếp theo", "Theo mã hoá đơn", "Theo thời gian", "Theo giá trị" });
+            sortJCombobox.SelectedIndex = 0;
             fromPicker.Value = new DateTime(2022, 1, 1);
             SetHoaDon();
             SetPage();
@@ -73,7 +74,7 @@ namespace CafeShop.View.AdForm
         private bool SortDirection = false;
         private void sortButton_Click(object sender, EventArgs e)
         {
-            if (sortJCombobox.SelectedItem != null)
+            if (sortJCombobox.SelectedItem != null && sortJCombobox.SelectedIndex != 0)
             {
                 string orderBy = sortJCombobox.SelectedItem.ToString();
                 if (orderBy.Equals(lastOrder))
@@ -100,7 +101,7 @@ namespace CafeShop.View.AdForm
         #endregion
 
         #region Pagination
-        private const int PageSize = 6;
+        private const int PageSize = 12;
         private int CurrentIndex = 1;
         private int TotalPage = 0;
         private void SetPage()
