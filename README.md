@@ -10,6 +10,12 @@ Lớp học phần PBL3: 20Nh13A.
 2.	Nguyễn Ngọc Hải, 20TCLC_DT2
 3.	Trương Thị Thanh Kiều, 20TCLC_DT5
 
+## Công nghệ sử dụng
+
+1. C# Winform
+2. Entityframework
+3. Microsoft SQL Server
+
 ## Giao diện
 ### Login
 ![login](https://github.com/TruongHoangNhatHuy/AppQuanLyQuanCafe/assets/94236029/c637752f-6e3b-479b-9aa5-24aa9b419385)
