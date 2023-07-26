@@ -15,7 +15,6 @@ Lớp học phần PBL3: 20Nh13A.
 ![login](https://github.com/TruongHoangNhatHuy/AppQuanLyQuanCafe/assets/94236029/c637752f-6e3b-479b-9aa5-24aa9b419385)
 
 ### Trang của quản lý
-![image](https://github.com/TruongHoangNhatHuy/AppQuanLyQuanCafe/assets/94236029/f5405bcd-edfb-4173-8f09-a90bcd835adc)
 
 #### Trang chủ của quản lý
 ![image](https://github.com/TruongHoangNhatHuy/AppQuanLyQuanCafe/assets/94236029/c4b150b6-8d60-41f9-ab25-14a47eb3c814)
